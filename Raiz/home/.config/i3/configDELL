@@ -45,8 +45,8 @@ set  $lkey Left
 set  $rkey Right
 
 # monitor outputs ==> xrandr -q | grep " connected" | cut -d ' ' -f1
-set  $out_pri output HDMI-1
-#set $out_sec output VGA-1
+set  $out_pri output eDP1
+set  $out_sec output HDMI1
 
 # float enable
 set  $float floating enable
@@ -154,8 +154,8 @@ set $ico_window   <span font='Font Awesome'>&#xf2d0;</span>
 # Appearance ===> FONTS ===> CORES    
 # ----------------------------------------------------------------------------
 
-font pango: System San Francisco Display:style=Regular:pixelsize=11;2
-#font pango:Source Sans Pro 12
+#font pango: System San Francisco Display:style=Regular:pixelsize=11;2
+font pango:Source Sans Pro 12
 #font pango:Open Sans Semibold 10
 #font pango: Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid
 #font pango:Iosevka Custom 11
@@ -256,16 +256,16 @@ set $ws10 "10"
 # outputs -- remind: check panel output variables!
 # Colocar automaticamente espaços de trabalho em telas específicas
 
-workspace $ws1  $out_pri
-workspace $ws2  $out_pri
-workspace $ws3  $out_pri
-workspace $ws4  $out_pri
-workspace $ws5  $out_pri
-workspace $ws6  $out_pri
-workspace $ws7  $out_pri
-workspace $ws8  $out_pri
-workspace $ws9  $out_pri
-workspace $ws10 $out_pri
+workspace $ws1    $out_pri
+workspace $ws2    $out_pri
+workspace $ws3    $out_pri
+workspace $ws4    $out_pri
+workspace $ws5    $out_pri
+workspace $ws6    $out_sec
+workspace $ws7    $out_sec
+workspace $ws8    $out_sec
+workspace $ws9    $out_sec
+workspace $ws10   $out_sec
 
 # switch to workspace (Navegar pelas workspaces)
 
@@ -423,8 +423,8 @@ $sup+comma         focus mode_toggle
 $sup+t             border toggle
 
 # Janela no centro da tela --> Ocultar/Exibir a janela oculta --> Pode também ialtenar várias janelas ocultas
-$sup+KP_Subtract   $scra 
-$sup+KP_Add        $show 
+$sup+minus   $scra 
+$sup+equal   $show 
 
 # toggle sticky
 $ca+s              sticky toggle
@@ -454,10 +454,10 @@ $ss+e          $exe i3-msg exit
 # PowerOFF
 $ss+d          $exe shutdown -h now
 
-# Reboot
+# Reboot (Reiniciar,FN+F5)
 $ss+b          $exe systemctl reboot
 
-# Suspend
+# Suspend (FN+F7)
 $ss+s          $exe systemctl suspend
 
 # Lockscreen (Bloqueia a máquina, FN+F6) 
@@ -672,7 +672,7 @@ smart_gaps on
 ## i3blocks volume control and status
 #set $vol_signal pkill -SIGRTMIN+10 i3blocks
 
-#$sup+F9                      $exe pavucontrol && $vol_signal
+#$sup+F9                       $exe pavucontrol && $vol_signal
 #$sup+F10                     $exe amixer set Master toggle && $vol_signal
 #$sup+F11                     $exe amixer set Master playback 5%- unmute && $vol_signal
 #$sup+F12                     $exe amixer set Master playback 5%+ unmute && $vol_signal
@@ -749,10 +749,10 @@ $sup+p  $exe pamac-manager
 
 # Mapeamento de teclas xmodmap -pke ou xev | grep -i key
 # start/close Calculadora 
-bindsym XF86Calculator $exe $scriptdir/calculadora.sh &
+bindsym F6 $exe $scriptdir/calculadora.sh &
 
 # start/close Spotify
-bindsym XF86Tools $exe $scriptdir/spotify.sh &
+bindsym F9 $exe $scriptdir/spotify.sh &
 
 # start dmenu (a program launcher)
 #$sup+d $exe dmenu_run
@@ -856,11 +856,11 @@ $exe nm-applet
 
 # Resolução de Tela(Instalar Arandr)
 $exe ~/.screenlayout/default.sh
-#$exe xrandr --output eDP-1 HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 60.00
+#$exe xrandr --output eDP-1 HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal
 
 # Bateria
 #$exe_always ~/.config/i3/scripts/ba.sh 
-#$exe ~/.config/i3/scripts/ba.sh
+$exe ~/.config/i3/scripts/ba.sh
 #exec_always --no-startup-id while sleep 60; do ~/.config/i3/scripts/bat.sh; done
 
 # Xrandr - Brilho de Tela
@@ -884,7 +884,7 @@ $exe sleep 5 && keepassxc
 
 # TouchPad >>> https://github.com/bulletmark/libinput-gestures
 #$exe /usr/bin/libinput-gestures &
-#$exe libinput-gestures-setup start &
+$exe libinput-gestures-setup start &
 
 # Fonts
 $exe_always fc-cache -fv
