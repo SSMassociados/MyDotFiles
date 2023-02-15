@@ -1,0 +1,13 @@
+[Desktop Entry]
+Comment=Transparent Theme For KDE Plasma
+Name=Fantasma
+X-KDE-PluginInfo-Author=ju1464
+X-KDE-PluginInfo-Category=Plasma Look And Feel
+X-KDE-PluginInfo-Email=
+X-KDE-PluginInfo-EnabledByDefault=true
+X-KDE-PluginInfo-License=GPL 3+
+X-KDE-PluginInfo-Name=Fantasma
+X-KDE-PluginInfo-Version=0.1
+X-KDE-PluginInfo-Website=https://www.pling.com/u/ju1464/
+X-KDE-ServiceTypes=Plasma/LookAndFeel
+X-KPackage-Dependencies=kns://aurorae.knsrc/api.kde-look.org/1329320,kns://colorschemes.knsrc/api.kde-look.org/1329318,kns://plasma-themes.knsrc/api.kde-look.org/1329321,kns://icons.knsrc/api.kde-look.org/1313336,kns://wallpaper.knsrc/api.kde-look.org/1329317,kns://sddmtheme.knsrc/api.kde-look.org/1345016

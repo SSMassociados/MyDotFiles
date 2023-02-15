@@ -1,0 +1,12 @@
+
+configuration {
+    modi: "window,drun,run,ssh";
+    font: "Open Sans 13";
+    show-icons: true;
+    drun-icon-theme: "Arc";
+    levenshtein-sort: true;
+    hide-scrollbar: true;
+    click-to-exit: true;
+}
+
+@import "~/.config/rofi/themes/dark.rasi"

@@ -1,0 +1,4256 @@
+./A/A Drink For All Ages.TTF
+./A/AAJAX.TTF
+./A/Aarcover.ttf
+./A/AARDC___.TTF
+./A/AARDV.TTF
+./A/AAUTOPSY.TTF
+./A/abaddon.TTF
+./A/ABBERANC.TTF
+./A/Abduction.ttf
+./A/abduction2002.ttf
+./A/AbductionII.ttf
+./A/AbductionIII.ttf
+./A/aberatn.ttf
+./A/ABODE___.TTF
+./A/abscibi_.ttf
+./A/abscib__.ttf
+./A/abscii__.ttf
+./A/absci___.ttf
+./A/abstrakt.ttf
+./A/Ac.ttf
+./A/ACCELERA.TTF
+./A/accid___.ttf
+./A/Ace.ttf
+./A/Ach4.ttf
+./A/ACID.TTF
+./A/acidrefl.ttf
+./A/acknowtt.ttf
+./A/acmesa.TTF
+./A/acmesab.TTF
+./A/acmesai.TTF
+./A/ACQUAINTANCE.TTF
+./A/Action Man Bold Italic.ttf
+./A/Action Man Bold.ttf
+./A/Action Man Extended Bold Italic.ttf
+./A/Alpha Thin.ttf
+./A/alphabet.ttf
+./A/AlphaFridgeMagnets.ttf
+./A/AlphaMaleModern.ttf
+./A/AlphaRev.ttf
+./A/AlphaRevHollow.ttf
+./A/Alphav2.ttf
+./A/ALPHC___.TTF
+./A/Alphd___.ttf
+./A/ALPHMA__.TTF
+./A/ALPHN___.TTF
+./A/ALPNI___.TTF
+./A/alsscrp.ttf
+./A/ALTAN___.TTF
+./A/ALTEA.TTF
+./A/alterna.ttf
+./A/amalgama.ttf
+./A/amalgamo.ttf
+./A/AMANO___.TTF
+./A/ambages.ttf
+./A/Arg2nd2.ttf
+./A/ARGOSY.TTF
+./A/ARIZAN__.ttf
+./A/Armgedon.ttf
+./A/ARNPRIOR.TTF
+./A/ARROBATH.TTF
+./A/ARRRMB__.TTF
+./A/Artbrush.ttf
+./A/arthriti.ttf
+./A/ARTIM___.TTF
+./A/Arvigo.ttf
+./A/ARWEN.TTF
+./A/ASENINE_.ttf
+./A/ASENST__.ttf
+./A/ASENT___.ttf
+./A/ASENW___.ttf
+./A/Asimov.ttf
+./A/ASMAN.TTF
+./A/aspartam.ttf
+./A/aspastic.ttf
+./A/asqualt.ttf
+./A/ASS.TTF
+./A/ASSEENONTV.ttf
+./A/ASSEENONTVSKEW.ttf
+./A/ASSIMILA.TTF
+./A/astonish.ttf
+./A/astrolyt.ttf
+./A/astronbi.ttf
+./A/AFTEDCI_.TTF
+./A/AFTEDCSI.TTF
+./A/AFTEDCS_.TTF
+./A/AFTEDC__.TTF
+./A/AFTEDI__.TTF
+./A/AFTEDSI_.TTF
+./A/AFTEDS__.TTF
+./A/AFTED___.TTF
+./A/aftermat.ttf
+./A/AfterShock.ttf
+./A/Against Myself.ttf
+./A/AGENTORANGE.TTF
+./A/AGENTRED.TTF
+./A/aggstock.ttf
+./A/Aileenation.ttf
+./A/aira.ttf
+./A/airaa.ttf
+./A/airab.ttf
+./A/airac.ttf
+./A/Action Man Extended Bold.ttf
+./A/african.ttf
+./A/airae.ttf
+./A/Alakob.ttf
+./A/Alexlco.ttf
+./A/Alpha Romanie Outline G98.ttf
+./A/Ambrosia.ttf
+./A/amplitud.ttf
+./A/animeace_b.ttf
+./A/ARABOLIC.TTF
+./A/architxt.ttf
+./A/astronbo.ttf
+./A/Avond_06.ttf
+./A/BN-ArNoN.ttf
+./A/AMSTHN__.TTF
+./A/AMSTT___.TTF
+./A/ANABS___.TTF
+./A/ANAGRAM.TTF
+./A/analgesics.ttf
+./A/Anasthesia.ttf
+./A/AnasthesiaItalic.ttf
+./A/Anatevka Caps.ttf
+./A/ANCHSN__.TTF
+./A/ANDIRONO.TTF
+./A/ANDOVER_.TTF
+./A/androidnation.ttf
+./A/androidnation_b.ttf
+./A/androidnation_i.ttf
+./A/angelica.ttf
+./A/Anger is a gift.ttf
+./A/ANGIA___.TTF
+./A/AngieBareFoot.ttf
+./A/AngieGroovin.ttf
+./A/AngieImpressing.ttf
+./A/AngiePierced.ttf
+./A/AngieTanLines.ttf
+./A/ANGLEPOI.TTF
+./A/AngloSaxon.ttf
+./A/angltrr.ttf
+./A/anhedoni.ttf
+./A/animeace.ttf
+./A/Avond_07.ttf
+./A/Avond_08.ttf
+./A/Avond_09.ttf
+./A/Avond_10.ttf
+./A/Avond_11.ttf
+./A/Avond_12.ttf
+./A/Avond_13.ttf
+./A/Avond_14.ttf
+./A/Avond_15.ttf
+./A/Avond_16.ttf
+./A/Avond_17.ttf
+./A/Avond_18.ttf
+./A/Avond_19.ttf
+./A/Avond_20.ttf
+./A/Avqest.ttf
+./A/AwlScrawl.ttf
+./A/AXAXAX.TTF
+./A/Ayuma2yk.ttf
+./A/AZRAEL__.TTF
+./A/a_d_mono.ttf
+./A/Alanden_.ttf
+./A/ALBAM___.TTF
+./A/ALBAS___.TTF
+./A/ALBA____.TTF
+./A/ALBED___.TTF
+./A/Alcohole.ttf
+./A/ALDO6.TTF
+./A/ALDOM2.TTF
+./A/ALEAWBB_.TTF
+./A/ALEAWB__.TTF
+./A/alewis.ttf
+./A/alex.ttf
+./A/alex3d.ttf
+./A/ALEXA.TTF
+./A/alexb.ttf
+./A/alexe.ttf
+./A/alexei.ttf
+./A/alexg.ttf
+./A/alexi.ttf
+./A/alexl.ttf
+./A/Alexlc2.ttf
+./A/Alexlcb.ttf
+./A/alexlci.ttf
+./A/Action Man Extended Italic.ttf
+./A/Action Man Extended.ttf
+./A/Action Man Italic.ttf
+./A/Action Man Shaded Italic.ttf
+./A/Action Man Shaded.ttf
+./A/Action Man.ttf
+./A/Actionis/ACTIONIS.TTF
+./A/Actionis/Actionit.ttf
+./A/Actionis/Actionwd.ttf
+./A/Actionis/Actionwi.ttf
+./A/actionj.ttf
+./A/Actionsh/Actionsh.ttf
+./A/Action_2/ACTION_2.TTF
+./A/Action_Force.ttf
+./A/ACUTATR_.TTF
+./A/AC______.TTF
+./A/ADAMN.TTF
+./A/ADD-JAZZ.TTF
+./A/ADD-SHAD.TTF
+./A/addcityboy.TTF
+./A/ADDICT.TTF
+./A/AddSpeedy.ttf
+./A/AdineKirnberg-Script.ttf
+./A/ADISPORT.TTF
+./A/Adore64.ttf
+./A/ADRIATOR.TTF
+./A/Adventure Subtitles.ttf
+./A/Adventure.ttf
+./A/Advert-Italic.ttf
+./A/Advert-Regular.ttf
+./A/aescrawl.ttf
+./A/aesymatt.ttf
+./A/Aethv2.ttf
+./A/Aethv2c.ttf
+./A/Aethv2i.ttf
+./A/cool_off/AIRCONDI.TTF
+./A/fonts/fkr_area51life.ttf
+./A/GEEK.TTF
+./A/HookedUp.ttf
+./A/LHF Action Movie.TTF
+./A/LMS America LSF.ttf
+./A/RAPHAEL_.TTF
+./A/Saxon.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Heavy Oblique.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Heavy.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Light Oblique.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Light.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Medium Oblique.ttf
+./A/SF Arborcrest v1.0/SF Arborcrest Medium.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Bold Italic.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Bold.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Extended Bold Italic.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Extended Bold.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Extended Italic.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Extended.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival Italic.ttf
+./A/SF Arch Rival v1.0/SF Arch Rival.ttf
+./A/SF Atarian System Bold Italic.ttf
+./A/SF Atarian System Bold.ttf
+./A/SF Atarian System Extended Bold Italic.ttf
+./A/SF Atarian System Extended Bold.ttf
+./A/SF Atarian System Extended Italic.ttf
+./A/SF Atarian System Extended.ttf
+./A/SF Atarian System Italic.ttf
+./A/SF Atarian System.ttf
+./A/SF Automaton v1.0/SF Automaton Bold Oblique.ttf
+./A/SF Automaton v1.0/SF Automaton Bold.ttf
+./A/SF Automaton v1.0/SF Automaton Condensed Oblique.ttf
+./A/SF Automaton v1.0/SF Automaton Condensed.ttf
+./A/SF Automaton v1.0/SF Automaton Extended Oblique.ttf
+./A/SF Automaton v1.0/SF Automaton Extended.ttf
+./A/SF Automaton v1.0/SF Automaton Oblique.ttf
+./A/SF Automaton v1.0/SF Automaton.ttf
+./A/taquesau.ttf
+./A/The Alchemist.ttf
+./A/XtraStuf.mac/ALBAM___.TTF
+./A/XtraStuf.mac/ALBAS___.TTF
+./A/XtraStuf.mac/ALBA____.TTF
+./A/astronbv.ttf
+./A/astronbw.ttf
+./A/ASWELL__.TTF
+./A/ataques.ttf
+./A/ataxia.ttf
+./A/ataxiao.ttf
+./A/Atlas of the Magi.ttf
+./A/ATLASSOL.TTF
+./A/ATLAS___.TTF
+./A/ATOMICCLOCKRADIO.TTF
+./A/ATOMIC__.TTF
+./A/AtoZ.ttf
+./A/ATTRACTMOREWOMEN.ttf
+./A/augie.ttf
+./A/AUNTBERT.TTF
+./A/Austrise.ttf
+./A/Austset.TTF
+./A/AUTOBAHN.TTF
+./A/automati.ttf
+./A/automin.ttf
+./A/automini.ttf
+./A/AVATAR__.TTF
+./A/AVATB___.TTF
+./A/AVEREN__.TTF
+./A/AVIGNON.TTF
+./A/Avond_01.ttf
+./A/Avond_02.ttf
+./A/Avond_03.ttf
+./A/Avond_04.ttf
+./A/Avond_05.ttf
+./A/animeace_i.ttf
+./A/ANIMP___.TTF
+./A/ANKLEPAN.TTF
+./A/ANMARI__.TTF
+./A/annifont.ttf
+./A/ANODETONOONE.TTF
+./A/Another_.ttf
+./A/antaviana/ANTABI__.TTF
+./A/antaviana/ANTAB___.TTF
+./A/antaviana/ANTAI___.TTF
+./A/antaviana/ANTAN___.TTF
+./A/ANTICLIMAX.TTF
+./A/ANTIESTA.TTF
+./A/Antimatr.ttf
+./A/antimony.TTF
+./A/ANTSYPAN.TTF
+./A/ap.ttf
+./A/api.ttf
+./A/apocalypse.ttf
+./A/APPETITE.TTF
+./A/Apple Butter.ttf
+./A/Aqua.ttf
+./A/Aquait.ttf
+./A/Aquarit.ttf
+./A/Aquawrp.ttf
+./A/ARAGONES.TTF
+./A/aramisi.ttf
+./A/ARBEBI__.TTF
+./A/ARBEB___.TTF
+./A/ARBEI___.TTF
+./A/ARBEKA__.TTF
+./A/ARBELI__.TTF
+./A/ARBEL___.TTF
+./A/ARBUCKLE.TTF
+./A/ARCADE.TTF
+./A/ARCADECLASSIC.TTF
+./A/arcanum.ttf
+./A/arcanum_b.ttf
+./A/arcanum_i.ttf
+./A/ARCHBLCI.TTF
+./A/ARCHBLC_.TTF
+./A/Archbli_.ttf
+./A/ARCHBLOI.TTF
+./A/ARCHBLO_.TTF
+./A/ARCHBLRI.TTF
+./A/ARCHBLR_.TTF
+./A/ARCHBL__.TTF
+./A/archi.ttf
+./A/AMERDB__.TTF
+./A/Amerdcon.ttf
+./A/Amerdcou.ttf
+./A/Amerdexp.ttf
+./A/Amerdexu.ttf
+./A/Amerdscu_.ttf
+./A/Amerdsc__.ttf
+./A/AMERDUB_.TTF
+./A/AMERDU__.TTF
+./A/AMERD___.TTF
+./A/AMERIKAA.ttf
+./A/AMERIKA_.ttf
+./A/AMERSN__.ttf
+./A/amiga4ever pro.ttf
+./A/amiga4ever pro2.ttf
+./A/amiga4ever.ttf
+./A/Amina.ttf
+./A/amor.ttf
+./A/AMOST___.TTF
+./A/Alexlcoi.ttf
+./A/alexle.ttf
+./A/alexli.ttf
+./A/ALFABET_.ttf
+./A/AlfredDrake.ttf
+./A/ALFREDO.TTF
+./A/ALIEN5.TTF
+./A/alienmarks.ttf
+./A/ALIENSAT.TTF
+./A/ALIENS__.TTF
+./A/alienwarping.ttf
+./A/ALIES___.TTF
+./A/ALIE___.TTF
+./A/AllCaps.ttf
+./A/ALLED___.TTF
+./A/ALMAGRO_.TTF
+./A/almonte.ttf
+./A/almontew.ttf
+./A/almosnow.ttf
+./A/Alpha Romanie G98.ttf
+./A/airai.ttf
+./A/airal.ttf
+./A/airali.ttf
+./A/AIRBAGSTREET.TTF
+./A/AIRCUT.TTF
+./A/airmill_o.ttf
+./A/airmole.ttf
+./A/airmolea.ttf
+./A/airmoleq.ttf
+./A/airmoles.ttf
+./A/airone.ttf
+./A/aironeb.ttf
+./A/aironec.ttf
+./A/aironi.ttf
+./A/AIRSTREA.TTF
+./A/air_mitalic.ttf
+./A/Akashi_m.ttf
+./B/b5hollow.ttf
+./B/Babelfish.ttf
+./B/BABIND.TTF
+./B/BABYBLOC.TTF
+./B/BABYJEEP.TTF
+./B/BABYK___.TTF
+./B/BABYUI__.TTF
+./B/BABYU___.TTF
+./B/Bachelor/Bachelor.ttf
+./B/BACKB___.TTF
+./B/BACKEC__.TTF
+./B/BACKG___.TTF
+./B/backlash.ttf
+./B/BACKO___.TTF
+./B/BACKSTAG.TTF
+./B/BACKTO1982.TTF
+./B/backtobay.ttf
+./B/BADABB__.TTF
+./B/BAILEYSC.TTF
+./B/BAL11.TTF
+./B/BALAC___.TTF
+./B/BALCONYA.TTF
+./B/baloney/BALONEY_.TTF
+./B/BALTAR.ttf
+./B/BAMBOO.TTF
+./B/bamf2.ttf
+./B/bluebold.ttf
+./B/BLUECA.TTF
+./B/BLUECAKE.TTF
+./B/bluecond.ttf
+./B/BLUEHIGD.TTF
+./B/bluehigh.ttf
+./B/bluehigl.ttf
+./B/BLUELINES.TTF
+./B/BLUEMDS_.TTF
+./B/BLUEPSS_.TTF
+./B/BlueStone.ttf
+./B/BN-BlurryDay.ttf
+./B/BN-Buzz!.ttf
+./B/BNEG98.ttf
+./B/bobcayge.ttf
+./B/bobcaygr.ttf
+./B/BOGSTAND.TTF
+./B/BOMBARD_.ttf
+./B/bombfact.ttf
+./B/BONVIVER.TTF
+./B/Boobk___.ttf
+./B/BoobToob.ttf
+./B/BoobToobOpen.ttf
+./B/BOOGNN__.TTF
+./B/Bookworm.ttf
+./B/BOOMBOX.TTF
+./B/BOOMERAN.TTF
+./B/BOOMI___.TTF
+./B/BOOMN___.TTF
+./B/BOOSTA__.TTF
+./B/BOOTERFF.ttf
+./B/BOOTERFO.ttf
+./B/BETAB.TTF
+./B/BETAD___.TTF
+./B/BETENOIR.TTF
+./B/BETSY.ttf
+./B/BETSY2.ttf
+./B/bettynoir.ttf
+./B/BEWARE__.TTF
+./B/bewilder.ttf
+./B/bewildet.ttf
+./B/BEYONDCONTROL.ttf
+./B/Bicycle.ttf
+./B/BicycleFancy.ttf
+./B/Big Ham.ttf
+./B/BIGAPPLE.TTF
+./B/BIGBLOCK.TTF
+./B/BIGBUBBA.TTF
+./B/bigfish/bigfish.ttf
+./B/Bijou/Bijou.ttf
+./B/BikerBones.ttf
+./B/BINNG___.TTF
+./B/BIO.TTF
+./B/brigadow.ttf
+./B/BRINGTHANOIZE.TTF
+./B/BRITCN__.TTF
+./B/BritishOutline.ttf
+./B/BROADD__.ttf
+./B/BROAD___.ttf
+./B/BrocaineDecade.ttf
+./B/broken15.ttf
+./B/BROKENTOYS.ttf
+./B/bronic.ttf
+./B/bronice.ttf
+./B/bronicei.ttf
+./B/bronici.ttf
+./B/bronics.ttf
+./B/BROOKLYN.TTF
+./B/Brotherm.ttf
+./B/brrr.TTF
+./B/BRUCE.TTF
+./B/Biotypg.ttf
+./B/Biotypgi.ttf
+./B/Biotypi.ttf
+./B/Biotypl.ttf
+./B/Biotypm.ttf
+./B/Biotypoi.ttf
+./B/Biotyps.ttf
+./B/Biotypsh.ttf
+./B/BIRDLANB.ttf
+./B/BIRDLAND.ttf
+./B/bitchin.ttf
+./B/BITEME.TTF
+./B/BITING.TTF
+./B/BITTERSW.TTF
+./B/bitwise.ttf
+./B/Bizarre.ttf
+./B/BizarreBlack.ttf
+./B/bknuckss.ttf
+./B/bknuckst.ttf
+./B/Blacdel.ttf
+./B/BLACKADD.TTF
+./B/bamfb.ttf
+./B/Bazzomba.ttf
+./B/BECKBLN_.TTF
+./B/besign.ttf
+./B/biocom.ttf
+./B/Biotypei.ttf
+./B/BLACKBOYSONMOPEDS.ttf
+./B/Blooshooz.ttf
+./B/BOOTERFZ.ttf
+./B/brigadom.ttf
+./B/brushcut/BRUSHCUT.TTF
+./B/bullpeni.ttf
+./B/buttercr.ttf
+./B/BEACHTYP.TTF
+./B/beaggressive.ttf
+./B/beam.ttf
+./B/beam3d.ttf
+./B/beamb.ttf
+./B/beambi.ttf
+./B/beambil.ttf
+./B/beambl.ttf
+./B/beamc.ttf
+./B/beame.ttf
+./B/beamel.ttf
+./B/beami.ttf
+./B/beamil.ttf
+./B/beaml.ttf
+./B/BEANTOWN.TTF
+./B/BEARB___.TTF
+./B/BEARPAW_.TTF
+./B/Beast Machines.TTF
+./B/Beast Wars.ttf
+./B/beatmygu.ttf
+./B/BeatnikHayseed.ttf
+./B/BEAUTYSC.TTF
+./B/bullpen_.ttf
+./B/BULWN___.TTF
+./B/BUMBASTIKA.TTF
+./B/BUMBAZO.TTF
+./B/bumped.ttf
+./B/Bungle City.ttf
+./B/Bungnipper.ttf
+./B/Buried.ttf
+./B/BURLESQUE.TTF
+./B/BURNRBL_.TTF
+./B/BURNSTOW.TTF
+./B/Burris.ttf
+./B/BurrisGhostTown.ttf
+./B/BurrisShootOut.ttf
+./B/BuschGardenz.ttf
+./B/BUTCH___.TTF
+./B/BUTTCA__.TTF
+./B/BUTTERBE.TTF
+./B/butterbrotpapier.ttf
+./B/BOOTEROF.ttf
+./B/BOOTEROO.ttf
+./B/BOOTEROZ.ttf
+./B/BOOTERZF.ttf
+./B/BOOTERZO.ttf
+./B/BOOTERZZ.ttf
+./B/BORG9.TTF
+./B/BORING.TTF
+./B/BORINGJ.TTF
+./B/BoringLesson.ttf
+./B/BORON2.TTF
+./B/bottix.ttf
+./B/bottled/BOTTF___.TTF
+./B/BOTTRBB_.TTF
+./B/BOTTRBRG.TTF
+./B/BoyfriEnd.ttf
+./B/BOYZRGRO.TTF
+./B/BRAD.TTF
+./B/bradybun.ttf
+./B/BRAESID2.ttf
+./B/BRAESIDE.ttf
+./B/BRAIS___.TTF
+./B/BRAMALEA.TTF
+./B/brandnew.ttf
+./B/brandywi.ttf
+./B/BRASSAL_.ttf
+./B/BRASSI__.ttf
+./B/brassknu.ttf
+./B/BRASSL__.TTF
+./B/BRASSST_.ttf
+./B/BRIALPOI.TTF
+./B/BRIC-A-B.TTF
+./B/BRICKLET.TTF
+./B/BRIDGE.TTF
+./B/BLACKJAC.TTF
+./B/BLACKNIT.TTF
+./B/Blacktop.ttf
+./B/BlackWolf.ttf
+./B/BLACR___.TTF
+./B/Blacsc__.ttf
+./B/Blacshif.ttf
+./B/BLADRMF_.TTF
+./B/blake.ttf
+./B/blambotcustom.ttf
+./B/BLAMDBI_.TTF
+./B/BLAMDB__.TTF
+./B/BLASTER.TTF
+./B/BLATANT.TTF
+./B/bleakseg.ttf
+./B/BLINDFOLD.TTF
+./B/BLINDMELON.TTF
+./B/blmngtn.ttf
+./B/Blobg98.ttf
+./B/BLOBS.TTF
+./B/blockbit.ttf
+./B/BLOCKHEA.TTF
+./B/BLOCKSTE.TTF
+./B/BLOCKUP_.ttf
+./B/bloktilt.ttf
+./B/BLOODGUT.TTF
+./B/Bloodrac.TTF
+./B/bamfg.ttf
+./B/bamfi.ttf
+./B/bamfout.ttf
+./B/bandless.ttf
+./B/bandmess.ttf
+./B/bandwdth.ttf
+./B/BARBATRI.TTF
+./B/BARBECUE.TTF
+./B/Barbt___.ttf
+./B/BARDOUR_.TTF
+./B/BARRICAD.TTF
+./B/BartonBus.ttf
+./B/BASIF___.TTF
+./B/BatFont.ttf
+./B/batmfa__.ttf
+./B/batmfo__.ttf
+./B/BATMOS.TTF
+./B/BATTLE3.TTF
+./B/battlelines.ttf
+./B/BATTLEST.TTF
+./B/Battle_Beasts.ttf
+./B/BAUERG__.TTF
+./B/baveuse.ttf
+./B/baveuse3.ttf
+./B/BAYOC___.TTF
+./B/BAZARONI.TTF
+./B/BEDBUG.TTF
+./B/bediz___.ttf
+./B/BEDLR___.TTF
+./B/BEECH___.TTF
+./B/Beethoven.ttf
+./B/BeethovenRough.ttf
+./B/BeethovenRougher.ttf
+./B/BEETLE.TTF
+./B/BELIEVER.TTF
+./B/belizarius.ttf
+./B/BELLHOPN.ttf
+./B/bendable.ttf
+./B/BENDIT__.TTF
+./B/beneg___.ttf
+./B/BENIGHTE.TTF
+./B/BENNB___.TTF
+./B/BenWitch.ttf
+./B/BERTHSID.TTF
+./B/Berylibi.ttf
+./B/Beryliub.ttf
+./B/Beryliui.ttf
+./B/Berylium.ttf
+./B/biocomb.ttf
+./B/biocomc.ttf
+./B/biocome.ttf
+./B/biocomei.ttf
+./B/biocomi.ttf
+./B/BIOMETRI.TTF
+./B/BIONICKIDSIMPLE.ttf
+./B/BIONICKIDSIMPLESLANTED.ttf
+./B/BIONICKIDSLANTED3D.ttf
+./B/BIOS.TTF
+./B/BIOST.TTF
+./B/Biotyp.ttf
+./B/Biotypb.ttf
+./B/Biotypc.ttf
+./B/Biotypci.ttf
+./B/Biotype.ttf
+./B/Biotypeb.ttf
+./B/BRUTALITY.TTF
+./B/BRUTALITYEXTRA.ttf
+./B/BUBBLEBATH.ttf
+./B/BUBBLEBO.TTF
+./B/BUBBLEBOY2.ttf
+./B/BUBBLEGUMS.TTF
+./B/Bubbly Frog Hollow.ttf
+./B/Bubbly Frog.ttf
+./B/budeasy.ttf
+./B/budeasym.ttf
+./B/Budhand.ttf
+./B/BUDMO.TTF
+./B/BUDMOB.TTF
+./B/BUENAN__.ttf
+./B/Bulgari.ttf
+./B/bulletho.ttf
+./B/bullettrain.TTF
+./B/bullpen3.ttf
+./B/BYTE.TTF
+./B/CHE-BITA.TTF
+./B/KingBus.ttf
+./B/SF Balloons.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque Condensed Oblique.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque Condensed.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque Extended Oblique.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque Extended.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque Oblique.ttf
+./B/SF Baroquesque v1.0/SF Baroquesque.ttf
+./B/SF Beaverton v1.0/SF Beaverton Heavy.ttf
+./B/SF Beaverton v1.0/SF Beaverton Light.ttf
+./B/SF Beaverton v1.0/SF Beaverton Medium.ttf
+./B/SF Beaverton v1.0/SF Beaverton SC Heavy.ttf
+./B/SF Beaverton v1.0/SF Beaverton SC Light.ttf
+./B/SF Beaverton v1.0/SF Beaverton SC Medium.ttf
+./B/SF Big Whiskey Bold.ttf
+./B/SF Big Whiskey Condensed Bold.ttf
+./B/SF Big Whiskey Condensed.ttf
+./B/SF Big Whiskey Extended Bold.ttf
+./B/SF Big Whiskey Extended.ttf
+./B/SF Big Whiskey SC Bold.ttf
+./B/SF Big Whiskey SC.ttf
+./B/SF Big Whiskey.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script Bold Italic.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script Bold.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script Italic.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script SC Bold Italic.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script SC Bold.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script SC Italic.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script SC.ttf
+./B/SF Burlington Script v1.0/SF Burlington Script.ttf
+./B/XtraStuf.mac/BLACKJAC.TTF
+./B/XtraStuf.mac/BLACR___.TTF
+./C/C-TYA___.TTF
+./C/C2C_black!.ttf
+./C/C2C_faded!.ttf
+./C/ca.ttf
+./C/CACHT___.TTF
+./C/Cacophony Loud.ttf
+./C/Cacophony Out Loud.ttf
+./C/CADDY.TTF
+./C/cadmi___.ttf
+./C/caduc___.ttf
+./C/CAELDERA.TTF
+./C/CAFFEINE.TTF
+./C/cajq____.ttf
+./C/cajunboogie.ttf
+./C/CALAVERA.TTF
+./C/Callaxis.ttf
+./C/calligula.ttf
+./C/Callistroke.ttf
+./C/CAMEOAPP.TTF
+./C/Comicv2i.ttf
+./C/Comicv3.ttf
+./C/Comismsh.ttf
+./C/COMMLITY.TTF
+./C/COMMON7.TTF
+./C/compc1o.ttf
+./C/compc1s.ttf
+./C/compc2o.ttf
+./C/compc2s.ttf
+./C/compc3o.ttf
+./C/compc3s.ttf
+./C/COMPETIT.TTF
+./C/COMPUTERAMOK.ttf
+./C/concav2.ttf
+./C/concv2.ttf
+./C/concv2b.ttf
+./C/concv2c.ttf
+./C/concv2e.ttf
+./C/concv2l.ttf
+./C/concv2s.ttf
+./C/Condui2i.ttf
+./C/Coving21.ttf
+./C/Coving22.ttf
+./C/Coving23.ttf
+./C/Coving24.ttf
+./C/Coving25.ttf
+./C/Coving26.ttf
+./C/Coving27.ttf
+./C/Coving28.ttf
+./C/Coving29.ttf
+./C/Coving30.ttf
+./C/Coving31.ttf
+./C/Coving32.ttf
+./C/cowboys.ttf
+./C/Cows In the US.ttf
+./C/CRAMPS__.TTF
+./C/CRANBERR.TTF
+./C/CRAPOLA.TTF
+./C/CrappyGothic.ttf
+./C/Crass.ttf
+./C/CRAYON__.TTF
+./C/CHINESER.ttf
+./C/CHINESETAKEAWAY.ttf
+./C/ChineseWatchShop.ttf
+./C/chintzy.ttf
+./C/chintzys.ttf
+./C/Chinyen.ttf
+./C/CHIPFN__.TTF
+./C/CHIZZHO_.ttf
+./C/CHIZZH__.ttf
+./C/CHIZZO__.ttf
+./C/CHIZZWHO.ttf
+./C/CHIZZWH_.ttf
+./C/CHIZZWO_.ttf
+./C/CHIZZW__.ttf
+./C/CHIZZ___.ttf
+./C/CHOCAN__.TTF
+./C/CHOCDN__.TTF
+./C/CHODAC__.ttf
+./C/COSMOJUN.TTF
+./C/COVENTRY.TTF
+./C/Coving01.ttf
+./C/Coving02.ttf
+./C/Coving03.ttf
+./C/Coving04.ttf
+./C/Coving05.ttf
+./C/Coving06.ttf
+./C/Coving07.ttf
+./C/Coving08.ttf
+./C/Coving09.ttf
+./C/Coving10.ttf
+./C/Coving11.ttf
+./C/Coving12.ttf
+./C/Coving13.ttf
+./C/Coving14.ttf
+./C/Coving15.ttf
+./C/Coving16.ttf
+./C/Coving17.ttf
+./C/Coving18.ttf
+./C/Coving19.ttf
+./C/CAMPGN__.TTF
+./C/casual.ttf
+./C/Chanltun/CHANLTUN.TTF
+./C/ChillyMoe.ttf
+./C/CHODA___.ttf
+./C/clasict2.ttf
+./C/Comicv2e.ttf
+./C/conduit.ttf
+./C/Cosmic Girl.ttf
+./C/Coving20.ttf
+./C/CRAZH___.TTF
+./C/CUOMOTYP.ttf
+./C/CATHSGBR.TTF
+./C/Cathzulu.ttf
+./C/Catwalk.ttf
+./C/CAVEMAN_.TTF
+./C/CBGBFont.ttf
+./C/CBGBFontSolid.ttf
+./C/ccaps.ttf
+./C/ccapshad.ttf
+./C/Celestial.ttf
+./C/celexa__.ttf
+./C/CELTG___.TTF
+./C/Cerbature.ttf
+./C/cerepf__.ttf
+./C/Certified.ttf
+./C/CertifiedItalic.ttf
+./C/CHACHIE_.TTF
+./C/ChainFontBlack.ttf
+./C/ChainFontOpen.ttf
+./C/ChainLetter.ttf
+./C/CHAINSAW.TTF
+./C/chancur.ttf
+./C/ChangChang.ttf
+./C/claw1.ttf
+./C/claw2.ttf
+./C/cleavttr.ttf
+./C/CLOSM___.TTF
+./C/coah.ttf
+./C/coahb.ttf
+./C/COASTERP.TTF
+./C/Cock Boat.TTF
+./C/collecro.ttf
+./C/collecrs.ttf
+./C/collecto.ttf
+./C/collects.ttf
+./C/College Halo.ttf
+./C/COLLEGE.TTF
+./C/COLLEGEB.TTF
+./C/COLLEGEC.TTF
+./C/COLLEGES.TTF
+./C/Colony Wars.ttf
+./C/colourbrush.ttf
+./C/COLWELLA.TTF
+./C/COLWELL_.ttf
+./C/Comaprison.ttf
+./C/combusii.ttf
+./C/combuspl.ttf
+./C/combusti.ttf
+./C/combustt.ttf
+./C/combustw.ttf
+./C/COMEN___.TTF
+./C/COMEP___.TTF
+./C/Comic Book.ttf
+./C/COMICATE.TTF
+./C/Comicv23D.ttf
+./C/Comicv2b.ttf
+./C/Comicv2bi.ttf
+./C/Comicv2c.ttf
+./C/Comicv2d.ttf
+./C/Cutting Corners.ttf
+./C/cyberia.ttf
+./C/Cybertron Metals.TTF
+./C/Cylocros.ttf
+./C/Cypher.ttf
+./C/Dorcla__.ttf
+./C/gaelach.ttf
+./C/KEJ-CIRC.TTF
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand Bold Italic.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand Bold.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand Italic.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand SC Bold Italic.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand SC Bold.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand SC Italic.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand SC.ttf
+./C/SF Cartoonist Hand v2.0/SF Cartoonist Hand.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Bold Oblique.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Bold.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Oblique.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Outline Oblique.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Outline.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Shaded Oblique.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae Shaded.ttf
+./C/SF Chaerilidae v1.0/SF Chaerilidae.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Bold Oblique.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Bold.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Condensed Oblique.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Condensed.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Extended Oblique.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Extended.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders Oblique.ttf
+./C/SF Chrome Fenders v1.0/SF Chrome Fenders.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 Bold Oblique.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 Bold.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 Oblique.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 SC Bold Oblique.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 SC Bold.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 SC Oblique.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24 SC.ttf
+./C/SF Chromium 24 v1.0/SF Chromium 24.ttf
+./C/SF Collegiate Italic.ttf
+./C/SF Collegiate Solid Bold Italic.ttf
+./C/SF Collegiate Solid Bold.ttf
+./C/SF Collegiate Solid Italic.ttf
+./C/SF Collegiate Solid.ttf
+./C/SF Collegiate.ttf
+./C/SF Comic Script v1.0/SF Comic Script Bold.ttf
+./C/SF Comic Script v1.0/SF Comic Script Condensed.ttf
+./C/SF Comic Script v1.0/SF Comic Script Extended.ttf
+./C/SF Comic Script v1.0/SF Comic Script Outline.ttf
+./C/SF Comic Script v1.0/SF Comic Script Shaded.ttf
+./C/SF Comic Script v1.0/SF Comic Script.ttf
+./C/XtraStuf.mac/CHERI___.TTF
+./C/XtraStuf.mac/CHERL___.TTF
+./C/conduit2.ttf
+./C/CONGALIN.TTF
+./C/CONMAN.ttf
+./C/CONMANFAT.ttf
+./C/CONNECTI.TTF
+./C/CONQN___.TTF
+./C/CONTOURG.TTF
+./C/CONTRAI_.ttf
+./C/CONTRA__.ttf
+./C/Convoy.ttf
+./C/COOLVETI.TTF
+./C/COPASETI.TTF
+./C/COPPCWDB.TTF
+./C/Copyviol.ttf
+./C/CopyvlN.ttf
+./C/COR.TTF
+./C/CORAZON_.TTF
+./C/CornFed.ttf
+./C/Cortesia.ttf
+./C/COSMABI_.TTF
+./C/COSMAB__.TTF
+./C/COSMAEI_.TTF
+./C/COSMAE__.TTF
+./C/COSMAI__.TTF
+./C/COSMAOI_.TTF
+./C/COSMAO__.TTF
+./C/COSMA___.TTF
+./C/CHANTICL.TTF
+./C/CHAR.TTF
+./C/CHARLESI.TTF
+./C/CHARLIE.TTF
+./C/chary___.ttf
+./C/chatteryt.ttf
+./C/CHEAP___.TTF
+./C/CHEATIN.TTF
+./C/CHECKBK0.TTF
+./C/CHELI___.TTF
+./C/CHELNU2.TTF
+./C/chemrea.ttf
+./C/chemreb.ttf
+./C/CHERI___.TTF
+./C/CHERL___.TTF
+./C/Chewed Straw.ttf
+./C/CHI-TOWN.TTF
+./C/Chibrush.ttf
+./C/ChickenFarm.ttf
+./C/CHICKENW.TTF
+./C/CHICK___.TTF
+./C/CHICM___.TTF
+./C/CHICORY_.TTF
+./C/CHICSA__.TTF
+./C/CREABBB_.TTF
+./C/CREABBRG.TTF
+./C/CREAMANDSUGAR.ttf
+./C/CREAMPUF.TTF
+./C/CREATURE.TTF
+./C/CREDITRI.TTF
+./C/CREELO__.TTF
+./C/CREEL___.TTF
+./C/CREERG__.TTF
+./C/CRETINO_.TTF
+./C/CrimesceneAfterimage.ttf
+./C/CRIMINAL.TTF
+./C/croisant.ttf
+./C/CROSSPATCHERSDELIGHT.TTF
+./C/CROSSPATCHERSDELIGHTNORMAL.ttf
+./C/CROWNT.TTF
+./C/Crumb.ttf
+./C/CrumbBlack.ttf
+./C/CRUMBLE_.TTF
+./C/CRYSTALC.TTF
+./C/CRYSTALR.ttf
+./C/Cryv2.ttf
+./C/Cryv2c.ttf
+./C/Cryv2i.ttf
+./C/Chonker.ttf
+./C/CHOWFUN_.TTF
+./C/chp-fire.ttf
+./C/CHR$(32).TTF
+./C/CHRICI__.TTF
+./C/chromohv.ttf
+./C/chromolt.ttf
+./C/CHROY___.TTF
+./C/CHS_____.TTF
+./C/CHUBBY.TTF
+./C/ChuckChillout.ttf
+./C/chumbly.ttf
+./C/CHUNBL__.TTF
+./C/CHUNH___.TTF
+./C/Chunk-a-Chip.ttf
+./C/CHUNKMUF.TTF
+./C/CHUTZPAH.TTF
+./C/CHYERG__.TTF
+./C/Cinderel.ttf
+./C/CINEMA.TTF
+./C/CIRCBN__.TTF
+./C/circulat.ttf
+./C/citycontrasts.ttf
+./C/CITYS___.TTF
+./C/clasict1.ttf
+./C/candysni.ttf
+./C/candystr.ttf
+./C/canker!.ttf
+./C/CANTD___.TTF
+./C/CAPACITR.ttf
+./C/Captain Spandex.ttf
+./C/CaptainPodd.ttf
+./C/CAPTAINS.TTF
+./C/CAPTH___.ttf
+./C/CARBONBL.ttf
+./C/CARMCI__.TTF
+./C/CARMCO__.TTF
+./C/CARMC___.TTF
+./C/Casket Breath.TTF
+./C/CASPER.TTF
+./C/Casps2.ttf
+./C/CASSZ___.TTF
+./C/Castro.ttf
+./D/CHE-DUST.TTF
+./D/dadha___.ttf
+./D/DAELC___.TTF
+./D/DAELNEU_.TTF
+./D/DAGGN___.TTF
+./D/Dalelands.ttf
+./D/Damn the Man.ttf
+./D/DAN.TTF
+./D/Danceclub.ttf
+./D/DANCINGD.TTF
+./D/DANUBE__.TTF
+./D/DANUB___.TTF
+./D/Dark Bastion.ttf
+./D/DARK.TTF
+./D/Darkh4.ttf
+./D/darkside.ttf
+./D/dashdot.ttf
+./D/dastardl.ttf
+./D/Datacut Italic.ttf
+./D/Datacut.ttf
+./D/DAYPBL__.TTF
+./D/DIGITALDREAMSKEW.ttf
+./D/DIGITALDREAMSKEWNARROW.ttf
+./D/DIGITALE.TTF
+./D/DIGITEK.TTF
+./D/DIGNITY.TTF
+./D/Dimurph.ttf
+./D/DimWitGauche.ttf
+./D/DimWitRight.ttf
+./D/Ding-DongDaddyO.ttf
+./D/Dinobots.ttf
+./D/DIOGENES.ttf
+./D/DIPEDM.TTF
+./D/Dirtdeco.ttf
+./D/DIRTF___.TTF
+./D/DIRTYDOZ.TTF
+./D/DISCOBOX.TTF
+./D/discoduckv2.ttf
+./D/discoduckv23d.ttf
+./D/discoduckv23di.ttf
+./D/discoduckv2c.ttf
+./D/discoduckv2e.ttf
+./D/discoduckv2ei.ttf
+./D/discoduckv2i.ttf
+./D/double01b.ttf
+./D/Dpm.ttf
+./D/Dr Eve L.ttf
+./D/draggle.ttf
+./D/draggleo.ttf
+./D/DRAGGLET.TTF
+./D/DRAGON2.TTF
+./D/DragonMaster.ttf
+./D/DrawnAndQuartered.ttf
+./D/Dread.ttf
+./D/dreamlan.ttf
+./D/dreamlas.ttf
+./D/DREAMMACHINE.TTF
+./D/DREAMOFME.TTF
+./D/dreamorp.ttf
+./D/dreamscar.ttf
+./D/drid.ttf
+./D/dridi.ttf
+./D/drido.ttf
+./D/drids.ttf
+./D/DELUXEDU.ttf
+./D/demon.ttf
+./D/Demonized.ttf
+./D/DENDRITI.TTF
+./D/DENSMORE.TTF
+./D/dephun2.ttf
+./D/DEPORTEE.TTF
+./D/DEPT.TTF
+./D/DESYREL_.ttf
+./D/detectivesinc.ttf
+./D/Deton.ttf
+./D/detonate.ttf
+./D/Devils Handshake.ttf
+./D/DEVOTION.TTF
+./D/dfdrspbi.TTF
+./D/dfdrsp_b.TTF
+./D/dfdrsp_i.TTF
+./D/dfdrsp__.TTF
+./D/diager.ttf
+./D/Diamond Fantasy.ttf
+./D/diamond_.ttf
+./D/dichtmy.ttf
+./D/DickVanDyke.ttf
+./D/DickVanDykeBold.ttf
+./D/DickVanDykeHeavy.ttf
+./D/diego.ttf
+./D/DAYROM_X.ttf
+./D/DELTAHEY.ttf
+./D/diego3d.ttf
+./D/DIGITALDREAMNARROW.ttf
+./D/discol__.ttf
+./D/double01.ttf
+./D/dridsi.ttf
+./D/diegoi.ttf
+./D/diegos.ttf
+./D/DIEHLDA_.ttf
+./D/DIEHLD__.ttf
+./D/DIENASTY.TTF
+./D/DIESEL.TTF
+./D/Digircu_.ttf
+./D/Digirc__.ttf
+./D/Digireu_.ttf
+./D/Digire__.ttf
+./D/Digirtu_.ttf
+./D/DIGIRT__.TTF
+./D/DIGIRU__.TTF
+./D/Digir___.ttf
+./D/digistrip.ttf
+./D/digistrip_b.ttf
+./D/digistrip_i.ttf
+./D/DIGITALDREAM.TTF
+./D/DIGITALDREAMFAT.ttf
+./D/DIGITALDREAMFATNARROW.ttf
+./D/DIGITALDREAMFATSKEW.ttf
+./D/DIGITALDREAMFATSKEWNARROW.ttf
+./D/discorda.ttf
+./D/DISCOTEC.TTF
+./D/disco___.ttf
+./D/DISTGAOI.TTF
+./D/DISTGAOR.TTF
+./D/DISTGCI_.TTF
+./D/DISTGCRG.TTF
+./D/DISTGI__.TTF
+./D/DISTGOI_.TTF
+./D/DISTGORG.TTF
+./D/DISTGRG_.TTF
+./D/DISTORTI.TTF
+./D/Divx.ttf
+./D/djcourag.ttf
+./D/dnk.ttf
+./D/DOCTORJE.TTF
+./D/DODG5.TTF
+./D/DOKYO___.TTF
+./D/DOMII___.TTF
+./D/DOMINICA.TTF
+./D/DOMISC__.TTF
+./D/DomoAregato Italic.ttf
+./D/DomoAregato Normal.ttf
+./D/DONOTEATTHIS.TTF
+./D/DONOTEATTHISFAT.ttf
+./D/DONOTEATTHISFATITALIC.ttf
+./D/DONOTEATTHISITALIC.ttf
+./D/DOPEJAM.TTF
+./D/DORNEN__.TTF
+./D/DOSEQUIS.TTF
+./D/Dot Your Eyes.ttf
+./D/DROID___.ttf
+./D/DROSS2.TTF
+./D/DrPeppers.ttf
+./D/DRUMSN__.TTF
+./D/DryGulchBlack.ttf
+./D/DryGulchOpen.ttf
+./D/DSMAN.TTF
+./D/dspl.ttf
+./D/DUALITY_.TTF
+./D/Dubbem_2.ttf
+./D/DUE.TTF
+./D/DUKEPLUS.TTF
+./D/dulet___.ttf
+./D/DURALITH.ttf
+./D/DURIANIK.TTF
+./D/DUSTYROS.TTF
+./D/dyer.TTF
+./D/DYMAXION.TTF
+./D/dynamic.ttf
+./D/DYNOMITE.TTF
+./D/DYNOS___.TTF
+./D/DYSPEPSI.TTF
+./D/dystorqu.ttf
+./D/RT_DCOMP.TTF
+./D/SF DecoTechno v1.0/SF DecoTechno Bold Oblique.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Bold.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Condensed Oblique.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Condensed.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Oblique.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Shaded Oblique.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno Shaded.ttf
+./D/SF DecoTechno v1.0/SF DecoTechno.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Condensed Oblique.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Condensed.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Oblique.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Outline Oblique.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Outline.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Shaded Oblique.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans Shaded.ttf
+./D/SF Diego Sans v1.0/SF Diego Sans.ttf
+./D/THEDOGHO.TTF
+./D/XtraStuf.mac/DOKYO___.TTF
+./D/XtraStuf.mac/DYNOMITE.TTF
+./D/XtraStuf.mac/DYNOS___.TTF
+./D/DAYROM__.ttf
+./D/DAZZLESH.TTF
+./D/dc_o.ttf
+./D/dc_s.ttf
+./D/ddork.ttf
+./D/De-Futura.ttf
+./D/DEADGRIT.TTF
+./D/DEARTEAC.TTF
+./D/Deathhead KeltCaps.ttf
+./D/DEBONAIR.TTF
+./D/decadnce.ttf
+./D/decayibm/decaa___.ttf
+./D/decayibm/decaying.ttf
+./D/decoder.ttf
+./D/decofree.ttf
+./D/decrepit.ttf
+./D/Defect.ttf
+./D/DEFTONE.TTF
+./D/degrassi.ttf
+./D/Dekadens/Dekadens.ttf
+./D/DELIRIUM.TTF
+./E/ALIEEBI_.TTF
+./E/ALIEEB__.TTF
+./E/ALIEEI__.TTF
+./E/ALIEESBI.TTF
+./E/ALIEESB_.TTF
+./E/ALIEESI_.TTF
+./E/ALIEES__.TTF
+./E/ALIEE___.TTF
+./E/eager___.ttf
+./E/EagleGTII.ttf
+./E/Earltik.ttf
+./E/EARTHQUA.TTF
+./E/EARWIGFA.TTF
+./E/easilyamused.ttf
+./E/EASTMARK.TTF
+./E/Eastwood.ttf
+./E/eccentrical.ttf
+./E/ECHEI___.TTF
+./E/ECHELON_.TTF
+./E/EchoDeco.ttf
+./E/ECHO____.TTF
+./E/Eclipse.ttf
+./E/ecliptic.ttf
+./E/Eco2.ttf
+./E/Edbindia.ttf
+./E/eddie.ttf
+./E/EDENMB__.ttf
+./E/engeexit.ttf
+./E/engeexpa.ttf
+./E/engeital.ttf
+./E/engeregu.ttf
+./E/ennobled.ttf
+./E/ENSIGN3.TTF
+./E/entangle.ttf
+./E/enthuse.ttf
+./E/enthuses.ttf
+./E/entlayra.ttf
+./E/entlayrb.ttf
+./E/entplain.ttf
+./E/entsans.ttf
+./E/Er.TTF
+./E/eraser.TTF
+./E/Ericott.ttf
+./E/Eroded2020.ttf
+./E/Erozion.ttf
+./E/Escape.ttf
+./E/Escapeb.ttf
+./E/Escapei.ttf
+./E/ESCAPN__.TTF
+./E/ESKARGOT.ttf
+./E/ESTROGP_.ttf
+./E/electri.ttf
+./E/ElectricBoots.TTF
+./E/ELECTRIK.TTF
+./E/ELECTROH.TTF
+./E/electrox.ttf
+./E/ELEKTORA.ttf
+./E/Elements.ttf
+./E/ELEPBI__.TTF
+./E/ELEPB___.TTF
+./E/ELEPHANT.TTF
+./E/ELEPI___.TTF
+./E/Elfarg98.ttf
+./E/ELI5.0B-.TTF
+./E/elsewher.ttf
+./E/Else____.ttf
+./E/ELVIS___.TTF
+./E/EMBARGO2.TTF
+./E/embosst1.ttf
+./E/ESTROG__.ttf
+./E/ETHNOCEN.TTF
+./E/euphor3d.ttf
+./E/euphoric.ttf
+./E/euphorig.ttf
+./E/EVERETT.TTF
+./E/everything.ttf
+./E/EVOL____.TTF
+./E/exagger8.ttf
+./E/EXCEL.TTF
+./E/excelate.ttf
+./E/excelatel.ttf
+./E/Excelateo.ttf
+./E/excelates.ttf
+./E/EXONERAT.TTF
+./E/ExpletiveDeleted.ttf
+./E/Expls___.ttf
+./E/EXTASY__.ttf
+./E/extracti.ttf
+./E/Extravirgin.ttf
+./E/eyerhyme.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Bold Oblique.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Bold.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Condensed Oblique.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Condensed.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Oblique.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Shaded Oblique.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus Shaded.ttf
+./E/SF Eccentric Opus v1.0/SF Eccentric Opus.ttf
+./E/SF Electrotome v1.0/SF Electrotome Bold Oblique.ttf
+./E/SF Electrotome v1.0/SF Electrotome Bold.ttf
+./E/SF Electrotome v1.0/SF Electrotome Condensed Oblique.ttf
+./E/SF Electrotome v1.0/SF Electrotome Condensed.ttf
+./E/SF Electrotome v1.0/SF Electrotome Oblique.ttf
+./E/SF Electrotome v1.0/SF Electrotome Shaded Oblique.ttf
+./E/SF Electrotome v1.0/SF Electrotome Shaded.ttf
+./E/SF Electrotome v1.0/SF Electrotome.ttf
+./E/SF Espionage v1.0/SF Espionage Heavy Oblique.ttf
+./E/SF Espionage v1.0/SF Espionage Heavy.ttf
+./E/SF Espionage v1.0/SF Espionage Light Oblique.ttf
+./E/SF Espionage v1.0/SF Espionage Light.ttf
+./E/SF Espionage v1.0/SF Espionage Medium Oblique.ttf
+./E/SF Espionage v1.0/SF Espionage Medium.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Bold Italic.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Bold.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Condensed Bold Italic.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Condensed Bold.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Condensed Italic.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Condensed.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack Italic.ttf
+./E/SF Espresso Shack v1.0/SF Espresso Shack.ttf
+./E/EDENM___.ttf
+./E/EDGEWATE.TTF
+./E/Edible Pet II.TTF
+./E/editundo.ttf
+./E/edmundis.ttf
+./E/edmunds.ttf
+./E/edundot.ttf
+./E/edunline.ttf
+./E/EFENTINE.TTF
+./E/EFFLBI__.TTF
+./E/EFFLB___.TTF
+./E/EFFLI___.TTF
+./E/EFFLORES.TTF
+./E/EGOTRIP_.TTF
+./E/Egotrip_f.ttf
+./E/Egotrip_fs.ttf
+./E/Egotrip_s.ttf
+./E/EIGH1___.TTF
+./E/EIGHT___.TTF
+./E/ELDORADO.TTF
+./E/ELECPIKL.TTF
+./E/ELECPKLB.TTF
+./E/electr.ttf
+./E/electrb.ttf
+./E/EDENMI__.ttf
+./E/electrbi.ttf
+./E/embosst2.ttf
+./E/engeexbo.ttf
+./E/ESTROGW_.ttf
+./E/embosst3.ttf
+./E/EMPIREST.TTF
+./E/EMPON___.TTF
+./E/Emulator.ttf
+./E/encappln.ttf
+./E/encapsul.ttf
+./E/encounte.ttf
+./E/ENDANGER.TTF
+./E/EndeavourForever.ttf
+./E/ENDLESS.TTF
+./E/ENDORALT.ttf
+./E/ENDOR___.ttf
+./E/ENDOS.TTF
+./E/enervate.ttf
+./E/engeboit.ttf
+./E/engebold.ttf
+./E/engeexbi.ttf
+./F/4shadow.ttf
+./F/4shadowo.ttf
+./F/BN-FishEye.ttf
+./F/BNFontBoy.ttf
+./F/BNFontBoy3D.ttf
+./F/FABIAN__.TTF
+./F/Face Front.ttf
+./F/FACEhi.TTF
+./F/FACEI___.TTF
+./F/FACEPLAN.TTF
+./F/FACEPLANh.ttf
+./F/FACETSNF.ttf
+./F/FACTOR2.TTF
+./F/FADGOD.ttf
+./F/FAILED.TTF
+./F/FAIRFAXS.TTF
+./F/FAKEP___.TTF
+./F/FAKERECE.ttf
+./F/FALCON.TTF
+./F/falsepos.ttf
+./F/Falseteeth.ttf
+./F/falsposr.ttf
+./F/famousfromage.ttf
+./F/fanboyhc.ttf
+./F/fanboyhcb.ttf
+./F/Florsn41.ttf
+./F/Florsn42.ttf
+./F/Florsn43.ttf
+./F/Florsn44.ttf
+./F/Florsn45.ttf
+./F/Florsn46.ttf
+./F/Florsn47.ttf
+./F/Florsn48.ttf
+./F/FLUBBER_.TTF
+./F/FLUORIDE.TTF
+./F/Fluox___.ttf
+./F/flushout.ttf
+./F/flwscrp.ttf
+./F/FlyLegs.ttf
+./F/FMUNIVER.TTF
+./F/foastt_w/fontoas_.ttf
+./F/FONT.TTF
+./F/FONTCIII.ttf
+./F/FONTCI__.TTF
+./F/FONTCOII.ttf
+./F/FONTCOIV.ttf
+./F/FONTCOP_.ttf
+./F/FONTCTI_.TTF
+./F/FONTC___.TTF
+./F/fontdinerdotcom_pc/FONTDINE.TTF
+./F/FONTE___.TTF
+./F/FontformerlyknownasFONT.ttf
+./F/FRIGKAT3.ttf
+./F/FRIGKATC.ttf
+./F/FRIGKATL.ttf
+./F/FRIGKAT_.ttf
+./F/Frission.ttf
+./F/frizzed.ttf
+./F/FrootStand.ttf
+./F/FROSTY__.TTF
+./F/froufrou.ttf
+./F/FROZEN.TTF
+./F/fruitopia.ttf
+./F/FUDD.TTF
+./F/Fujita_demo.ttf
+./F/fullcomp.ttf
+./F/FULLTILT.TTF
+./F/FUNDR___.TTF
+./F/FUNKS___.TTF
+./F/FUNNY.TTF
+./F/Funnyfarm_hard.TTF
+./F/Funnyfarm_soft.TTF
+./F/fusion.ttf
+./F/fusioni.ttf
+./F/Fusty Luggs.ttf
+./F/FUTHAI__.TTF
+./F/FUTHA___.TTF
+./F/festus!.ttf
+./F/FETEACCO.TTF
+./F/fidgety.ttf
+./F/FIELDDAY.TTF
+./F/fiftes___.ttf
+./F/fifte___.ttf
+./F/FIGHTT3_.ttf
+./F/filthy_habits.ttf
+./F/FINALNEW.TTF
+./F/FINCHLEY.TTF
+./F/Finger.ttf
+./F/Firecat.ttf
+./F/FIREFLY_.TTF
+./F/FIRESTAR.TTF
+./F/First Crush.ttf
+./F/firstaid.TTF
+./F/FIRSTBLI.TTF
+./F/FLAPHEAD.TTF
+./F/Flashback3.ttf
+./F/flashit.ttf
+./F/Flat Earth Scribe.ttf
+./F/Florsn13.ttf
+./F/Florsn14.ttf
+./F/Florsn15.ttf
+./F/Florsn16.ttf
+./F/Florsn17.ttf
+./F/Florsn18.ttf
+./F/Florsn19.ttf
+./F/Florsn20.ttf
+./F/Florsn21.ttf
+./F/Florsn22.ttf
+./F/Florsn23.ttf
+./F/Florsn24.ttf
+./F/Florsn25.ttf
+./F/Florsn26.ttf
+./F/Florsn27.ttf
+./F/Florsn28.ttf
+./F/Florsn29.ttf
+./F/Florsn30.ttf
+./F/Florsn31.ttf
+./F/Florsn32.ttf
+./F/Florsn33.ttf
+./F/Florsn34.ttf
+./F/Florsn35.ttf
+./F/Florsn36.ttf
+./F/Florsn37.ttf
+./F/Florsn38.ttf
+./F/Florsn39.ttf
+./F/fanboyhci.ttf
+./F/Festival/Festival.ttf
+./F/FLATIRON.TTF
+./F/Florsn12.ttf
+./F/Florsn40.ttf
+./F/Fontovision II 3D.ttf
+./F/FRIGATE_.ttf
+./F/Future Sallow Wide.ttf
+./F/Fancy Footwork.ttf
+./F/FANCYPAN.TTF
+./F/FANDANGO.TTF
+./F/FantasticFont.ttf
+./F/FANTOMET.TTF
+./F/fanzine.ttf
+./F/FAREAST.TTF
+./F/FAREWELL.TTF
+./F/FARGAS__.TTF
+./F/fascii.ttf
+./F/fasciicr.ttf
+./F/fasciisc.ttf
+./F/fasciism.ttf
+./F/fasciitw.ttf
+./F/FashionVictim.ttf
+./F/fast99.ttf
+./F/Fat-Free.ttf
+./F/FATFINGR.TTF
+./F/FATSB___.TTF
+./F/FATTSN__.TTF
+./F/fat_free_solid.ttf
+./F/FAT_____.TTF
+./F/fbsbltc.ttf
+./F/Fear.ttf
+./F/fearless.ttf
+./F/FearlessVampireKillers.ttf
+./F/FEDYRAL3.TTF
+./F/FEEDBI__.TTF
+./F/FEEDBRG_.TTF
+./F/Feetish.ttf
+./F/Future Sallow.ttf
+./F/FUTURE.TTF
+./F/FuturexVoyager.ttf
+./F/Futurism.TTF
+./F/FuzzySock Thin.ttf
+./F/FuzzySock.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia Bold Oblique.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia Bold.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia Oblique.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia Shaded Oblique.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia Shaded.ttf
+./F/SF Ferretopia v1.0/SF Ferretopia.ttf
+./F/SF Fortune Wheel Bold Italic.ttf
+./F/SF Fortune Wheel Bold.ttf
+./F/SF Fortune Wheel Condensed Italic.ttf
+./F/SF Fortune Wheel Condensed.ttf
+./F/SF Fortune Wheel Extended Italic.ttf
+./F/SF Fortune Wheel Extended.ttf
+./F/SF Fortune Wheel Italic.ttf
+./F/SF Fortune Wheel.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Bold Italic.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Bold.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Extended Bold Italic.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Extended Bold.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Extended Italic.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Extended.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script Italic.ttf
+./F/SF Foxboro Script v1.0/SF Foxboro Script.ttf
+./F/SF Funk Master v1.0/SF Funk Master Oblique.ttf
+./F/SF Funk Master v1.0/SF Funk Master.ttf
+./F/XtraStuf.mac/FRESBS__.TTF
+./F/XtraStuf.mac/FRESHBOT.TTF
+./F/Fontovision III 3D no 2.ttf
+./F/Fontovision IV outline.ttf
+./F/Fontovision.ttf
+./F/FONTRSTC.TTF
+./F/fonts/fkr_area51life.ttf
+./F/FONTSHUI.TTF
+./F/FONTTWEL.TTF
+./F/FONTZ@/forcible.ttf
+./F/FOO.ttf
+./F/FOOB____.TTF
+./F/FORCE3.TTF
+./F/FORGOTTE.TTF
+./F/Fortunaschwein.ttf
+./F/FORTY-SE.TTF
+./F/FOXJUMP.TTF
+./F/FRAGILEB.TTF
+./F/FRAKTMOD.TTF
+./F/FRAND___.TTF
+./F/Frank.ttf
+./F/FRANKEN'.TTF
+./F/frankfrt.ttf
+./F/Frantic/Frantic.ttf
+./F/Frazzed.ttf
+./F/FRE3OF9X.TTF
+./F/Freaa___.ttf
+./F/freak.ttf
+./F/freaktur.ttf
+./F/FREAN__0.TTF
+./F/FREE3OF9.TTF
+./F/frenchgr.ttf
+./F/FRESBS__.TTF
+./F/FRESHBOT.TTF
+./F/fleck.ttf
+./F/flip.ttf
+./F/FLIPFLOP.TTF
+./F/flipside.ttf
+./F/Floraless.ttf
+./F/FLORES__.TTF
+./F/FLORIMEL.TTF
+./F/Florsn01.ttf
+./F/Florsn02.ttf
+./F/Florsn03.ttf
+./F/Florsn04.ttf
+./F/Florsn05.ttf
+./F/Florsn06.ttf
+./F/Florsn07.ttf
+./F/Florsn08.ttf
+./F/Florsn09.ttf
+./F/Florsn10.ttf
+./F/Florsn11.ttf
+./G/BN-Gangsters.ttf
+./G/BN-Gillian.ttf
+./G/Gadzoox.ttf
+./G/GAEIL1.TTF
+./G/GAGARIN_.TTF
+./G/GAGASM__.TTF
+./G/GAGGERS_.TTF
+./G/GAINSBOR.TTF
+./G/Galant5.ttf
+./G/Galan___.ttf
+./G/galapogo.ttf
+./G/Galap___.ttf
+./G/Galas___.ttf
+./G/GALATHEA.TTF
+./G/GALAXY__.TTF
+./G/galvaniz.ttf
+./G/gamma.ttf
+./G/gaposiso.ttf
+./G/gaposiss.ttf
+./G/Gargoyles.ttf
+./G/gasping.ttf
+./G/gotnohea.ttf
+./G/GOV.TTF
+./G/GOYAH___.TTF
+./G/gr8higts.ttf
+./G/GRADGN__.TTF
+./G/GRAFFITI.TTF
+./G/GRAMN___.TTF
+./G/Grand Stylus.ttf
+./G/GRANPS__.TTF
+./G/granular.ttf
+./G/grapple.ttf
+./G/GRASSHOP.TTF
+./G/GRAVD___.TTF
+./G/Grave Digger.ttf
+./G/graveyrd.ttf
+./G/graviseg.ttf
+./G/gravitat.ttf
+./G/GravitySucks.ttf
+./G/GRAVITY_.TTF
+./G/GILGONK_.ttf
+./G/GILGONM_.ttf
+./G/GILGONO_.ttf
+./G/GILGONP_.ttf
+./G/GILGONS_.ttf
+./G/GILGONT_.ttf
+./G/GILGON__.ttf
+./G/GILLIGAN.TTF
+./G/GINGP___.TTF
+./G/girlsare.ttf
+./G/Girth Control.ttf
+./G/GLAMOURG.TTF
+./G/glashou.ttf
+./G/GLAZKRAK.TTF
+./G/GLIMSTIC.TTF
+./G/glockenspiel.TTF
+./G/GLOO-GUN.TTF
+./G/GLUE____.TTF
+./G/grudge.ttf
+./G/GRUNJA__.ttf
+./G/GruntReaper.ttf
+./G/GUADALUP.TTF
+./G/guanine_.ttf
+./G/GUEVARA_.TTF
+./G/GUINNESS.TTF
+./G/GUMTUCKE.TTF
+./G/Gunhead Chick.TTF
+./G/gunmetl.ttf
+./G/gunplay.ttf
+./G/gunplay3.ttf
+./G/GUNSHIP2.TTF
+./G/Gutcruncher.ttf
+./G/gyparody.ttf
+./G/GYR4.TTF
+./G/gyroresh.ttf
+./G/gyrose.ttf
+./G/gyrosesq.ttf
+./G/GYRUSSIA.TTF
+./G/SF Gothican v2.0/SF Gothican Bold Oblique.ttf
+./G/SF Gothican v2.0/SF Gothican Bold.ttf
+./G/SF Gothican v2.0/SF Gothican Condensed Bold Oblique.ttf
+./G/SF Gothican v2.0/SF Gothican Condensed Bold.ttf
+./G/SF Gothican v2.0/SF Gothican Condensed Oblique.ttf
+./G/SF Gothican v2.0/SF Gothican Condensed.ttf
+./G/SF Gothican v2.0/SF Gothican Oblique.ttf
+./G/SF Gothican v2.0/SF Gothican.ttf
+./G/SF Grandezza v1.0/SF Grandezza Heavy Oblique.ttf
+./G/SF Grandezza v1.0/SF Grandezza Heavy.ttf
+./G/SF Grandezza v1.0/SF Grandezza Light Oblique.ttf
+./G/SF Grandezza v1.0/SF Grandezza Light.ttf
+./G/SF Grandezza v1.0/SF Grandezza Medium Oblique.ttf
+./G/SF Grandezza v1.0/SF Grandezza Medium.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans Bold Italic.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans Bold.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans Italic.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans SC Italic.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans SC.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans Shadow Italic.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans Shadow.ttf
+./G/SF Grunge Sans v1.0/SF Grunge Sans.ttf
+./G/SF Gushing Meadow v1.0/SF Gushing Meadow SC.ttf
+./G/SF Gushing Meadow v1.0/SF Gushing Meadow.ttf
+./G/XtraStuf.mac/GRAVITY_.TTF
+./G/ZIPFONT/GALAXIAP/Galan___.ttf
+./G/ZIPFONT/GALAXIAP/Galap___.ttf
+./G/ZIPFONT/GALAXIAP/Galas___.ttf
+./G/gather.ttf
+./G/gathrgap.ttf
+./G/Gazzarelli.ttf
+./G/GearBox.ttf
+./G/geekabyte.ttf
+./G/geekabyte2.ttf
+./G/Gemerald.ttf
+./G/GemFont One.ttf
+./G/GEN4.TTF
+./G/Generation Two.ttf
+./G/genotyph.ttf
+./G/genotyps.ttf
+./G/genotyrh.ttf
+./G/genotyrs.ttf
+./G/GESSELE.TTF
+./G/GETBURNT.TTF
+./G/GHOSTMEA.TTF
+./G/GHOSTWRI.TTF
+./G/GhoulyBooly.ttf
+./G/GIANTTIG.TTF
+./G/Gibberish.ttf
+./G/GassyGaut.ttf
+./G/GILGOND_.ttf
+./G/Glutton man.ttf
+./G/Gotham Nights.ttf
+./G/GREALN__.ttf
+./G/Grouser.ttf
+./G/GREENFUZ.TTF
+./G/GREGH___.TTF
+./G/GREGOH__.TTF
+./G/GRENADIE.TTF
+./G/GreyWolf.ttf
+./G/Griffin.ttf
+./G/GriffinBold.ttf
+./G/GRIMACE.TTF
+./G/Grinched.ttf
+./G/GringoNights.ttf
+./G/GROOMB__.TTF
+./G/GROOMEB_.TTF
+./G/GROOMEUB.TTF
+./G/GROOMEU_.TTF
+./G/GROOME__.TTF
+./G/GROOMUB_.TTF
+./G/GROOMU__.TTF
+./G/GROOM___.TTF
+./G/grotesq.ttf
+./G/GROTTO.TTF
+./G/gl______.ttf
+./G/gm italic.ttf
+./G/gm.ttf
+./G/gnarly.ttf
+./G/GOGO_BIG.TTF
+./G/GOLDENGI.ttf
+./G/GOLONG.TTF
+./G/goodfisb.ttf
+./G/goodfisc.ttf
+./G/goodfish.ttf
+./G/goodfisi.ttf
+./G/goodfoot.ttf
+./G/GOODTIME.ttf
+./G/Goofball.ttf
+./G/Gorlock  Bold.ttf
+./G/gosebmp2.ttf
+./G/gosebmps.ttf
+./G/gossip.ttf
+./H/Happening.ttf
+./H/hipch___.ttf
+./H/Houdini.ttf
+./H/CHE-HBMB.TTF
+./H/DEADJIM.TTF
+./H/hacknslash.ttf
+./H/HADALT__.ttf
+./H/Hadley__.ttf
+./H/HALCION_.ttf
+./H/HALCIT__.ttf
+./H/HALCYONI.TTF
+./H/Halo11.ttf
+./H/HAMBH___.TTF
+./H/Hammerhead  Thin Italic.ttf
+./H/Hammerhead  Thin.ttf
+./H/Hammerhead Italic.ttf
+./H/Hammerhead.ttf
+./H/HammerheadOutline Italic.ttf
+./H/HammerheadOutline.ttf
+./H/HAND-ME-.TTF
+./H/handmedo.ttf
+./H/handmeds.ttf
+./H/Handycandy.ttf
+./H/HoaryGaut.ttf
+./H/HOBBYHOR.TTF
+./H/Hogb.TTF
+./H/holdyourbreath.ttf
+./H/HOLIB___.TTF
+./H/Holiday.ttf
+./H/HOLIDAYH.TTF
+./H/HOLIDAY_.TTF
+./H/HOLLHBI_.TTF
+./H/HOLLHB__.TTF
+./H/HOLLHCI_.TTF
+./H/HOLLHC__.TTF
+./H/HOLLHEI_.TTF
+./H/HOLLHE__.TTF
+./H/HOLLHI__.TTF
+./H/HOLLH___.TTF
+./H/HOLY-RAV.TTF
+./H/HOLY.TTF
+./H/homespun.ttf
+./H/HOMINIS.TTF
+./H/hondafont.ttf
+./H/HONEJS__.ttf
+./H/HONEJ___.ttf
+./H/HOOKED.TTF
+./H/HOOKEDON.TTF
+./H/Horns of Dilemma.ttf
+./H/HORNSWOG.TTF
+./H/horrendo.ttf
+./H/horrh___.ttf
+./H/Horsal__.ttf
+./H/HORSERAD.TTF
+./H/hotdog.ttf
+./H/hotpizza.ttf
+./H/Happy.ttf
+./H/HARDKAZE.TTF
+./H/Hardware.ttf
+./H/HARDW___.TTF
+./H/HARLEQUI.TTF
+./H/hassle.ttf
+./H/HASTP___.TTF
+./H/hathor.ttf
+./H/HAUNTAOE.TTF
+./H/HAWAIIAH.TTF
+./H/HAWKEYE.TTF
+./H/hbevel.ttf
+./H/Hc___.ttf
+./H/Headache.ttf
+./H/HEARRG__.TTF
+./H/HEATWAVE.TTF
+./H/HEAVTUB_.TTF
+./H/heck.ttf
+./H/Hecubus_.ttf
+./H/HEIDH___.ttf
+./H/HELLDORA.TTF
+./H/HELLOLAR.TTF
+./H/HEMIHEAD.TTF
+./H/HERAS___.TTF
+./H/HeroOfFools.ttf
+./H/HERZOGVA.TTF
+./H/hexadonald.ttf
+./H/HIBERNAT.TTF
+./H/HIGHFIVE.TTF
+./H/hillock.ttf
+./H/HOUSEPIPES Italic.ttf
+./H/HOUSEPIPES Normal.ttf
+./H/hpunk.ttf
+./H/Hsurgery.ttf
+./H/Huckle Buff.ttf
+./H/HUMANOI0.TTF
+./H/humanoid.ttf
+./H/HURONTAR.TTF
+./H/HURRYUP.TTF
+./H/Hursheys.ttf
+./H/HUSKYSTA.TTF
+./H/HUTSR___.TTF
+./H/huxtable.ttf
+./H/hydro.ttf
+./H/HYDROGEN.TTF
+./H/hydroi.ttf
+./H/hyperion.ttf
+./H/Hypersonic.ttf
+./H/hyperspd.ttf
+./H/Hypmotizin.ttf
+./H/HYPNO.TTF
+./H/SF Hallucination v1.0/SF Hallucination Extreme.ttf
+./H/SF Hallucination v1.0/SF Hallucination Outline.ttf
+./H/SF Hallucination v1.0/SF Hallucination Shadow.ttf
+./H/SF Hallucination v1.0/SF Hallucination.ttf
+./H/SOLO5.TTF
+./I/IMPOS-30.ttf
+./I/infinityc.ttf
+./I/Internet.ttf
+./I/I Did This.ttf
+./I/IAMSB___.TTF
+./I/IAMSIMPL.TTF
+./I/ICICLECO.TTF
+./I/ICON.TTF
+./I/IDIOT___.TTF
+./I/idolwild.ttf
+./I/IHATCS__.TTF
+./I/Ihop.ttf
+./I/IKARRG__.TTF
+./I/IKART___.TTF
+./I/IKARV___.TTF
+./I/ilits.ttf
+./I/illumination.ttf
+./I/IMMORTAL.ttf
+./I/IMMRTLT_.ttf
+./I/IMP2.TTF
+./I/IMPERFEC.TTF
+./I/IMPOS+30.ttf
+./I/INTERPLA.TTF
+./I/intersc.ttf
+./I/intersec.ttf
+./I/interso.ttf
+./I/INTREPD2.TTF
+./I/intsh.ttf
+./I/intshc.ttf
+./I/intshe.ttf
+./I/intshl.ttf
+./I/intsho.ttf
+./I/Invasion2000.ttf
+./I/invisibl.ttf
+./I/iomanoid.ttf
+./I/irezumi.ttf
+./I/irezumi_i.ttf
+./I/IRONICK-.TTF
+./I/IRONMAN_.TTF
+./I/IronPipe.ttf
+./I/IRREP___.TTF
+./I/irritate.ttf
+./I/IrwinAllen.ttf
+./I/Its About Time.ttf
+./I/iwant.ttf
+./I/iwantb.ttf
+./I/iwantc.ttf
+./I/iwante.ttf
+./I/iwants.ttf
+./I/SF Intermosaic v1.0/SF Intermosaic B Bold.ttf
+./I/SF Intermosaic v1.0/SF Intermosaic B.ttf
+./I/SF Intermosaic v1.0/SF Intermosaic Bold.ttf
+./I/SF Intermosaic v1.0/SF Intermosaic.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Bold Oblique.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Bold.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Extended Oblique.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Extended.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Oblique.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Shaded Oblique.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues Shaded.ttf
+./I/SF Intoxicated Blues v1.0/SF Intoxicated Blues.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Bold Oblique.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Bold.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Extended Oblique.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Extended.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Oblique.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Shaded Oblique.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic Shaded.ttf
+./I/SF Iron Gothic v1.0/SF Iron Gothic.ttf
+./I/SF Ironsides v1.0/SF Ironsides Bold Italic.ttf
+./I/SF Ironsides v1.0/SF Ironsides Bold.ttf
+./I/SF Ironsides v1.0/SF Ironsides Condensed Italic.ttf
+./I/SF Ironsides v1.0/SF Ironsides Condensed.ttf
+./I/SF Ironsides v1.0/SF Ironsides Extended Italic.ttf
+./I/SF Ironsides v1.0/SF Ironsides Extended.ttf
+./I/SF Ironsides v1.0/SF Ironsides Italic.ttf
+./I/SF Ironsides v1.0/SF Ironsides.ttf
+./I/ZIPFONT/Intesc__.ttf
+./I/infinityci.ttf
+./I/infinitye.ttf
+./I/infinityei.ttf
+./I/infinityg.ttf
+./I/infinitygi.ttf
+./I/infinityi.ttf
+./I/infinitys.ttf
+./I/infinitysi.ttf
+./I/INFLAMMA.TTF
+./I/INFO5.TTF
+./I/Inhishan.ttf
+./I/initial.ttf
+./I/INKBURRO.TTF
+./I/Inkedw.ttf
+./I/inkswipe.ttf
+./I/inktank.ttf
+./I/INNES___.TTF
+./I/INNIO___.TTF
+./I/Insane hours 2.ttf
+./I/Insanehours.ttf
+./I/INSTANTT.TTF
+./I/INSULA__.ttf
+./I/Intaglios.ttf
+./I/Intergalaktika.ttf
+./I/Intergalaktika2.ttf
+./I/International.ttf
+./I/IMPOS05_.ttf
+./I/IMPOS0__.ttf
+./I/IMPOS10_.ttf
+./I/IMPOS50_.ttf
+./I/imposs.ttf
+./I/IMPOSSD_.ttf
+./I/Impressed Metal.ttf
+./I/INCANTAT.TTF
+./I/INCARNAT.TTF
+./I/Incognitype.ttf
+./I/independ.TTF
+./I/INDIGO.TTF
+./I/INDUBITA.TTF
+./I/INDUCTIO.TTF
+./I/inertia.ttf
+./I/inevitab.ttf
+./I/infinity.ttf
+./J/Jerk.ttf
+./J/JUNGLEFE.TTF
+./J/BNJinx.ttf
+./J/j.d.ttf
+./J/JACK.TTF
+./J/JACKLB__.TTF
+./J/JackOLantern.ttf
+./J/jagged.ttf
+./J/Jambotan.ttf
+./J/JANGB___.TTF
+./J/Janglywalk.ttf
+./J/Jann2.ttf
+./J/Janne.ttf
+./J/Janns.ttf
+./J/Jannsh.ttf
+./J/japan.ttf
+./J/jappernees.ttf
+./J/jargon.ttf
+./J/Jasmine.ttf
+./J/jasper.ttf
+./J/jaspers.ttf
+./J/jawbhard.ttf
+./J/jawbreak.ttf
+./J/jawbrko1.ttf
+./J/jawbrko2.ttf
+./J/JEALOUSY.TTF
+./J/Jedi.ttf
+./J/JEEPNEY.TTF
+./J/JellyBelly.ttf
+./J/jeopardi.ttf
+./J/jeopardt.ttf
+./J/JERKOFF.TTF
+./J/JERRB___.TTF
+./J/JERU.TTF
+./J/Jetpakj.ttf
+./J/JETPLANE.TTF
+./J/JETTA.TTF
+./J/JETTAT.TTF
+./J/Jiggery Pokery.ttf
+./J/JIGSAWTR.TTF
+./J/JINGOPOP.TTF
+./J/JJSTS___.TTF
+./J/jmacscrl.ttf
+./J/jnco.ttf
+./J/Jobbernole.ttf
+./J/JoeJack.ttf
+./J/Johndoe.ttf
+./J/JOHNNYFE.TTF
+./J/JOINPD__.TTF
+./J/JollyRaunchy.ttf
+./J/joltcaff.ttf
+./J/JOPPA.TTF
+./J/JOSHF___.TTF
+./J/JOYCARDS.TTF
+./J/JOYSTIX.TTF
+./J/jr!ha___.ttf
+./J/JudasPriest.ttf
+./J/JUDGE.TTF
+./J/JUDGE2.TTF
+./J/JUGGERNA.TTF
+./J/jumbo.ttf
+./J/jumboi.ttf
+./J/jumboo.ttf
+./J/jumbooi.ttf
+./J/JUNEBUG_.TTF
+./J/JUNGJ___.TTF
+./J/junipr.ttf
+./J/junist/junist.ttf
+./J/jupiterc.ttf
+./J/JUST.TTF
+./J/JUST2.TTF
+./J/JUST2I.TTF
+./J/justadream_hollow.ttf
+./J/justadream_solid.ttf
+./J/JUSTI.TTF
+./J/SF Juggernaut Bold Italic.ttf
+./J/SF Juggernaut Bold.ttf
+./J/SF Juggernaut Condensed Bold Italic.ttf
+./J/SF Juggernaut Condensed Bold.ttf
+./J/SF Juggernaut Condensed Italic.ttf
+./J/SF Juggernaut Condensed.ttf
+./J/SF Juggernaut Italic.ttf
+./J/SF Juggernaut.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Bold Oblique.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Bold.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Condensed Oblique.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Condensed.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Oblique.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Shaded Oblique.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture Shaded.ttf
+./J/SF Junk Cutlure v1.0/SF Junk Culture.ttf
+./K/BNKuktus.ttf
+./K/KABOG___.TTF
+./K/Kaela.ttf
+./K/Kahless2.ttf
+./K/Kahless2p.ttf
+./K/Kahless2s.ttf
+./K/kaliberr.ttf
+./K/kalibers.ttf
+./K/kaliberx.ttf
+./K/KAMIKZOM.ttf
+./K/KANDIDE_.ttf
+./K/KANDIDUW.ttf
+./K/KANDIDU_.ttf
+./K/KANDIDW_.ttf
+./K/KANDUNW_.ttf
+./K/KANDUN__.ttf
+./K/KAREH___.TTF
+./K/KARELIA_.TTF
+./K/KARISMAI.ttf
+./K/KARISMAS.ttf
+./K/KARISMA_.ttf
+./K/KARMASUT.TTF
+./K/KARNIBLA.ttf
+./K/KARNIVBL.ttf
+./K/KARNIVOB.ttf
+./K/KARNIVOD.ttf
+./K/KARNIVOF.ttf
+./K/KARNIVOK.ttf
+./K/KK.TTF
+./K/KLAUJ___.TTF
+./K/KLEPTOCR.TTF
+./K/KLINOM__.TTF
+./K/Klytus.ttf
+./K/KMKDSKBW.ttf
+./K/KMKDSPBW.ttf
+./K/KMKDSPB_.ttf
+./K/KMKDSPKB.ttf
+./K/KMKDSPKW.ttf
+./K/KMKDSPK_.ttf
+./K/KMKDSPSH.ttf
+./K/KMKDSPT_.ttf
+./K/KMKDSPW_.ttf
+./K/KMKDSP__.ttf
+./K/KNICO___.TTF
+./K/KNIGHT.TTF
+./K/KNOCARG_.TTF
+./K/Kntkzgrb.ttf
+./K/KNUCKLED.TTF
+./K/Knucklesandwich.TTF
+./K/Knuffig.ttf
+./K/KOCHR___.TTF
+./K/KOMETENM.TTF
+./K/KOMIKABB.ttf
+./K/KOMIKAHB.ttf
+./K/KOMIKAHN.ttf
+./K/KOMIKAH_.ttf
+./K/KOMIKASK.ttf
+./K/KOMIKASL.ttf
+./K/KOMIKHBI.ttf
+./K/KOMIKHI_.ttf
+./K/KOMIKJI_.ttf
+./K/KOMIKJ__.ttf
+./K/KARNIVOP.ttf
+./K/KARNIVOR.ttf
+./K/KARNIVOS.ttf
+./K/KARNIVOT.ttf
+./K/KARNIVSV.ttf
+./K/kataacti.ttf
+./K/katainac.ttf
+./K/KATANA.TTF
+./K/Kathleen.ttf
+./K/KathleenBold.ttf
+./K/KathleenInline.ttf
+./K/KATSKR~1.TTF
+./K/KELMSCOT.TTF
+./K/Kelt Caps Freehand.ttf
+./K/KentuckyFriedChickenFont.ttf
+./K/KENYAN.TTF
+./K/KERFUFFL.TTF
+./K/ketch___.ttf
+./K/KOMIKSKI.ttf
+./K/KOMIKSLI.ttf
+./K/KOMTXKBI.ttf
+./K/KOMTXTBI.ttf
+./K/KOMTXTB_.ttf
+./K/KOMTXTI_.ttf
+./K/KOMTXTKB.ttf
+./K/KOMTXTKI.ttf
+./K/KOMTXTK_.ttf
+./K/KOMTXTTI.ttf
+./K/KOMTXTT_.ttf
+./K/KOMTXT__.ttf
+./K/konecto1.ttf
+./K/konecto2.ttf
+./K/konector.ttf
+./K/koneerie.ttf
+./K/KONFUCF_.ttf
+./K/Kickass.ttf
+./K/kickflip.ttf
+./K/KICKINGL.TTF
+./K/kidkosmic.ttf
+./K/kidkosmicb.ttf
+./K/kidkosmici.ttf
+./K/Killerboots.ttf
+./K/kimberle.ttf
+./K/KINDERFE.TTF
+./K/King Arthur Special Normal.ttf
+./K/KING.TTF
+./K/KINGH___.TTF
+./K/KINGRICH.TTF
+./K/KINGSGMB.TTF
+./K/KINGXMAS.TTF
+./K/kinkaid.ttf
+./K/KINKIE__.TTF
+./K/kinkimono.ttf
+./K/kirbyss.ttf
+./K/KISMET-N.TTF
+./K/KissTheSky.ttf
+./K/Kitchenpolice.TTF
+./K/KARNIVOL.ttf
+./K/Kharnorric.ttf
+./K/KittyKatt.ttf
+./K/KOMIKND_.ttf
+./K/KONFUCT_.ttf
+./K/KONFUC__.ttf
+./K/Konspiracy Theory slant.ttf
+./K/Konspiracy Theory.ttf
+./K/Kookaburra.ttf
+./K/KOVACS2.TTF
+./K/KOVACSSP.TTF
+./K/Kr.TTF
+./K/krazynights.ttf
+./K/KREDIT1.TTF
+./K/KRIZU___.TTF
+./K/KRONIKA_.ttf
+./K/KRUPKE__.TTF
+./K/kryptic.ttf
+./K/Krystal.ttf
+./K/KURVACEO.TTF
+./K/kurvatur.ttf
+./K/KUSTOMKA.TTF
+./K/WBXKOMIK.TTF
+./K/XtraStuf.mac/KRUPKE__.TTF
+./L/LABRATB_.ttf
+./L/LABRAT__.ttf
+./L/LABRIT__.ttf
+./L/LABYRINT.TTF
+./L/LACONICK.TTF
+./L/LADYSTAR.TTF
+./L/LAGNIAPP.TTF
+./L/LAKESHOR.TTF
+./L/lamebrai.ttf
+./L/land.ttf
+./L/landc.ttf
+./L/lande.ttf
+./L/landg.ttf
+./L/landi.ttf
+./L/Landw.ttf
+./L/Landwi.ttf
+./L/Landwo.ttf
+./L/landwog.ttf
+./L/Landwp.ttf
+./L/Larabieb.ttf
+./L/LARABIEF.TTF
+./L/LARCHER_.TTF
+./L/larkspur.ttf
+./L/Laser Rod.ttf
+./L/LASER4.TTF
+./L/lastninja.ttf
+./L/lion.ttf
+./L/lionb.ttf
+./L/lionc.ttf
+./L/lione.ttf
+./L/lioni.ttf
+./L/lions.ttf
+./L/LIPST___.TTF
+./L/LIQUIDIS.TTF
+./L/LITTDC__.TTF
+./L/LittleCaesar.ttf
+./L/LITTLELO.TTF
+./L/LIVINGBY.TTF
+./L/Lizzie__.ttf
+./L/LLODE.TTF
+./L/LOCHEN__.TTF
+./L/LOCKERGN.TTF
+./L/locke___.ttf
+./L/LoisAnn.ttf
+./L/LOKICOLA.TTF
+./L/LongCoolGrandma.ttf
+./L/LongCoolMother.ttf
+./L/LongCoolWoman.ttf
+./L/LOOPY_IT.TTF
+./L/LOOPY___.ttf
+./L/LORDS3.TTF
+./L/LOTSOD__.TTF
+./L/LOU.TTF
+./L/LOUNB___.TTF
+./L/lousy.ttf
+./L/Love Letters.ttf
+./L/Love Parade italian.ttf
+./L/Love Parade widebold.ttf
+./L/Love Parade.ttf
+./L/LOVE.TTF
+./L/lowdown.ttf
+./L/LOWRBI__.TTF
+./L/LOWRB___.TTF
+./L/ltromatic bold.ttf
+./L/ltromatic italic.ttf
+./L/ltromatic.ttf
+./L/lucid.ttf
+./L/lucid2.ttf
+./L/lucid2o.ttf
+./L/lucido.ttf
+./L/LUCIFERI.ttf
+./L/LUCIFER_.ttf
+./L/LUCIFIN_.ttf
+./L/Lumpbump.ttf
+./L/LUNASOL.TTF
+./L/LUNCHEON.TTF
+./L/LUXO____.TTF
+./L/lyneous.ttf
+./L/lyneousl.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Bold Oblique.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Bold.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Condensed Oblique.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Condensed.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Extended Oblique.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Extended.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic Oblique.ttf
+./L/SF Laundromatic v1.0/SF Laundromatic.ttf
+./L/VASARELY.TTF
+./L/later_on.ttf
+./L/Lazerbeam_s.TTF
+./L/LCHAIN.TTF
+./L/Leadcoat.ttf
+./L/LEDREALI.TTF
+./L/LED_REAL.TTF
+./L/LeeBeeSchwarz.ttf
+./L/LEGAL.TTF
+./L/LEGION.TTF
+./L/LENID___.TTF
+./L/LESSERCO.TTF
+./L/LET'SEAT.TTF
+./L/lethargi.ttf
+./L/LEWINSKY.TTF
+./L/LIBEL.TTF
+./L/LIBRIT__.ttf
+./L/LIBRIUM_.ttf
+./L/licostrg.ttf
+./L/lifeis.ttf
+./L/lifeisb.ttf
+./L/lifeisbi.ttf
+./L/lifeisi.ttf
+./L/lifesubi.ttf
+./L/lifesupb.ttf
+./L/lifesupi.ttf
+./L/lifesupp.ttf
+./L/lightout.ttf
+./L/LateNite.ttf
+./L/Lindl___.ttf
+./L/Love Parade outline Bold.ttf
+./M/BN M@TAN.ttf
+./M/BNMachine.ttf
+./M/MACH14.TTF
+./M/macropsi.ttf
+./M/mac_and_sidney.ttf
+./M/MAD3.TTF
+./M/MADAVE.TTF
+./M/MADISI__.TTF
+./M/MadScience.ttf
+./M/Madscientist.ttf
+./M/Madscientist_p.ttf
+./M/madscrwl.ttf
+./M/MAEL____.TTF
+./M/Mage.ttf
+./M/MAGYS___.TTF
+./M/MAILRAYS.TTF
+./M/MAITAI.TTF
+./M/MAKISUPA.TTF
+./M/MALACHE.TTF
+./M/Mammagamma.ttf
+./M/Metal Spagetti 2000.ttf
+./M/METALORD.TTF
+./M/METEORGM.TTF
+./M/METRN___.TTF
+./M/METRO-DF.ttf
+./M/METRO-RE.TTF
+./M/METROLOX.ttf
+./M/mexcel3D.ttf
+./M/mexcelle.ttf
+./M/MICHAEL.TTF
+./M/MICKEY.TTF
+./M/MicroMbd.TTF
+./M/MicroMdt.ttf
+./M/MicroMpt.ttf
+./M/MicroMrg.TTF
+./M/MIGHZB__.TTF
+./M/MIGHZCB_.TTF
+./M/MIGHZCI_.TTF
+./M/MIGHZC__.TTF
+./M/MIGHZI__.TTF
+./M/MIGHZ___.TTF
+./M/MIKEYJAX.TTF
+./M/milit.ttf
+./M/Milkdrops cold.ttf
+./M/MILKFRES.TTF
+./M/Milleni Gem.ttf
+./M/MILTONBU.TTF
+./M/Miltown_.ttf
+./M/mima4x4i.ttf
+./M/mima4x4o.ttf
+./M/mimaalt1.ttf
+./M/mimaalt2.ttf
+./M/mimafuse.ttf
+./M/mincer.ttf
+./M/monogeb_.ttf
+./M/monog___.ttf
+./M/Monsterfreak.ttf
+./M/Montana2.ttf
+./M/MONTP___.TTF
+./M/MOOCOWSW.TTF
+./M/Moog Boy.ttf
+./M/moonracr.ttf
+./M/Morethanhuman.ttf
+./M/moronmis.ttf
+./M/MORPHEUS.TTF
+./M/morse.ttf
+./M/MORST.TTF
+./M/Moscoso.ttf
+./M/Mothership.ttf
+./M/MOTOE___.TTF
+./M/MOTORCAD.TTF
+./M/motrhead.ttf
+./M/Mouser.ttf
+./M/Mouser_i.ttf
+./M/Mouser_o.ttf
+./M/mouthbrebb.ttf
+./M/mouthbrebb_b.ttf
+./M/Movie Times.ttf
+./M/movieboard.ttf
+./M/MrBubbleFont.ttf
+./M/MARYJGI_.ttf
+./M/MARYJLR_.ttf
+./M/MARYJM__.ttf
+./M/MARYJO__.ttf
+./M/MARYJSC_.ttf
+./M/MARYJWI_.ttf
+./M/MARYJ___.ttf
+./M/MASQUE__.ttf
+./M/Massh__3.TTF
+./M/MASSIVER.TTF
+./M/Masterforce Solid.TTF
+./M/MASTODB_.ttf
+./M/MASTODH_.ttf
+./M/MASTOD__.ttf
+./M/MATERHOR.TTF
+./M/MATHOI__.TTF
+./M/MATHO___.TTF
+./M/Maximal Beasts.TTF
+./M/MAXIS___.TTF
+./M/MCKLB___.ttf
+./M/MCKLM___.ttf
+./M/MCKLSH__.ttf
+./M/MCKLST__.ttf
+./M/MCKLT___.ttf
+./M/MCKLW___.ttf
+./M/mecha.ttf
+./M/mechai.ttf
+./M/mechan.ttf
+./M/mechani.ttf
+./M/medra___.ttf
+./M/meetjh/MEETJH__.TTF
+./M/MANDINGO.TTF
+./M/MARYJCA_.ttf
+./M/Melted Moments.ttf
+./M/minikott.ttf
+./M/monogb__.ttf
+./M/mrgoodbaur.ttf
+./M/Much too loud.ttf
+./M/muchomacho.ttf
+./M/mufferaw.ttf
+./M/Mummy Loves You.ttf
+./M/MUNSB___.TTF
+./M/Mutant Supermodel.ttf
+./M/mypager.ttf
+./M/MYPUMA__.TTF
+./M/Mypuouo__.ttf
+./M/MYPUO___.TTF
+./M/mysteron.ttf
+./M/Mystic Etchings.ttf
+./M/MystikOrbs.ttf
+./M/MYSTP___.TTF
+./M/mytype.ttf
+./M/Myuoo__.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Bold Oblique.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Bold.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Extended Oblique.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Extended.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Oblique.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Shaded Oblique.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat Shaded.ttf
+./M/SF Minced Meat v1.0/SF Minced Meat.ttf
+./M/SF Movie Poster Bold Italic.ttf
+./M/SF Movie Poster Bold.ttf
+./M/SF Movie Poster Condensed Bold Italic.ttf
+./M/SF Movie Poster Condensed Bold.ttf
+./M/SF Movie Poster Condensed Italic.ttf
+./M/SF Movie Poster Condensed.ttf
+./M/SF Movie Poster Italic.ttf
+./M/SF Movie Poster.ttf
+./M/minikstt.ttf
+./M/MINISYST.TTF
+./M/MINSPSW_.TTF
+./M/MINYA.TTF
+./M/MIRISCH.TTF
+./M/MISERABL.TTF
+./M/mishmash.ttf
+./M/misirlod.ttf
+./M/misirlou.ttf
+./M/MissingLink.ttf
+./M/MISSISSA.TTF
+./M/MISTERFI.TTF
+./M/MISTRESA.ttf
+./M/MISTRESS.ttf
+./M/MJALTER_.ttf
+./M/MJDEG___.ttf
+./M/MJTANK__.ttf
+./M/MLTWNII_.ttf
+./M/mnkchunk/mnkchunk.ttf
+./M/MO.TTF
+./M/MOBCONCR.TTF
+./M/MOBILE4.TTF
+./M/Mobsters.ttf
+./M/MOLDPAPA.TTF
+./M/molten.ttf
+./M/MOLTOR3.TTF
+./M/MONAFONT.TTF
+./M/mondored.TTF
+./M/MONKEY-F.TTF
+./M/Monkeyboy.ttf
+./M/monkphon.ttf
+./M/MonkyBusiness.ttf
+./M/monodb_.ttf
+./M/MONOFONT.TTF
+./M/mangat.ttf
+./M/mangatb.ttf
+./M/mangati.ttf
+./M/Manson Nights.ttf
+./M/maple/MAPLS___.TTF
+./M/MAPOFYOU.TTF
+./M/Maranallo.ttf
+./M/MaranalloHigh.ttf
+./M/MaranalloHighItalic.ttf
+./M/MaranalloItalic.ttf
+./M/MarkedFool.ttf
+./M/MarkerFinePoint.ttf
+./M/MarkyM.ttf
+./M/marmeladeguys.ttf
+./M/MARQUEEM.TTF
+./M/MARSHGAS.TTF
+./M/marspolice.ttf
+./M/marspolice_i.ttf
+./M/martel.ttf
+./N/BN-NoFear.ttf
+./N/BNNiv5000.ttf
+./N/NAFTA.TTF
+./N/Nails.ttf
+./N/nanosecw.ttf
+./N/NASAL.TTF
+./N/NASALIZA.TTF
+./N/native.ttf
+./N/nativee.ttf
+./N/nativei.ttf
+./N/naughts.ttf
+./N/nauvo___.ttf
+./N/necplus.ttf
+./N/necplusi.ttf
+./N/Negatori.ttf
+./N/Negtiv12.ttf
+./N/Negtiv24.ttf
+./N/NEO5.TTF
+./N/nerdproof.ttf
+./N/Nervous.ttf
+./N/NERVT___.TTF
+./N/NINJAS.TTF
+./N/NINJP___.TTF
+./N/NIOBBL__.TTF
+./N/NIOBRG__.TTF
+./N/NIPANDTU.TTF
+./N/noclocks.ttf
+./N/Nohalsc_.ttf
+./N/NOLO.TTF
+./N/nominal.ttf
+./N/NONSTOP_.TTF
+./N/Noodlesoup.TTF
+./N/NORDIC__.TTF
+./N/NOSFERAT/Nosfer__.ttf
+./N/NOSFERAT/Nosfo___.ttf
+./N/nostalgi.ttf
+./N/NOTMK___.TTF
+./N/notqr.ttf
+./N/novem___.ttf
+./N/no_problem.ttf
+./N/neural.ttf
+./N/NEURAL2.TTF
+./N/neuralol.ttf
+./N/NEUROCHR.TTF
+./N/neuropob.ttf
+./N/NEUROPOL.TTF
+./N/NEUROTOX.TTF
+./N/NEURPOLI.TTF
+./N/neustyl.ttf
+./N/neustylb.ttf
+./N/NEVER.TTF
+./N/NEVESD__.TTF
+./N/new detroit.ttf
+./N/NEWBRILL.TTF
+./N/NEWJOB.TTF
+./N/NICKELOD.TTF
+./N/NICKERB1.TTF
+./N/NICKLEY-.TTF
+./N/NICKODE1.TTF
+./N/NIFE2.TTF
+./N/NIFER3.TTF
+./N/NIGHTCAP.TTF
+./N/NIGHTCOU.TTF
+./N/NIGHTPOR.TTF
+./N/nightsky.ttf
+./N/nsecthin.ttf
+./N/NUGACITY.TTF
+./N/NUMBBN__.TTF
+./N/numskull.ttf
+./N/NYAKS___.TTF
+./N/Nyctalopia.ttf
+./N/Nyctalopia_tilt.ttf
+./N/nymonak.ttf
+./N/SF New Republic Bold Italic.ttf
+./N/SF New Republic Bold.ttf
+./N/SF New Republic Italic.ttf
+./N/SF New Republic SC Bold Italic.ttf
+./N/SF New Republic SC Bold.ttf
+./N/SF New Republic SC Italic.ttf
+./N/SF New Republic SC.ttf
+./N/SF New Republic.ttf
+./N/NETHERWO.TTF
+./N/Nightwarrior.ttf
+./N/nsecthck.ttf
+./O/7000.TTF
+./O/BN-OldFashion.ttf
+./O/BN-OuterLine.ttf
+./O/OAKWOOD_.TTF
+./O/oberon.ttf
+./O/OBLIVIOU.TTF
+./O/obloquyo.ttf
+./O/obloquys.ttf
+./O/obstacle.ttf
+./O/obstacll.ttf
+./O/octovill.ttf
+./O/ODALISQU.TTF
+./O/ODDDOG.TTF
+./O/OFFICER3.TTF
+./O/offkiltl.ttf
+./O/offkiltr.ttf
+./O/Offset Plain.ttf
+./O/Og.TTF
+./O/Ohcrap.ttf
+./O/orangefizz.ttf
+./O/orangefizzi.ttf
+./O/orangutan.ttf
+./O/orbicula.ttf
+./O/Oreos.ttf
+./O/Orient.ttf
+./O/ORNAM___.TTF
+./O/OUIJADOR.TTF
+./O/OURGANG.TTF
+./O/outersid.ttf
+./O/Outofsight.ttf
+./O/OUTRIGHT.TTF
+./O/outwrite.ttf
+./O/overhead.ttf
+./O/OVERLOAD.TTF
+./O/OXYGENE1.TTF
+./O/Ozone.ttf
+./O/Ozonelayer.ttf
+./O/SF Obliquities v1.0/SF Obliquities Bold.ttf
+./O/SF Obliquities v1.0/SF Obliquities Extended Bold.ttf
+./O/SF Obliquities v1.0/SF Obliquities Extended.ttf
+./O/SF Obliquities v1.0/SF Obliquities Outline Bold.ttf
+./O/SF Obliquities v1.0/SF Obliquities Outline.ttf
+./O/SF Obliquities v1.0/SF Obliquities.ttf
+./O/Old Copperfield.ttf
+./O/Old Oak.ttf
+./O/Old Virus.ttf
+./O/Oldec___.ttf
+./O/OLDFAX.TTF
+./O/OLDGATEL.TTF
+./O/oliver/oliver__.ttf
+./O/OLIVERSB.TTF
+./O/OLLIC___.TTF
+./O/OLYMB___.TTF
+./O/OLYMRG__.TTF
+./O/OMEGA5.TTF
+./O/OMNI.TTF
+./O/ONCEINAW.TTF
+./O/ONE47.TTF
+./O/oneway.ttf
+./O/OogieBoogie.ttf
+./O/Ooky.ttf
+./O/Operatinginstructions.ttf
+./O/opiated.ttf
+./O/OPIUM___.TTF
+./O/SF Old Republic Bold.ttf
+./O/SF Old Republic Italic.ttf
+./O/SF Old Republic SC Bold Italic.ttf
+./O/SF Old Republic SC Bold.ttf
+./O/SF Old Republic SC Italic.ttf
+./O/SF Old Republic SC.ttf
+./O/SF Old Republic.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Heavy Oblique.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Heavy.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Light Oblique.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Light.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Medium Oblique.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Medium.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Shaded Oblique.ttf
+./O/SF Orson Casual v1.0/SF Orson Casual Shaded.ttf
+./O/SF Outer Limits Distorted.ttf
+./O/SF Outer Limits DistUpright.ttf
+./O/SF Outer Limits Extended.ttf
+./O/SF Outer Limits ExtUpright.ttf
+./O/SF Outer Limits Upright.ttf
+./O/SF Outer Limits.ttf
+./O/TT_OMNIB.TTF
+./O/OHCRBRG_.TTF
+./O/oposs___.ttf
+./O/SF Old Republic Bold Italic.ttf
+./P/Bminus.TTF
+./P/Egna/PLATN___.TTF
+./P/Pacmania.ttf
+./P/pakenham.ttf
+./P/PALIMPUS.TTF
+./P/Panama.ttf
+./P/PANTSPAT.TTF
+./P/PAPAMA__.TTF
+./P/PARAAMIN.TTF
+./P/Parkvane.ttf
+./P/ParryHotter.ttf
+./P/PARTB___.TTF
+./P/Pastern.ttf
+./P/PASTICHE.TTF
+./P/PASTOROF.TTF
+./P/PAYZP___.TTF
+./P/pdark.ttf
+./P/PEAKE.TTF
+./P/PEATLOAF.TTF
+./P/PEEXEL__.TTF
+./P/PEEXL___.TTF
+./P/PLATSCH.ttf
+./P/PLAYDOUG.TTF
+./P/Playtoy.ttf
+./P/PLEASING.TTF
+./P/PLUG-NIC.TTF
+./P/pneumati.ttf
+./P/pneutall.ttf
+./P/pneuwide.ttf
+./P/poftsarade.ttf
+./P/poilettaper.ttf
+./P/PointedlyMad.ttf
+./P/POISB___.TTF
+./P/Pokemon.ttf
+./P/Police.ttf
+./P/ponde___.ttf
+./P/pookie.ttf
+./P/POP.1280.TTF
+./P/POPPYCOC.TTF
+./P/Popsies.ttf
+./P/POPULARC.TTF
+./P/PORKH___.TTF
+./P/PORKY'S_.TTF
+./P/PinkCandyPopcornBats.ttf
+./P/PinkCandyPopcornFont.ttf
+./P/PINNIEPO.TTF
+./P/PIRACY__.TTF
+./P/Piranha.ttf
+./P/PIXEL___.TTF
+./P/pizzabot.ttf
+./P/PIZZDFO_.TTF
+./P/PLAINCRE.TTF
+./P/PLAIO___.TTF
+./P/PLAND___.TTF
+./P/PLANET5.TTF
+./P/PLANETBE.TTF
+./P/PLANETN.TTF
+./P/PLANETNS.TTF
+./P/plasdrip.ttf
+./P/plasdrpe.ttf
+./P/Plasma01.ttf
+./P/Plasma02.ttf
+./P/Plasma03.ttf
+./P/Plasma04.ttf
+./P/Plasma05.ttf
+./P/Plasma06.ttf
+./P/PrimoBright.ttf
+./P/Priv.ttf
+./P/Proc2.ttf
+./P/PROJM___.TTF
+./P/PROPAGAN.ttf
+./P/PROTECTI.TTF
+./P/PSAUDI5.TTF
+./P/pseudo.ttf
+./P/pshift.TTF
+./P/PSYCHO.TTF
+./P/ptarmci_.ttf
+./P/ptarmc__.ttf
+./P/ptarmi__.ttf
+./P/ptarm___.ttf
+./P/PUBLIC-E.TTF
+./P/PUFF.TTF
+./P/Punk.ttf
+./P/punkass_.ttf
+./P/PUNKA___.TTF
+./P/pupcat__.ttf
+./P/PUSSSA__.TTF
+./P/PUSSS___.TTF
+./P/PYRA.TTF
+./P/PYRITE.TTF
+./P/pythia.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Condensed Oblique.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Condensed.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Extended Oblique.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Extended.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Oblique.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Shaded Oblique.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom Shaded.ttf
+./P/SF Pale Bottom v1.0/SF Pale Bottom.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric Condensed Oblique.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric Condensed.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric Inline Oblique.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric Inline.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric Oblique.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric SFX Oblique.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric SFX.ttf
+./P/SF Piezolectric v1.0/SF Piezolectric.ttf
+./P/SF Pixelate v1.0/SF Pixelate Bold Oblique.ttf
+./P/SF Pixelate v1.0/SF Pixelate Bold.ttf
+./P/SF Pixelate v1.0/SF Pixelate Oblique.ttf
+./P/SF Pixelate v1.0/SF Pixelate Shaded Bold Oblique.ttf
+./P/SF Pixelate v1.0/SF Pixelate Shaded Bold.ttf
+./P/SF Pixelate v1.0/SF Pixelate Shaded Oblique.ttf
+./P/SF Pixelate v1.0/SF Pixelate Shaded.ttf
+./P/SF Pixelate v1.0/SF Pixelate.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter Bold Italic.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter Bold.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter Italic.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter Outline Italic.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter Outline.ttf
+./P/SF Planetary Orbiter v2.0/SF Planetary Orbiter.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Bold Italic.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Bold.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Extended Bold Italic.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Extended Bold.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Extended Italic.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Extended.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Italic.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Outline Italic.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie Outline.ttf
+./P/SF Port McKenzie v1.0/SF Port McKenzie.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Bold Oblique.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Bold.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Condensed Oblique.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Condensed.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Extended Oblique.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Extended.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic Oblique.ttf
+./P/SF Proverbial Gothic v1.0/SF Proverbial Gothic.ttf
+./P/WHITB___.TTF
+./P/WINDOWS/Desktop/Primer.ttf
+./P/WINDOWS/Desktop/Primerb.ttf
+./P/XtraStuf.mac/PUSSSA__.TTF
+./P/XtraStuf.mac/PUSSS___.TTF
+./P/Plasma08.ttf
+./P/Plasma09.ttf
+./P/Plasma10.ttf
+./P/Plasma11.ttf
+./P/Plasma12.ttf
+./P/Plasma13.ttf
+./P/Plasma14.ttf
+./P/Plasma15.ttf
+./P/Plasma16.ttf
+./P/plasmati.ttf
+./P/PLASTICB.TTF
+./P/PLASTIQU.TTF
+./P/PlatinumHubCaps.ttf
+./P/PlatinumHubCapsPolished.ttf
+./P/PlatinumHubCapsSolid.ttf
+./P/PLATONIC.TTF
+./P/PLATSCH 2 outline.ttf
+./P/PEEX____.TTF
+./P/pincers.ttf
+./P/Plasma07.ttf
+./P/PLATSCH 2.ttf
+./P/PORNHUT_.TTF
+./P/Primo.ttf
+./P/PepRally.ttf
+./P/perd.ttf
+./P/Perdc.ttf
+./P/Perde.ttf
+./P/PERE.TTF
+./P/PERISPHE.TTF
+./P/Perlenkette.ttf
+./P/Permanent.ttf
+./P/Permanent_I.ttf
+./P/Persona.ttf
+./P/persuasi.ttf
+./P/PESSIMA_.TTF
+./P/Phantomime.ttf
+./P/PHARMACY.TTF
+./P/PHATGUY_.TTF
+./P/PHATP___.TTF
+./P/PheanisWickey.ttf
+./P/PHILA3.TTF
+./P/phorfeit.ttf
+./P/Phorise.ttf
+./P/PICKABIL.TTF
+./P/PIECB___.TTF
+./P/portcreb.ttf
+./P/PORTCRED.TTF
+./P/POST.TTF
+./P/PotLand.ttf
+./P/POWDRFG_.ttf
+./P/POWDRFP_.ttf
+./P/POWDRFS_.ttf
+./P/POWDRFT_.ttf
+./P/POWDRF__.ttf
+./P/powdwrk5.ttf
+./P/Powerpuff.ttf
+./P/PRECISIO.TTF
+./P/Predacon Beasts.TTF
+./P/PRESGRG.TTF
+./P/PRESTI__.TTF
+./P/PREST___.TTF
+./P/PRETS___.TTF
+./P/PRETU___.TTF
+./P/PRICEDOW.TTF
+./P/PRICK___.TTF
+./P/PRIMEMIN.TTF
+./Q/Quares.ttf
+./Q/queasy.ttf
+./Q/Qarats.ttf
+./Q/QGEAR.TTF
+./Q/Qiroff.ttf
+./Q/qlumpy.ttf
+./Q/qlumpysh.ttf
+./Q/qmark.ttf
+./Q/qmarkc.ttf
+./Q/qmarkci.ttf
+./Q/qmarkcs.ttf
+./Q/qmarkcsi.ttf
+./Q/qmarki.ttf
+./Q/qmarks.ttf
+./Q/qmarksi.ttf
+./Q/QQ4.TTF
+./Q/QSWITCHA.TTF
+./Q/QTECH.TTF
+./Q/quacksal.ttf
+./Q/QUADAPTO.TTF
+./Q/QUADRANG.TTF
+./Q/quadrcal.ttf
+./Q/quadrtic.ttf
+./Q/QUAKE.TTF
+./Q/quandary.ttf
+./Q/quantfh.ttf
+./Q/quantflt.ttf
+./Q/QUANTITY.TTF
+./Q/quantrh.ttf
+./Q/quantrnd.ttf
+./Q/quanttap.ttf
+./Q/quaranti.ttf
+./Q/Quardi.ttf
+./Q/Quark.ttf
+./Q/Quarki.ttf
+./Q/Quarko.ttf
+./Q/Quarkoi.ttf
+./Q/quart.ttf
+./Q/quartc.ttf
+./Q/quarte.ttf
+./Q/quarthck.ttf
+./Q/quarthin.ttf
+./Q/quarti.ttf
+./Q/quarto.ttf
+./Q/quartoi.ttf
+./Q/Quarx.ttf
+./Q/Quarxi.ttf
+./Q/Quarxo.ttf
+./Q/Quarxoi.ttf
+./Q/Quasart.ttf
+./Q/QUASI___.TTF
+./Q/Quaxy.ttf
+./Q/queasyol.ttf
+./Q/quest2.ttf
+./Q/quest2i.ttf
+./Q/quest2l.ttf
+./Q/quest2s.ttf
+./Q/Questionoftime.ttf
+./Q/Questionoftimesimple.ttf
+./Q/Quibel.ttf
+./Q/QUICK4.TTF
+./Q/QUICKSIL.TTF
+./Q/Quiff.ttf
+./Q/QUIGLEYW.TTF
+./Q/quillexo.ttf
+./Q/quillexs.ttf
+./Q/QUINKIE_.TTF
+./Q/quixotic.ttf
+./Q/QUOTP___.TTF
+./Q/QUROH___.TTF
+./Q/QUROPA__.TTF
+./Q/QURVE-R.TTF
+./Q/SF Quartzite v2.0/SF Quartzite Bold Oblique.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Bold.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Extended Oblique.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Extended.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Oblique.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Shaded Oblique.ttf
+./Q/SF Quartzite v2.0/SF Quartzite Shaded.ttf
+./Q/SF Quartzite v2.0/SF Quartzite.ttf
+./R/BN-Rock.ttf
+./R/rabiohead.ttf
+./R/RAD.TTF
+./R/radgranny.ttf
+./R/RADIO.TTF
+./R/radiohar.ttf
+./R/RADIORAN.TTF
+./R/radiosin.ttf
+./R/RADIOSTA.TTF
+./R/RADIO___.TTF
+./R/RAGEY.TTF
+./R/RAGGMOPP.TTF
+./R/raiders.ttf
+./R/Raind___.TTF
+./R/RAKEFM__.TTF
+./R/rambling.ttf
+./R/RAMMR___.TTF
+./R/ransom.ttf
+./R/RANXEROX.TTF
+./R/RAPJACK_.TTF
+./R/ratio___.ttf
+./R/Rattpick.ttf
+./R/Raumsond.ttf
+./R/ravaged2.ttf
+./R/ravcater.ttf
+./R/raveflire.ttf
+./R/Raveheart.ttf
+./R/raydiat2.ttf
+./R/REPUB2I_.ttf
+./R/REPUB2__.ttf
+./R/REPUB3I_.ttf
+./R/REPUB3__.ttf
+./R/REPUB4I_.ttf
+./R/REPUB4__.ttf
+./R/REPUB5I_.ttf
+./R/REPUB5__.ttf
+./R/REPUBI__.ttf
+./R/REPUBLKI.ttf
+./R/REPUBLK_.ttf
+./R/REPUB___.ttf
+./R/REPUCNI_.ttf
+./R/REPUCN__.ttf
+./R/REPUEXPI.ttf
+./R/REPUEXP_.ttf
+./R/REPUSKI_.ttf
+./R/REPUSK__.ttf
+./R/RESEGRG_.TTF
+./R/Roguec.ttf
+./R/Rogued.ttf
+./R/Roguee.ttf
+./R/Rogueei.ttf
+./R/Roguei.ttf
+./R/Roguela.ttf
+./R/Roguelai.ttf
+./R/Roguelaie.ttf
+./R/Roguele.ttf
+./R/Rogueo.ttf
+./R/ROLLOGLI.TTF
+./R/ROMAA___.TTF
+./R/ROMEO.TTF
+./R/ROOSEVEL.TTF
+./R/ROTHWELL.TTF
+./R/rotund.ttf
+./R/rotundo.ttf
+./R/Roung___.ttf
+./R/Royalacid.ttf
+./R/Royalacid_o.ttf
+./R/regi.ttf
+./R/registry.ttf
+./R/rego.ttf
+./R/relapse.ttf
+./R/RELIEFTE.TTF
+./R/relishga.ttf
+./R/REP2.TTF
+./R/REP2CNI_.ttf
+./R/REP2CN__.ttf
+./R/REP2EXPI.ttf
+./R/REP2EXP_.ttf
+./R/REP3CNI_.ttf
+./R/REP3CN__.ttf
+./R/REP3EXPI.ttf
+./R/REP3EXP_.ttf
+./R/REP4CNI_.ttf
+./R/REP4CN__.ttf
+./R/REP4EXPI.ttf
+./R/REP4EXP_.ttf
+./R/REP5CNI_.ttf
+./R/REP5CN__.ttf
+./R/REP5EXPI.ttf
+./R/REP5EXP_.ttf
+./R/REPENT__.TTF
+./R/REPKCNI_.ttf
+./R/REPKCN__.ttf
+./R/REPKEXPI.ttf
+./R/RCMP2.TTF
+./R/ready_for_my_closeup.ttf
+./R/realpol.ttf
+./R/reason.ttf
+./R/reasonsh.ttf
+./R/Rebec4.ttf
+./R/REBUFFED.TTF
+./R/Reburied.ttf
+./R/Red Lightning.ttf
+./R/REDCIRCL.TTF
+./R/REDENSEK.TTF
+./R/REDHGB__.TTF
+./R/REDHG___.TTF
+./R/Redstar.ttf
+./R/RedstarBold.ttf
+./R/redundan.ttf
+./R/refluxed.TTF
+./R/reg.ttf
+./R/regc.ttf
+./R/rege.ttf
+./R/RAZORKEE.TTF
+./R/regenera.ttf
+./R/REPKEXP_.ttf
+./R/RESURREC.TTF
+./R/Rogue.ttf
+./R/RUBAE___.TTF
+./R/RETALIAT.TTF
+./R/RHUBARBP.TTF
+./R/RHUMBASC.TTF
+./R/RIALTO.TTF
+./R/Riddleprint.ttf
+./R/Riggle.ttf
+./R/rina.ttf
+./R/RIOTSQUA.TTF
+./R/RIPPCUC_.TTF
+./R/RIPPC___.TTF
+./R/Ripple_0.ttf
+./R/RITABD__.ttf
+./R/RITAEXB_.ttf
+./R/Ritalin.ttf
+./R/RITZYREM.TTF
+./R/Rival.ttf
+./R/rivalry.ttf
+./R/RIVANNA_.TTF
+./R/ROBERTA_.TTF
+./R/ROBOKID_.TTF
+./R/ROBOKOZ.TTF
+./R/ROBOM___.TTF
+./R/RockFont.ttf
+./R/Rockmsf_.ttf
+./R/ROCKYAOE.TTF
+./R/RUFF.TTF
+./R/ruinik.ttf
+./R/Runner.ttf
+./R/RUNNINGS.TTF
+./R/runoff.ttf
+./R/RUNY-TUN.TTF
+./R/RUSHIN.TTF
+./R/RUSTPROO.TTF
+./R/RxFF__.ttf
+./R/RxFO__.ttf
+./R/RxFZ__.ttf
+./R/RxOF__.ttf
+./R/RxOO__.ttf
+./R/RxOZ__.ttf
+./R/RxZF__.ttf
+./R/RxZO__.ttf
+./R/RxZZ__.ttf
+./R/ryuker.ttf
+./R/SF Retroesque v2.0/SF Retroesque FX Oblique.ttf
+./R/SF Retroesque v2.0/SF Retroesque FX.ttf
+./R/SF Retroesque v2.0/SF Retroesque Oblique.ttf
+./R/SF Retroesque v2.0/SF Retroesque Outline Oblique.ttf
+./R/SF Retroesque v2.0/SF Retroesque Outline.ttf
+./R/SF Retroesque v2.0/SF Retroesque Shaded Oblique.ttf
+./R/SF Retroesque v2.0/SF Retroesque Shaded.ttf
+./R/SF Retroesque v2.0/SF Retroesque.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice Condensed.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice Outline.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice SC Condensed.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice SC Outline.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice SC Shaded.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice SC.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice Shaded.ttf
+./R/SF RetroSplice v1.0/SF RetroSplice.ttf
+./R/XtraStuf.mac/REDENSEK.TTF
+./R/XtraStuf.mac/ROLLOGLI.TTF
+./S/akbar.ttf
+./S/BN-Snake.ttf
+./S/sadfilms.ttf
+./S/sad_jane.ttf
+./S/SALIMC__.TTF
+./S/SAMARN__.TTF
+./S/SAMARO__.TTF
+./S/Samba.ttf
+./S/SAMBD___.TTF
+./S/Samdan.ttf
+./S/SamdanCondensed.ttf
+./S/SamdanEvil.ttf
+./S/SamdanEvilCondensed.ttf
+./S/sandoval.ttf
+./S/Sands Of Fire.ttf
+./S/SAND____.TTF
+./S/SANKA___.TTF
+./S/SANTBSB_.TTF
+./S/sarcasti.ttf
+./S/Snott SemiBold.ttf
+./S/sofachri.ttf
+./S/Softfade.TTF
+./S/Softplain.TTF
+./S/SOLEMNIT.TTF
+./S/Something Fishy.ttf
+./S/somewhereinspace.TTF
+./S/Somora.ttf
+./S/SONIS___.TTF
+./S/Son_Of/Son_of__.ttf
+./S/SOUCISAN.TTF
+./S/SOULMAMA.TTF
+./S/SOULPAPA.TTF
+./S/SOVIET4.TTF
+./S/Space Chick.ttf
+./S/Space Pontiff.ttf
+./S/Space Woozies 3D.ttf
+./S/SPACEACE.TTF
+./S/SPACEBEA.TTF
+./S/spaceboy.TTF
+./S/Spacec5.ttf
+./S/Spacec5i.ttf
+./S/SPACECAD.TTF
+./S/spacefr.ttf
+./S/spacefri.ttf
+./S/Spacej.ttf
+./S/SpaceOut.ttf
+./S/SpaceOutOpen.ttf
+./S/SpaceWoozies.ttf
+./S/SPACEWOR.TTF
+./S/spaciouo.ttf
+./S/spacious.ttf
+./S/SPACP___.TTF
+./S/spanky.ttf
+./S/steelfib.ttf
+./S/steelfis.ttf
+./S/STEINBI_.ttf
+./S/STEINEMB.ttf
+./S/STEINEMI.ttf
+./S/STEINEMU.ttf
+./S/STEINEM_.ttf
+./S/stenc_ex.ttf
+./S/STENFR__.TTF
+./S/STENF___.TTF
+./S/STEREOFI.TTF
+./S/STEREOHI.TTF
+./S/STEREOPH.TTF
+./S/STHLM___.TTF
+./S/Stile Project.ttf
+./S/stilltim.ttf
+./S/Stiltedman .ttf
+./S/StixnStonz.ttf
+./S/stocky.TTF
+./S/STOREB__.TTF
+./S/Strab___.ttf
+./S/Strande2.ttf
+./S/STRAPN__.TTF
+./S/SF Speakeasy v1.0.1/SF Speakeasy Oblique.ttf
+./S/SF Speakeasy v1.0.1/SF Speakeasy Outline Oblique.ttf
+./S/SF Speakeasy v1.0.1/SF Speakeasy Outline.ttf
+./S/SF Speakeasy v1.0.1/SF Speakeasy Shaded Oblique.ttf
+./S/SF Speakeasy v1.0.1/SF Speakeasy Shaded.ttf
+./S/SF Speakeasy v1.0.1/SF Speakeasy.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Bold Oblique.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Bold.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Condensed Oblique.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Condensed.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Oblique.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Shaded Oblique.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar Shaded.ttf
+./S/SF Speedwaystar v1.0/SF Speedwaystar.ttf
+./S/SF Star Dust v1.0/SF Star Dust Condensed Italic.ttf
+./S/SF Star Dust v1.0/SF Star Dust Condensed.ttf
+./S/SF Star Dust v1.0/SF Star Dust Italic.ttf
+./S/SF Star Dust v1.0/SF Star Dust.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Bold Oblique.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Bold.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Condensed Oblique.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Condensed.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Oblique.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Shaded Oblique.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop Shaded.ttf
+./S/SF Synthonic Pop v1.0/SF Synthonic Pop.ttf
+./S/ShadowTag.ttf
+./S/SHAKETHA.TTF
+./S/SHAM.TTF
+./S/SHANLN__.TTF
+./S/Sharon Apple.ttf
+./S/SHAXIZOR.TTF
+./S/She-Creature.ttf
+./S/Shermlock.ttf
+./S/ShermlockOpen.ttf
+./S/SHIFTY.TTF
+./S/ShineOn.ttf
+./S/SHLOP.TTF
+./S/SHO-CARD.TTF
+./S/Shock.ttf
+./S/ShockThick.ttf
+./S/SHOPLIFT.TTF
+./S/shouldve.ttf
+./S/shouldvs.ttf
+./S/ShowerFlower/showerflower.ttf
+./S/SHREDDED.TTF
+./S/Shredder.ttf
+./S/Si.TTF
+./S/SID-THEK.TTF
+./S/SIDESHOW.TTF
+./S/sideways.ttf
+./S/Simple Runes.ttf
+./S/Simpleman.ttf
+./S/simplto2.ttf
+./S/Sargoo.ttf
+./S/scifi2k2.ttf
+./S/SCUME___.TTF
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic Bold Oblique.ttf
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic Bold.ttf
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic Oblique.ttf
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic Shaded Oblique.ttf
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic Shaded.ttf
+./S/SF Slapstick Comic v1.0/SF Slapstick Comic.ttf
+./S/Simpsonfont.ttf
+./S/Slighrg_.ttf
+./S/Snott Outline.ttf
+./S/spastic2.ttf
+./S/SQUAUEB_.TTF
+./S/Steamroller.ttf
+./S/STRAPO__.TTF
+./S/STRTHN__.ttf
+./S/Suncatcher.ttf
+./S/STRTHRIT.ttf
+./S/STRUPIT_.ttf
+./S/STRUPR__.ttf
+./S/STRURIT_.ttf
+./S/Stuck___.ttf
+./S/STUDEBAK.TTF
+./S/STUNT3.TTF
+./S/STYROFOA.TTF
+./S/SUBAI___.TTF
+./S/SUBARG__.TTF
+./S/submergd.ttf
+./S/subpear_.ttf
+./S/SUBTEXT_.TTF
+./S/subway.ttf
+./S/Suck My Balls.ttf
+./S/SUDBURY.TTF
+./S/sudbury3.ttf
+./S/SUGAR.TTF
+./S/Suicide.ttf
+./S/SUIGBI__.TTF
+./S/SUIGB___.TTF
+./S/SUIGENER.TTF
+./S/SUIGI___.TTF
+./S/sujetbi_.ttf
+./S/sujetb__.ttf
+./S/sujeti__.ttf
+./S/sujet___.ttf
+./S/SULPHUR_.TTF
+./S/scifi2ki.ttf
+./S/scifi2ku.ttf
+./S/scifibit.ttf
+./S/scifix.ttf
+./S/scifixb.ttf
+./S/scifixbi.ttf
+./S/scifixi.ttf
+./S/scifixo.ttf
+./S/scifixoi.ttf
+./S/sclnmaze.ttf
+./S/Scood___.ttf
+./S/Scottie-and-Judy.ttf
+./S/scott___.ttf
+./S/SCRAA___.TTF
+./S/SCREWBAL.ttf
+./S/SCRIPALT.ttf
+./S/SCRIPTIN.ttf
+./S/SCRUBADO.TTF
+./S/sirclive.ttf
+./S/Sirsrg__.ttf
+./S/SISTER.TTF
+./S/SIXTY.TTF
+./S/SKATD___.TTF
+./S/Skeksis.ttf
+./S/SKELETOR.TTF
+./S/SKETCHBO.TTF
+./S/sketchy.ttf
+./S/SKIDE___.TTF
+./S/SKIDZ___.TTF
+./S/SKINA___.TTF
+./S/skullcap.ttf
+./S/Skunkline.ttf
+./S/Skurri.ttf
+./S/SKYLAB60.TTF
+./S/SLAINE.TTF
+./S/slammertag.ttf
+./S/Slap Happy.ttf
+./S/SLEEP.TTF
+./S/slender.ttf
+./S/slenderw.ttf
+./S/slenmini.ttf
+./S/slenstub.ttf
+./S/SPATC___.TTF
+./S/SPECVBB_.TTF
+./S/SPECVBRG.TTF
+./S/Speeb___.TTF
+./S/Speec___.TTF
+./S/SPEEF___.TTF
+./S/SPEEN3__.TTF
+./S/SPEENS__.TTF
+./S/SPIDERSH.TTF
+./S/spiritmedium.ttf
+./S/SpitShine.ttf
+./S/Splash.ttf
+./S/Splatz2.ttf
+./S/Split Enzymes.ttf
+./S/SPONGY.TTF
+./S/SpookyMagic.ttf
+./S/Spot Matrix.ttf
+./S/SPOTF___.TTF
+./S/SpringfieldTablets/SPRIT___.TTF
+./S/sproject/SCIEP___.TTF
+./S/Spy2.ttf
+./S/sqroute.ttf
+./S/SuncatcherFill.ttf
+./S/Sunday Kid.ttf
+./S/SUNSET__.TTF
+./S/SUPEHO__.TTF
+./S/SUPER.TTF
+./S/SUPERFLY.TTF
+./S/SUPERGLU.TTF
+./S/SUPERHET.TTF
+./S/SUPERVIX.TTF
+./S/Surfph__.ttf
+./S/Surfpi__.ttf
+./S/Surfpl__.ttf
+./S/Surfpunx.ttf
+./S/SURFS___.TTF
+./S/SWALLOW_.TTF
+./S/SwedieCruel.ttf
+./S/SWEETASC.TTF
+./S/SweetLeaf.ttf
+./S/SWINGER_.TTF
+./S/SWINKYDA.TTF
+./S/SWINSBRG.TTF
+./S/Swirled2.ttf
+./S/SWISHBUT.TTF
+./S/SWOLS___.TTF
+./S/SYBIG___.TTF
+./S/Symbnerv.ttf
+./S/syndrome.ttf
+./S/syntheti.ttf
+./S/ULTRSHO_.TTF
+./S/ULTRS___.TTF
+./S/windows/Desktop/sofachro.ttf
+./S/XtraStuf.mac/SANKA___.TTF
+./S/XtraStuf.mac/SUPEHO__.TTF
+./S/XtraStuf.mac/SUPERFLY.TTF
+./S/XtraStuf.mac/SUPERVIX.TTF
+./S/XtraStuf.mac/ULTRSHO_.TTF
+./S/XtraStuf.mac/ULTRS___.TTF
+./S/Slimania Bold.ttf
+./S/Slimania.ttf
+./S/Slimania2.ttf
+./S/Slimaniabold Black.ttf
+./S/SLOEGIN.TTF
+./S/SLUDGE.TTF
+./S/SMARC___.TTF
+./S/SMARSB__.TTF
+./S/SMARS___.TTF
+./S/Smash.ttf
+./S/smegalom/SMEGALOM.TTF
+./S/Smellvet.ttf
+./S/Smelo___.ttf
+./S/SMILAGE_.TTF
+./S/Snail  n  Ink.ttf
+./S/SNAKV___.TTF
+./S/SNAPPYSE.TTF
+./S/SNIDELY_.TTF
+./S/SNIGSET_.TTF
+./S/Snott  Bold.ttf
+./S/Snott 2000      Bold.ttf
+./S/SQUAUN__.TTF
+./S/SQUAUT__.TTF
+./S/SQUEALER.TTF
+./S/SQUEMB__.TTF
+./S/squitcher.ttf
+./S/srgt6pack.ttf
+./S/SRSERVIC.TTF
+./S/SSCRIPT2.TTF
+./S/STAGB___.TTF
+./S/stagnati.ttf
+./S/STAMAJ__.TTF
+./S/STAMPACT.TTF
+./S/STANDING.TTF
+./S/StanHand.ttf
+./S/Starcraft Normal.ttf
+./S/STARF7.TTF
+./S/Starjedi.ttf
+./S/Starjhol.ttf
+./S/Starjout.ttf
+./S/Starn___.ttf
+./S/StartlingFont.ttf
+./S/STRCMIT_.ttf
+./S/STRCMRI_.ttf
+./S/STRCOMP_.ttf
+./S/STREETCR.TTF
+./S/STREETI_.ttf
+./S/StreetwiseBuddy.ttf
+./S/STREET__.ttf
+./S/strenuou.ttf
+./S/Stretch  Plain.ttf
+./S/STREXPI_.ttf
+./S/STREXPS_.ttf
+./S/STREXP__.ttf
+./S/STREXRI_.ttf
+./S/STRIPES & STARS Normal.ttf
+./S/STRLN___.ttf
+./S/STRRVIT_.ttf
+./S/STRTHIT_.ttf
+./S/SEA7.TTF
+./S/SEAWFA__.TTF
+./S/SECRCODE.TTF
+./S/seethebe.ttf
+./S/SelznickNormal.ttf
+./S/SENDCASH.TTF
+./S/SEOUC___.TTF
+./S/Seperate.ttf
+./S/sequence.ttf
+./S/SERAPHIM.TTF
+./S/Serial.ttf
+./S/Seriffic Grunge.ttf
+./S/SESQUIPE.TTF
+./S/setbackt.ttf
+./S/Seventy Flares.ttf
+./S/SEVER2.TTF
+./S/SEVESBRG.TTF
+./S/sewer.TTF
+./S/sexsmith.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans Bold Italic.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans Bold.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans Italic.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans SC Bold Italic.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans SC Bold.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans SC Italic.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans SC.ttf
+./S/SF Scribbled Sans v1.0/SF Scribbled Sans.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Bold Oblique.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Bold.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Distressed Oblique.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Distressed.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Extended Oblique.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Extended.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai Oblique.ttf
+./S/SF Shai Fontai v1.0/SF Shai Fontai.ttf
+./S/SARSAPAR.TTF
+./S/Satanick-Regular.ttf
+./S/SATURN__.TTF
+./S/saunder.ttf
+./S/SAVEDBYZ.TTF
+./S/SAVINGSB_.TTF
+./S/sbblanco.ttf
+./S/sbblital.ttf
+./S/sbital.ttf
+./S/scalines.ttf
+./S/SCAR6.TTF
+./S/SCARB3.TTF
+./S/SCARO.TTF
+./S/Scatterbrained Restrained.ttf
+./S/SCHIZM__.TTF
+./S/schoolbully.ttf
+./S/SCHRAO__.TTF
+./S/SCHRA___.TTF
+./T/12tonfishstick.ttf
+./T/12tonsushi.ttf
+./T/13oclock.ttf
+./T/Evilcop.ttf
+./T/RT_tower.TTF
+./T/SF Telegraphic v1.0/SF Telegraphic Bold Italic.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Bold.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Italic.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Light Bold Italic.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Light Bold.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Light Italic.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic Light.ttf
+./T/SF Telegraphic v1.0/SF Telegraphic.ttf
+./T/SF Toontime v1.0/SF Toontime Blotch Italic.ttf
+./T/SF Toontime v1.0/SF Toontime Blotch.ttf
+./T/SF Toontime v1.0/SF Toontime Bold Italic.ttf
+./T/SF Toontime v1.0/SF Toontime Bold.ttf
+./T/SF Toontime v1.0/SF Toontime Italic.ttf
+./T/SF Toontime v1.0/SF Toontime Shaded Italic.ttf
+./T/SF Toontime v1.0/SF Toontime Shaded.ttf
+./T/SF Toontime v1.0/SF Toontime.ttf
+./T/TAGSX___.TTF
+./T/tallpaul.ttf
+./T/TANGLEWO.TTF
+./T/Tantrum Tongue.ttf
+./T/TAPELOOP.TTF
+./T/TAPEWORM.TTF
+./T/TAPPYS_.TTF
+./T/TARABULB.TTF
+./T/TASTC___.TTF
+./T/TattooLetteringBlack.ttf
+./T/TattooLetteringOpen.ttf
+./T/TAWAI___.TTF
+./T/TEAMSPIR.TTF
+./T/Teazer.ttf
+./T/techniqo.ttf
+./T/techniqu.ttf
+./T/techover.ttf
+./T/TEENAGEA.TTF
+./T/teenbdit.ttf
+./T/teenbold.ttf
+./T/Teenick.ttf
+./T/THURSDOO.TTF
+./T/thwart.ttf
+./T/Tiffy.ttf
+./T/TiltAWhirl.ttf
+./T/Timebomb.TTF
+./T/TINSNIPS.TTF
+./T/TITANICK.TTF
+./T/TOBINTAX.TTF
+./T/Today___.ttf
+./T/TOFORGIV.TTF
+./T/TOFU.TTF
+./T/TOLO____.TTF
+./T/TOMB.TTF
+./T/TOMMYGUN.TTF
+./T/tomnr.ttf
+./T/TOMVA___.TTF
+./T/tonik.ttf
+./T/TOONEYNO.TTF
+./T/TOPBOND.TTF
+./T/Torgny_.ttf
+./T/TORKBI__.TTF
+./T/TORKB___.TTF
+./T/TORKI___.TTF
+./T/TORK____.TTF
+./T/TROGLOP_.ttf
+./T/TROGLO__.ttf
+./T/trollbai.ttf
+./T/TRON.TTF
+./T/Trubble.ttf
+./T/Tsa.ttf
+./T/tsextolo.ttf
+./T/tsextols.ttf
+./T/tuesday.ttf
+./T/TURBRIP_.TTF
+./T/turkeys/turkeys.ttf
+./T/turmoil.ttf
+./T/TURNBB__.TTF
+./T/TURNB___.TTF
+./T/Turok.ttf
+./T/Turtles.ttf
+./T/tussle.ttf
+./T/tusslee.ttf
+./T/tussleeo.ttf
+./T/tussleo.ttf
+./T/Twelve Ton Goldfish.ttf
+./T/type4.ttf
+./T/TYPEE.TTF
+./T/typesimp.TTF
+./T/TYPEWRIT.TTF
+./T/TypewriterKeys.ttf
+./T/typoderm.ttf
+./T/XtraStuf.mac/THURSDOO.TTF
+./T/teenlita.ttf
+./T/teenlite.ttf
+./T/teen____.ttf
+./T/Tejartchi.ttf
+./T/TELE2.TTF
+./T/telephas.ttf
+./T/TERRA-X_.TTF
+./T/TERRA3.TTF
+./T/TERYLENE.TTF
+./T/TGIFriday.ttf
+./T/ThaiPedicure.ttf
+./T/THAYSN__.TTF
+./T/THEBIRDS.TTF
+./T/Thedrips.ttf
+./T/Therfont.ttf
+./T/THERIFLE.TTF
+./T/TheThreeStoogesFont.ttf
+./T/Thirtyei.ttf
+./T/Thor.ttf
+./T/thunder2.ttf
+./T/thunder2i.ttf
+./T/thunder2s.ttf
+./T/TouristTrap.ttf
+./T/TOYLAND-.TTF
+./T/TRACE4.TTF
+./T/Tragic2.ttf
+./T/trancefm.ttf
+./T/Transformers.TTF
+./T/Transmaidens.ttf
+./T/Transmetals.TTF
+./T/Transylv.ttf
+./T/trans___.ttf
+./T/TRAPPERJ.TTF
+./T/Treamd.ttf
+./T/Trenz.ttf
+./T/TRIACSEV.TTF
+./T/TRIBAL__.ttf
+./T/tribn___.TTF
+./T/TRIBTWO_.ttf
+./T/teenital.ttf
+./T/Thundercats.ttf
+./T/Toucon__.ttf
+./T/TrickTag.ttf
+./U/underwhe.ttf
+./U/Unxgalaw.ttf
+./U/TRANSFER/ERIC/ULTRATTF/ULTRAWOR.TTF
+./U/U26frg__.ttf
+./U/ubiquity.ttf
+./U/UFRAYD.TTF
+./U/Ugly-Rumor.ttf
+./U/uglyface.ttf
+./U/UGLYL___.TTF
+./U/UJACK2.TTF
+./U/ULTIMATU.TTF
+./U/ULTRA9.TTF
+./U/Ultrasonik.ttf
+./U/umberto.ttf
+./U/unanimo.ttf
+./U/unanimoi.ttf
+./U/Uncey.ttf
+./U/UNDERCOV.TTF
+./U/UNDERGRO.TTF
+./U/Underw.ttf
+./U/Unxgalo.ttf
+./U/Unxgalwo.ttf
+./U/updik___.ttf
+./U/upheavtt.ttf
+./U/upraise.ttf
+./U/uranium.ttf
+./U/urban.ttf
+./U/urbani.ttf
+./U/URBS____.TTF
+./U/URKELIAN.TTF
+./U/URSB____.TTF
+./U/URSE____.TTF
+./U/URURMA.TTF
+./U/usa.ttf
+./U/usac2.ttf
+./U/usae.ttf
+./U/usag.ttf
+./U/usai.ttf
+./U/usal.ttf
+./U/usalft.ttf
+./U/usas.ttf
+./U/USENETA.ttf
+./U/USENET_.ttf
+./U/USUZI.TTF
+./U/underwho.ttf
+./U/UNDIC___.TTF
+./U/Unfinished1.TTF
+./U/Unfinished2.TTF
+./U/UNI2.TTF
+./U/UNICORN.TTF
+./U/UNIONCIT.TTF
+./U/UniTortred.ttf
+./U/Universalfruitcake.ttf
+./U/UNIVOX.TTF
+./U/UNKUL.TTF
+./U/unlearn2.ttf
+./U/unlearne.ttf
+./U/unrespon.ttf
+./U/UNSTEADY.TTF
+./U/Untidy Italic Skrawl.ttf
+./U/Untitled.TTF
+./U/Untitled2.TTF
+./U/Untitled3.TTF
+./U/Unxgala.ttf
+./V/VectorBlack.ttf
+./V/VIPESRG_.TTF
+./V/TRANSFER/ERIC/VIOLTTF/VIOLATIO.TTF
+./V/vacantz.ttf
+./V/vademecu.ttf
+./V/vahikab.ttf
+./V/vahikac.ttf
+./V/vahikai.ttf
+./V/vahika_.ttf
+./V/valium.ttf
+./V/Valium__.ttf
+./V/valuold.TTF
+./V/vamp.ttf
+./V/vamp3d.ttf
+./V/VANDALOO.TTF
+./V/vanhelsing.ttf
+./V/Vanilla Boys.ttf
+./V/VANILLA.TTF
+./V/vanished.ttf
+./V/VANISHIN.TTF
+./V/vantage.ttf
+./V/vaporb.ttf
+./V/vaporbi.ttf
+./V/vaporbp.ttf
+./V/vaporbpi.ttf
+./V/vaporbs.ttf
+./V/vaporbsi.ttf
+./V/variance.ttf
+./V/VASSALLO.TTF
+./V/VDUB.TTF
+./V/Vector.ttf
+./V/vectroia.ttf
+./V/vectroic.ttf
+./V/vectroid.ttf
+./V/Vegetable.ttf
+./V/VELCRO__.TTF
+./V/velvenda.ttf
+./V/VENTA___.TTF
+./V/VENUSFLY.TTF
+./V/VENUSRIS.TTF
+./V/verrutscht.ttf
+./V/Verticalization.ttf
+./V/verti___.ttf
+./V/Very bad posture.ttf
+./V/VeryChristmess.ttf
+./V/Vi.TTF
+./V/VIBROCEN.TTF
+./V/VICEP___.TTF
+./V/VICTOR__.TTF
+./V/Videophreak.ttf
+./V/VikingStencil.ttf
+./V/VILLAGE.TTF
+./V/Vilmos.ttf
+./V/vindicti.ttf
+./V/VINNBBN_.TTF
+./V/VINSOME.TTF
+./V/vinylrepairkit.ttf
+./V/VIPESI__.TTF
+./V/VIPESSI_.TTF
+./V/VIPESSRG.TTF
+./V/VIPNAGOR.TTF
+./V/Virginlo.ttf
+./V/VIRIO___.TTF
+./V/VIRIS___.TTF
+./V/VIRTUE1.TTF
+./V/Visionaries.ttf
+./V/visitor1.ttf
+./V/visitor2.ttf
+./V/VITAMINO.TTF
+./V/VITAMIN_.TTF
+./V/VIXENE.TTF
+./V/VLAANDE1.TTF
+./V/VLAANDE2.TTF
+./V/VLAANDER.TTF
+./V/vmonitor.ttf
+./V/volatil1.ttf
+./V/volatil2.ttf
+./V/volt____.ttf
+./V/Voodoo Doll.ttf
+./V/vox.ttf
+./V/VSTAR.TTF
+./V/vtcorona/vtcorona.ttf
+./V/VULGDOP_.TTF
+./V/VURT.TTF
+./V/XtraStuf.mac/VELCRO__.TTF
+./W/Wbxscar_.ttf
+./W/Whoosit.ttf
+./W/Wolf4bo.ttf
+./W/FONTZ@/wincing.ttf
+./W/SF Wasabi v1.0/SF Wasabi Bold Italic.ttf
+./W/SF Wasabi v1.0/SF Wasabi Bold.ttf
+./W/SF Wasabi v1.0/SF Wasabi Condensed Bold Italic.ttf
+./W/SF Wasabi v1.0/SF Wasabi Condensed Bold.ttf
+./W/SF Wasabi v1.0/SF Wasabi Condensed Italic.ttf
+./W/SF Wasabi v1.0/SF Wasabi Condensed.ttf
+./W/SF Wasabi v1.0/SF Wasabi Italic.ttf
+./W/SF Wasabi v1.0/SF Wasabi.ttf
+./W/SF Willamette Bold Italic.ttf
+./W/SF Willamette Bold.ttf
+./W/SF Willamette Extended.ttf
+./W/SF Willamette Italic.ttf
+./W/SF Willamette.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Blotch Italic.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Blotch.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Bold Italic.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Bold.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Inline Italic.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Inline.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic Italic.ttf
+./W/SF Wonder Comic v1.0/SF Wonder Comic.ttf
+./W/W.J.P___.TTF
+./W/Wacko.ttf
+./W/WAKEBAKE.TTF
+./W/WAKIW___.TTF
+./W/WALRUSGU.TTF
+./W/WALSHES.TTF
+./W/WALSHESO.TTF
+./W/WAR2.TTF
+./W/WARLOCK_.TTF
+./W/Warlords.ttf
+./W/WarpSpeed.ttf
+./W/WARREN1_.TTF
+./W/Wash99.ttf
+./W/Watertank.ttf
+./W/WATET___.TTF
+./W/Waved.ttf
+./W/waver.ttf
+./W/WAVY.TTF
+./W/Waybeyondblue.TTF
+./W/wayward.ttf
+./W/waywards.ttf
+./W/Wbxkomik.ttf
+./W/WHORN___.TTF
+./W/Wibble__.ttf
+./W/WICKQB__.TTF
+./W/Wideg___.ttf
+./W/WIFFLES_.TTF
+./W/wigsquig.ttf
+./W/WILDSEWE.TTF
+./W/WILLHAR_.TTF
+./W/WILLR___.TTF
+./W/WillyWonka.ttf
+./W/wimp.ttf
+./W/wimp3d.ttf
+./W/wimpc.ttf
+./W/wimpe.ttf
+./W/wimpi.ttf
+./W/WINKF___.TTF
+./W/Winter in Gotham.ttf
+./W/WIREFRAM.TTF
+./W/wishful.TTF
+./W/withstan.ttf
+./W/WNET3.TTF
+./W/wobbly.ttf
+./W/Wolf4.ttf
+./W/Wolf4b.ttf
+./W/Wolf4be.ttf
+./W/Wolf4bei.ttf
+./W/Wolf4beo.ttf
+./W/Wolf4bi.ttf
+./W/Wbxscraw.ttf
+./W/Wbx_nero.ttf
+./W/weatherd.ttf
+./W/weathers.ttf
+./W/weaver.ttf
+./W/WEBLBB__.TTF
+./W/WEBLBRG_.TTF
+./W/webster.ttf
+./W/WEBSTERW.TTF
+./W/WEDGIE__.TTF
+./W/weebairn.ttf
+./W/Weird.ttf
+./W/Welbut__.ttf
+./W/WELFAREB.TTF
+./W/WELLSLEY.TTF
+./W/WELTRON_.TTF
+./W/WENTELTE.TTF
+./W/Wesley__.ttf
+./W/WESTNI__.TTF
+./W/WESTN___.TTF
+./W/WETPET.TTF
+./W/WHACKAD_.ttf
+./W/WHACUI__.ttf
+./W/WHACUWI_.ttf
+./W/WHACUW__.ttf
+./W/WHACU___.ttf
+./W/WHAM.TTF
+./W/WHATA.TTF
+./W/whiffy.ttf
+./W/whipsnap.ttf
+./W/WHITEBLD.TTF
+./W/WHITELAK.TTF
+./W/WhiteWolf.ttf
+./W/WHITRABT.TTF
+./W/Whoobub.ttf
+./W/WHOOPASS.TTF
+./W/Wolf4bp.ttf
+./W/Wolf4bs.ttf
+./W/Wolf4i.ttf
+./W/Wolf4o.ttf
+./W/Wolf4p.ttf
+./W/Wolf4s.ttf
+./W/wolves.ttf
+./W/wonderlism.ttf
+./W/Wonkers.ttf
+./W/woodb___.ttf
+./W/WOODCUT.TTF
+./W/WoodenCasket.ttf
+./W/WOODENNI.TTF
+./W/wordsoflove.ttf
+./W/WORLDOFW.TTF
+./W/Wormfont.ttf
+./W/Worm____.ttf
+./W/WORTHLES.TTF
+./W/WRECKAGE.TTF
+./W/Write2.ttf
+./W/Write2o.ttf
+./W/wyld2.ttf
+./W/wyldb.ttf
+./W/wyldt.ttf
+./W/XtraStuf.mac/WELTRON_.TTF
+./X/X-rayTed.TTF
+./X/X-rayTed_s.TTF
+./X/XactoBlade.ttf
+./X/xcel.ttf
+./X/xceli.ttf
+./X/XCRYPT.TTF
+./X/XENO4.TTF
+./X/XENOWORT.TTF
+./X/Xeranthemum.ttf
+./X/Xeron.ttf
+./X/xeroxmal.ttf
+./X/xhume.ttf
+./X/xipital.ttf
+./X/xirod.ttf
+./X/xmaslght.ttf
+./X/XO.TTF
+./X/XOLTO.TTF
+./X/XPED.TTF
+./X/Xpedb.ttf
+./X/Xpedc.ttf
+./X/Xpedd.ttf
+./X/Xpede.ttf
+./X/Xpedi.ttf
+./X/Xpedl.ttf
+./X/XPEDO.TTF
+./X/Xposed.ttf
+./X/XTRAFLEX.TTF
+./X/Xtraordinary.ttf
+./X/xtrusion.ttf
+./Y/YOR.TTF
+./Y/urcompi.ttf
+./Y/urcompo.ttf
+./Y/y2k.ttf
+./Y/Y2K_analog_legacy.ttf
+./Y/Y2K_analog_legacy_italic.ttf
+./Y/YADOU.TTF
+./Y/Yahoo.ttf
+./Y/YAHREN7.TTF
+./Y/YAWNOVIS.TTF
+./Y/YBANDTUN.TTF
+./Y/Year 2000.ttf
+./Y/yearend.ttf
+./Y/Yearsupplyoffairycakes.ttf
+./Y/YELLOWPI.TTF
+./Y/yesterda.ttf
+./Y/yesterdaysmeal.ttf
+./Y/yielding.ttf
+./Y/ynwuay.ttf
+./Y/yoinks.ttf
+./Y/YOLDA___.TTF
+./Y/yonder.ttf
+./Y/YONDERRE.TTF
+./Y/yoshi bold.ttf
+./Y/yoshi italic.ttf
+./Y/yoshi.ttf
+./Y/yoshisst.ttf
+./Y/Youaretheone.ttf
+./Y/youarewhatyoueat.ttf
+./Y/YOUNGATH.TTF
+./Y/youngst.ttf
+./Y/younz___.ttf
+./Y/yourcomp.ttf
+./Y/youregoi.ttf
+./Y/youregon.ttf
+./Y/YOUTHANI.ttf
+./Y/YOUTHAN_.ttf
+./Y/YOUTHQUA.TTF
+./Y/YOUTTX__.ttf
+./Y/Ysgarth.ttf
+./Y/Yurine Overflow.ttf
+./Y/YYTRIUMD.TTF
+./Z/ZipperbluesOutline.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Bold Italic.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Bold.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Condensed Bold Italic.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Condensed Bold.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Condensed Italic.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Condensed.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity Italic.ttf
+./Z/SF Zero Gravity v1.1/SF Zero Gravity.ttf
+./Z/SF Zimmerman v1.0/SF Zimmerman Italic.ttf
+./Z/SF Zimmerman v1.0/SF Zimmerman.ttf
+./Z/zachary_.ttf
+./Z/zapped.ttf
+./Z/ZEE.TTF
+./Z/zektonbi.ttf
+./Z/zektonbo.ttf
+./Z/zektonit.ttf
+./Z/zekton__.ttf
+./Z/zeldadxt.ttf
+./Z/zenith.ttf
+./Z/zephyrea.ttf
+./Z/zephyreg.ttf
+./Z/ZEROES__.TTF
+./Z/ZEROHOUR.TTF
+./Z/zerothre.ttf
+./Z/ZEROTWOS.TTF
+./Z/zerovelo.ttf
+./Z/ZHANGQA_.TTF
+./Z/Zing Diddly Doo.ttf
+./Z/ZIPERHEA.TTF
+./Z/ZIPPB___.TTF
+./Z/ZipperbluesBlack.ttf
+./Z/zirccube.ttf
+./Z/zirconia.ttf
+./Z/ZITCREAM.TTF
+./Z/ZITZ____.TTF
+./Z/ZODIASTI.TTF
+./Z/ZODILLIN.TTF
+./Z/zoidal.ttf
+./Z/ZOINKFAT.TTF
+./Z/zolofbi_.ttf
+./Z/zolofb__.ttf
+./Z/zolofi__.ttf
+./Z/Zolofn_.ttf
+./Z/zolofse_.ttf
+./Z/ZOMBIE.TTF
+./Z/Zombified.ttf
+./Z/ZONE.TTF
+./Z/ZootAllures.ttf
+./Z/zrnic___.ttf
+./Z/ZUDJB___.TTF
+./Z/ZUDJI___.TTF
+./Z/ZUDJUICE.TTF
+./Z/zurklezo.ttf
+./Z/zurklezs.ttf
+./Z/zxspectr.ttf
+./Z/ZY3.TTF
+./Z/ZZZTop.ttf
