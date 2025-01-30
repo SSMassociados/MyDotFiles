@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="34"
+   height="16"
+   viewBox="0 0 34 16"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.92.4 (5da689c313, 2019-01-14)"
+   sodipodi:docname="checkmarks.svg">
+  <defs
+     id="defs4">
+    <style
+       type="text/css"
+       id="current-color-scheme">
+      .ColorScheme-Highlight {
+        color:#008080;
+        stop-color:#008080;
+      }
+      </style>
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#000000"
+     borderopacity="1"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="10.710588"
+     inkscape:cx="-13.903999"
+     inkscape:cy="8"
+     inkscape:document-units="px"
+     inkscape:current-layer="radiobutton"
+     showgrid="true"
+     inkscape:showpageshadow="false"
+     borderlayer="true"
+     units="px"
+     inkscape:window-width="1366"
+     inkscape:window-height="709"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     showguides="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0">
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-904.36218)">
+    <g
+       id="radiobutton"
+       inkscape:label="#g852"
+       style="opacity:0.8">
+      <rect
+         y="904.36218"
+         x="0"
+         height="16"
+         width="16"
+         id="rect4134"
+         style="opacity:1;fill:none;fill-opacity:1;stroke:none" />
+      <circle
+         r="4"
+         cy="912.36218"
+         cx="8"
+         id="circle4158"
+         style="opacity:1;fill:currentColor;fill-opacity:1;stroke:none"
+         class="ColorScheme-Highlight" />
+    </g>
+    <g
+       id="checkbox"
+       inkscape:label="#g838"
+       style="opacity:0.8"
+       transform="translate(2.5961109e-8,-2.2720541e-6)">
+      <rect
+         style="fill:none;stroke:none"
+         id="rect4148"
+         width="14"
+         height="13.999998"
+         x="19"
+         y="905.36218" />
+      <path
+         id="rect4160"
+         d="m 20,905.36218 c -0.553989,0 -1,0.44601 -1,1 v 12 c 0,0.55399 0.446011,1 1,1 h 12 c 0.553989,0 1,-0.44601 1,-1 v -12 c 0,-0.55399 -0.446011,-1 -1,-1 z m 0,1 h 12 v 12 H 20 Z"
+         style="opacity:0.01000001;fill:#000000;fill-opacity:1;stroke:none"
+         inkscape:connector-curvature="0" />
+      <path
+         id="path2"
+         d="m 30.59,907.95216 1.41,1.41 -8,8 -4,-4 1.41,-1.41 2.59,2.59 z"
+         inkscape:connector-curvature="0"
+         class="ColorScheme-Highlight"
+         style="fill:currentColor;fill-opacity:1" />
+    </g>
+  </g>
+</svg>

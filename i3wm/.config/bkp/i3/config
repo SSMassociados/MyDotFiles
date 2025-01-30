@@ -1,0 +1,1215 @@
+
+##########################################
+#  DOTFILES -- I3CONFIG -- By: Sidiclei  #
+##########################################
+
+# ==> Default configuration: nano /etc/i3/config 
+
+# helpful cmdline tools:
+#  * xev 
+# ==> (Teclado)  xev | grep -i key 
+# ==> (Mouse)    xev | grep button
+#  * xbindkeys xbindkeys_config
+#  * xbindkeys --key * xbindkeys --multikey
+#  * xmodmap ou xmodmap -pke
+#  * xprop ou xwininfo
+#  * ==> Ordem=("INSTANCE","CLASS")xprop | grep WM_CLASS ou xprop WM_CLASS ou wmctrl -lx 
+
+# ----------------------------------------------------------------------------
+# Shortener Variables ===> PRINCIPAL <  >
+# ----------------------------------------------------------------------------
+
+# mod key (alt=Mod1, super=Mod4, win=Mod4)
+set  $win Mod4
+set  $alt Mod1
+
+# bindsym 
+set  $sup bindsym  Mod4
+set  $ss  bindsym  Mod4+Shift
+set  $sc  bindsym  Mod4+Ctrl
+set  $ca  bindsym  Ctrl+Mod1
+set  $cs  bindsym  Ctrl+Shift
+set  $ct  bindsym  Ctrl+Tab
+set  $as  bindsym  Mod1+space
+
+# exec 
+set  $exe     exec --no-startup-id
+set  $exe_al  exec_always --no-startup-id
+
+# user local bin path (usually '~/bin' or '~/.local/bin')
+set  $bin_path ~/bin
+
+# direction keys
+set  $ukey Up
+set  $dkey Down
+set  $lkey Left
+set  $rkey Right
+
+# Define Workspaces and screens
+# monitor outputs ==> xrandr -q | grep " connected" | cut -d ' ' -f1
+set  $out_pri output eDP1
+set  $out_sec output HDMI1
+
+# float enable
+set  $float floating enable
+
+# Position
+set  $center move position center
+
+# FullScreen
+set $full fullscreen enable
+
+# Scratchpad ==> Ocultar/Exibir a janela
+set  $scra move scratchpad 
+set  $show scratchpad show 
+
+# Workspace
+set  $to move to workspace
+
+# default mail client
+#set $mail ~/bin/launcher-thunderbird
+
+# default diretorio de scripts
+set $scriptdir ~/.config/i3/scripts
+
+# default terminal
+set  $term       exec --no-startup-id kitty
+set  $term_drop  exec --no-startup-id xfce4-terminal --drop-down
+set  $term_theme exec --no-startup-id env GTK_THEME=Arc-Dark xfce4-terminal
+
+# default theme for geany
+#set  $exe_geany  exec --no-startup-id env GTK_THEME=Arc-Dark geany
+
+#include ~/.config/i3/colors.conf
+#include ~/.config/i3/bar.conf
+
+# colors
+set  $darker      #080910
+set  $dark        #181920
+set  $black       #2F343F
+set  $darkgray    #3B4252
+set  $gray        #E7E8EB
+set  $white       #F5F6F7
+set  $red         #BF616A
+set  $orange      #DBAB6B
+set  $yellow      #EBCB8B
+set  $green       #A3BE8C
+set  $cyan        #88C0D0
+set  $blue        #91B1D1
+set  $darkblue    #416181
+set  $purple      #B48EAD
+set  $SandyBrown  #F4A460
+
+# icons
+
+# editor       
+# menu         
+# document     
+# table        
+# code         
+# chat         
+# news         
+# monitor      
+# firefox      
+# chrome       
+# terminal     
+# window       
+# github       
+# whatsapp     
+# telegram     
+# hangout      
+# bank         
+# folder       
+# package      
+#
+# no preview...
+#
+# volume
+# play
+# music
+# video
+# email
+
+set $ico_bank     <span font='Font Awesome'>&#xf155;</span>
+set $ico_chat     <span font='Font Awesome'>&#xf27b;</span>
+set $ico_chrome   <span font='Font Awesome'>&#xf268;</span>
+set $ico_code     <span font='Font Awesome'>&#xf121;</span>
+set $ico_document <span font='Font Awesome'>&#xf0f6;</span>
+set $ico_editor   <span font='Font Awesome'>&#xf044;</span>
+set $ico_email    <span font='Font Awesome'>&#xf003;</span>
+set $ico_firefox  <span font='Font Awesome'>&#xf269;</span>
+set $ico_folder   <span font='Font Awesome'>&#xf115;</span>
+set $ico_github   <span font='Font Awesome'>&#xf09b;</span>
+set $ico_hangouts <span font='Font Awesome'>&#xf10e;</span>
+set $ico_menu     <span font='Font Awesome'>&#xf0c9;</span>
+set $ico_monitor  <span font='Font Awesome'>&#xf26c;</span>
+set $ico_music    <span font='Font Awesome'>&#xf001;</span>
+set $ico_news     <span font='Font Awesome'>&#xf09e;</span>
+set $ico_package  <span font='Font Awesome'>&#xf1c6;</span>
+set $ico_play     <span font='Font Awesome'>&#xf01d;</span>
+set $ico_table    <span font='Font Awesome'>&#xf0ce;</span>
+set $ico_telegram <span font='Font Awesome'>&#xf1d9;</span>
+set $ico_terminal <span font='Font Awesome'>&#xf120;</span>
+set $ico_video    <span font='Font Awesome'>&#xf008;</span>
+set $ico_volume   <span font='Font Awesome'>&#xf028;</span>
+set $ico_whatsapp <span font='Font Awesome'>&#xf232;</span>
+set $ico_window   <span font='Font Awesome'>&#xf2d0;</span>
+
+# ----------------------------------------------------------------------------
+# Appearance ===> FONTS ===> CORES # Font for window titles
+# ----------------------------------------------------------------------------
+
+#font pango:JetBrains Mono:style=Regular:pixelsize=13
+font pango:SF Pro Display Regular 13
+#font pango:Cantarell:style=Bold:pixelsize=11
+#font pango:Source Sans Pro 12
+#font pango:Open Sans Semibold 10
+#font pango:Font Awesome 5 Free,Font Awesome 5 Free Solid:style=Solid
+#font pango:Iosevka Custom 11
+#font pango:monospace 8
+#font pango:FiraCode 8
+#font pango:Fantasque Sans Mono 8
+#font pango:Poppins 8
+#font pango:DejaVu Sans Mono 8
+#font pango:Noto Sans 12
+
+# Window Border color
+# class                   border  backgr  text       indicator  client_border
+#client.focused           $black  $black  $blue      $cyan      #556064
+#client.unfocused         $darker $darker $darkblue  $cyan      $darker
+#client.focused_inactive  $dark   $dark   $darkblue  $cyan      $dark
+#client.urgent            $red    $red    $dark      $cyan      $red
+
+## Set colors from Xresources
+## Change 'color7' and 'color2' to whatever colors you want i3 to use 
+## from the generated scheme.
+## NOTE: The '#f0f0f0' in the lines below is the color i3 will use if
+## it fails to get colors from Xresources.
+#set_from_resource $fg i3wm.color7 #f0f0f0
+#set_from_resource $bg i3wm.color2 #f0f0f0
+
+## class                 border  backgr. text indicator child_border
+#client.focused          $bg     $bg     $fg  $bg       $fg
+#client.focused_inactive $bg     $bg     $fg  $bg       $bg
+#client.unfocused        $bg     $bg     $fg  $bg       $bg
+#client.urgent           $bg     $bg     $fg  $bg       $bg
+#client.placeholder      $bg     $bg     $fg  $bg       $bg
+
+#client.background       $bg
+
+## colors
+#set_from_resource $bg-color            i3wm.color7 #676E7D
+#set_from_resource $inactive-bg-color   i3wm.color0 #2f343f
+#set_from_resource $text-color          i3wm.color7 #f3f4f5
+#set_from_resource $inactive-text-color i3wm.color8 #676E7D
+#set_from_resource $urgent-bg-color     i3wm.color1 #E53935
+
+## window colors         border              background         text                 indicator
+#client.focused          $bg-color           $bg-color          $text-color          #8f712b
+#client.unfocused        $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+#client.focused_inactive $inactive-bg-color  $inactive-bg-color $inactive-text-color $inactive-bg-color
+#client.urgent           $urgent-bg-color    $urgent-bg-color   $text-color 
+
+# PROTIP: You can also dynamically set dmenu's colors this way:
+# bindsym $mod+d exec dmenu_run -nb "$fg" -nf "$bg" -sb "$bg" -sf "$fg"
+
+# ----------------------------------------------------------------------------
+# WINDOWS ===> BORDAS ===> FOCUS ===> FLOATING MODE   
+# ----------------------------------------------------------------------------
+
+# Floating defaults
+# Para descobrir a classe e instância de sua janela, execute 
+# "xprop | grep WM_CLASS" ou "xprop WM_CLASS" ou "xwininfo"  no terminal, 
+# em seguida clique na janela que deseja flutuar. Isso lhe dará as propriedades da janela.
+# "wmctrl -lx" não precisa clicar na janela
+
+# WM_CLASS(STRING) = "instance_name", "class_name"
+# Olhe para o WM_CLASS(STRING) = "Navigator", "firefox". 
+# O primeiro elemento é sempre o INSTANCE, o segundo sempre o CLASS.
+# Estrutura do WM_CLASS
+# Instance: identifica a instância específica do aplicativo. Por exemplo, você pode 
+# ter várias janelas do Firefox, cada uma com uma instance diferente.
+# Class: identifica o tipo geral ou a classe do aplicativo. Normalmente, essa é a 
+# mesma para todas as janelas de uma aplicação (por exemplo, "Firefox" para todas as janelas do Firefox).
+
+# xprop | grep -E "WM_NAME|WM_WINDOW_ROLE|_NET_WM_WINDOW_TYPE|WM_CLASS"
+
+# WM_CLASS: identifica a instancia e a classe da janela
+# WM_NAME(STRING): representa o título da janela.
+# WM_WINDOW_ROLE(STRING): representa uma função específica da janela (nem todos os aplicativos definem essa propriedade).
+# _NET_WM_WINDOW_TYPE(ATOM): representa o tipo de janela. Isso pode incluir tipos como dialog, utility, toolbar, etc.
+
+# Hide Windowns border style <normal|1pixel|pixel xx|none|pixel>
+# Set per-application border
+for_window [class="^.*" title="^.*"] border pixel 4 
+#$exe xborders --border-radius 7 --border-width 1 &
+
+# (No) Title Bars
+#for_window [class="^.*"] border pixel 0
+
+# Hide borders <hide_edge_borders none|vertical|horizontal|both|smart>
+hide_edge_borders smart
+
+# Window title alignment left|center|right >>> "Posição de alinhamento do título da janela."
+title_align center
+
+# ----------------------------------------------------------------------------
+# Floating Mode Programs ===> REGRAS -> xprop | grep WM_CLASS -> Key-mapper
+# ----------------------------------------------------------------------------
+
+# floating pop up automatically (+ sticky) mode
+for_window [window_role="pop-up|bubble|app|page-info|task_dialog|Preferences|About"] $float
+for_window [window_role="Picture-In-Picture"] $float
+for_window [window_role="GtkFileChooserDialog|Dialog|DIALOG"] $float
+for_window [window_type="Dialog|Menu"] $float
+for_window [title="Authy|Preferences$|Progresso$"] $float
+for_window [title="Picture-in-Picture"] sticky enable $show
+for_window [class="Yad" title="Calendar"] $float
+for_window [class="Tk|Toplevel"] $float
+for_window [class="<interactive>"] $float
+for_window [class="floating_window"] $float
+for_window [class="qt5ct|qt6ct"] $float, resize set 640x665
+
+for_window [class="Synapse|albert|Google Assistant"] $float, border none
+for_window [class="scrcpy|flameshot"] $float
+for_window [class="missioncenter|Gestures|Lightdm-gtk-greeter-settings|Nwg-look|Lxappearance|qt5ct|Nitrogen|selectdefaultapplication|gearlever"] $float
+for_window [class="Blueman-manager|Blueman-services|System-config-printer|simple-scan|Gufw.py|Key-mapper-gtk"] $float
+for_window [class="Rustdesk|TeamViewer|Anydesk"] $float
+for_window [class="kitty|GParted|BleachBit|Alarm-clock-applet|kruler|Woeusb"] $float
+for_window [class="feh|Densify"] $float
+for_window [class="Cheese|obs|SimpleScreenRecorder|gnome-network-displays"] $float
+for_window [class="smplayer|vlc|amberol|Audacity|qBittorrent|4K Video Downloader|com-abdownloadmanager-desktop-AppKt"] $float
+for_window [class="qvidcap"] $float, sticky enable, resize set 335 250
+
+for_window [class="TelegramDesktop|WhatSie|qtwaw|ZapZap|whatsdesk|Whatsapp-for-linux"] $float, border none, resize set 910 512, $center
+for_window [class="Psensor"] $float, resize set 450 590
+for_window [class="KeePassXC"] $float, resize set 800 500
+for_window [class="Arandr"] $float, resize set 280 254
+for_window [class="pavucontrol|easyeffects"] $float, resize set 650 410
+for_window [class="Gnome-calculator"] $float, resize set 100 300
+for_window [class="xdman-Main"] $float, move position 1620 1010, resize set 759 419
+for_window [class="Xdm-app"] $float, move position 1620 1010, resize set 250 40
+for_window [class="zoom"] $float, resize set 200 480, $center
+for_window [class="VirtualBox Manager|VirtualBox Machine"] $float, resize set 804 720, $center
+for_window [class="kdeconnect-indicator|kdeconnect-settings|kdeconnect.app|kdeconnect.sms"] $float, resize set 803 421, $center
+for_window [instance="geany"] $center
+
+# set position of floating window
+#for_window [class=".*"] $center
+
+# Centralize todas as janelas com o atributo floating ativo
+#for_window [floating] $center
+
+# ----------------------------------------------------------------------------
+# ===> WORKSPACE 
+# ----------------------------------------------------------------------------
+
+# Define names for default workspaces for which we configure key bindings later on.
+# We use variables to avoid repeating the names in multiple places.
+ 
+# Workspaces aliases snixembed-- labels
+
+set $ws1  "1"
+set $ws2  "2"
+set $ws3  "3"
+set $ws4  "4"
+set $ws5  "5"
+set $ws6  "6"
+set $ws7  "7"
+set $ws8  "8"
+set $ws9  "9"
+set $ws10 "10"
+
+#        ♫  
+
+#set $ws1  "1: "
+#set $ws2  "2: "
+#set $ws3  "3: "
+#set $ws4  "4: "
+#set $ws5  "5: "
+#set $ws6  "6: "
+#set $ws7  "7: "
+#set $ws8  "8: "
+#set $ws9  "9: "
+#set $ws10 "10:"
+
+# outputs -- remind: check panel output variables!
+# Colocar automaticamente espaços de trabalho em telas específicas
+
+workspace $ws1  $out_pri
+workspace $ws2  $out_pri
+workspace $ws3  $out_pri
+workspace $ws4  $out_pri
+workspace $ws5  $out_pri
+workspace $ws6  $out_sec
+workspace $ws7  $out_sec
+workspace $ws8  $out_sec
+workspace $ws9  $out_sec
+workspace $ws10 $out_sec
+
+# switch to workspace (Navegar pelas workspaces)
+
+$sup+1 workspace number $ws1
+$sup+2 workspace number $ws2
+$sup+3 workspace number $ws3
+$sup+4 workspace number $ws4
+$sup+5 workspace number $ws5
+$sup+6 workspace number $ws6
+$sup+7 workspace number $ws7
+$sup+8 workspace number $ws8
+$sup+9 workspace number $ws9
+$sup+0 workspace number $ws10
+
+# Move focused container to workspace (Mover Janela focada Para WS Escolhida)
+
+$ss+1 move container to workspace number $ws1
+$ss+2 move container to workspace number $ws2
+$ss+3 move container to workspace number $ws3
+$ss+4 move container to workspace number $ws4
+$ss+5 move container to workspace number $ws5
+$ss+6 move container to workspace number $ws6
+$ss+7 move container to workspace number $ws7
+$ss+8 move container to workspace number $ws8
+$ss+9 move container to workspace number $ws9
+$ss+0 move container to workspace number $ws10
+
+# Navegar para o próximo/anterior workspace ativo
+$ca+Right      workspace next
+$ca+Left       workspace prev
+
+# next/previous/back_and_forth workspace >>> próximo/anterior/último e o atual
+$ct workspace next
+$cs+Tab workspace prev
+
+# Avanço e retrocesso automático do último workspace
+workspace_auto_back_and_forth yes
+
+# Mover espaços de trabalho entre monitores
+# ==> move workspace to output left|right|down|up|current|primary|<output>
+#$cs+Right move workspace to output right
+#$cs+Left  move workspace to output left
+$cs+Up move workspace to output next
+
+# Mudar para a área de trabalho com janela urgente automaticamente
+for_window [urgent=latest] focus
+
+# clear all urgent statuses
+#bindsym $mod+k urgent clear
+
+# set urgent on particular titles
+for_window [title="error"] urgent set
+
+# Layout padrão workspace <default|stacking|tabbed>
+#workspace_layout tabbed
+
+# Orientation for new workspaces (horizontal|vertical|auto)
+default_orientation auto
+
+# ----------------------------------------------------------------------------
+# ===> APLICATIVOS ABERTOS NA WS   
+# ----------------------------------------------------------------------------
+
+# Open applications on specific workspaces
+
+assign [class="firefox"] $ws1
+for_window [instance="Navigator"] focus
+assign [class="Pcmanfm|Thunar|nautilus"] $ws2
+for_window [instance="pcmanfm|Thunar|nautilus"] focus
+assign [class="Atril|Evince"] $ws3
+for_window [instance="atril|evince"] focus
+assign [class="Geany"] $ws4
+for_window [instance="geany"] focus
+assign [class="mpv"] $ws5
+for_window [instance="gl"] focus, $full
+
+# KVM config
+assign [class="Virt-manager"] $ws6
+for_window [class="Virt-manager"] $float, resize set 804 720 
+
+# WPS Writer & Spreadsheets
+assign [class="wps"] $ws8
+assign [class="et"] $ws9
+for_window [instance="et|wps"] focus
+
+# Spotify move to workspace $ws10
+assign [class="Spotify"] $ws10
+for_window [class="Spotify"] $float, resize set 928 800 
+for_window [instance="spotify"] focus
+
+# ----------------------------------------------------------------------------
+# FOCUS ===> WINDOWS ===> Mouse/Key bindings  
+# ----------------------------------------------------------------------------
+
+# Focus defaults
+focus_on_window_activation smart
+#focus_follows_mouse yes
+focus_wrapping yes
+
+# Mouse quando o foco de uma janela é alterado >>> none|output
+mouse_warping output
+
+# Focus (Alternar Entre as Janelas)
+$sup+$lkey        focus left
+$sup+$dkey        focus down
+$sup+$ukey        focus up
+$sup+$rkey        focus right
+$sup+Prior        focus parent
+$sup+Next         focus child
+
+# Alt+Tab Focus >>> yay -S alttab
+#$exe_al alttab -pk h -nk l -fg "#d58681" -bg "#4a4a4a" -frame "#eb564d" -t 128x150 -i 127x64
+$exe_al killall alttab || alttab -pk h -nk l -fg "#1E2127" -bg "#282B31" -frame "#61AFEF" -t 65x65 -i 64x64
+
+# Switch container focus i3-cycle
+#bindsym $win+Tab		$exe i3-cycle right
+#bindsym $win+Shift+Tab		$exe i3-cycle left
+
+# Easyfocus >>> yay -S wmfocus
+#$ct exec "wmfocus -f Mono:80"
+
+# Mover a janela focada para o centro da tela
+$ss+h $center
+
+# Moving containers (Mover Janela Focada)
+$ss+$lkey        move left
+$ss+$dkey        move down
+$ss+$ukey        move up
+$ss+$rkey        move right
+
+# ----------------------------------------------------------------------------
+# Layout de Contêiner ===> TILING PARAMETERS 
+# ----------------------------------------------------------------------------
+
+# Dividida janelas antes de criar a nova janela <split vertical|horizontal|toggle>
+$sup+h focus left, split h; exec notify-send 'Tile horizontally'
+$sup+v focus up, split v; exec notify-send 'Tile vertically'
+
+# Alterna os 2 atalhos acima #semicolon=ponto e vírgula
+$sup+semicolon     split toggle
+
+# Mudar o Layout do Container <stacked, tabbed, toggle split>
+# Win+s >> Pilha | Win+w >> Abas | Win+e >> Tiling
+$sup+s layout stacking; exec notify-send 'stacking~Empilhadas'
+$sup+w layout tabbed; exec notify-send 'tabbed~Guias'
+$sup+e layout toggle split; exec notify-send 'split_H/split_V'
+
+# Faz o mesmo que os 3 atalhos acima, alternando os layouts:
+$sup+Tab           layout toggle all
+
+# Alternar tela dividida Horizontal/Vertical 
+$sup+slash         layout toggle splitv splith
+
+# Entrar em Modo Tela Cheia
+$sup+F11          fullscreen toggle
+
+#smart|ignore|leave_fullscreen
+popup_during_fullscreen smart 
+
+# Alternar lado a lado/flutuante e foco das janelas
+# comma=vírgula #period=ponto 
+$sup+period        floating toggle
+$sup+comma         focus mode_toggle 
+#$ss+space         floating toggle
+#$sup+space        focus mode_toggle
+
+# Sem título da janela e uma borda
+#$sup+y            border 1pixel
+
+# Sem o título da janela e sem a borda 
+#$sup+s            border none
+
+# Border type - Faz o mesmo que os 2 atalhos acima:
+$sup+t             border toggle
+
+# Janela no centro da tela --> Ocultar/Exibir a janela oculta --> Pode também ialtenar várias janelas ocultas
+$sup+minus    $scra 
+$sup+equal    $show 
+
+# Toggle sticky
+$ca+s              sticky toggle
+
+# Urgent workspace >>>  Focar na última janela que se tornou urgente. 
+$sup+u             [urgent=latest] focus
+
+# Kill focused windows
+$sup+q             kill
+
+# Kill all windows
+$ss+q [class=".*"] kill
+
+# Xkill
+$sc+Delete         --release $exe xkill
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> SYSTEM ===> reload changed configuration
+# ----------------------------------------------------------------------------
+
+# Session control ==> Restart, Reload & Exit
+# Restart i3 in-place (preserves layout/session)
+$ss+r          restart
+# Reload the configuration file
+$ss+c          reload; exec notify-send "Reloaded i3 config."
+$ss+e          $exe i3-msg exit
+#$ss+e exec --no-startup-id "i3-nagbar -t warning -m 'Você deseja sair do i3gaps?' -B 'Sim, desejo sair do i3gaps' 'i3-msg exit'"
+
+# PowerOFF
+$ss+d          $exe shutdown -h now
+
+# Reboot (Reiniciar,FN+F5)
+$ss+b          $exe systemctl reboot
+
+# Windows
+# sudo grep menuentry /boot/grub/grub.cfg    
+# sudo EDITOR=nano visudo
+# Same thing without a password
+# %wheel ALL=(ALL) NOPASSWD:/usr/bin/grub-reboot
+$ss+w          $exe sudo grub-reboot 2 && reboot
+
+# Suspend (FN+F7)
+$ss+s          $exe systemctl suspend
+
+# Lockscreen (Bloqueia a máquina, FN+F6) 
+#$sup+l        $exe betterlockscreen -u ~/.wallpaper -l dim
+$sup+l         $exe $scriptdir/random_wallpaper_lockscreen.sh
+
+## Set shut down, restart and locking features
+#$ss+d mode "$mode_system"
+#set $mode_system (l)ock,  (e)xit,  switch_(u)ser,  (s)uspend,  (h)ibernate, (r)eboot,  (p)ower_off
+#mode "$mode_system" {
+    #bindsym l $exe betterlockscreen -u ~/.wallpaper -l dim, mode "default"
+    #bindsym s $exe systemctl suspend, mode "default"
+    #bindsym u $exe systemctl --user, mode "default"
+    #bindsym e $exe i3-msg exit, mode "default"
+    #bindsym h $exe systemctl hibernate, mode "default"
+    #bindsym r $exe systemctl reboot, mode "default"
+    #bindsym p $exe systemctl poweroff -i, mode "default"
+
+    ## exit system mode: "Enter" or "Escape"
+    #bindsym Escape mode "default"
+#}
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> SYSTEM 
+# ----------------------------------------------------------------------------
+
+# i3-layout-manager
+$sup+F1 $exe ~/.config/i3/i3-resurrect-dmenu
+
+# Matar/Iniciar Compositor
+$sup+F4 $exe $scriptdir/toggle_picom.sh
+
+# Matar/Iniciar Dunst
+$ss+t $exe $scriptdir/toggle_dunst.sh
+
+# Matar xidlehook
+$ss+x $exe $scriptdir/toggle_xidlehook.sh
+
+# Ajuda I3wm
+#$sc+h exec xdg-open ~/Downloads/relatorio-1.pdf
+$sc+h exec xdg-open https://i3wm.org/docs/userguide.html
+
+# I3 WM & Polybar -> Config
+$sup+Home      $exe geany ~/.config/i3/config
+$sup+End       $exe geany ~/.config/polybar/config.ini
+
+# Open Various Files
+$sup+apostrophe mode "$mode_files"
+set $mode_files	[I]3,  [P]oly,  [K]itty,  [B]etterloc,  [D]unst,  [O]picom,  [Z]sh,  [F]eh,  [N]vim,	 [T]zathura,   [S]amba
+mode "$mode_files" {
+    bindsym i  $term -e nvim ~/.config/i3/config, mode "default"
+    bindsym p  $term -e nvim ~/.config/polybar/config.ini, mode "default"
+    bindsym k  $term -e nvim ~/.config/kitty/kitty.conf, mode "default"
+    bindsym b  $term -e nvim ~/.config/betterlockscreenrc, mode "default"
+    bindsym d  $term -e nvim ~/.config/dunst/dunstrc, mode "default"
+    bindsym o  $term -e nvim ~/.config/picom/picom.conf, mode "default"
+    bindsym f  $term -e nvim ~/.config/feh/themes, mode "default"
+    bindsym z  $term -e nvim ~/.zshrc, mode "default"
+    bindsym n  $term -e nvim ~/.config/nvim/init.vim, mode "default" 
+    bindsym t  $term -e nvim ~/.config/zathura/zathurarc, mode "default"
+    bindsym s exec $term -e nvim /etc/samba/smb.conf; mode "default"
+
+    # exit system mode: "Escape"
+    bindsym Escape mode "default"
+}
+
+## redshift modes
+#bindsym $mod+r mode "$mode_redshift"
+#set $mode_redshift Set colour temperature: (a)uto, (r)eset, (2)500K, (3)000K, (4)000K, (5)000K
+#set $kill_redshift pkill -9 redshift;
+#mode "$mode_redshift" {
+    #bindsym a exec --no-startup-id "$kill_redshift redshift -P -t 5000:4000", mode "default"
+    #bindsym r exec --no-startup-id "$kill_redshift redshift -x", mode "default"
+    #bindsym 2 exec --no-startup-id "$kill_redshift redshift -P -O 2500", mode "default"
+    #bindsym 3 exec --no-startup-id "$kill_redshift redshift -P -O 3000", mode "default"
+    #bindsym 4 exec --no-startup-id "$kill_redshift redshift -P -O 4000", mode "default"
+    #bindsym 5 exec --no-startup-id "$kill_redshift redshift -P -O 5000", mode "default"
+ 
+    ## exit mode: "Enter" or "Escape"
+    #bindsym Return mode "default"
+    #bindsym Escape mode "default"
+#}
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> MOUSE 
+# ----------------------------------------------------------------------------
+
+#$exe unclutter
+
+# Use Mouse+$alt to drag floating windows to their wanted position
+# Modificador para arrastar janela com mouse apertando a tecla Alt
+floating_modifier $alt
+
+# Arrastar janela com mouse pelo titulo da janela
+# tiling_drag modifier titlebar
+
+# Mouse(Mapeamento xev) 
+# ==> Se você não sabe o número do botão do mouse, você pode usar xev para saber o número: xev | grep button
+# O botão do meio do Mouse sobre a barra de título mata a janela
+bindsym        --release button2 kill
+
+# O botão do meio(--whole-window) e um modificador sobre qualquer parte da janela matam a janela
+bindsym        --whole-window $win+button2 kill
+
+# O botão direito alterna para flutuar
+#bindsym --whole-window button3 floating toggle
+$sup+button3   --whole-window floating toggle
+
+# Os botões laterais(8 e 9) scroll(direita/esquerda 6 e 7 e rolagem cima/baixo 4 e 5)movem a janela
+bindsym        --whole-window button6 move left
+bindsym        --whole-window button7 move right
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> RESIZE 
+# ----------------------------------------------------------------------------
+
+# Resizing containers
+#$sup+r mode "resize"
+
+#Basta Isso...
+$sc $rkey      resize grow   width  5 px or 5 ppt
+$sc $lkey      resize shrink width  5 px or 5 ppt
+$sc $ukey      resize grow   height 5 px or 5 ppt
+$sc $dkey      resize shrink height 5 px or 5 ppt
+
+# ----------------------------------------------------------------------------
+# Settings ===> GAPS 
+# ----------------------------------------------------------------------------
+
+gaps inner 5
+gaps outer 1
+smart_gaps on
+
+#smart_borders on
+#smart_borders no_gaps
+#border_radius 2
+
+#set $mode_gaps Gaps: (o) outer, (i) inner
+#set $mode_gaps_outer Outer Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+#set $mode_gaps_inner Inner Gaps: +|-|0|d (local), Shift + +|-|0|d (global)
+#$ss+g mode "$mode_gaps"
+
+#mode "$mode_gaps" {
+        #bindsym o      mode "$mode_gaps_outer"
+        #bindsym i      mode "$mode_gaps_inner"
+        #bindsym Return mode "default"
+        #bindsym Escape mode "default"
+#}
+
+#mode "$mode_gaps_inner" {
+        #bindsym plus  gaps inner current plus 5
+        #bindsym minus gaps inner current minus 5
+        #bindsym 0     gaps inner current set 0
+
+        #bindsym Shift+plus  gaps inner all plus 5
+        #bindsym Shift+minus gaps inner all minus 5
+        #bindsym Shift+0     gaps inner all set 0
+
+        #bindsym d gaps inner current set $gaps_inner_default, mode "default"
+        #bindsym Shift+d gaps inner all set $gaps_inner_default, mode "default"
+
+        #bindsym Return mode "default"
+        #bindsym Escape mode "default"
+#}
+
+#mode "$mode_gaps_outer" {
+        #bindsym plus  gaps outer current plus 5
+        #bindsym minus gaps outer current minus 5
+        #bindsym 0     gaps outer current set 0
+
+        #bindsym Shift+plus  gaps outer all plus 5
+        #bindsym Shift+minus gaps outer all minus 5
+        #bindsym Shift+0     gaps outer all set 0
+
+        #bindsym d gaps outer current set $gaps_outer_default, mode "default"
+        #bindsym Shift+d gaps outer all set $gaps_outer_default, mode "default"
+
+        #bindsym Return mode "default"
+        #bindsym Escape mode "default"
+#}
+
+# ----------------------------------------------------------------------------
+# STATUS BAR
+# ----------------------------------------------------------------------------
+
+#bar {        
+        #$out_pri
+        #position top
+        #wheel_up_cmd nop
+        #wheel_down_cmd nop
+        #tray_padding 4
+
+        #mode dock
+
+        ##mode hide
+        ##hidden_state hide
+        ##modifier Mod4
+
+        #separator_symbol "|"
+        ##workspace_min_width 10
+        ##tray_output none
+        ##strip_workspace_numbers yes
+
+        #status_command SCRIPT_DIR=~/.config/i3/blocklets/ i3blocks
+
+        #font pango:Cantarell 14
+
+        ##colors {
+            ##background    $dark
+            ##statusline    $white
+            ##separator     #555555
+
+            ###                   border     backgr    text
+            ##focused_workspace   $blue      $blue     $darker
+            ##active_workspace    $dark      $dark     $blue
+            ##inactive_workspace  $dark      $dark     $blue
+            ##urgent_workspace    $red       $red      $darker
+            ##}
+            
+          #colors {
+             #background $inactive-bg-color
+             #statusline $bg-color
+              
+             ##                   border              backgr             Etext            
+             #focused_workspace   $inactive-bg-color  $inactive-bg-color $text-color
+             #active_workspace    $inactive-bg-color  $inactive-bg-color $inactive-text-color
+             #inactive_workspace  $inactive-bg-color  $inactive-bg-color $inactive-text-color
+             #urgent_workspace    $urgent-bg-color    $urgent-bg-color   $text-color
+             #}
+
+         #}
+   
+# ----------------------------------------------------------------------------
+# I3BLOCKS
+# ----------------------------------------------------------------------------
+
+#i3blocks - keylock leds status
+bindsym --release Caps_Lock  $exe pkill -SIGRTMIN+11 i3blocks
+bindsym --release Num_Lock   $exe pkill -SIGRTMIN+11 i3blocks
+
+# i3blocks - upgrades
+$ss+u                 $exe pkill -SIGRTMIN+14 i3blocks
+
+## i3blocks volume control and status
+set $vol_signal pkill -SIGRTMIN+10 i3blocks
+
+#$sup+F9                      $exe pavucontrol && $vol_signal
+#$sup+F10                     $exe amixer set Master toggle && $vol_signal
+#$sup+F11                     $exe amixer set Master playback 5%- unmute && $vol_signal
+#$sup+F12                     $exe amixer set Master playback 5%+ unmute && $vol_signal
+
+#XF86AudioRaiseVolume
+#XF86AudioLowerVolume
+#XF86AudioMute
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> PROGRAM LAUNCHERS 
+# ----------------------------------------------------------------------------
+
+# Polybar toggle, hide or show >>> Mostrar ou ocultar a barra de status da Polybar
+$sup+o $exe polybar-msg cmd toggle
+
+# I3 bar toggle, hide or show
+#bindsym $sup+o bar mode toggle
+#bindsym $sup+i bar mode invisible
+
+# Start a terminal
+$sup+Return        $exe kitty
+#$ss+Return        $exe xfce4-terminal --drop-down
+#$sup+Return       $exe i3-sensible-terminal
+
+# Script para desenhar o terminal (Kitty/Alacritty)
+bindsym F1         $exe $scriptdir/draw_window.sh
+#bindsym F1 $exe ~/.config/alacritty/alaDraw.sh
+
+# i3-quickterm(~/.config/i3/i3-quickterm.json)
+#$sup+F2 exec i3-quickterm
+# always pop standard shell, without the menu
+bindsym F2         $exe i3-quickterm shell
+
+# Scratchpad terminal
+#$exe "termite --class='ScratchPad'"
+#for_window [class="ScratchPad"] $float, resize set 1366 384, move position 0 18, $scra
+#bindsym F2 [class="ScratchPad"] $show 
+
+# Start a Browsers
+$cs+q $exe qutebrowser
+$sup+f $exe firefox
+#$ca+t  $exe firefox https://outlook.live.com/mail/0/ https://mail.google.com/mail/u/1/#inbox https://sei.pe.gov.br/sei/controlador.php?acao=procedimento_controlar&infra_sistema=100000100&infra_unidade_atual=110012095&infra_hash=5d0f525d60ed3099b398bbacc60095bdba4c41c55bc3175ef8fe6e599a1f3ac9
+$sup+b $exe brave
+$sup+c $exe google-chrome-stable
+
+#$sup+w $exe librewolf
+#$sup+v $exe vivaldi-stable
+
+# Google Meet
+$sup+m  $exe google-chrome-stable -url meet.google.com/svc-vasq-drv
+for_window [title="Meet: svc-vasq-drv - Google Chrome"] $to $ws6 $full
+
+#&& xdotool search --sync --onlyvisible --class "^Google-chrome$" windowactivate key F11
+#xdotool key --clearmodifiers F11 
+
+# Start a File Manager
+$sup+x  $exe "killall Thunar || Thunar"
+#$sup+x $exe pidof nemo && killall nemo || nemo 
+#$sup+x $exe $scriptdir/pcmanfm.sh &
+$sup+r  $exe kitty -e 'ranger' 
+
+# Start KeePassXC
+#$sup+k  $exe pidof keepassxc && killall keepassxc || keepassxc
+#bindsym $mod+Shift+p [instance="keepassxc"] scratchpad show, move position center
+#for_window [instance="keepassxc"] floating enable, resize set 800 800, move scratchpad, border pixel 5
+
+# Start Kdeconnect-indicator
+$sup+backslash $exe $scriptdir/kdeconnect.sh &
+
+# Start Bluetooth
+$sc+b $exe "pgrep blueman-applet && pkill blueman-applet || blueman-applet"
+
+# Start Pamac
+$sup+p  $exe pamac-manager
+
+# Mapeamento de teclas xmodmap -pke ou xev | grep -i key
+# start/close Calculadora 
+bindsym F6 $exe $scriptdir/calculadora.sh &
+bindsym XF86Calculator $exe $scriptdir/calculadora.sh &
+
+# Start/close Spotify
+bindsym F9 $exe $scriptdir/spotify.sh &
+bindsym XF86Tools $exe $scriptdir/spotify.sh &
+
+# Start dmenu (a program launcher)
+#$sup+d $exe dmenu_run
+
+# A more modern dmenu replacement is rofi:
+#$sup+d $exe "rofi -modi drun,run,emoji,ssh -show drun -theme solarized -font "System San Francisco 15" -show-icons -sidebar-mode"
+#$as  $exe rofi -show drun -theme "~/.config/rofi/rofi.sidiclei/themes/arch.rasi"
+$as $exe ~/.config/rofi/launchers/type-1/launcher.sh
+$sup+d $exe ~/.config/rofi/powermenu/type-2/powermenu.sh
+
+# Screenshot ===> Flameshot
+# https://flameshot.org/docs/advanced/commandline-options/
+bindsym --release Mod4+Print $exe QT_QPA_PLATFORM=xcb flameshot gui && sleep 300 && killall -q flameshot
+#bindsym --release Ctrl+Shift+Print $exe QT_QPA_PLATFORM=xcb flameshot full -c && sleep 30 && killall -q flameshot
+
+## Screenshot ===> Scrot
+bindsym --release Print $exe cd ~/Imagens/Screenshots/ && sleep 1 && scrot
+bindsym --release Shift+Print $exe cd ~/Imagens/Screenshots/ && sleep 1 && scrot -s -b
+
+## Take various screen-shots
+#bindsym $mod+Print mode "$mode_screen"
+#set $mode_screen (a)rea,  (w)indow
+#mode "$mode_screen" {
+    #bindsym a --release exec cd ~/Imagens/Screenshots/ && scrot -s, mode "default"
+    #bindsym w exec --no-startup-id cd ~/Imagens/Screenshots/ && sleep 1 && scrot -u, mode "default"
+
+    ## exit system mode: "Enter" or "Escape"
+    #bindsym Escape mode "default"
+#}
+	
+# Gravação de Tela (SimpleScreenRecorder)
+#$sup+g $exe simplescreenrecorder --start-hidden # -> Inicia o ssr
+#$ss+g $exe killall simplescreenrecorder # -> Mata o ssr
+$sup+g $exe $scriptdir/simplescreenrecorder.sh &
+
+# Launch OCR Text 
+bindsym $alt+o $exe $scriptdir/image_to_text.sh
+
+# Launch Search
+$sup+z $exe $scriptdir/search.py "/home/sidiclei/Área de trabalho/AUSTRO/DECLARAÇÕES/Banco de Dados/TXT_Output/CSV_Output/dados_unificados.csv"
+
+# Launch QRcode Reader 
+bindsym $alt+q $exe $scriptdir/code_to_link.sh
+
+# Alarme
+$sup+a $exe "pgrep alarm-clock-applet && pkill alarm-clock-applet || alarm-clock-applet"
+
+# Simula o pressionamento de ctrl+v ao pressionar $mod+x
+#bindsym --release $mod+x $exe xdotool key --clearmodifiers ctrl+v
+
+# ----------------------------------------------------------------------------
+# Key bindings ===> WORKSPACE LAYOUT(CENÁRIOS PREDEFINIDOS) 
+# ----------------------------------------------------------------------------
+
+# Alternar entre os modos do 'mons' com FN+F8
+bindsym Mod2+Mod4+Super_L $exe ~/.config/i3/scripts/toggle_mons.sh
+
+# RESURRECT ===> i3-resurrect-dmenu script
+#bindsym F12 $exe ~/.config/i3/scripts/i3-resurrect-dmenu
+
+bindsym F12 $exe ~/.config/i3/scripts/save_restore_del.sh
+
+# i3-save-tree --workspace 1 > ~/.config/i3/cenarios/layout_2.json
+# sed -i 's|^\(\s*\)// "|\1"|g; /^\s*\/\//d' ~/.config/i3/cenarios/layout_2.json
+# sed -i -e '/"swallows": \[/,/\]/ {s|^\(\s*\)// \("class".*\)$|\1\2|; s|^\(\s*\)// \("instance".*\),|\1\2|; s|\\||g; /^[[:space:]]*\/\//d}' ~/.config/i3/cenarios/layout_2.json
+
+#bindsym F12 $exe ~/.config/i3/scripts/save_i3_layout.sh
+
+set $restore_layout append_layout ~/.config/i3/
+
+# Start in current workspace
+$sc+1 $restore_layout/cenarios/layout_2.json; $exe firefox; $exe geany; $exe thunar; $exe kitty
+
+# Start in a specific workspace
+$sc+2 workspace 7; $restore_layout/cenarios/layout_1.json; $exe firefox; $exe geany; $exe thunar; $exe tilix
+
+#  ===> RESURRECT
+# Save all workspace layouts
+#bindsym F3 $exe "i3-msg -t get_workspaces | sed 's/},{/\n/g' | awk -F, '{print $3}' | awk -F: '{print $2}' | xargs -n1 i3-resurrect save -d ~/.cache/i3-resurrect -w"
+
+# Restore all workspaces and windows
+#bindsym F4 $exe "i3-resurrect ls -d ~/.cache/i3-resurrect | sed -n '/programs/!p' | awk '{print $2}' | xargs -n1 i3-resurrect restore -d ~/.cache/i3-resurrect -w"
+
+# ----------------------------------------------------------------------------
+# ===> CONTROLES DO AÚDIO
+# ----------------------------------------------------------------------------
+
+## Alsa key bindings (need media-sound/alsa-utils for amixer.)
+#bindsym XF86AudioRaiseVolume  exec amixer -q set Master 10%+ unmute
+#bindsym XF86AudioLowerVolume  exec amixer -q set Master 10%- unmute
+#bindsym XF86AudioMute         exec amixer -q set Master toggle
+
+# Use pactl to adjust volume in PulseAudio. (need USE flag "pulseaudio", will pull in media-sound/pulseaudio automatically.)
+bindsym XF86AudioRaiseVolume  $exe pactl set-sink-volume @DEFAULT_SINK@ +10%
+bindsym XF86AudioLowerVolume  $exe pactl set-sink-volume @DEFAULT_SINK@ -10% 
+bindsym XF86AudioMute         $exe pactl set-sink-mute @DEFAULT_SINK@ toggle
+bindsym XF86AudioMicMute      $exe pactl set-source-mute @DEFAULT_SOURCE@ toggle
+
+# Media player controls (need media-sound/playerctl for playerctl.)
+bindsym XF86AudioPlay  $exe playerctl play-pause
+bindsym XF86AudioPause $exe playerctl play-pause
+bindsym XF86AudioStop  $exe playerctl stop
+bindsym XF86AudioNext  $exe playerctl next
+bindsym XF86AudioPrev  $exe playerctl previous
+
+# ----------------------------------------------------------------------------
+# Sreen brightness controls ===> CONTROLES DE BRILHO
+# ----------------------------------------------------------------------------
+
+# xbacklight (need x11-apps/xbacklight for xbacklight. >>>  só funciona com Intel)
+bindsym XF86MonBrightnessUp    exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown  exec xbacklight -dec 20 # decrease screen brightness
+
+# brillantor(yay -S brightnessct)
+#bindsym XF86MonBrightnessUp exec brightnessctl set +2%; exec notify-send 'brightness up 2%'
+#bindsym XF86MonBrightnessDown exec brightnessctl set -2%; exec notify-send 'brightness down 2%'
+
+# ----------------------------------------------------------------------------
+# Dunst ===> CONTROLES DE NOTIFICAÇÕES
+# ----------------------------------------------------------------------------
+
+#Fecha a notificação ativa no momento (a notificação em foco).
+bindsym Ctrl+space              $exe dunstctl close
+# Fecha todas as notificações exibidas na tela, limpando o buffer atual.
+bindsym Ctrl+Shift+space        $exe dunstctl close-all
+# Exibe a notificação mais recente do histórico de notificações. >>> comma = ,
+bindsym Ctrl+comma             $exe dunstctl history-pop
+# Abrir um link, executar um comando, etc >>> period = .
+bindsym Ctrl+Shift+period       $exe dunstctl context
+
+# ------------------------------------------------------------------------------------------------------------
+# AUTOSTART APPLICATIONS/SERVICES ON LOGIN ===> INICIAR COM O I3 
+# ------------------------------------------------------------------------------------------------------------
+# Resolução de Tela(Instalar Arandr)
+#$exe ~/.screenlayout/default.sh
+#$exe xrandr --output eDP-1 HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 60.00
+#$exe xrandr --output DP-1 --mode 3440x1440 --rate 143.97
+
+# Auto-detect the connected display hardware and load the appropriate X11 setup using xrandr 
+$exe /usr/bin/autorandr -c --default default
+
+# Xrandr - Brilho de Tela
+#$exe xrandr --output DP1 --brightness 0.7
+
+# Mouse(Scroll) Instalar imwheel
+#$exe /usr/bin/imwheel -b "4 5"
+
+# TouchPad >>> https://github.com/bulletmark/libinput-gestures
+#$exe /usr/bin/libinput-gestures &
+$exe libinput-gestures-setup start &
+
+# Keyboard & IBUS(Telegram, WPS, KeePass...)
+$exe setxkbmap -layout br -model abnt2 -option nodeadkeys
+#$exe setxkbmap us
+$exe_al pidof xbindkeys && killall xbindkeys || xbindkeys &
+$exe ibus-daemon --xim -d -r
+$exe sleep 5 && keepassxc
+
+# Activating numlock on bootup
+$exe numlockx on
+
+# Bateria
+$exe_al ~/.config/i3/scripts/start_battery_monitor.sh
+
+# Polkit-gnome-authentication(Agentes de autenticação)
+$exe_al /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+                
+# PolyBar
+#$exe_al ~/.config/polybar/launch.sh 
+# Inicie sem necessidade de script
+#$exe polybar DP-1 -r 
+
+# Launch Polybar after Pywal has restored the color scheme
+#$exe_al wal -i ~/.wallpaper --iterative -o $HOME/.config/polybar/launch.sh
+$exe_al wal -i ~/.wallpaper --iterative -o ~/.config/polybar/launch.sh && ~/.config/dunst/update_dunst_colors.sh
+exec_always --no-startup-id source ~/.cache/wal/colors.sh
+
+# Apply .Xresource. As far as I know, only needed here if using starx (dont have a login manager)
+#$exe_al xrdb ~/.Xresources
+
+# Wallpaper Manager
+#$exe_al wal -i ~/.wallpaper --iterative &
+#$exe_al "feh --bg-fill --randomize ~/.wallpaper/*"
+#$exe $scriptdir/random_wallpaper.sh 
+#$exe nitrogen --restore &
+
+# Fonts
+$exe_al fc-cache -fv
+
+# Configuração do tema X11
+# Alternativa ao gnome-settings-daemon para usuários que não estão usando o ambiente de área de 
+# trabalho GNOME, mas que ainda executam GTK+ e deseja configurar coisas como temas, 
+# fontes antialiasing/hinting e efeitos sonoros da interface do usuário. 
+# ~/.config/xsettingsd/xsettingsd.conf
+$exe xsettingsd &
+$exe_al killall -HUP xsettingsd
+
+# Picom
+# $exe_al "picom --config ~/.config/picom/picom.conf"
+$exe_al ~/.config/picom/kill_restart.sh
+
+# Dunst - Notificação(~/.config/dunst/dunstrc)
+#$exe dunst -b
+
+# Thunar modo daemon, inicia automaticamente no login
+# $exe thunar --daemon &
+# Iniciar thunar mais rapido: sudo nvim /usr/share/gvfs/mounts/network.mount 
+# Alterar AutoMount=true para AutoMount=false . 
+
+# Autotiling(Instalar Autotiling)
+#$exe_al autotiling
+
+# Lockscreen
+# ==> Xautolock
+#$exe xautolock -time 3 -locker 'betterlockscreen -u ~/.wallpaper -l dim' -detectsleep 
+#$exe xautolock -time 7 -locker "systemctl suspend" &
+
+# ==> Xidlehook é um substituto do Xautolock escrito em Rust, --timer é dado em segundos
+# Desabilitar o bloqueio da tela quando o som está tocando ou quando a tela está no modo tela cheia. 
+
+# Comando para bloquear a tela
+set $lockscreen 'betterlockscreen -u ~/.wallpaper -l dim'
+
+# Gerenciador de inatividade com bloqueio e suspensão
+$exe xidlehook \
+    --not-when-fullscreen \
+    --not-when-audio \
+    --timer 240 $lockscreen '' \
+    --timer 90 'systemctl suspend' '' &
+
+
+# Discovers automatically all UPnP AV Media Servers on the network, 
+# and make the content available in a directory tree
+$exe sleep 15 && sudo djmount -o allow_other /media/upnp
+
+# AutoAdb + Scrcpy
+# ==> AutoAdb Executar automaticamente qualquer comando assim que um dispositivo for conectado via adb. 
+# ==> Scrcpy espelha dispositivos Android (vídeo e áudio) conectados via USB ou sobre TCP/IP , e controlar 
+# Encontrar o serial do dispositivo: ==> autoadb printf 'Device %s connected\n' '{}' ou adb devices
+# ==> M=Mouse K=Keyboard S=DesligarTela t=MostrarToques w=NãoHibernar r=Record s=SerialDispositivo
+$exe /usr/bin/autoadb scrcpy -MKSts 6bb1a8f7 &
+
+# Boas vindas
+#$exe sleep 7 && notify-send -i "/usr/share/icons/ePapirus/32x32/apps/user_icon.svg"  "Olá $USER, Seja Bem-vindo!"
+$exe sleep 7 && \
+notify-send -i "/home/sidiclei/.icons/kora/apps/scalable/cs-cat-admin.svg" "Olá $USER, Seja Bem-vindo!" && \
+paplay "/home/sidiclei/.config/i3/sounds/Epic_Sax_Guy.mp3"
+
+#exec --no-startup-id ~/.config/i3/scripts/window_events.sh
+
+# ----------------------------------------------------------------------------
+# ==> AUTOSTART SCRIPTS
+# ----------------------------------------------------------------------------
+
+# Horários das Aulas
+#$exe_al ~/.config/i3/scripts/notificacao_horarios.sh
+$exe_al /bin/bash -c 'if pgrep -x "notificacao_horarios.sh" > /dev/null; then pkill -x "notificacao_horarios.sh"; fi && ~/.config/i3/scripts/notificacao_horarios.sh &'
+
+# Monitora o arquivo e reinicia o i3wm se houver mudanças
+$exe /home/sidiclei/.config/i3/scripts/watch_config.sh
+
+# ----------------------------------------------------------------------------
+# ==> SYTRAY APPLETS
+# ----------------------------------------------------------------------------
+
+# Habilitar por padrão na configuração do i3 para iniciar automaticamente aplicativos como em um DE.
+# if you do not use dex: exec --no-startup-id dex --autostart --environment i3
+# you need to have tray apps started manually one by one:
+
+# Execute .desktop files + apps using /etc/xdg/autostart. ~ https://github.com/jceb/dex
+#$exe dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+#$exe dex --autostart --environment i3
+
+# NetworkManager 
+# and nm-applet is a desktop environment-independent system tray GUI for it.
+$exe nm-applet
+
+# Bluetooth
+#$exe blueman-applet
+                                                                                                                                                
+# Clipman
+$exe xfce4-clipman
+
+# dde-printer
+# Fila de impressão, iniciará o dde-printer e fechará sua janela logo em seguida, 
+# se exitir fila de impressão o programa ficará aberto na tray.
+$exe dde-printer
+$exe sleep 2 && xdotool search --class dde-printer windowkill
+
+# Redshift - ==> geoclue /etc/geoclue/geoclue.conf 
+$exe redshift-gtk &
+$exe /usr/lib/geoclue-2.0/demos/agent
+
+# AnyDesk
+#$exe anydesk
+#for_window [instance="anydesk"] $scra
+
+# Kdeconnect-indicator
+#$exe kdeconnect-indicator
+
+# Albert, Synapse
+#$exe albert &
+#$exe synapse &
+
+# Telegram
+$exe telegram-desktop -startintray %u
+
+# WhatsApp
+#$exe sleep 20 && zapzap
+$exe sleep 20 && whatsie
+#$exe sleep 9 && xdotool search --class zapzap windowkill
+#$exe $scriptdir/qtwaw.sh 
+#$exe whatsapp-nativefier
+#$exe flatpak run io.bit3.WhatsAppQT
+#$exe whatsdesk
+#$exe whatstux
+#$exe sleep 15 && whatsapp-for-linux

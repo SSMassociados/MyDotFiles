@@ -1,0 +1,11 @@
+[user]
+	name = SSMassociados
+	email = ssmassociados@hotmail.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[merge]
+	tool = vimdiff
+[safe]
+	directory = /home/sidiclei/.cache/yay/auto-cpufreq/src/opt/auto-cpufreq/

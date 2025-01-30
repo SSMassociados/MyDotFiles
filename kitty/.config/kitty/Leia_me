@@ -1,0 +1,1 @@
+cd /home/sidiclei/.config/kitty/ && rm theme.conf && ln -s ./kitty-themes/MaterialDark.conf ~/.config/kitty/theme.conf

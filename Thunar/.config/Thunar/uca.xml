@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Abra o terminal aqui</name>
+	<submenu></submenu>
+	<unique-id>1641550833641501-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<range></range>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>go-parent-folder</icon>
+	<name>Abrir como root</name>
+	<submenu></submenu>
+	<unique-id>1641914519454734-1</unique-id>
+	<command>pkexec thunar %f</command>
+	<description>Abrir diretório como root</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>edit-find-replace</icon>
+	<name>Localizar</name>
+	<submenu></submenu>
+	<unique-id>1641914749503365-1</unique-id>
+	<command>catfish %f</command>
+	<description>Localizar arquivo ou pasta</description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>kr_comparedirs</icon>
+	<name>Compare</name>
+	<submenu></submenu>
+	<unique-id>1643422534590896-1</unique-id>
+	<command>meld %F</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>xml-node-duplicate</icon>
+	<name>Duplicar </name>
+	<submenu></submenu>
+	<unique-id>1643422675815038-2</unique-id>
+	<command>for file in %F ;do cp &quot;$file&quot; &quot;$file&quot;_1 ;done</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>gksu-icon</icon>
+	<name>Editar arquivo como ROOT</name>
+	<submenu></submenu>
+	<unique-id>1643418188631107-1</unique-id>
+	<command>gksu geany %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>edit-copy</icon>
+	<name>Copiar para nova pasta</name>
+	<submenu></submenu>
+	<unique-id>1710413112037204-1</unique-id>
+	<command>NOVA_PASTA=$(/usr/bin/zenity --entry --title &apos;Copiar para nova pasta&apos; --text &apos;Por favor, insira um nome para a nova pasta&apos;) &amp;&amp; if [ -d &quot;$NOVA_PASTA&quot; ]; then if /usr/bin/zenity --question --title &apos;Confirmar sobrescrita&apos; --text &apos;A pasta já existe. Deseja sobrescrevê-la?&apos;; then cp -r %F &quot;$NOVA_PASTA&quot;; fi; else mkdir &quot;$NOVA_PASTA&quot; &amp;&amp; cp -r %F &quot;$NOVA_PASTA&quot;; fi</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>edit-cut</icon>
+	<name>Mover para nova pasta </name>
+	<submenu></submenu>
+	<unique-id>1643451063181503-1</unique-id>
+	<command>NEW_FOLDER=$(/usr/bin/zenity --entry --title &apos;Mover para nova pasta&apos; --text &apos;Por favor, insira um nome para a nova pasta&apos;) &amp;&amp; if [ -d &quot;$NEW_FOLDER&quot; ]; then if /usr/bin/zenity --question --title &apos;Confirmar sobrescrita&apos; --text &apos;Pasta já existe. Deseja mover os arquivos para ela?&apos;; then mv %F &quot;$NEW_FOLDER&quot;; fi; else mkdir &quot;$NEW_FOLDER&quot; &amp;&amp; mv %F &quot;$NEW_FOLDER&quot;; fi</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>run-build-install-root</icon>
+	<name>Tornar executável</name>
+	<submenu></submenu>
+	<unique-id>1643422110874738-2</unique-id>
+	<command>chmod +x %F</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>folder-publicshare</icon>
+	<name>Compartilha</name>
+	<submenu></submenu>
+	<unique-id>1643477632367739-1</unique-id>
+	<command>net usershare add --long %n %f &quot;&quot; &quot;Everyone:F&quot; guest_ok=n</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>object-rotate-right</icon>
+	<name>Girar Direita</name>
+	<submenu></submenu>
+	<unique-id>1643453264773138-2</unique-id>
+	<command>for file in %F; do tempfile=$(mktemp) &amp;&amp; convert &quot;$file&quot; -rotate 90 &quot;$tempfile&quot; &amp;&amp; mv -f &quot;$tempfile&quot; &quot;$file&quot; &amp;&amp; rm -f &quot;$tempfile&quot;; done
+</command>
+	<description>Girar imagens JPEG em 90 graus no sentido horário</description>
+	<range></range>
+	<patterns>*.jpg;*.JPG;*.jpeg;*.JPEG;*.png;*.PNG</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>object-rotate-left</icon>
+	<name>Girar Esquerda</name>
+	<submenu></submenu>
+	<unique-id>1710416202450070-1</unique-id>
+	<command>for file in %F; do tempfile=$(mktemp) &amp;&amp; convert &quot;$file&quot; -rotate -90 &quot;$tempfile&quot; &amp;&amp; mv -f &quot;$tempfile&quot; &quot;$file&quot; &amp;&amp; rm -f &quot;$tempfile&quot;; done</command>
+	<description>Girar imagens JPEG em 90 graus no sentido anti horário</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>PNG para JPEG</name>
+	<submenu></submenu>
+	<unique-id>1643453502687846-1</unique-id>
+	<command>convert %f -quality 75 %f.jpg</command>
+	<description></description>
+	<range></range>
+	<patterns>*.png</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>0575_wordicon.0</icon>
+	<name>PDF to DOCX py</name>
+	<submenu></submenu>
+	<unique-id>1710498817170856-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/pdf_to_docx.py %f</command>
+	<description> Python,pdf2docx,notify-send,paplay</description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>draw-text</icon>
+	<name>PDF to TXT</name>
+	<submenu></submenu>
+	<unique-id>1710783221218932-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/1_pdf_txt.sh %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.pdf</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>gnumeric-format-border-double-bottom</icon>
+	<name>TXT to CSV - Extração de Dados</name>
+	<submenu></submenu>
+	<unique-id>1710783523210682-2</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/2_extra_txt_csv.sh %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.txt</patterns>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Unificar CSV(s)</name>
+	<submenu></submenu>
+	<unique-id>1711238667330772-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/unificar_CSV.py %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.csv</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>4715_EXCEL.0</icon>
+	<name>CSV to XLSX</name>
+	<submenu></submenu>
+	<unique-id>1710788371301295-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/3_csv_xlsx.py %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.csv</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>pdfstudio</icon>
+	<name>Picture to PDF</name>
+	<submenu></submenu>
+	<unique-id>1710417193698244-1</unique-id>
+	<command>~/.config/Thunar/scripts/img_to_pdf.sh %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>compress-pdf</icon>
+	<name>Comprimir PDF</name>
+	<submenu></submenu>
+	<unique-id>1671025988454365-1</unique-id>
+	<command>~/.config/Thunar/scripts/compression_pdf.sh %F</command>
+	<description></description>
+	<range></range>
+	<patterns>*.pdf</patterns>
+	<startup-notify/>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>pdf-convert</icon>
+	<name>Export to PDF</name>
+	<submenu></submenu>
+	<unique-id>1710413446593533-2</unique-id>
+	<command>unoconv -f pdf %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>document-print-direct</icon>
+	<name>Imprimir</name>
+	<submenu></submenu>
+	<unique-id>1709808837539604-1</unique-id>
+	<command>bash -c &apos;printer=$(lpstat -a | awk &quot;{print \$1}&quot; | zenity --list --title=&quot;Imprimir&quot; --text=&quot;Selecione a impressora&quot; --column=&quot;Impressoras&quot; --height=400 --width=300) &amp;&amp; copies=$(zenity --entry --title=&quot;Quantidade de Cópias&quot; --text=&quot;Digite a quantidade de cópias&quot; --entry-text=&quot;1&quot;) &amp;&amp; lp -d &quot;$printer&quot; -n &quot;$copies&quot; %F&apos;</command>
+	<description>Imprimir arquivo</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon></icon>
+	<name>Samba Share Remove</name>
+	<submenu></submenu>
+	<unique-id>1643477962518590-1</unique-id>
+	<command>net usershare delete %n &amp;&amp; chmod 755 %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Samba Public Read Only</name>
+	<submenu></submenu>
+	<unique-id>1643484456523579-1</unique-id>
+	<command>net usershare add %n %f &quot;&quot; Everyone:R guest_ok=y</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Samba Public Writeable</name>
+	<submenu></submenu>
+	<unique-id>1643484493198427-2</unique-id>
+	<command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=y &amp;&amp; chmod 777 %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Samba Private Read Only</name>
+	<submenu></submenu>
+	<unique-id>1643484526876027-3</unique-id>
+	<command>net usershare add %n %f &quot;&quot; Everyone:R guest_ok=n</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon></icon>
+	<name>Samba Private Writeable</name>
+	<submenu></submenu>
+	<unique-id>1643484571202087-4</unique-id>
+	<command>net usershare add %n %f &quot;&quot; Everyone:F guest_ok=n &amp;&amp; chmod 777 %f</command>
+	<description></description>
+	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+</actions>

@@ -1,0 +1,63 @@
+## Esta é uma breve introdução ao feh baseada no archlinux wiki
+
+Introdução
+
+fehé um visualizador e catalogador de imagens leve e muito configurável.
+Destina-se a usuários de linha de comando, mas também pode ser iniciado a partir de gerenciadores de arquivos gráficos.
+Ele também pode compilar listagens de texto e miniaturas, mostrar arquivos (não) carregáveis, definir planos de fundo X11, entre outras coisas.
+
+## Modos
+feh é baseado em vários modos que são selecionados na inicialização por opções de linha de comando.
+
+#Modo de apresentação de slides: Slideshow mode:
+É o modo padrão.
+Ele abre uma janela e exibe a primeira imagem nela.
+
+#Modo de montagem: Montage mode
+Forma uma montagem a partir da lista de arquivos.
+A imagem resultante pode ser visualizada ou salva, e seu tamanho pode ser limitado por largura, altura ou ambos.
+
+#Modo de índice Index mode
+Formms uma impressão de índice da lista de arquivos.
+As miniaturas das imagens são mostradas junto com o nome do arquivo, tamanho e dimensões, impressas usando uma fonte truetype de sua escolha.
+A imagem resultante pode ser visualizada ou salva, e seu tamanho pode ser limitado por largura, altura ou ambos.
+
+#Modo de miniatura: Thumbnail mode
+É como o modo de índice, mas as mini-imagens são clicáveis.
+Se uma mini-imagem for clicada, ela será aberta em uma nova janela.
+
+#Modo multijanela: Multiwindow mode
+Mostra as imagens em várias janelas, ao contrário da apresentação de slides, que mostra tudo em uma janela.
+Não o use com uma lista de arquivos grande.
+
+#Modo de lista: List mode:
+Não exibe imagens.
+Ele gera uma lslistagem -style do arquivo na lista de arquivos especificada.
+A saída inclui informações da imagem, como tamanho, número de pixels, tipo, etc.
+Há um formato de saída personalizado especificado por uma printfstring de formato -like.
+Confira as opções de cada modalidade em man feh.
+
+## Definindo o papel de parede
+
+Em muitos ambientes de área de trabalho, fehpode ser usado como um configurador de plano de fundo.
+
+Execute feh --bg-scale <path_to_image>para definir o papel de parede do ambiente de trabalho.
+
+Este comando anterior criará um script chamado .fehbgno diretório inicial.
+
+Para restaurar o papel de parede toda vez que o servidor X for iniciado, adicione ~/.fehbg &ao script de inicialização do X (geralmente localizado em /etc/X11/xinit/xinitrc. Isso executará o script criado no diretório inicial e definirá automaticamente a imagem do papel de parede.
+
+Para fazer isso, execute sudo vim /etc/X11/xinit/xinitrce adicione esta linha ~/.fehbg &na parte inferior (O &significa "executá-lo em segundo plano").
+
+:wqpara salvar o arquivo e fechar o vim.
+
+## Configuração
+
+feh tem três arquivos de configuração:
+
+~/.config/feh/themes para definições de temas.
+~/.config/feh/keys para atalhos de teclado.
+~/.config/feh/buttons para ligações de botão do mouse.
+Ele tentará lê-los de $XDG_CONFIG_HOME/feh/, que, quando não definido, é padronizado como ~/.config/feh/.
+
+Dê uma olhada nas man fehpáginas para mais informações sobre como configurá-los.

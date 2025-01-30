@@ -1,0 +1,56 @@
+# configuration file for betterlockscreen
+
+# Cor do círculo interno (ARGB). Aqui está completamente transparente.
+insidecolor=00000000  
+
+# Cor do anel externo padrão (ARGB). Branco e totalmente opaco.
+ringcolor=ffffffff    
+
+# Cor do destaque ao pressionar teclas. Vermelho opaco.
+keyhlcolor=d23c3dff    
+
+# Cor do destaque ao apagar caracteres. Também vermelho opaco.
+bshlcolor=d23c3dff     
+
+# Cor do separador entre os anéis (ARGB). Totalmente transparente.
+separatorcolor=00000000
+
+# Cor do círculo interno durante a verificação de senha. Totalmente transparente.
+insidevercolor=00000000
+
+# Cor do círculo interno ao errar a senha. Vermelho opaco.
+insidewrongcolor=d23c3dff
+
+# Cor do anel externo durante a verificação de senha. Branco opaco.
+ringvercolor=ffffffff  
+
+# Cor do anel externo ao errar a senha. Branco opaco.
+ringwrongcolor=ffffffff
+
+# Cor do texto enquanto a senha é verificada. Branco opaco.
+verifcolor=ffffffff    
+
+# Cor do texto do horário exibido. Branco opaco.
+timecolor=ffffffff     
+
+# Cor do texto da data exibida. Branco opaco.
+datecolor=ffffffff     
+
+# Cor do fundo da caixa de login. Preto com 60% de opacidade.
+loginbox=00000099      
+
+# Define a fonte usada para textos. Aqui é uma fonte monoespaçada padrão do sistema.
+font="monospace:size=14"        
+
+# Texto exibido durante o bloqueio.
+locktext='Bem-vindo de volta!
+Digite sua senha...'
+
+# Texto exibido durante a verificação da senha.
+veriftext='Verificando...'
+
+# Texto exibido ao errar a senha.
+wrongtext='Senha incorreta!'
+
+# Tempo para o bloqueio automático, está desativado.
+#lock_timeout=60
