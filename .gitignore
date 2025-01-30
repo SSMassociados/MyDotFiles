@@ -1,0 +1,32 @@
+# Chaves SSH (NUNCA compartilhe suas chaves privadas)
+.ssh/
+*.pem
+*.pub
+
+# Informações sensíveis e credenciais
+*.env
+.secrets
+*.gpg
+*.p12
+
+# Cache e configurações locais
+.cache/
+.local/
+.config/gtk-3.0/bookmarks
+.config/Code/User/settings.json  # VSCode configs locais
+.mozilla/
+.google-chrome/
+.vscode/
+
+# Arquivos temporários e logs
+*.swp
+*.swo
+*.log
+*.bak
+*.tmp
+.DS_Store  # Arquivo do macOS (caso um dia use)
+
+# Arquivos do gerenciador de pacotes
+node_modules/
+venv/
+__pycache__/
