@@ -175,7 +175,7 @@ def export_to_pdf(filename, data):
     # Função para visualizar o arquivo exportado com o visualizador padrão do sistema
     def visualize_pdf():
         try:
-            subprocess.Popen(["evince", filename])
+            subprocess.Popen(["atril", filename])
         except FileNotFoundError:
             messagebox.showerror("Erro", "Visualizador de PDF padrão não encontrado. Verifique se está configurado corretamente no seu sistema.")
 
@@ -308,7 +308,7 @@ def export_ata_to_pdf():
         # Função para visualizar o arquivo exportado com o visualizador padrão do sistema
         def visualize_pdf():
             try:
-                subprocess.Popen(["xreader", filename])
+                subprocess.Popen(["atril", filename])
             except FileNotFoundError:
                 show_custom_message("Erro", "Visualizador de PDF padrão não encontrado.")
 

@@ -290,14 +290,14 @@ for_window [class="qvidcap"] $float, sticky enable, resize set 335 250
 
 for_window [class="TelegramDesktop|WhatSie|qtwaw|ZapZap|whatsdesk|Whatsapp-for-linux"] $float, border none, resize set 910 512, $center
 for_window [class="Psensor"] $float, resize set 450 590
-for_window [class="KeePassXC"] $float, resize set 800 500
+for_window [class="KeePassXC"] $float, resize set 800 500, $center
 for_window [class="Arandr"] $float, resize set 280 254
 for_window [class="pavucontrol|easyeffects"] $float, resize set 650 410
 for_window [class="Gnome-calculator"] $float, resize set 100 300
 for_window [class="xdman-Main"] $float, move position 1620 1010, resize set 759 419
 for_window [class="Xdm-app"] $float, move position 1620 1010, resize set 250 40
 for_window [class="zoom"] $float, resize set 200 480, $center
-for_window [class="VirtualBox Manager|VirtualBox Machine"] $float, resize set 804 720, $center
+for_window [class="VirtualBox Manager|VirtualBox Machine|VirtualBox"] $float, resize set 749 385, $center
 for_window [class="kdeconnect-indicator|kdeconnect-settings|kdeconnect.app|kdeconnect.sms"] $float, resize set 803 421, $center
 for_window [instance="geany"] $center
 for_window [instance="Places|firefox"] $float, resize set 660 363, $center

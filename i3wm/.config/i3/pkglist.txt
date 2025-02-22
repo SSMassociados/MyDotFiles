@@ -55,7 +55,6 @@ cpu-x
 csvkit
 cups-pdf
 cyme
-cython
 deepin-sound-theme
 deskreen
 devour
@@ -103,7 +102,6 @@ github-cli
 gksu
 glabels
 gnome-calculator-gtk3
-gnome-common
 gnome-icon-theme
 gnome-icon-theme-extras
 gnome-network-displays
@@ -119,7 +117,6 @@ gst-plugin-pipewire
 gstreamer-vaapi
 gsview
 gtk-chtheme
-gtk-doc
 gtk-theme-murrine-collection
 gufw
 gutenprint
@@ -144,7 +141,6 @@ ifuse
 inkscape
 inotify-tools
 intel-ucode
-intltool
 inxi
 iw
 iwd
@@ -193,6 +189,7 @@ matugen-bin
 meld
 mesa-utils
 meson
+microsoft-edge-stable-bin
 mission-center
 mkinitcpio-numlock
 mons
@@ -329,6 +326,10 @@ vidcutter
 video-trimmer
 viewnior
 vim-runtime
+virtualbox
+virtualbox-ext-oracle
+virtualbox-guest-iso
+virtualbox-host-dkms
 vivaldi
 vivaldi-ffmpeg-codecs
 vlc
