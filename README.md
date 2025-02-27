@@ -123,4 +123,3 @@ Este repositório está licenciado sob os termos especificados no arquivo [LICEN
 
 ---
 
-Com essa estrutura, o `README.md` fica mais direto e fácil de entender, ajudando qualquer usuário (inclusive você no futuro) a configurar rapidamente o ambiente. 😊
