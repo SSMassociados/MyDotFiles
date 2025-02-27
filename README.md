@@ -1,138 +1,126 @@
 # Dotfiles
 
-Este repositório contém minhas configurações  pessoais (dotfiles) para vários aplicativos e ambientes. As  configurações são gerenciadas usando o `GNU Stow` para criar links simbólicos de forma organizada.
+Este repositório armazena minhas configurações pessoais (dotfiles) para diversos aplicativos e ambientes. Sou usuário de **Arch Linux** com **i3wm**, e as configurações são gerenciadas com `GNU Stow`, permitindo uma gestão organizada por meio de links simbólicos.
 
 ## Estrutura do Repositório
 
-Aqui está uma visão geral da estrutura do repositório:
+Abaixo está a organização dos arquivos e diretórios:
 
 ```
 .
-├── bashrc                  # Configurações do Bash
-├── betterlockscreen        # Configurações do Betterlockscreen
-├── dunst                   # Configurações do Dunst (notificações)
-├── feh                     # Configurações do Feh (visualizador de imagens)
-├── fonts                   # Fontes personalizadas
-├── fzf                     # Configurações do FZF (fuzzy finder)
-├── geany                   # Configurações do Geany (editor de texto)
-├── gestures                # Configurações de gestos de touchpad
-├── git                     # Configurações específicas do Git
-├── gitconfig               # Arquivo de configuração global do Git
-├── gtk-2.0                 # Configurações do GTK 2.0
-├── gtk-3.0                 # Configurações do GTK 3.0
-├── gtk-4.0                 # Configurações do GTK 4.0
-├── gtkrc-2.0               # Configurações específicas do GTK 2.0
-├── i3wm                    # Configurações do i3 Window Manager
-├── icons                   # Ícones personalizados
-├── kitty                   # Configurações do terminal Kitty
-├── LICENSE                 # Licença do repositório
-├── mime                    # Configurações de tipos MIME
-├── mpv                     # Configurações do player de mídia MPV
-├── nvim                    # Configurações do Neovim (editor de texto)
-├── nwg-look                # Configurações do utilitário de aparência
-├── oh-my-zsh               # Configurações do Oh My Zsh
-├── picon                   # Ícones personalizados
-├── polybar                 # Configurações da barra de status Polybar
-├── qBittorrent             # Configurações do qBittorrent
-├── qt5ct                   # Configurações do Qt5 Configuration Tool
-├── qt6ct                   # Configurações do Qt6 Configuration Tool
-├── qutebrowser             # Configurações do navegador Qutebrowser
-├── ranger                  # Configurações do gerenciador de arquivos Ranger
-├── rofi                    # Configurações do launcher Rofi
-├── themes                  # Temas personalizados
-├── Thunar                  # Configurações do gerenciador de arquivos Thunar
-├── user-dirs               # Configurações de diretórios de usuário
-├── wal                     # Configurações do Pywal (gerenciador de cores)
-├── wallpaper               # Papéis de parede personalizados
-├── xbindkeys               # Configurações de atalhos de teclado
-├── Xdefault                # Configurações padrão do servidor X
-├── xinitrc                 # Script de inicialização do Xorg
-├── Xmodmap                 # Configurações de mapeamento de teclado
-├── xsettingsd              # Configurações do daemon de configurações do X
-├── zathura                 # Configurações do visualizador de documentos Zathura
-└── zshrc                   # Configurações do Zsh
+├── bashrc                     # Configurações do Bash
+├── betterlockscreen           # Configurações do Betterlockscreen
+├── dunst                      # Notificações (Dunst)
+├── feh                        # Visualizador de imagens (Feh)
+├── fonts                      # Fontes personalizadas
+├── fzf                        # Fuzzy Finder (FZF)
+├── geany                      # Editor de texto (Geany)
+├── gestures                   # Gestos para touchpad
+├── git                        # Configurações do Git
+├── gitconfig                  # Arquivo global do Git
+├── gtk-2.0, gtk-3.0, gtk-4.0  # Temas e configurações GTK
+├── i3wm                       # Configurações do i3wm
+├── icons                      # Ícones personalizados
+├── kitty                      # Terminal Kitty
+├── LICENSE                    # Licença do repositório
+├── mime                       # Configurações de tipos MIME
+├── mpv                        # Player de mídia MPV
+├── nvim                       # Editor de texto Neovim
+├── oh-my-zsh                  # Configurações do Oh My Zsh
+├── polybar                    # Barra de status Polybar
+├── qBittorrent                # Configurações do qBittorrent
+├── qt5ct, qt6ct               # Ferramentas de configuração Qt
+├── qutebrowser                # Navegador Qutebrowser
+├── ranger                     # Gerenciador de arquivos Ranger
+├── rofi                       # Launcher Rofi
+├── themes                     # Temas personalizados
+├── Thunar                     # Gerenciador de arquivos Thunar
+├── wal                        # Pywal (gerenciador de cores)
+├── wallpaper                  # Papéis de parede
+├── xbindkeys                  # Atalhos de teclado
+├── xinitrc                    # Inicialização do Xorg
+├── Xmodmap                    # Mapeamento de teclado
+├── xsettingsd                 # Daemon de configurações do X
+├── zathura                    # Visualizador de documentos Zathura
+└── zshrc                      # Configurações do Zsh
 ```
 
 ## Como Usar
 
-### Pré-requisitos
+### Requisitos
 
 - **Git**: Para clonar e sincronizar o repositório.
-- **GNU Stow**: Para gerenciar links simbólicos das configurações.
+- **GNU Stow**: Para gerenciar links simbólicos.
 
-Instale o `GNU Stow` se ainda não o tiver:
+Instale o `GNU Stow` conforme sua distribuição:
 
-```
+```bash
+sudo pacman -S stow    # Arch Linux
 sudo apt install stow  # Para sistemas baseados em Debian/Ubuntu
-sudo pacman -S stow    # Para sistemas baseados em Arch
 ```
 
 ### Clonando o Repositório
 
-Clone este repositório em seu diretório home:
+Clone o repositório e navegue até a pasta:
 
-```
+```bash
 git clone https://github.com/seu-usuario/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-### Aplicando Configurações com GNU Stow
+### Aplicando Configurações com Stow
 
-Para aplicar as configurações de um diretório específico (por exemplo, `nvim`), use o comando:
+Para aplicar configurações específicas (exemplo: `nvim`):
 
-```
+```bash
 stow nvim
 ```
 
-Isso criará links simbólicos dos arquivos no diretório `nvim` para o local apropriado no seu `$HOME`.
+Para aplicar todas as configurações:
 
-Para aplicar todas as configurações de uma vez:
-
-```
+```bash
 stow */
 ```
 
 ### Removendo Configurações
 
-Para remover os links simbólicos de um diretório específico (por exemplo, `nvim`), use:
+Para desfazer links simbólicos de um diretório específico:
 
-```
+```bash
 stow -D nvim
 ```
 
 Para remover todas as configurações:
 
-```
+```bash
 stow -D */
 ```
 
 ### Sincronizando com Git
 
-Para manter suas configurações atualizadas em várias máquinas, use o Git para sincronizar:
+Para manter suas configurações sempre atualizadas:
 
-1. Faça commit das mudanças:
+```bash
+git add .
+git commit -m "Atualização das configurações"
+git push origin main
+```
 
-   ```
-   git add .
-   git commit -m "Atualizando configurações"
-   git push origin main
-   ```
-   
-2. Em outra máquina, puxe as mudanças:
+Em outra máquina, basta puxar as mudanças:
 
-   ```
-   git pull origin main
-   ```
+```bash
+git pull origin main
+```
 
 ## Licença
 
-Este repositório está licenciado sob a licença especificada no arquivo [LICENSE](https://LICENSE).
+Este repositório está licenciado sob os termos especificados no arquivo [LICENSE](https://github.com/seu-usuario/dotfiles/blob/main/LICENSE).
 
-------
+## Personalização
 
-### Personalização
+- Substitua `https://github.com/seu-usuario/dotfiles.git` pelo URL correto do seu repositório.
+- Adicione/remova seções conforme sua necessidade.
 
-- Substitua `https://github.com/seu-usuario/dotfiles.git` pelo URL do seu repositório real.
-- Adicione ou remova seções conforme necessário para refletir suas configurações e fluxo de trabalho.
+---
 
-Esse `README.md` deve fornecer uma boa documentação para você e para qualquer pessoa que queira usar ou contribuir com seu repositório de dotfiles. 😊
+Com essa estrutura, o `README.md` fica mais direto e fácil de entender, ajudando qualquer usuário (inclusive você no futuro) a configurar rapidamente o ambiente. 😊
