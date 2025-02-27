@@ -114,7 +114,7 @@ git pull origin main
 
 ## Licença
 
-Este repositório está licenciado sob os termos especificados no arquivo [LICENSE](https://github.com/seu-usuario/dotfiles/blob/main/LICENSE).
+Este repositório está licenciado sob os termos especificados no arquivo [LICENSE](https://github.com/SSMassociados/MyDotFiles/blob/main/LICENSE).
 
 ## Personalização
 
