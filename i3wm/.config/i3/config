@@ -33,7 +33,7 @@ set  $ct  bindsym  Ctrl+Tab
 set  $as  bindsym  Mod1+space
 
 # exec 
-set  $exe     exec --no-startup-id
+set  $exe       exec --no-startup-id
 set  $exe_al  exec_always --no-startup-id
 
 # user local bin path (usually '~/bin' or '~/.local/bin')
@@ -50,8 +50,9 @@ set  $rkey Right
 set  $out_pri output eDP1
 set  $out_sec output HDMI1
 
-# float enable
-set  $float floating enable
+# float enable/disable
+set  $float     floating enable
+set  $nofloat floating disable
 
 # Position
 set  $center move position center
@@ -457,7 +458,8 @@ for_window [instance="gl"] focus, $full
 
 # KVM config
 assign [class="Virt-manager"] $ws6
-for_window [class="Virt-manager"] $float, resize set 804 720 
+for_window [class="Virt-manager"] $float, resize set 487 344, $center
+for_window [title=".*QEMU/KVM$"] $nofloat
 
 # WPS Writer & Spreadsheets
 assign [class="wps"] $ws8
