@@ -460,6 +460,7 @@ for_window [instance="gl"] focus, $full
 assign [class="Virt-manager"] $ws6
 for_window [class="Virt-manager"] $float, resize set 487 344, $center
 for_window [title=".*QEMU/KVM$"] $nofloat
+for_window [title="Nova VM"] $float, $center
 
 # WPS Writer & Spreadsheets
 assign [class="wps"] $ws8
@@ -1213,6 +1214,10 @@ $exe xidlehook \
 #$exe sleep 15 && sudo djmount -o allow_other /media/upnp
 #$exe djmount -o allow_other /media/upnp
 bindsym F5 $exe $scriptdir/toggle_djmount.sh
+
+# Gnirehtet (Reverse Tethering)
+# yay -S gnirehtet
+bindsym F7 $exe $scriptdir/toggle_gnirehtet.sh
 
 # AutoAdb + Scrcpy
 # ==> AutoAdb Executar automaticamente qualquer comando assim que um dispositivo for conectado via adb. 
