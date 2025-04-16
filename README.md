@@ -2,7 +2,9 @@
 
 Este repositório armazena minhas configurações pessoais (dotfiles) para diversos aplicativos e ambientes. Sou usuário de **Arch Linux** com **i3wm**, e as configurações são gerenciadas com `GNU Stow`, permitindo uma gestão organizada por meio de links simbólicos.
 
-## Estrutura do Repositório
+------
+
+## 📂 Estrutura do Repositório
 
 Abaixo está a organização dos arquivos e diretórios:
 
@@ -45,81 +47,88 @@ Abaixo está a organização dos arquivos e diretórios:
 └── zshrc                      # Configurações do Zsh
 ```
 
-## Como Usar
+------
 
-### Requisitos
+## 🛠 Como Usar
 
-- **Git**: Para clonar e sincronizar o repositório.
-- **GNU Stow**: Para gerenciar links simbólicos.
+### Pré-requisitos
 
-Instale o `GNU Stow` conforme sua distribuição:
-
-```bash
+```
 sudo pacman -S stow    # Arch Linux
-sudo apt install stow  # Para sistemas baseados em Debian/Ubuntu
+sudo apt install stow  # Debian/Ubuntu
 ```
 
-### Clonando o Repositório
+### Clonagem
 
-Clone o repositório e navegue até a pasta:
-
-```bash
+```
 git clone https://github.com/seu-usuario/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
-### Aplicando Configurações com Stow
+------
 
-Para aplicar configurações específicas (exemplo: `nvim`):
+## ⚠️ Importante: Sempre Simule Antes!
 
-```bash
-stow nvim
+Use `-n` (dry-run) e `-v` (verbose) antes de qualquer operação:
+
+### Aplicar Configurações
+
+```
+# Para pacotes específicos (ex: dunst picom):
+stow -nv -d ~/.dotfiles -t ~ dunst picom  # Simula
+stow -v -d ~/.dotfiles -t ~ dunst picom   # Executa
+
+# Para todos os dotfiles:
+stow -nv -d ~/.dotfiles -t ~ */           # Simula
+stow -v -d ~/.dotfiles -t ~ */            # Executa
 ```
 
-Para aplicar todas as configurações:
+### Remover Configurações
 
-```bash
-stow */
+```
+# Pacote específico:
+stow -nv -d ~/.dotfiles -t ~ -D dunst picom  # Simula
+stow -v -d ~/.dotfiles -t ~ -D dunst picom   # Executa
+
+# Todos os dotfiles:
+cd ~/.dotfiles && stow -nvD -t ~ */       # Simula
+cd ~/.dotfiles && stow -vD -t ~ */        # Executa
 ```
 
-### Removendo Configurações
+### Reconstruir Links (-R)
 
-Para desfazer links simbólicos de um diretório específico:
+```
+# Uso básico:
+cd ~/.dotfiles && stow -R -t ~ dunst picom
 
-```bash
-stow -D nvim
+# Com flags:
+cd ~/.dotfiles && stow -Rv -t ~ */   # Com verbose
+cd ~/.dotfiles && stow -Rn -t ~ */   # Dry-run
 ```
 
-Para remover todas as configurações:
+------
 
-```bash
-stow -D */
+## 🔄 Sincronização com Git
+
 ```
-
-### Sincronizando com Git
-
-Para manter suas configurações sempre atualizadas:
-
-```bash
+# Atualizar:
 git add .
 git commit -m "Atualização das configurações"
 git push origin main
-```
 
-Em outra máquina, basta puxar as mudanças:
-
-```bash
+# Em outra máquina:
 git pull origin main
 ```
 
-## Licença
+------
+
+## 📜 Licença
 
 Este repositório está licenciado sob os termos especificados no arquivo [LICENSE](https://github.com/SSMassociados/MyDotFiles/blob/main/LICENSE).
 
 ## Personalização
 
 - Substitua `https://github.com/seu-usuario/dotfiles.git` pelo URL correto do seu repositório.
-- Adicione/remova seções conforme sua necessidade.
 
 ---
 
