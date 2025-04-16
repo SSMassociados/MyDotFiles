@@ -1,9 +1,28 @@
-# Chaves SSH (NUNCA compartilhe suas chaves privadas)
+# =============================================
+# EXCEÇÕES PARA PASTAS DE SISTEMA (icons, fonts, themes)
+# =============================================
+!icons/
+!icons/.local/
+!icons/.local/share/
+!icons/.local/share/**/*
+!fonts/
+!fonts/.local/
+!fonts/.local/share/
+!fonts/.local/share/**/*
+!themes/
+!themes/.local/
+!themes/.local/share/
+!themes/.local/share/**/*
+
+# =============================================
+# REGRAS DE IGNORE (ATUALIZADAS)
+# =============================================
+# Chaves SSH
 .ssh/
 *.pem
 *.pub
 
-# Informações sensíveis e credenciais
+# Informações sensíveis
 *.env
 .secrets
 *.gpg
@@ -11,22 +30,23 @@
 
 # Cache e configurações locais
 .cache/
-.local/
+.local/                   # EXCETO para os .local já permitidos acima
+!**/.local/share/         # Permite qualquer .local/share/ no projeto
 .config/gtk-3.0/bookmarks
-.config/Code/User/settings.json  # VSCode configs locais
+.config/Code/User/settings.json
 .mozilla/
 .google-chrome/
 .vscode/
 
-# Arquivos temporários e logs
+# Arquivos temporários
 *.swp
 *.swo
 *.log
 *.bak
 *.tmp
-.DS_Store  # Arquivo do macOS (caso um dia use)
+.DS_Store
 
-# Arquivos do gerenciador de pacotes
+# Gerenciadores de pacotes
 node_modules/
 venv/
 __pycache__/

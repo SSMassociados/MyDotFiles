@@ -52,7 +52,7 @@
 	<name>Duplicar </name>
 	<submenu></submenu>
 	<unique-id>1643422675815038-2</unique-id>
-	<command>for file in %F ;do cp &quot;$file&quot; &quot;$file&quot;_1 ;done</command>
+	<command>for file in %F; do newfile=&quot;${file}_1&quot;; i=1; while [ -e &quot;$newfile&quot; ]; do i=$((i+1)); newfile=&quot;${file}_$i&quot;; done; cp &quot;$file&quot; &quot;$newfile&quot;; done</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>

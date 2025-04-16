@@ -1,3 +1,6 @@
+# Debugging - remover após análise
+$exe_al  --no-startup-id bash -c 'date +"Início: %H:%M:%S" > /tmp/i3-debug.log'
+$exe_al  bash -c 'for i in {1..60}; do date +"$i: %H:%M:%S" >> /tmp/i3-debug.log; sleep 1; done' &
 
 ##########################################
 #  DOTFILES -- I3CONFIG -- By: Sidiclei  #
@@ -272,7 +275,7 @@ for_window [window_type="Dialog|Menu"] $float
 for_window [title="Authy|Preferences$|Progresso$"] $float
 for_window [title="Picture-in-Picture"] sticky enable $show
 for_window [class="Yad" title="Calendar"] $float
-for_window [class="Tk|Toplevel"] $float
+for_window [class="Tk|Toplevel|Bell_scheduler_gui.py"] $float
 for_window [class="<interactive>"] $float
 for_window [class="floating_window"] $float
 for_window [class="qt5ct|qt6ct"] $float, resize set 640 665
@@ -333,6 +336,18 @@ for_window [instance="Places|firefox"] $float, resize set 660 363, $center
 
 # Configurar bordas para janelas flutuantes
 for_window [floating] client_border none
+
+# ----------------------------------------------------------------------------
+# ===> SOUNDS
+# ----------------------------------------------------------------------------
+# Tocar som ao abrir uma janela
+#for_window [class=".*"] exec bash -c "sleep 2 && paplay /usr/share/sounds/enchanted/stereo/window-switch.ogg"
+
+# Tocar som ao fechar uma janela
+#bindsym $mod+Shift+q exec "/usr/share/sounds/enchanted/stereo/window-switch.ogg && kill"
+
+# Tocar som ao abrir o terminal
+#assign [class="kitty"] exec paplay /usr/share/sounds/gnome/default/alerts/glass.oga
 
 # ----------------------------------------------------------------------------
 # ===> WORKSPACE 
@@ -568,7 +583,7 @@ $ca+s              sticky toggle
 $sup+u             [urgent=latest] focus
 
 # Kill focused windows
-$sup+q             kill
+$sup+q            kill
 
 # Kill all windows
 $ss+q [class=".*"] kill
@@ -1112,7 +1127,7 @@ bindsym Ctrl+Shift+period       $exe dunstctl context
 #$exe xrandr --output DP-1 --mode 3440x1440 --rate 143.97
 
 # Auto-detect the connected display hardware and load the appropriate X11 setup using xrandr 
-$exe /usr/bin/autorandr -c --default default
+$exe /usr/bin/autorandr -c --default default &
 
 # Xrandr - Brilho de Tela
 #$exe xrandr --output DP1 --brightness 0.7
@@ -1147,8 +1162,8 @@ $exe_al /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 # Launch Polybar after Pywal has restored the color scheme
 #$exe_al wal -i ~/.wallpaper --iterative -o $HOME/.config/polybar/launch.sh
-$exe_al wal -i ~/.wallpaper --iterative -o ~/.config/polybar/launch.sh && ~/.config/dunst/update_dunst_colors.sh
-$exe_al --no-startup-id source ~/.cache/wal/colors.sh
+$exe_al wal -i ~/.wallpaper --iterative -o ~/.config/polybar/launch.sh && ~/.config/dunst/update_dunst_colors.sh &
+$exe_al --no-startup-id source ~/.cache/wal/colors.sh &
 
 #bindsym $mod+Shift+w exec --no-startup-id ~/.config/matugen/matugen-start.sh
 
@@ -1177,7 +1192,7 @@ $exe_al killall -HUP xsettingsd
 
 # Picom
 # $exe_al "picom --config ~/.config/picom/picom.conf"
-$exe_al ~/.config/picom/kill_restart.sh
+$exe_al ~/.config/picom/kill_restart.sh &
 
 # Dunst - Notificação(~/.config/dunst/dunstrc)
 #$exe dunst -b
@@ -1242,10 +1257,35 @@ paplay "$HOME/.config/i3/sounds/Epic_Sax_Guy.mp3"
 
 # Horários das Aulas
 #$exe_al $scriptdir/notificacao_horarios.sh
-$exe_al /bin/bash -c 'if pgrep -x "notificacao_horarios.sh" > /dev/null; then pkill -x "notificacao_horarios.sh"; fi && ~/.config/i3/scripts/notificacao_horarios.sh &'
+#$exe_al /bin/bash -c 'if pgrep -x "notificacao_horarios.sh" > /dev/null; then pkill -x "notificacao_horarios.sh"; fi && ~/.config/i3/scripts/notificacao_horarios.sh &'
+
+# bell_scheduler_gui
+# Atalho 
+#bindsym F11 exec python3 ~/.config/i3/scripts/bell_scheduler_gui.py
+bindsym F11 exec "pkill -f bell_scheduler_gui.py; python3 ~/.config/i3/scripts/bell_scheduler_gui.py"
+
+# Iniciar com a interface gráfica
+#exec --no-startup-id python3 ~/.config/i3/scripts/bell_scheduler_gui.py --service &
+
+# Para iniciar o serviço (sem interface)
+#exec --no-startup-id ~/.local/bin/bell_scheduler &
+
+# Bell Scheduler - Configuração para Arch Linux + i3wm
+
+# 1. Atalho para abrir a interface gráfica (F11)
+#bindsym F11 exec python3 ~/.config/i3/scripts/bell_scheduler_gui.py
+
+# 2. Inicialização automática como serviço (recomendado)
+#exec_always --no-startup-id "systemctl --user import-environment DISPLAY XAUTHORITY && sleep 3 && systemctl --user restart bell-scheduler.service"
+
+#exec --no-startup-id "systemctl --user import-environment DISPLAY XAUTHORITY"
+#exec --no-startup-id "sleep 3 && systemctl --user restart bell-scheduler.service"
+
+# 3. Alternativa direta (sem systemd, se preferir)
+# exec --no-startup-id python3 ~/.config/i3/scripts/bell_scheduler_gui.py --service &
 
 # Monitora o arquivo e reinicia o i3wm se houver mudanças
-$exe $scriptdir/watch_config_i3.sh
+$exe $scriptdir/watch_config_i3.sh &
 
 # ----------------------------------------------------------------------------
 # ==> SYTRAY APPLETS
@@ -1272,8 +1312,8 @@ $exe xfce4-clipman
 # dde-printer
 # Fila de impressão, iniciará o dde-printer e fechará sua janela logo em seguida, 
 # se exitir fila de impressão o programa ficará aberto na tray.
-$exe dde-printer
-$exe sleep 2 && xdotool search --class dde-printer windowkill
+#$exe dde-printer
+#$exe sleep 2 && xdotool search --class dde-printer windowkill
 
 # Redshift - ==> geoclue /etc/geoclue/geoclue.conf 
 $exe redshift-gtk &
@@ -1295,7 +1335,7 @@ $exe telegram-desktop -startintray %u
 
 # WhatsApp
 #$exe sleep 20 && zapzap
-$exe sleep 20 && whatsie
+#$exe sleep 20 && whatsie
 #$exe sleep 9 && xdotool search --class zapzap windowkill
 #$exe $scriptdir/qtwaw.sh 
 #$exe whatsapp-nativefier
@@ -1303,3 +1343,4 @@ $exe sleep 20 && whatsie
 #$exe whatsdesk
 #$exe whatstux
 #$exe sleep 15 && whatsapp-for-linux
+$exe bash -c 'notify-send "i3 iniciado em $(($(date +%s) - $(date +%s -r /tmp/i3-start-time.log))) segundos"'

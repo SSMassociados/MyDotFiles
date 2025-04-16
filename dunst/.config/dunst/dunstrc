@@ -110,25 +110,25 @@
     per_monitor_dpi = true
 
 [urgency_low]
-    background = "#160f0f"
+    background = "#100f09"
     foreground = "#FFFFFF"
-    frame_color = "#160f0f"
+    frame_color = "#100f09"
     timeout = 15
     default_icon = dialog-information
     sound = paplay /usr/share/sounds/freedesktop/stereo/alarm.mp3
 
 [urgency_normal]
-    background = "#2E5997"
-    foreground = "#FFFFFF"
-    frame_color = "#2E5997"
+    background = "#709B6B"
+    foreground = "#000000"
+    frame_color = "#709B6B"
     timeout = 15
     default_icon = dialog-information
     sound = paplay /usr/share/sounds/freedesktop/stereo/alarm.mp3
 
 [urgency_critical]
-    background = "#EC9365"
-    foreground = "#FFFFFF"
-    frame_color = "#EC9365"
+    background = "#6A803C"
+    foreground = "#000000"
+    frame_color = "#6A803C"
     timeout = 15
     #override_pause_level = 60
     default_icon = dialog-warning
