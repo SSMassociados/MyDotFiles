@@ -1,43 +1,65 @@
 #!/bin/bash
 
-# fork from Per-core temperatures :
-# https://github.com/jaagr/polybar/wiki/User-contributed-modules#per-core-temperatures
+# Função segura para obter temperatura da CPU
+get_cpu_temp() {
+    # 1. Tentar lm_sensors (Package ID para Intel)
+    local sensors_output=$(sensors 2>/dev/null)
+    local pkg_temp=$(echo "$sensors_output" | awk '
+        /Package id 0/ {
+            for(i=1; i<=NF; i++) {
+                if($i ~ /+[0-9]+\.[0-9]°C/) {
+                    gsub(/[+°C]/, "", $i)
+                    print $i
+                    exit
+                }
+            }
+        }
+    ')
 
-# Get information from cores temp thanks to sensors
-rawData=$( sensors | grep -m 1 Core | awk '{print substr($3, 2, length($3)-5)}' )
-tempCore=($rawData)
-
-# Define constants :
-degree="°C"
-temperaturesValues=(40 50 60 70 80 90)
-temperaturesColors=("#6bff49" "#f4cb24" "#ff8819" "#ff3205" "#f40202" "#ef02db")
-temperaturesIcons=(     )
-
-for iCore in ${!tempCore[*]}
-do
-    for iTemp in ${!temperaturesValues[*]}
-    do
-        if (( "${tempCore[$iCore]}" < "${temperaturesValues[$iTemp]}"  )); then
-            tmpEcho="%{F${temperaturesColors[$iTemp]}}${tempCore[$iCore]}$degree%{F-}"
-            finalEcho="$finalEcho $tmpEcho"
-            break
+    # 2. Tentar leitura direta do kernel (priorizando zonas CPU)
+    local cpu_zone_temp=$(for zone in /sys/class/thermal/thermal_zone*; do
+        if grep -q -E '(cpu|processor|core)' "$zone/type" 2>/dev/null; then
+            awk '{printf "%.1f", $1/1000}' "$zone/temp" 2>/dev/null
         fi
-    done
-    total=$(( ${tempCore[$iCore]} + total ));
-done
+    done | sort -nr | head -1)
 
-sum=$(( $total/${#tempCore[*]} ))
+    # 3. Fallback para qualquer zona térmica
+    local any_zone_temp=$(cat /sys/class/thermal/thermal_zone*/temp 2>/dev/null | 
+                         awk '{t=$1/1000; if(t>max)max=t} END{printf "%.1f", max}')
 
-for iTemp in ${!temperaturesValues[*]}
-do
-    if (( "$sum" < "${temperaturesValues[$iTemp]}" )); then
-        ## This line will color the icon too
-        tmpEcho="%{F${temperaturesColors[$iTemp]}}${temperaturesIcons[$iTemp]}%{F-}"
-        ## This line will NOT color the icon
-        #tmpEcho="${temperaturesIcons[$iTemp]}"
-        finalEcho=" $finalEcho $tmpEcho"
-        break
+    # Priorizar Package, depois zona CPU específica, depois qualquer zona
+    if [[ "$pkg_temp" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+        echo "$pkg_temp"
+    elif [[ "$cpu_zone_temp" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+        echo "$cpu_zone_temp"
+    elif [[ "$any_zone_temp" =~ ^[0-9]+(\.[0-9]+)?$ ]]; then
+        echo "$any_zone_temp"
+    else
+        echo "0"
     fi
-done
+}
 
-echo $finalEcho
+# Obter temperatura
+temp=$(get_cpu_temp)
+
+# Debug (opcional)
+echo "Temperatura lida: $temp" > /tmp/cpu_temp_debug.log
+
+# Validar
+if ! [[ "$temp" =~ ^[0-9]+(\.[0-9]+)?$ ]] || (( $(echo "$temp == 100" | bc -l 2>/dev/null) )); then
+    # Se for exatamente 100°C ou inválido, usar fallback
+    temp=$(cat /sys/class/thermal/thermal_zone*/temp 2>/dev/null | 
+          awk '{t=$1/1000; if(t>0 && t<100) print t}' | sort -nr | head -1)
+    [[ -z "$temp" ]] && temp=0
+fi
+
+# Escala de cores
+if (( $(echo "$temp >= 85" | bc -l 2>/dev/null) )); then
+    echo "%{F#ef02db} ${temp}°C%{F-}"
+elif (( $(echo "$temp >= 70" | bc -l 2>/dev/null) )); then
+    echo "%{F#ff3205} ${temp}°C%{F-}"
+elif (( $(echo "$temp >= 50" | bc -l 2>/dev/null) )); then
+    echo "%{F#f4cb24} ${temp}°C%{F-}"
+else
+    echo "%{F#6bff49} ${temp}°C%{F-}"
+fi

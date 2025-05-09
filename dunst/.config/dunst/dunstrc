@@ -1,13 +1,14 @@
-#      _                 _    
+#
 #   __| |_   _ _ __  ___| |_  
 #  / _` | | | | '_ \/ __| __| 
 # | (_| | |_| | | | \__ \ |_  
 #  \__,_|\__,_|_| |_|___/\__| 
 #                             
-#  
-# by Sidiclei < Ratel > (2024) 
+# Dunst - Notificação de Desktop Leve
+# by Sidiclei < Ratel > (2025) 
 # ----------------------------------------------------- 
 
+### INSTRUÇÕES ###
 ### Maiores informações consulte: https://manpages-debian-org.translate.goog/testing/dunst/dunst.1.en.html?_x_tr_sl=en&_x_tr_tl=pt&_x_tr_hl=pt-BR&_x_tr_pto=op,sc
 ### Testar alterações: 
 # killall dunst && dunst --config ~/.config/dunst/dunstrc & \
@@ -18,78 +19,150 @@
 [global]
     ### DISPLAY ###
 
+    # Monitor: 0 = primário, pode especificar por nome também
     monitor = 0
+
+    # Comportamento da janela: none/mouse/keyboard
     follow = none
     
-    # width = (0, 300) # largura dinâmica de 0 a 300
-    # height = (0,300) # A altura máxima de uma única notificação, excluindo o quadro.
-    width = 210 # largura
-    height = 70 # altura máxima
-    origin = top-right # Posição da notificação
-    offset = 3x25 # Deslocamento horizontal e vertical em pixels, X e Y, largura e altura
+    # Altura: (mínima, máxima) em pixels ou (0, porcentagem da tela)
+    height = (0, 70)
+    
+    # Largura: similar à altura
+    width = (0, 210)
+    
+    # Posição: combinações de top/bottom + left/right/center
+    origin = top-right
+    
+    # Deslocamento: (horizontal, vertical) em pixels da borda da tela
+    offset = (3, 25)
+    
+    # Escala: 0 = automático, 1 = não escalar para HiDPI
     scale = 0
+    
+    # Limite de notificações visíveis simultaneamente (0 = ilimitado)
     notification_limit = 0
+    
+    # Reduzir notificação se não couber no espaço
     shrink = no
 
-    ### PROGRESS BAR ###
+    ### BARRA DE PROGRESSO ###
 
     progress_bar = true
     progress_bar_height = 10
+    
+    # Espessura da borda da barra
     progress_bar_frame_width = 1
     progress_bar_min_width = 150
     progress_bar_max_width = 300
     progress_bar_corner_radius = 5
+    
+    # Mostrar indicador para notificações ocultas
     indicate_hidden = yes
-    transparency = 10
+    
+    # Transparência: 0-100 (0 = totalmente opaco)
+    transparency = 0
+    
+    # Altura da linha separadora entre notificações
     separator_height = 1
+    
+    # Preenchimento interno da notificação
     padding = 8
     horizontal_padding = 8
+    
+    # Espaço entre texto e ícone
     text_icon_padding = 0
+    
+    # Espessura da borda da notificação
     frame_width = 2
+    
+    # Cor da borda (substituída por placeholders temáticos)
     #frame_color = "#458588"
+    
+    # Espaço entre notificações
     gap_size = 4
+    
+    # Cor do separador: 'frame' = mesma cor da borda
     separator_color = frame
-    sort = yes
+    
+    # Ordenar notificações: yes = mais recentes no topo
+    sort = no
     #idle_threshold = 120
 
-    ### TEXT ###
+    ### TEXTO ###
 
-    font = System San Francisco Display 9 
+    # Fonte padrão com fallback
+    font = System San Francisco Display 9
+    
+    # Altura da linha (0 = automático)
     line_height = 0
+    
+    # Suporte a markup: none/full/strip
     markup = full
+    
+    # Formato: %s = resumo, %b = corpo, %i = ícone
     format = "<b>%s</b>\n%b"
+    
+    # Alinhamento do texto
     alignment = left
     vertical_alignment = center
+    
+    # Mostrar tempo desde o envio após X segundos
     show_age_threshold = 60
-    #word_wrap = yes
+    
+    # Como lidar com texto longo: truncate/middle/end/none
     ellipsize = middle
+    
+    # Quebrar linhas longas
     ignore_newline = no
+    
+    # Agrupar notificações duplicadas
     stack_duplicates = true
+    
+    # Mostrar contador de duplicatas
     hide_duplicate_count = false
+    
+    # Mostrar indicadores para ações disponíveis
     show_indicators = yes
 
-    ### ICONS ###
+    ### ÍCONES ###
 
+    # Posição: left/right/off
     icon_position = left
     min_icon_size = 0
     max_icon_size = 32
+    
+    # Raio dos cantos do ícone
     icon_corner_radius = 0
-    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/
+    
+    # Caminhos para buscar ícones (fallbacks adicionados)
+    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/24x24/status/:/usr/share/pixmaps/
 
-    ### HISTORY ###
+    ### HISTÓRICO ###
 
+    # Manber notificações sticky no histórico após fechar
     sticky_history = yes
+    
+    # Número máximo de notificações no histórico
     history_length = 20
 
-    ### MISC/ADVANCED ###
+    ### MISC/AVANÇADO ###
 
-    dmenu = /usr/bin/dmenu -p dunst:
-    browser = /usr/bin/firefox -new-tab
-    #browser = /usr/bin/xdg-open
+    # Aplicativo para mostrar histórico (com fallback)
+    dmenu = /usr/bin/dmenu -p dunst: || /usr/local/bin/dmenu -p dunst:
+    
+    # Navegador padrão para URLs (múltiplos fallbacks)
+    browser = /usr/bin/firefox -new-tab || /usr/bin/chromium --new-tab || /usr/bin/xdg-open
     always_run_script = true
+    
+    # Identificação da janela para gerenciadores de janelas
     title = Dunst
     class = Dunst
-    corner_radius = 7
+    
+    # Raio dos cantos da notificação
+    corner_radius = 5
+    
+    # Ignorar fechamento via DBus
     ignore_dbusclose = false
 
     ### WAYLAND ###
@@ -101,39 +174,39 @@
     force_xinerama = false
 
     ### MOUSE ###
-    
-    mouse_left_click = do_action
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
+    mouse_left_click = do_action     # Clique esquerdo = executar ação
+    mouse_middle_click = do_action, close_current  # Clique meio = ação + fechar
+    mouse_right_click = close_all    # Clique direito = fechar todas
 
 [experimental]
+    # Ajustar DPI por monitor (útil para multi-monitor com escalas diferentes)
     per_monitor_dpi = true
 
 [urgency_low]
-    background = "#100f09"
-    foreground = "#FFFFFF"
-    frame_color = "#100f09"
+    # Cores com fallbacks para sistemas sem suporte a placeholders
+    background = "#1c0f0b" 
+    foreground = "#FFFFFF" 
+    frame_color = "#1c0f0b" 
     timeout = 15
     default_icon = dialog-information
-    sound = paplay /usr/share/sounds/freedesktop/stereo/alarm.mp3
-
+    
 [urgency_normal]
-    background = "#709B6B"
+    background = "#DA8B8B" 
     foreground = "#000000"
-    frame_color = "#709B6B"
+    frame_color = "#DA8B8B"
     timeout = 15
     default_icon = dialog-information
-    sound = paplay /usr/share/sounds/freedesktop/stereo/alarm.mp3
-
+    
 [urgency_critical]
-    background = "#6A803C"
+    background = "#DF7A85"
     foreground = "#000000"
-    frame_color = "#6A803C"
-    timeout = 15
+    frame_color = "#DF7A85" 
+    timeout = 30
+    # Pausar notificador quando tiver X notificações críticas
     #override_pause_level = 60
     default_icon = dialog-warning
-    sound = paplay /usr/share/sounds/freedesktop/stereo/alarm.mp3
 
+# Configurações específicas por aplicativo
 [download]
      appname = "dl"
      background = "#ad8ebc"
@@ -143,7 +216,7 @@
      appname = "dock"
      background = "#f1f1f1"
      foreground = "#2d2d2d"
-	timeout = 0
+     timeout = 0  # 0 = não fecha automaticamente
 
 [info]
      appname = "info"
@@ -152,20 +225,20 @@
 
 [stack-volumes]
      appname = "some_volume_notifiers"
-     set_stack_tag = "volume"
+     set_stack_tag = "volume"  # Agrupa notificações com a mesma tag
+     
+[ignore]
+appname = "some_spammy_app"
+skip_display = true
 
-#[espeak]
+# Exemplos de seções comentadas:
+# [espeak]
 #    summary = "*"
-#    script = dunst_espeak.sh
+#    script = dunst_espeak.sh  # Script para ler notificações
 
-#[script-test]
-#    summary = "*script*"
-#    script = dunst_test.sh
-
-#[ignore]
-#    # This notification will not be displayed
+# [ignore]
 #    summary = "foobar"
-#    skip_display = true
+#    skip_display = true  # Ignora completamente estas notificações
 
 #[history-ignore]
 #    # This notification will not be saved in history

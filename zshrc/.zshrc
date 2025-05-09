@@ -17,7 +17,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 
-ZSH_THEME="bira" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
+ZSH_THEME="robbyrussell" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
 #ZSH_THEME=powerlevel10k/powerlevel10k
 
 #POWERLEVEL10K_MODE="nerdfont-complete"

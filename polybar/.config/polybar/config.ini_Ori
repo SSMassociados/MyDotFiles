@@ -1,0 +1,904 @@
+
+;==========================================================
+;       DOTFILES -- POLIBAR -- By: Sidiclei  
+;==========================================================
+
+; ==> https://github.com/polybar/polybar/wiki
+
+;  > Configuração inicial
+; mkdir -p ~/.config/polybar  ==> Cria diretório se não existir
+; cp /usr/share/doc/polybar/examples/config.ini ~/.config/polybar/  ==> Importa config padrão
+
+;  > Comandos úteis
+; polybar -c /usr/share/doc/polybar/examples/config.ini    ==> Testa configuração padrão
+; polybar -r -l error main                                 ==> Inicia mostrando só erros
+; polybar -l trace main 2>&1 | grep "module/battery"       ==> Logs detalhados do módulo bateria
+; polybar -l trace main 2>&1 | grep "warn\|error"          ==> Identificar possíveis problemas
+; killall polybar && polybar -r main > ~/polybar.log 2>&1  ==> Salva logs em arquivo
+
+;  > Gerenciamento de processos
+; killall polybar && polybar -r main & disown                        ==> Reinicia limpo em background, terminal liberado
+; polybar -r example &                                               ==> Versão simplificada para i3wm
+; exec --no-startup-id killall polybar && polybar -r main & disown   ==> Inicia com o i3, usar no seu i3wm config (~/.config/i3/config)
+; Se quiser manter comentários inline, sempre use espaço após o ;:
+
+;==========================================================
+;                CONFIGURAÇÕES GLOBAIS
+;==========================================================
+
+[global/wm]
+; > Margens para gerenciadores de janelas
+; > Define o espaço entre a barra e as bordas da tela
+; Margem superior
+margin-top = 5 
+; Margem inferior    
+margin-bottom = 5  
+
+[settings]
+; Configurações de DPI (dots per inch)
+; 0 = automático (padrão), valores positivos forçam um DPI específico
+dpi = 0
+
+;==================== COMPORTAMENTO DINÂMICO ====================
+; Recarregar automaticamente ao mudar de monitor/tela
+screenchange-reload = true
+
+;==================== CONFIGURAÇÕES DE COMPOSIÇÃO ====================
+; Camada de fundo (por trás da barra)
+compositing-background = source
+; Camada de primeiro plano (conteúdo da barra)
+compositing-foreground = over
+
+; > Efeitos visuais:
+; Linha superior
+compositing-overline = over 
+; Linha inferior    
+compositing-underline = over 
+; Bordas   
+compositing-border = over       
+
+;==========================================================
+;                   CONFIGURAÇÃO DE CORES
+;==========================================================
+[colors]
+
+;==================== CORES BASE ====================
+; Cor de fundo principal (fallback #222)
+background = ${xrdb:color0:#222}
+; Cor de texto principal
+foreground = ${xrdb:color7:#222}
+; Cor de texto alternativo (igual ao principal)
+foreground-alt = ${xrdb:color7:#222}
+
+;==================== CORES TEMÁTICAS ====================
+; Cor primária (Destaques/interações)
+primary = ${xrdb:color1:#222}
+; Cor secundária (Elementos secundários)
+secondary = ${xrdb:color2:#222}
+; Cor de Alertas/notificações
+alert = ${xrdb:color3:#222}
+; Cor de sublinhado (herda primary)
+underline = ${xrdb:color1:#222}
+; Cor de fundo alternativo
+background-alt = #2A2A2A
+
+;==================== PALETA PERSONALIZADA ====================
+; Cores personalizadas (para uso em módulos específicos)
+azul = #5e8dff
+azul-claro = #7dcfff
+verde = #5eff8d
+laranja = #ff9e64
+amarelo = #ffdd5e
+alerta = #ff5e5e
+
+;==================== TRANSPARÊNCIA ====================
+; Habilita transparência pseudo (sem compositor, metodo obsoleto)
+pseudo-transparency = false
+
+;==========================================================
+;                   CONFIGURAÇÃO DA BARRA I3
+;==========================================================
+[bar/main]
+
+;==================== CONFIGURAÇÕES DE MONITOR ====================
+; Define o monitor principal onde a barra será exibida
+; Use 'polybar -M' para listar monitores disponíveis
+; ou 'xrandr -q | grep " connected"' para ver as conexões ativas
+
+; Monitor principal (ordem de prioridade):
+; 1. Usa a variável de ambiente $MONITOR se existir
+; 2. Caso contrário, usa DP-1 (DisplayPort)
+; 3. Se DP-1 não estiver disponível, usa o fallback abaixo
+monitor = ${env:MONITOR:DP-1}
+
+; ==================== FALLBACK AUTOMÁTICO ====================
+; Monitor secundário caso o principal falhe:
+; - eDP-1 (tela integrada de laptops) como último recurso
+; - Não usa variável de ambiente aqui para evitar loops
+monitor-fallback = eDP-1
+
+; ==================== OPÇÕES AVANÇADAS (DESATIVADAS POR PADRÃO) ====================
+; monitor-strict = false  ; Descomente para forçar erro se o monitor não existir
+; monitor-exact = true    ; Descomente para exigir correspondência exata do nome
+
+;==================== POSICIONAMENTO E DIMENSÕES ====================
+; Posiciona a barra na parte inferior da tela
+bottom = false
+; Mantém a barra centralizada mesmo com redimensionamento
+fixed-center = false
+; Largura da barra (100% = largura total do monitor)
+width = 100%
+; Altura da barra em pixels
+height = 40
+; Offset de posicionamento (ajuste fino)
+;offset-x = 1%
+;offset-y = 1%
+
+;==================== APARÊNCIA E FORMATO ====================
+; Raio de curvatura para todos os cantos
+;radius = 12
+; Raio de curvatura individual
+radius-top = 18
+radius-bottom = 0.0
+; Espessura da linha decorativa
+line-size = 3
+; Cor da linha decorativa
+;line-color = #f00
+; Cor de fundo da barra
+background = ${colors.background}
+; Cor do texto principal
+foreground = ${colors.foreground}
+
+;==================== CONFIGURAÇÕES DE BORDA ====================
+; Tamanho global para todas as bordas
+;border-size = 0
+
+; Tamanhos individuais das bordas
+border-top-size = 1
+;border-bottom-size = 1
+border-left-size = 1
+border-right-size = 1
+
+; Cor global para todas as bordas
+;border-color = #000000
+;border-color = ${colors.primary}
+; Cores individuais das bordas
+;border-top-color =
+;border-bottom-color =
+;border-left-color = 
+;border-right-color =
+
+;==================== ESPAÇAMENTOS E MARGENS ====================
+; Espaçamento interno Global (aplica a todos os lados)
+padding = 3
+; Espaçamento interno individual (sobrescreve o global)
+;padding-left = 4
+;padding-right = 4
+
+; Margem entre módulos (global)
+module-margin = 2
+; Margem entre módulos (individual)
+;module-margin-left = 2
+;module-margin-right = 2
+
+;==================== COMPORTAMENTO DA BARRA ====================
+; Controla o redirecionamento da barra, Padrão ideal para i3 <false>
+override-redirect = false
+; Habilita comunicação entre processos IPC
+enable-ipc = true
+;==========================================================
+;                CONFIGURAÇÃO DE FONTES
+;==========================================================
+
+; > FONTES PRINCIPAIS (ESCOLHA UMA COMO PRIMÁRIA)
+;  SF Pro Display - Fonte moderna estilo Apple (padrão)
+font-0 = SF Pro Display:style=Bold:pixelsize=15;0
+; Poppins - Fonte limpa com design arredondado
+;font-0 = Poppins:style=Regular:pixelsize=12;1
+; Roboto - Fonte clássica do Material Design
+;font-0 = Roboto Bold:style=Bold:pixelsize=11;2
+; Cantarell - Fonte padrão do GNOME
+;font-0 = Cantarell:style=Bold:pixelsize=11;1
+; JetBrains Mono - Ótima para programação
+;font-0 = JetBrains Mono:style=Regular:pixelsize=11;1
+; Source Sans Pro - Versátil e altamente legível
+;font-0 = Source Sans Pro:style=Semi-Bold:pixelsize=11;1
+; font-0 = "FiraCode Nerd Font:size=13;2"
+
+; > FONTES DE ÍCONES (MANTENHA TODAS ATIVAS)
+; Font Awesome Regular - Ícones básicos
+font-1 = Font Awesome 5 Free:style=Regular:pixelsize=13;1
+; Font Awesome Solid - Ícones preenchidos
+font-2 = Font Awesome 5 Free:style=Solid:pixelsize=13;1
+; Font Awesome Brands - Logos de marcas
+font-3 = Font Awesome 5 Brands:style=Regular:pixelsize=13;1
+; Hack Nerd Font - Glifos para desenvolvimento
+font-4 = Hack Nerd Font:style=Regular:pixelsize=13;1
+; Material Icons - Ícones do Material Design
+font-5 = Material Icons:style=Regular:pixelsize=13;1
+; Ícones do Material Design (Google)
+font-6 = Material Design Icons:style=Regular:pixelsize=13;1
+; Ícones minimalistas Feather
+font-7 = Feather:pixelsize=13;1
+; Ícones do VS Code (Codicons)
+font-8 = Codicons:pixelsize=13;1
+; Ícones para tecnologias de desenvolvimento
+font-9 = Devicons:style=Regular:pixelsize=13;1
+; Ícones meteorológicos
+font-10 = WeatherIcons:pixelsize=13;1
+; Logotipos de distros Linux
+font-11 = FontLogos:style=Regular:pixelsize=13;1
+; Ícones do GitHub (Octicons)
+font-12 = Octicons:pixelsize=13;1
+; Ícones para aplicativos (Ionicons)
+font-13 = Ionicons:style=Regular:pixelsize=13;1
+
+;==========================================================
+;                INSTRUÇÕES DE USO
+;==========================================================
+; 1. PRINCIPAIS FONTES:
+; - Descomente APENAS UMA fonte principal (deixe como font-0)
+; - Exemplo para usar JetBrains Mono:
+;   #font-0 = SF Pro Display:style=Bold:pixelsize=15;0
+;   font-0 = JetBrains Mono:style=Regular:pixelsize=11;1
+
+; 2. FONTES DE ÍCONES:
+; - Mantenha todas ativas para suporte completo
+; - Ajuste o pixelsize conforme necessário
+
+; 3. RECOMENDAÇÕES:
+; - Buscar fontes instaladas: fc-list | grep NomeDaFonte
+; - Teste fontes com: fc-match "Fonte:style=Estilo"
+; - Verificar correspondência de fontes: fc-match -s | grep -i NomeDaFonte
+; - Atualize cache após mudanças: fc-cache -fv
+; - Reinicie o polybar após alterações: killall polybar && polybar -r main & disown
+; - Instalar gerenciador de fontes: yay -Syu font-manager
+
+; 4.RECURSO PARA FONTES:
+; - Font Awesome: https://fontawesome.com/v5/cheatsheet
+; - Nerd Fonts: https://www.nerdfonts.com/cheat-sheet
+; - Material Icons: https://pictogrammers.github.io/@mdi/font/6.4.95/
+
+
+; 5. CONFIGURAÇÃO DE DPI
+; Defina valores de DPI usados ao renderizar texto
+; Isso afeta apenas fontes escaláveis
+; Defina como 0 para permitir que o polybar calcule o dpi a partir do tamanho da tela.
+; 0 = detecção automática baseada na tela
+
+;==========================================================;
+;		     MÓDULOS BAR TOP                       
+;==========================================================;
+separator = |
+;separator = /
+;dim-value = 1.0
+
+modules-left = user i3
+modules-center = xwindow  
+modules-right =  tray print_config system-updates pen_usb fs_root fs_home dell-brightness pulseaudio ram temp_cpu cpu date time lixeira powermenu 
+
+; spotify  battery 
+
+;==========================================================;
+;		          CONFIGURAÇÕES DOS MÓDULOS	               ;
+;==========================================================;
+
+[module/i3]
+type = internal/i3
+
+; === CONFIGURAÇÕES COMPORTAMENTAIS ===
+; Mostra apenas workspaces do monitor atual
+pin-workspaces = true
+; Mantém números visíveis junto com ícones
+strip-wsnumbers = false
+; Mantém ordem original dos workspaces
+index-sort = false
+; Habilita interação por clique
+enable-click = true
+; Habilita navegação por scroll
+enable-scroll = true
+; Desativa rolagem circular
+wrapping-scroll = false
+; Mantém direção padrão de scroll
+reverse-scroll = false
+; Exige correspondência exata de nomes
+fuzzy-match = false
+
+; === MOUSE ACTIONS - i3 WORKSPACES ===
+
+; Navegação por Scroll 
+scroll-up = i3-msg workspace next_on_output
+scroll-down = i3-msg workspace prev_on_output
+
+; Navegação por Click 
+click-left = i3-msg workspace next
+click-right = i3-msg workspace prev
+click-middle = i3-msg workspace emergency
+
+; Acesso Rápido por Duplo-Clique 
+double-click-left = i3-msg workspace number 1
+double-click-right = i3-msg workspace number 2
+double-click-middle = i3-msg workspace number 3
+
+; Configurações de Cursor 
+cursor-click = pointer
+cursor-scroll = ns-resize
+
+; === SISTEMA DE ÍCONES ===
+
+ws-icon-0 = 1;
+ws-icon-1 = 2;
+ws-icon-2 = 3;
+ws-icon-3 = 4;
+ws-icon-4 = 5;
+ws-icon-5 = 6;
+ws-icon-6 = 7;
+ws-icon-7 = 8;
+ws-icon-8 = 9;
+ws-icon-9 = 10;
+
+; Ícone padrão para workspaces não listados
+ws-icon-default = " "
+
+; Fonte de ícones alternativos:
+; http://fontawesome.io/cheatsheet/
+;       v    
+
+; === FORMATAÇÃO VISUAL ===
+; Separador entre workspaces
+;label-separator = |
+
+format = <label-state> <label-mode>
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+
+; Modo ativo (ex: resize, tabbed)
+label-mode = %mode%
+label-mode-padding = 2
+label-mode-foreground = #000000
+label-mode-background = #FFBB00
+
+; === ESTADOS DOS WORKSPACES ===
+; Workspace ativo no monitor atual
+label-focused = %icon% %name%
+label-focused-background = ${colors.background}
+label-focused-foreground = ${colors.foreground}
+label-focused-underline = ${colors.underline}
+label-focused-padding = 2
+
+; Workspace inativo
+label-unfocused = %icon% %name%
+label-unfocused-background = ${colors.background}
+label-unfocused-foreground = ${colors.foreground}
+label-unfocused-padding = 2
+
+; Workspace ativo em outro monitor
+label-visible = %icon% %name%
+label-visible-background = ${self.label-focused-background}
+label-visible-underline = ${self.label-focused-underline}
+label-visible-padding = 2
+
+; Workspace com alerta
+label-urgent = %icon% %name%
+label-urgent-background = ${self.label-focused-background}
+label-urgent-foreground = #db104e
+label-urgent-padding = 2
+
+[module/tray]
+type = internal/tray
+tray-detached = true
+
+; === POSICIONAMENTO INTELIGENTE ===
+tray-position = center
+tray-align = middle
+tray-origin = bar
+tray-offset-x = $[(${bar:width} - min(300, ${tray:width}))/2]
+tray-offset-y = 1  # Ajuste vertical
+
+; === CONTROLE DE DIMENSÕES ===
+tray-size = 28
+; Ideal para seu monitor 3440px
+tray-max-width = 40%
+; Controle individual por ícone, mesmo tamanho 
+tray-icon-size = 28
+; Valor seguro (evite acima de 1.8), adaptabilidade automática  
+tray-scale = 1.2     
+
+; === ESTILO VISUAL ===
+tray-background = ${colors.background} 
+tray-foreground = ${colors.foreground}
+tray-transparent = false
+tray-underline-size = 2
+tray-underline-color = ${colors.primary}
+
+; === ESPAÇAMENTO AVANÇADO ===
+tray-padding = 2
+tray-spacing = 3
+; Margem externa uniforme
+tray-margin = 1  
+
+; === FILTRO DE APLICATIVOS ===
+tray-application-whitelist = "discord,spotify,steam,org.wezfurlong.wezterm"
+
+; === COMPORTAMENTO ===
+;tray-click-middle = none  # Desativa clique do meio
+;tray-click-right = none   # Desativa clique direito
+
+[module/notifications]
+type = custom/script
+exec = echo ""
+click-left = ~/.config/polybar/scripts/notification_menu.sh
+interval = 0
+
+[module/user]
+type = custom/text
+
+; --- Conteúdo e Formatação ---
+format = <label>
+format-padding = 1
+format-margin = 1
+;format-background = ${colors.background-alt}
+format-underline = ${colors.underline}
+
+label = "%{T4}%{T-}%{T0} Sidiclei%{T-}"
+
+; --- Ações Interativas ---
+click-left = bash -c 'if xdotool search --name "sidiclei - Thunar" windowminimize; then wmctrl -c "sidiclei - Thunar"; else thunar ~ & fi'
+click-right = xdg-open https://wiki.archlinux.org
+;click-middle = xdg-open ~
+
+; --- Estilo Avançado ---
+label-font = 4  ; Hack Nerd Font
+;label-overline = ${colors.primary}
+label-padding = 1
+
+[module/xwindow]
+type = internal/xwindow
+
+format =     <label>
+format-foreground = ${colors.primary}
+format-background = ${colors.background}
+format-underline = ${colors.underline}
+label-underline = ${colors.underline}
+
+label = %title%
+label-foreground = ${colors.foreground}
+label-maxlen = 30
+
+label-empty = Desktop
+label-empty-foreground = ${colors.foreground}
+label-empty-underline = ${colors.foreground}
+
+[module/xkeyboard]
+type = internal/xkeyboard
+blacklist-0 = num lock
+
+format-prefix = "  "
+format-prefix-foreground = ${colors.primary}
+format-prefix-underline = ${colors.underline}
+format-foreground = ${colors.foreground}
+
+label-layout = %layout%
+label-layout-underline = ${colors.underline}
+label-indicator-padding = 2
+label-indicator-margin = 1
+label-indicator-background = ${colors.secondary}
+label-indicator-underline = ${colors.underline}
+
+[module/filesystem]
+type = custom/script
+exec = ~/.config/polybar/scripts/fs_status.sh
+interval = 30
+
+format = <label>
+format-underline = ${colors.underline}
+
+[module/fs_home]
+type = internal/fs
+interval = 30
+
+mount-0 = /home
+;fixed-values = true
+;spacing = 2
+
+format-mounted-prefix = "  "
+format-mounted-prefix-foreground = ${colors.primary}
+label-mounted-underline = ${colors.underline}
+format-mounted-prefix-underline = ${colors.underline}
+format = <label>
+
+format-mounted = <label-mounted>
+
+label-mounted = %percentage_used%%
+label-unmounted = %mountpoint% Não montado
+;label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/fs_root]
+type = internal/fs
+interval = 30
+
+mount-0 = /
+;fixed-values = true
+;spacing = 2
+
+format-mounted-prefix = "濫   "
+format-mounted-prefix-foreground = ${colors.primary}
+label-mounted-underline = ${colors.underline}
+format-mounted-prefix-underline = ${colors.underline}
+
+format = <label>
+
+format-mounted = <label-mounted>
+
+label-mounted =  %percentage_used%%
+label-unmounted = %mountpoint% Não montado
+;label-unmounted-foreground = ${colors.foreground-alt}
+
+[module/mpd]
+type = internal/mpd
+
+; === Formatação Principal ===
+format-online = <label-song>  <bar-progress> <controls>
+format-offline = <label-offline>
+
+; === Elementos de Controle ===
+controls = <icon-prev> <icon-stop> <toggle> <icon-next>
+icon-prev = 
+icon-next = 
+icon-stop = 
+icon-play = 
+icon-pause = 
+
+; === Barra de Progresso ===
+bar-progress-width = 35
+bar-progress-format = %{+u +o}%fill%%{-u -o}%indicator%%{+u +o}%empty%%{-u -o}
+bar-progress-fill = █
+bar-progress-empty = ▒
+bar-progress-indicator = █
+bar-progress-fill-foreground = #bb
+bar-progress-empty-foreground = #44
+bar-progress-indicator-foreground = #A85659
+
+; === Rótulos ===
+label-song = %{F#A85659}%{F-} %artist% - %title% [%elapsed%/%total%]
+label-offline = %{F#A85659} MPD offline%{F-}
+
+; === Comportamento ===
+interval = 1
+click-left = mpc toggle
+click-right = mpc next
+click-middle = mpc prev
+
+[module/dell-brightness]
+type = custom/script
+exec = ~/.config/polybar/scripts/brightness.sh
+exec-if = "which ddcutil && ddcutil detect | grep -q 'Display'"
+scroll-up = "bash -c 'ddcutil setvcp 10 + 3 && ~/.config/polybar/scripts/brightness.sh > /tmp/polybar_brightness_cache && polybar-msg hook dell-brightness 1'"
+scroll-down = "bash -c 'ddcutil setvcp 10 - 3 && ~/.config/polybar/scripts/brightness.sh > /tmp/polybar_brightness_cache && polybar-msg hook dell-brightness 1'"
+interval = 5
+format = <label>
+label = %output%
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+
+[module/cpu]
+type = internal/cpu
+interval = 2
+format-prefix = "   "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+label = %percentage%%
+
+[module/temp_cpu]
+;lm_sensors ==> sensors-detect --auto (valores padrão para todas as perguntas)
+type = custom/script
+exec = ~/.config/polybar/scripts/tempcores.sh
+click-left = kitty -e ~/.config/polybar/scripts/toogle_sensors.sh 
+;click-right = 
+interval = 2
+format-padding = 1
+format-foreground = ${colors.foreground}
+format-background = ${colors.background}
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+label = %output:0:150:%
+
+[module/ram]
+type = internal/memory
+interval = 2
+format-prefix = "   "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+label = %percentage_used%%
+;label = %gb_used% / %gb_total% GB (%percentage_used%%)
+
+; Available tokens:
+;   %percentage_used% (default)
+;   %percentage_free%
+;   %gb_used%
+;   %gb_free%
+;   %gb_total%
+;   %mb_used%
+;   %mb_free%
+;   %mb_total%
+
+[module/time]
+type = internal/date
+interval = 1
+
+;date = " %d-%m-%Y"
+time = %H:%M
+time-alt = %T
+
+format-prefix = " "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+
+label = %date% %time%
+
+[module/date]
+; Dependências - yad, xdotool
+type = custom/script
+interval = 1
+exec = date +'%d/%m/%Y'
+;exec = date "+%a, %d %b"
+click-left = ~/.config/polybar/scripts/calendar.sh &
+#click-left = ~/.config/polybar/scripts/popup_calendar.sh --popup &
+#click-left = gsimplecal
+#click-right = mailspring
+
+format-prefix = "   "
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+use-ui-max = true
+
+format-volume = <label-volume>
+format-volume-underline = ${colors.underline}
+format-volume-prefix = "  "
+format-volume-prefix-foreground = ${colors.primary}
+label-volume = %percentage%%
+
+label-muted = "    "
+label-muted-foreground = ${colors.alert}
+format-muted-underline = ${colors.alert}
+
+;click-middle =
+click-right = pidof pavucontrol && killall pavucontrol || pavucontrol
+
+[module/wlan]
+type = internal/network
+interface = wlp0s20f3
+interval = 3.0
+
+format-connected-prefix = " "
+format-connected-prefix-foreground = ${colors.underline}
+label-connected = %essid%  %downspeed:%
+label-connected-foreground = ${colors.principal}
+
+format-disconnected-prefix = " "
+label-disconnected = offline
+label-disconnected-foreground = ${colors.principal}
+format-disconnected-prefix-foreground = ${colors.secondary}
+
+click-left = exec i3-sensible-terminal -e nmtui &
+
+[module/eth]
+type = internal/network
+interface = enp4s0
+interval = 3.0
+accumulate-stats = true
+unknown-as-up = true
+
+format-connected-prefix = "  "
+format-connected-prefix-foreground = ${colors.primary}
+format-connected-prefix-underline = ${colors.underline}
+label-connected = %local_ip%  %downspeed:%
+label-connected-underline = ${colors.underline}
+
+format-disconnected-prefix = "  "
+format-disconnected-prefix-foreground = ${colors.primary}
+label-disconnected = offline
+
+[module/battery]
+type = internal/battery
+full-at = 98
+
+; ls -1 /sys/class/power_supply/
+battery = BAT0
+adapter = ADP0
+
+format-charging = <animation-charging> <label-charging>
+format-discharging = <ramp-capacity> <label-discharging>
+format-full = <ramp-capacity> <label-full>
+
+label-charging = %percentage%%
+label-discharging = %percentage%%
+label-charging-padding = 0
+label-discharging-padding = 0
+
+ramp-capacity-0 = 
+ramp-capacity-0-foreground = ${colors.secondary}
+ramp-capacity-1 = 
+ramp-capacity-1-foreground = ${colors.secondary}
+ramp-capacity-2 = 
+ramp-capacity-2-foreground = ${colors.secondary}
+ramp-capacity-3 = 
+ramp-capacity-3-foreground = ${colors.secondary}
+ramp-capacity-4 = 
+ramp-capacity-4-foreground = ${colors.primary}
+
+bar-capacity-width = 10
+bar-capacity-format = %{+u}%{+o}%fill%%empty%%{-u}%{-o}
+bar-capacity-fill = █
+bar-capacity-fill-foreground = #ddffffff
+bar-capacity-fill-font = 3
+bar-capacity-empty = █
+bar-capacity-empty-font = 3
+bar-capacity-empty-foreground = #44ffffff
+
+animation-charging-0 = 
+animation-charging-0-foreground = ${colors.primary}
+animation-charging-1 = 
+animation-charging-1-foreground = ${colors.primary}
+animation-charging-2 = 
+animation-charging-2-foreground = ${colors.primary}
+animation-charging-3 = 
+animation-charging-3-foreground = ${colors.primary}
+animation-charging-4 = 
+animation-charging-4-foreground = ${colors.primary}
+animation-charging-framerate = 750
+
+#[module/battery]
+#type = internal/battery
+
+#; Configuração automática que funciona em ambos dispositivos
+#battery = ${exec:ls /sys/class/power_supply/ | grep -m1 'BAT'}
+#adapter = ${exec:ls /sys/class/power_supply/ | grep -m1 'AC\\|ADP'}
+
+#; Comportamento quando não há bateria (PC)
+#full-at = 98
+#poll-interval = 5
+#low-level = 20
+
+#; Formato principal
+#format-charging = <animation> <label-charging>
+#format-discharging = <ramp> <label-discharging>
+#format-full = <ramp> <label-full>
+
+#; Elementos visuais
+#label-charging = "%percentage%% (Carregando)"
+#label-discharging = "%percentage%%"
+#label-full = "FULL"
+
+#; Ícones e animação
+#ramp-capacity-0 = ""
+#ramp-capacity-1 = ""
+#ramp-capacity-2 = ""
+#ramp-capacity-3 = ""
+#ramp-capacity-4 = ""
+
+#animation-charging-0 = ""
+#animation-charging-1 = ""
+#animation-charging-2 = ""
+#animation-charging-3 = ""
+#animation-charging-4 = ""
+#animation-framerate = 750
+
+#; Comportamento inteligente
+#format-power-saving = <label-power-saving>
+#label-power-saving = " %percentage%%"
+
+#; Fallback para PCs sem bateria
+#format-missing = ""
+
+[module/spotify]
+type = custom/script
+interval = 1
+format-prefix = " "
+format = <label>
+exec = python $HOME/.config/polybar/scripts/spotify_status.py -f '{artist}: {song}'
+format-underline = #1db954
+;control players (optional)
+click-left = playerctl --player=spotify play-pause
+click-right = playerctl --player=spotify next
+click-middle = playerctl --player=spotify previous
+
+[module/pen_usb]
+type = custom/script
+exec = ~/.config/polybar/scripts/system-usb-udev.sh
+tail = true
+click-left = ~/.config/polybar/scripts/system-usb-udev.sh --mount-notify &
+click-right = ~/.config/polybar/scripts/system-usb-udev.sh --unmount-notify &
+interval = 3
+format-prefix = " "
+format-underline = ${colors.underline}
+format-prefix-foreground = #FF0000
+label-mounted = %output%
+label-unmounted = %output%
+
+[module/lixeira]
+type = custom/script
+interval = 2
+exec = ~/.config/polybar/scripts/lixeira.sh
+click-left = bash -c 'if xdotool search --name "Lixeira" windowminimize; then wmctrl -c "Lixeira"; else thunar trash:/// & fi'
+click-right = bash -c 'if zenity --question --text="Esvaziar lixeira?" --icon-name=user-trash; then rm -rf ~/.local/share/Trash/{files,info}/* && notify-send -i user-trash "Lixeira esvaziada!"; fi'
+
+format-prefix = "  "
+format-underline = ${colors.underline}
+format-prefix-foreground = ${colors.primary}
+
+[module/print_config]
+type = custom/text
+label = " "
+format-prefix = ""
+format-underline = ${colors.underline}
+format-prefix-foreground = ${colors.primary}
+click-right = ~/.config/polybar/scripts/open_printer_queue.sh
+click-left = ~/.config/polybar/scripts/toggle_printer_config.sh
+
+[module/system-updates]
+type = custom/script
+exec = ~/.config/polybar/scripts/sys_updates.sh
+interval = 60
+
+; Estilo visual
+format = <label>
+format-font = 4
+format-background = ${colors.background}
+format-prefix-foreground = ${colors.primary}
+format-underline = ${colors.underline}
+
+; Tooltip
+;tooltip = " Atualizações disponíveis\n Total de pacotes\n Atualizações do repositório\n Atualizações do AUR\nClique esquerdo: Atualização interativa\nClique direito: Atualização automática"
+
+; Ações de clique
+click-right = kitty -e bash -c "yay -Syu; read -p 'Pressione Enter para sair...'; exit"
+#click-right = kitty -e bash -c "yay -Syu --noconfirm && notify-send 'Atualização concluída!'"
+click-left = kitty -e bash -c "sudo pacman -Syu --noconfirm && notify-send 'Atualização concluída!'"
+click-middle = kitty -e bash -c "yay -Qu; read -p 'Pressione Enter para sair...'; exit"
+
+[module/powermenu]
+type = custom/menu
+expand-right = true
+format-spacing = 1
+
+label-open = "  "
+label-open-foreground = ${colors.primary}
+label-close = "  "
+label-close-foreground = #ff3b30
+label-separator = " | "
+label-separator-foreground = ${colors.foreground}
+
+menu-0-0 = "  "
+menu-0-0-exec = systemctl reboot --firmware-setup
+menu-0-1 = "  "
+# > sudo grep -oP "menuentry '\KWindows Boot Manager.*?(?=')" /boot/grub/grub.cfg | head -1
+menu-0-1-exec = sudo grub-reboot 'Windows Boot Manager (on /dev/nvme0n1p1)' && systemctl reboot
+menu-0-2 = "  "
+menu-0-2-exec = i3-msg exit
+menu-0-3 = " ⏾ "
+menu-0-3-exec = systemctl suspend
+menu-0-4 = "  "
+menu-0-4-exec = systemctl reboot
+menu-0-5 = "  "
+menu-0-5-exec = systemctl poweroff
+
+#menu-0-0 = "  Setup "
+#menu-0-0-exec = systemctl reboot --firmware-setup
+#menu-0-1 = "  Win "
+# > sudo grep -oP "menuentry '\KWindows Boot Manager.*?(?=')" /boot/grub/grub.cfg | head -1
+#menu-0-1-exec = sudo grub-reboot 'Windows Boot Manager (on /dev/nvme0n1p1)' && systemctl reboot
+#menu-0-2 = "  Logout "
+#menu-0-2-exec = i3-msg exit
+#menu-0-3 = " ⏾ Suspend "
+#menu-0-3-exec = systemctl suspend
+#menu-0-4 = "  Reboot "
+#menu-0-4-exec = systemctl reboot
+#menu-0-5 = "  Poweroff "
+#menu-0-5-exec = systemctl poweroff
+
