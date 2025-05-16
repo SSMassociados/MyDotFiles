@@ -13,7 +13,7 @@ ast-firmware
 audio-recorder
 auto-cpufreq
 autoadb-git
-betterlockscreen
+betterlockscreen-git
 bibata-cursor-theme
 bluemail
 brave-bin
@@ -90,6 +90,7 @@ pinokio-bin
 piper-tts-bin
 piper-voices-pt-br
 proftpd-git
+python-i3-quickterm
 python-pdf2docx
 python-pdf2image
 python-pypdf2

@@ -1,0 +1,37 @@
+#mkdir -p ~/.config/betterlockscreen/
+#cp /usr/share/doc/betterlockscreen/examples/betterlockscreenrc ~/.config/betterlockscreen/
+
+# Cores Modernas (esquema ARGB)
+insidecolor=00000000          # Transparência total para círculo interno
+ringcolor=ffffff80            # Anel externo branco com 50% de opacidade (moderno)
+keyhlcolor=00ffaa90           # Destaque teclas - verde-água com transparência
+bshlcolor=ff555590            # Destaque backspace - vermelho suave
+separatorcolor=00000000       # Mantém transparente
+
+# Estados de Verificação
+insidevercolor=00000000       # Transparente durante verificação
+insidewrongcolor=ff555580     # Vermelho suave para erro
+ringvercolor=00ffffff         # Azul claro durante verificação
+ringwrongcolor=ff555580       # Vermelho suave no anel para erro
+
+# Textos e Informações
+verifcolor=ffffffff           # Texto branco puro
+timecolor=00ffffff            # Hora em azul claro
+datecolor=ffffffff            # Data em branco
+
+# Configuração completa da loginbox
+#loginbox=00000060             # Caixa de login preta com 40% transparência
+
+# Tipografia Moderna
+font="Hack Nerd Font:pixelsize=8"
+locktext='  
+
+ACESSO RESTRITO   '
+veriftext='       Autenticando...'
+wrongtext='  Senha incorreta!'
+time_format=" %H:%M:%S
+ %d/%m/%y" 
+
+# Configurações Adicionais (descomente se necessário)
+# lock_timeout=300            # 5 minutos para bloqueio automático
+#time_format="%H:%M:%S •  %d/%m/%y"

@@ -119,6 +119,8 @@
     # Agrupar notificações duplicadas
     stack_duplicates = true
     
+    replace_id = yes
+    
     # Mostrar contador de duplicatas
     hide_duplicate_count = false
     
@@ -184,23 +186,23 @@
 
 [urgency_low]
     # Cores com fallbacks para sistemas sem suporte a placeholders
-    background = "#1c0f0b" 
+    background = "#0b0707" 
     foreground = "#FFFFFF" 
-    frame_color = "#1c0f0b" 
+    frame_color = "#0b0707" 
     timeout = 15
     default_icon = dialog-information
     
 [urgency_normal]
-    background = "#DA8B8B" 
-    foreground = "#000000"
-    frame_color = "#DA8B8B"
+    background = "#9A5334" 
+    foreground = "#FFFFFF"
+    frame_color = "#9A5334"
     timeout = 15
     default_icon = dialog-information
     
 [urgency_critical]
-    background = "#DF7A85"
-    foreground = "#000000"
-    frame_color = "#DF7A85" 
+    background = "#6A5555"
+    foreground = "#FFFFFF"
+    frame_color = "#6A5555" 
     timeout = 30
     # Pausar notificador quando tiver X notificações críticas
     #override_pause_level = 60

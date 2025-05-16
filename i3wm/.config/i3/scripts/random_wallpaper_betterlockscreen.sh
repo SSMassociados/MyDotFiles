@@ -10,7 +10,8 @@ if [ ! -d "$wallpaper_dir" ]; then
 fi
 
 # Seleciona aleatoriamente uma imagem do diretório
-random_wallpaper=$(find "$wallpaper_dir" -type f \( -name "*.jpg" -o -name "*.png" \) -print0 | shuf -n 1 -z)
+random_wallpaper=$(find -L "$wallpaper_dir"  -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1)
+
 
 # Verifica se uma imagem foi encontrada
 if [ -z "$random_wallpaper" ]; then

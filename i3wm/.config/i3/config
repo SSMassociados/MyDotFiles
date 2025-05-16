@@ -243,7 +243,7 @@ for_window [class="Psensor"] $float, resize set 450 590
 for_window [class="KeePassXC"] $float, resize set 800 500, $center
 for_window [class="Arandr"] $float, resize set 280 254
 for_window [class="pavucontrol|easyeffects"] $float, resize set 650 410
-for_window [class="Gnome-calculator"] $float, resize set 100 300
+for_window [class="Gnome-calculator"] $float, resize set 100 300, $center
 for_window [class="xdman-Main"] $float, move position 1620 1010, resize set 759 419
 for_window [class="Xdm-app"] $float, move position 1620 1010, resize set 250 40
 for_window [class="Blueman-manager|Blueman-services|System-config-printer|simple-scan|Gufw.py|Key-mapper-gtk"] $float
@@ -261,6 +261,7 @@ for_window [instance="Places|firefox"] $float, resize set 660 363, $center
 for_window [instance="Navigator"] focus
 for_window [instance="pcmanfm|Thunar|nautilus"] focus
 for_window [instance="atril|evince"] focus
+for_window [instance="geany"] $center focus
 
 # Special Cases
 for_window [instance="gl"] focus, $full
@@ -270,7 +271,8 @@ for_window [class="floating_window"] $float
 for_window [class="Tk|Toplevel|Bell_scheduler_gui.py"] $float
 #for_window [instance="anydesk"] $scra
 
-for_window [class="BatteryPopup"] floating enable, border pixel 1, move position center, sticky enable
+for_window [class="BatteryPopup"] $float, border pixel 1, move position center, sticky enable
+for_window [class="Alarm-clock-applet|scrcpy"] $float
 
 # ----------------------------------------------------------------------------
 # SECTION 5: WORKSPACES
@@ -403,7 +405,7 @@ $ss+s $exe systemctl suspend
 # Dual boot: reinicia no Windows
 $ss+w $exe sudo grub-reboot 2 && reboot
 # Bloquear Tela
-$sup+l $exe $scriptdir/random_wallpaper_lockscreen.sh
+$sup+l $exe $scriptdir/random_wallpaper_betterlockscreen.sh
 
 # [SYSTEM TOOLS] -----------------------------------------
 # Alternar monitores >>> SUP+FN+F8
@@ -475,24 +477,24 @@ bindsym F1 $exe $scriptdir/draw_window.sh
 bindsym F2 $exe i3-quickterm shell  
 
 # [BROWSERS] ---------------------------------------------
-$sup+f $exe firefox  
-$sup+b $exe brave  
-$sup+c $exe google-chrome-stable  
+$sup+f $exe firefox
+$sup+b $exe "pkill brave || brave"
+$sup+c $exe google-chrome-stable
 #$sup+w $exe librewolf
 #$sup+v $exe vivaldi-stable
-$cs+q $exe qutebrowser  
+$cs+q $exe "pkill qutebrowser || qutebrowser"
 $ca+t  $exe firefox https://outlook.live.com/mail/0/ https://mail.google.com/mail/u/1/?ogbl#inbox https://www.siepe.educacao.pe.gov.br/
 $sup+m $exe google-chrome-stable -url meet.google.com/svc-vasq-drv
 
 # [FILE MANAGEMENT] ---------------------------------------
 $sup+x $exe "killall Thunar || Thunar"  
-$sup+r $exe kitty -e 'ranger'  r
+$sup+r $exe "pkill ranger || kitty -e 'ranger'"
 
 # [UTILITIES] --------------------------------------------
 # Integração com Android
 $sup+backslash $exe $scriptdir/launch_kdeconnect.sh &
 # Bluetooth  
-$sc+b $exe "pgrep blueman-applet || blueman-applet"
+$sc+b $exe "pkill blueman-applet || blueman-applet"
 # Launcher (Alt+Space)  
 $as $exe ~/.config/rofi/launchers/type-1/launcher.sh
  
@@ -502,7 +504,7 @@ $as $exe ~/.config/rofi/launchers/type-1/launcher.sh
 bindsym F11 exec "pkill -f bell_scheduler_gui.py; python3 ~/.config/i3/scripts/bell_scheduler_gui.py"  
 
 # Alarme
-$sup+a $exe "pgrep alarm-clock-applet && pkill alarm-clock-applet || alarm-clock-applet" 
+$sup+a $exe $scriptdir//toggle_alarm.sh 
 
 # start/close Calculadora 
 bindsym F6 $exe $scriptdir/launch_calculadora.sh &  
@@ -726,7 +728,7 @@ bindsym Ctrl+period            $exe dunstctl context
 
 gaps inner 4
 gaps outer 1
-smart_gaps on
+#smart_gaps on
 
 #smart_borders on
 #smart_borders no_gaps
@@ -910,8 +912,10 @@ $exe libinput-gestures-setup start &
 $always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 $always $scriptdir/start_battery_monitor.sh
 
-# UI
-$always ~/.config/picom/kill_restart.sh &
+# Picom
+$always ~/.config/picom/start_picom.sh
+
+# Fonts
 $always fc-cache -fv
 
 # Configuração do tema X11
@@ -925,20 +929,13 @@ $always killall -HUP xsettingsd
 # Autotiling(Instalar Autotiling)
 # $always autotiling
 
-# Picom
-# $always "picom --config ~/.config/picom/picom.conf"
-
 # Thunar modo daemon, inicia automaticamente no login
 # $exe thunar --daemon &
 # Iniciar thunar mais rapido: sudo nvim /usr/share/gvfs/mounts/network.mount 
 # Alterar AutoMount=true para AutoMount=false . 
 
 # Gerenciador de inatividade com bloqueio e suspensão
-$exe xidlehook \
-    --not-when-fullscreen \
-    --not-when-audio \
-    --timer 240 $lockscreen '' \
-    --timer 90 'systemctl suspend' '' &
+$exe $scriptdir/start_xidlehook.sh
     
 # Apply .Xresource. As far as I know, only needed here if using startx (dont have a login manager)
 # Executa o seguinte comando ao iniciar o X11, para que as configurações de cores sejam aplicadas no seu ambiente, sejam carregadas.

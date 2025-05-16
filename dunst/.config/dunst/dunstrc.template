@@ -119,6 +119,8 @@
     # Agrupar notificações duplicadas
     stack_duplicates = true
     
+    replace_id = yes
+    
     # Mostrar contador de duplicatas
     hide_duplicate_count = false
     
