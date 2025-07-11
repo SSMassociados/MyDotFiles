@@ -1,42 +1,47 @@
 #!/bin/bash
 
-export DISPLAY=:0
+source "$HOME/.cache/wal/colors.sh"
 
 BAT="BAT0"
-CAPACITY=$(tr -d '\n' < /sys/class/power_supply/$BAT/capacity)
-STATUS=$(tr -d '\n' < /sys/class/power_supply/$BAT/status)
+
+CAPACITY=$(cat /sys/class/power_supply/$BAT/capacity)
+STATUS=$(cat /sys/class/power_supply/$BAT/status)
 
 HEALTH="N/A"
 if [ -f /sys/class/power_supply/$BAT/charge_full_design ]; then
-    FULL=$(tr -d '\n' < /sys/class/power_supply/$BAT/charge_full)
-    DESIGN=$(tr -d '\n' < /sys/class/power_supply/$BAT/charge_full_design)
+    FULL=$(cat /sys/class/power_supply/$BAT/charge_full)
+    DESIGN=$(cat /sys/class/power_supply/$BAT/charge_full_design)
     if [ "$DESIGN" -gt 0 ]; then
         HEALTH="$((100 * FULL / DESIGN))%"
     fi
 fi
 
-echo "🔋 ${CAPACITY}% | ⚡ ${STATUS} | 🩺 ${HEALTH}" | \
-rofi -dmenu -filter " " \
--theme-str '
+VOLTAGE=$(cat /sys/class/power_supply/$BAT/voltage_now)
+CURRENT=$(cat /sys/class/power_supply/$BAT/current_now)
+TECHNOLOGY=$(cat /sys/class/power_supply/$BAT/technology)
+
+MESSAGE="🔋 Capacidade: ${CAPACITY}%\n⚡ Status: ${STATUS}\n🩺 Saúde: ${HEALTH}\n🔌 Voltagem: $((VOLTAGE / 1000000))V\n🔋 Corrente: $((CURRENT / 1000000))A\n⚙️ Tecnologia: ${TECHNOLOGY}"
+
+echo -e "$MESSAGE" | rofi -dmenu -p "Bateria" -theme-str "
 window {
-    width: 38ch;
-    padding: 5px;
+    width: 28ch;
+    padding: 3px;
+    background: '${background}';
+}
+mainbox {
+    padding: 10px;
 }
 inputbar {
     enabled: false;
     visible: false;
-    children: [];
-    margin: 0;
-    padding: 0;
-    border: 0;
 }
 listview {
-    lines: 1;
+    lines: 6;
+    spacing: 7px;
     scrollbar: false;
     border: 0;
-    padding: 0;
 }
 element {
     border: 0;
 }
-'
+" 

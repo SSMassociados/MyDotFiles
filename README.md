@@ -49,6 +49,28 @@ Abaixo está a organização dos arquivos e diretórios:
 
 ------
 
+## 🧹 Limpeza de Configurações Antigas (Opcional)
+
+Recomenda-se remover configurações antigas antes de aplicar os novos dotfiles para evitar conflitos. **Faça backup antes de executar estes comandos!**
+
+### Limpeza de arquivos na home directory:
+
+```
+rm -v ~/.{zshrc,bashrc,wallpaper,xinitrc,gitconfig} 2>/dev/null
+```
+
+### Limpeza de diretórios no .config:
+```
+rm -rfv ~/.config/{betterlockscreen,dunst,feh,gtk-{3.0,4.0},.gtkrc-2.0,i3,kitty,mimeapps.list,nvim,picom,polybar,qBittorrent,qt{5,6}ct,qutebrowser,ranger,rofi,xsettingsd,zathura,geany} 2>/dev/null
+```
+
+### Limpeza de recursos compartilhados:
+```
+rm -rfv ~/.local/share/{fonts,icons,themes} 2>/dev/null
+```
+
+------
+
 ## 🛠 Como Usar
 
 ### Pré-requisitos

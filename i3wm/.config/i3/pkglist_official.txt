@@ -40,11 +40,11 @@ brightnessctl
 btop
 cabextract
 catfish
+cava
 cdrdao
 cheese
 chromium
 cmake
-copyq
 cpu-x
 csvkit
 cups-pdf
@@ -59,6 +59,7 @@ docker
 dosfstools
 dunst
 dvd+rw-tools
+dysk
 easyeffects
 edk2-ovmf
 efibootmgr
@@ -88,7 +89,6 @@ font-manager
 fuse2
 gawk
 gcc
-gcompris-qt
 geany
 geany-plugins
 geeqie
@@ -97,6 +97,7 @@ gimagereader-gtk
 git
 github-cli
 glabels
+glow
 gnome-boxes
 gnome-disk-utility
 gnome-themes-extra
@@ -142,7 +143,6 @@ iwd
 jdk-openjdk
 jq
 jre8-openjdk
-k3b
 kde-cli-tools
 kdeconnect
 kdiskmark
@@ -151,6 +151,7 @@ kernel-modules-hook
 kitty
 kooha
 kruler
+kvantum-qt5
 lhasa
 lib32-mesa
 lib32-vulkan-intel
@@ -196,7 +197,6 @@ nasm
 nbtscan
 ncdu
 ncompress
-neofetch
 neovim
 net-tools
 netctl
@@ -242,6 +242,7 @@ plocate
 polkit-gnome
 polybar
 print-manager
+proton-vpn-gtk-app
 python-build
 python-installer
 python-matplotlib
@@ -250,9 +251,9 @@ python-numpydoc
 python-pandas
 python-pdftotext
 python-pip
+python-pipx
 python-poetry-core
 python-pynvim
-python-pywal
 python-reportlab
 python-soundfile
 python-xlsxwriter
@@ -265,6 +266,7 @@ ranger
 rebuild-detector
 redshift
 reflector
+rmpc
 rofi
 rofi-emoji
 sane-airscan
@@ -303,7 +305,6 @@ thunar-shares-plugin
 thunar-volman
 thunderbird
 thunderbird-i18n-pt-br
-tilix
 tk
 tldr
 tlp
@@ -354,6 +355,7 @@ xbindkeys
 xclip
 xdg-user-dirs
 xdg-utils
+xdo
 xdotool
 xf86-video-intel
 xf86-video-vesa

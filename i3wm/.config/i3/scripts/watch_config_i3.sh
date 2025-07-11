@@ -32,7 +32,8 @@ restart_i3() {
 }
 
 # Adicionar captura de sinais
-trap "echo '🛑 Encerrando monitoramento do arquivo de configuração.'; exit" SIGINT SIGTERM
+trap "echo '🛑 Encerrando monitoramento do arquivo de configuração.'; exit 0" SIGINT SIGTERM
+
 
 # Loop para monitorar o arquivo de configuração
 last_hash=$(md5sum "$CONFIG_FILE" | awk '{print $1}')

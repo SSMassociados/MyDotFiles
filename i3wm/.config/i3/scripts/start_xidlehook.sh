@@ -6,7 +6,7 @@ wallpaper_path=$(find -L ~/.wallpaper -type f \( -name '*.jpg' -o -name '*.png' 
 # Não ativa quando o áudio está sendo reproduzido
 # Primeiro temporizador: 120s de inatividade → bloquear tela
 # Segundo temporizador: 90s depois disso → suspender sistema
-# -l dimblur OU -l dim
+# Opções: -l (blur color dim dimblur dimpixel pixel resize)
 
 xidlehook \
   --not-when-fullscreen \

@@ -1,1 +1,20 @@
-sheets.svg
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <metadata>
+  <rdf:RDF>
+   <cc:Work rdf:about="">
+    <dc:format>image/svg+xml</dc:format>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:title/>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <g transform="translate(-7.8808 -10.385)">
+  <g stroke-width="1.3854">
+   <rect x="13.834" y="12.237" width="5.0271" height="13.229" fill="#15949b"/>
+   <rect x="18.861" y="14.589" width="5.0271" height="10.877" fill="#2fbdc6"/>
+   <rect x="8.8068" y="16.941" width="5.0271" height="8.5256" fill="#037377"/>
+  </g>
+  <path d="m23.888 16.947c-7.6809 0.1455-7.7199 3.8867-9.9196 5.554-1.2191 0.9241-3.7282 1.4794-5.1616 1.6972v1.2676h15.081z" fill="#0a5555" opacity=".5"/>
+ </g>
+</svg>

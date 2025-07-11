@@ -48,9 +48,9 @@ set $as bindsym Mod1+space
 set $exe exec --no-startup-id
 set $always exec_always --no-startup-id
 
-# Paths(usually '~/bin' or '~/.local/bin')
-set $bin_path ~/.local/bin
-set $scriptdir ~/.config/i3/scripts
+# Paths(usually '$HOME/bin' or '$HOME/.local/bin')
+set $bin_path $HOME/.local/bin
+set $scriptdir $HOME/.config/i3/scripts
 
 # Direction keys
 set $ukey Up
@@ -73,7 +73,7 @@ set $show scratchpad show
 set $to move to workspace
 
 # Comando para bloquear a tela
-set $lockscreen 'betterlockscreen -u ~/.wallpaper -l dim'
+set $lockscreen 'betterlockscreen -u $HOME/.wallpaper -l dim'
 
 # # Terminal configurations
 set $term exec --no-startup-id kitty
@@ -81,7 +81,7 @@ set $term_drop exec --no-startup-id xfce4-terminal --drop-down
 #set $term_theme exec --no-startup-id env GTK_THEME=Arc-Dark xfce4-terminal
 
 # Default mail client
-#set $mail ~/bin/launcher-thunderbird
+#set $mail $HOME/bin/launcher-thunderbird
 
 # ----------------------------------------------------------------------------
 # SECTION 3: APPEARANCE AND THEMING
@@ -165,7 +165,7 @@ set $SandyBrown #F4A460
 
 
 # COLORS (Xresources integration)
-# Uses colors from ~/.Xresources (fallback to #f0f0f0 if not found)
+# Uses colors from $HOME/.Xresources (fallback to #f0f0f0 if not found)
 # Docs: https://i3wm.org/docs/userguide.html#xresources
 
 # Cores Base (Nord-inspired)
@@ -236,17 +236,19 @@ for_window [title="Authy|Preferences$|Progresso$"] $float
 for_window [title="Picture-in-Picture"] sticky enable $show
 for_window [title=".*QEMU/KVM$"] $nofloat
 for_window [title="Nova VM"] $float, $center
+for_window [title=".*cheatsheet.*"] $full
 
 # System Tools
+for_window [class="Protonvpn-app"] $float, $center
 for_window [class="Yad" title="Calendar"] $float
 for_window [class="Psensor"] $float, resize set 450 590
 for_window [class="KeePassXC"] $float, resize set 800 500, $center
 for_window [class="Arandr"] $float, resize set 280 254
-for_window [class="pavucontrol|easyeffects"] $float, resize set 650 410
+for_window [class="pavucontrol|easyeffects"] $float, resize set 747 425
 for_window [class="Gnome-calculator"] $float, resize set 100 300, $center
 for_window [class="xdman-Main"] $float, move position 1620 1010, resize set 759 419
 for_window [class="Xdm-app"] $float, move position 1620 1010, resize set 250 40
-for_window [class="Blueman-manager|Blueman-services|System-config-printer|simple-scan|Gufw.py|Key-mapper-gtk"] $float
+for_window [class="Blueman-manager|Blueman-services|System-config-printer.py|simple-scan|Gufw.py|Key-mapper-gtk|kruler"] $float
 
 # Messaging Apps
 for_window [class="TelegramDesktop|WhatSie|qtwaw|ZapZap|whatsdesk|Whatsapp-for-linux"] $float, border none, resize set 910 512, $center
@@ -255,13 +257,15 @@ for_window [class="TelegramDesktop|WhatSie|qtwaw|ZapZap|whatsdesk|Whatsapp-for-l
 for_window [class="zoom"] $float, resize set 200 480, $center
 for_window [class="smplayer|vlc|amberol|Audacity|qBittorrent"] $float
 for_window [class="qvidcap"] $float, sticky enable, resize set 335 250
+for_window [class="RMPC"] $float, resize set 801 399, $center, border pixel 2
 
 #  File Managers and Browsers
-for_window [instance="Places|firefox"] $float, resize set 660 363, $center
+for_window [instance="Places|Firefox"] $float, resize set 561 328, $center
 for_window [instance="Navigator"] focus
 for_window [instance="pcmanfm|Thunar|nautilus"] focus
 for_window [instance="atril|evince"] focus
 for_window [instance="geany"] $center focus
+for_window [instance="org.gnome.FileRoller"] $float, $center, focus
 
 # Special Cases
 for_window [instance="gl"] focus, $full
@@ -347,7 +351,10 @@ workspace_auto_back_and_forth yes
 $sup+k urgent clear
 
 # Polybar toggle, hide or show 
+# Todas instâncias, barras
 $sup+o $exe polybar-msg cmd toggle 
+# Monitor secudário se conectado
+$ss+o $exe $HOME/.config/polybar/scripts/toggle_bar.sh
 
 # I3 bar toggle, hide or show
 #$sup+o bar mode toggle
@@ -396,7 +403,7 @@ $ss+e $exe i3-msg exit
 # Desligamento imediato
 $ss+d $exe shutdown -h now
 # Power Menu
-$sup+d $exe ~/.config/rofi/powermenu/type-2/powermenu.sh 
+$sup+d $exe $HOME/.config/rofi/powermenu/type-2/powermenu.sh 
 # ==> $ss+p $exe polybar-msg hook powermenu 1
 # Reinicia o sistema     
 $ss+b $exe systemctl reboot
@@ -419,9 +426,11 @@ $ss+x $exe $scriptdir/toggle_xidlehook.sh
 # Ajuda do i3 
 $sc+h exec xdg-open https://i3wm.org/docs/userguide.html
 # Edição I3 Config  
-$sup+Home $exe geany ~/.config/i3/config
+$sup+Home $exe geany $HOME/.config/i3/config
 # Edição Polybar Config
-$sup+End $exe geany ~/.config/polybar/config.ini
+$sup+End $exe geany $HOME/.config/polybar/config.ini
+# Cheatsheet
+$sup+i $exe kitty --title cheatsheet -e glow $HOME/.config/i3/scripts/cheatsheet.md -p
 
 # ==> Windows
 # sudo grep menuentry /boot/grub/grub.cfg    
@@ -433,16 +442,16 @@ $sup+End $exe geany ~/.config/polybar/config.ini
 $sup+apostrophe mode "$mode_files"
 set $mode_files [I]3, [P]oly, [K]itty, [B]etterloc, [D]unst, [O]picom, [Z]sh, [F]eh, [N]vim, [T]zathura, [S]amba
 mode "$mode_files" {
-    bindsym i $term -e nvim ~/.config/i3/config, mode "default"
-    bindsym p $term -e nvim ~/.config/polybar/config.ini, mode "default"
-    bindsym k $term -e nvim ~/.config/kitty/kitty.conf, mode "default"
-    bindsym b $term -e nvim ~/.config/betterlockscreenrc, mode "default"
-    bindsym d $term -e nvim ~/.config/dunst/dunstrc, mode "default"
-    bindsym o $term -e nvim ~/.config/picom/picom.conf, mode "default"
-    bindsym f $term -e nvim ~/.config/feh/themes, mode "default"
-    bindsym z $term -e nvim ~/.zshrc, mode "default"
-    bindsym n $term -e nvim ~/.config/nvim/init.vim, mode "default" 
-    bindsym t $term -e nvim ~/.config/zathura/zathurarc, mode "default"
+    bindsym i $term -e nvim $HOME/.config/i3/config, mode "default"
+    bindsym p $term -e nvim $HOME/.config/polybar/config.ini, mode "default"
+    bindsym k $term -e nvim $HOME/.config/kitty/kitty.conf, mode "default"
+    bindsym b $term -e nvim $HOME/.config/betterlockscreenrc, mode "default"
+    bindsym d $term -e nvim $HOME/.config/dunst/dunstrc, mode "default"
+    bindsym o $term -e nvim $HOME/.config/picom/picom.conf, mode "default"
+    bindsym f $term -e nvim $HOME/.config/feh/themes, mode "default"
+    bindsym z $term -e nvim $HOME/.zshrc, mode "default"
+    bindsym n $term -e nvim $HOME/.config/nvim/init.vim, mode "default" 
+    bindsym t $term -e nvim $HOME/.config/zathura/zathurarc, mode "default"
     bindsym s exec $term -e nvim /etc/samba/smb.conf; mode "default"
     bindsym Escape mode "default"
 }
@@ -452,17 +461,18 @@ mode "$mode_files" {
 # Área selecionada
 bindsym --release Mod4+Print $exe QT_QPA_PLATFORM=xcb flameshot gui
 # Tela inteira  
-bindsym --release Print $exe cd ~/Imagens/Screenshots/ && scrot 
+bindsym --release Print $exe cd $HOME/Imagens/Screenshots/ && scrot 
 # Janela selecionada 
-bindsym --release Shift+Print $exe cd ~/Imagens/Screenshots/ && scrot -s -b  
+bindsym --release Shift+Print $exe cd $HOME/Imagens/Screenshots/ && scrot -s -b  
 
 # Screen recording
 $sup+g $exe $scriptdir/launch_ssrecorder.sh &  
 #$sup+g $exe simplescreenrecorder --start-hidden
 
-# OCR and QR tools
+# OCR , BarCode and QR tools
 bindsym $alt+o $exe $scriptdir/image_to_text.sh
-bindsym $alt+q $exe $scriptdir/code_to_link.sh
+bindsym $alt+q $exe $scriptdir/qrscan.sh
+bindsym $alt+b $exe $scriptdir/barcode_scan.sh
 
 ### SUBSECTION 6.2: APPLICATION BINDINGS ###
 # Lançadores de aplicativos e controles específicos
@@ -473,7 +483,7 @@ bindsym $alt+q $exe $scriptdir/code_to_link.sh
 $sup+Return $exe kitty
 # Terminal flutuante  
 bindsym F1 $exe $scriptdir/draw_window.sh
-# Terminal rápido - (~/.config/i3/i3-quickterm.json)  
+# Terminal rápido - ($HOME/.config/i3/i3-quickterm.json)  
 bindsym F2 $exe i3-quickterm shell  
 
 # [BROWSERS] ---------------------------------------------
@@ -496,12 +506,12 @@ $sup+backslash $exe $scriptdir/launch_kdeconnect.sh &
 # Bluetooth  
 $sc+b $exe "pkill blueman-applet || blueman-applet"
 # Launcher (Alt+Space)  
-$as $exe ~/.config/rofi/launchers/type-1/launcher.sh
+$as $exe $HOME/.config/rofi/launchers/type-1/launcher.sh
  
 #$sup+d $exe dmenu_run  # Start dmenu (a program launcher)
 
 # Agendador - bell_scheduler_gui
-bindsym F11 exec "pkill -f bell_scheduler_gui.py; python3 ~/.config/i3/scripts/bell_scheduler_gui.py"  
+bindsym F11 exec "pkill -f bell_scheduler_gui.py; python3 $HOME/.config/i3/scripts/bell_scheduler_gui.py"  
 
 # Alarme
 $sup+a $exe $scriptdir//toggle_alarm.sh 
@@ -514,8 +524,11 @@ bindsym XF86Calculator $exe $scriptdir/launch_calculadora.sh &
 $sup+z $exe $scriptdir/search.py "$HOME/Área de trabalho/AUSTRO/DECLARAÇÕES/Banco de Dados/TXT_Output/CSV_Output/dados_unificados.csv"
 
 # Start/close Spotify
-bindsym F9 $exe $scriptdir/launch_spotify.sh &
+#bindsym F9 $exe $scriptdir/launch_spotify.sh &
 bindsym XF86Tools $exe $scriptdir/launch_spotify.sh &
+
+# Start/close rmpc
+bindsym F9 $exe $scriptdir/toggle_rmpc.sh
 
 # Discovers automatically all UPnP AV Media Servers on the network, 
 # and make the content available in a directory tree
@@ -590,7 +603,7 @@ $sup+Prior focus parent
 $sup+Next focus child   
 
 # Alt+Tab Focus >>> yay -S alttab
-#$exe ~/.config/i3/scripts/alttab_pywal.sh
+#$exe $HOME/.config/i3/scripts/alttab_pywal.sh
 
 # Switch container focus i3-cycle - conflito com o alttab
 # Rotação horária entre janelas
@@ -800,7 +813,7 @@ gaps outer 1
 #        tray_output none
 #        strip_workspace_numbers yes
 
-#        status_command SCRIPT_DIR=~/.config/i3/blocklets/ i3blocks
+#        status_command SCRIPT_DIR=$HOME/.config/i3/blocklets/ i3blocks
 
 #        font pango:Cantarell 14
 
@@ -891,13 +904,24 @@ gaps outer 1
 # ----------------------------------------------------------------------------
 
 # Resolução de Tela(Instalar Arandr)
-#$exe ~/.screenlayout/default.sh
-#$exe xrandr --output eDP-1 HDMI1 --primary --mode 1920x1080 --pos 0x0 --rotate normal --rate 60.00
-#$exe xrandr --output DP-1 --mode 3440x1440 --rate 143.97
+#$exe $HOME/.screenlayout/default.sh
 
-#  Auto-detect the connected display hardware and load the appropriate X11 setup using xrandr 
-$exe /usr/bin/autorandr -c --default default &
+#  ==> Autorandr
+# 1º Cofigurar os monitore(s) usando xrandr/arandr para ajustar resoluções e posições
+# 2º Salvar perfil ==> autorandr --save notebook  
+# 3º Liste os perfis salvos ==> autorandr
+# 4º Setar perfil padrão ==> autorandr --default notebook
+# 5º Salve outros perfis notebook+monitorSecundário lembre-se de setar antes no arandr para depois usar o ==> autorandr --save NovoPerfil
+# O autorandr tenta detectar o melhor perfil (--change). 
+# Se nenhum perfil for detectado, ele usará o perfil padrão, Fallback (--default notebook).
+$exe autorandr --change --default notebook
 
+# ==> Mons
+#$exe mons -o
+
+# ==> i3-autodisplay
+#$exe "sleep 2 && i3-autodisplay"
+ 
 # Input devices
 #$exe setxkbmap -layout br -model abnt2
 $always pidof xbindkeys && killall xbindkeys || xbindkeys &
@@ -913,7 +937,7 @@ $always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 $always $scriptdir/start_battery_monitor.sh
 
 # Picom
-$always ~/.config/picom/start_picom.sh
+$always $HOME/.config/picom/start_picom.sh
 
 # Fonts
 $always fc-cache -fv
@@ -922,7 +946,7 @@ $always fc-cache -fv
 # Alternativa ao gnome-settings-daemon para usuários que não estão usando o ambiente de área de 
 # trabalho GNOME, mas que ainda executam GTK+ e deseja configurar coisas como temas, 
 # fontes antialiasing/hinting e efeitos sonoros da interface do usuário. 
-# ~/.config/xsettingsd/xsettingsd.conf
+# $HOME/.config/xsettingsd/xsettingsd.conf
 $exe xsettingsd &
 $always killall -HUP xsettingsd
 
@@ -939,27 +963,30 @@ $exe $scriptdir/start_xidlehook.sh
     
 # Apply .Xresource. As far as I know, only needed here if using startx (dont have a login manager)
 # Executa o seguinte comando ao iniciar o X11, para que as configurações de cores sejam aplicadas no seu ambiente, sejam carregadas.
-#$always xrdb -merge ~/.Xresources
+#$always xrdb -merge $HOME/.Xresources
 
 # ===== Configuração do Pywal =====
 # Sistema dinâmico de cores que:
-# 1. Seleciona aleatoriamente um wallpaper da pasta ~/.wallpaper
+# 1. Seleciona aleatoriamente um wallpaper da pasta $HOME/.wallpaper
 # 2. Gera um esquema de cores harmonioso com base na imagem (via Pywal)
 # 3. Aplica as cores geradas em todos os componentes do sistema
 # 4. Atualiza o Dunst e a Polybar para manter a consistência visual
 # 5. Executa sempre que o i3 é reiniciado/recarregado
 
-$always"
-     WALLPAPER=$(find -L ~/.wallpaper -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1) && \
-     wal -i \"$WALLPAPER\" --iterative && \
-     source ~/.cache/wal/colors.sh && \
-     ~/.config/dunst/update_dunst_colors.sh && \
-     sleep 0.2 && \
-     ~/.config/i3/scripts/alttab_pywal.sh && \
-     ~/.config/polybar/launch.sh   
-"
+#$always"
+#     WALLPAPER=$(find -L $HOME/.wallpaper -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1) && \
+#     wal -i \"$WALLPAPER\" --iterative && \
+#     source $HOME/.cache/wal/colors.sh && \
+#     $HOME/.config/dunst/update_dunst_colors.sh && \
+#     sleep 0.2 && \
+#     $HOME/.config/i3/scripts/alttab_pywal.sh && \
+#     $HOME/.config/polybar/launch.sh
+#  "
 
-#exec_always --no-startup-id "~/.config/polybar/launch.sh"
+$always $scriptdir/pywal_autorun.sh
+
+
+#exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 
 # Monitora o arquivo e reinicia o i3wm se houver mudanças
 $exe $scriptdir/watch_config_i3.sh &
@@ -968,6 +995,9 @@ $exe $scriptdir/watch_config_i3.sh &
 $exe sleep 7 && \
 notify-send -i "$HOME/.icons/kora/apps/scalable/cs-cat-admin.svg" "Olá $USER, Seja Bem-vindo!" && \
 paplay "$HOME/.config/i3/sounds/Epic_Sax_Guy.mp3"
+
+# Terminal-bg ==> https://github.com/DaarcyDev/terminal-bg
+# $exe terminal-bg --script cava --monitor 0
 
 # ----------------------------------------------------------------------------
 # SECTION 11:SYSTRAY APPLETS
@@ -978,34 +1008,48 @@ paplay "$HOME/.config/i3/sounds/Epic_Sax_Guy.mp3"
 # you need to have tray apps started manually one by one:
 
 # Execute .desktop files + apps using /etc/xdg/autostart. ~ https://github.com/jceb/dex
-#$exe dex -a -s /etc/xdg/autostart/:~/.config/autostart/
+#$exe dex -a -s /etc/xdg/autostart/:$HOME/.config/autostart/
 #$exe dex --autostart --environment i3
 
-$exe sleep 2 && nm-applet
-$exe keepassxc --minimized
-$exe sleep 4 && xfce4-clipman
-$exe sleep 8 && telegram-desktop -startintray %u
-$exe sleep 16 && zapzap
+#$exe sleep 2 && nm-applet
+#$exe keepassxc --minimized
+#$exe sleep 4 && xfce4-clipman
+#$exe sleep 8 && telegram-desktop -startintray %u
+#$exe sleep 16 && zapzap
 #$exe sleep 20 && blueman-applet
 #$exe sleep 24 && whatsie
 #$exe kdeconnect-indicator
 
 # Redshift - ==> geoclue /etc/geoclue/geoclue.conf 
-$exe sleep 32 && redshift-gtk  &
+#$exe sleep 32 && redshift-gtk 
+
+# systemctl enable --now geoclue.service
 $exe /usr/lib/geoclue-2.0/demos/agent
+
+# Gammastep
+# Usar GPS via IP (automático sem GeoClue)
+#$exe $scriptdir/gammastep_auto
+
+# Coordenadas manuais (substitua LAT:LON) 
+# ==>  curl -s https://ipapi.co/latlong 
+# ==> temperatura de cor dia (5700K) e noite (4000K)
+#$exe gammastep -l -7.85:-35.44 -t 5700:4000
 
 # AnyDesk
 #$exe anydesk
+
+# Polybar launcher automatizado (com Systray)
+# Lança sempre o script que gerencia Polybar e Systray
 
 # ----------------------------------------------------------------------------
 # SECTION 12: WORKSPACE LAYOUTS
 # ----------------------------------------------------------------------------
 
-# i3-save-tree --workspace 1 > ~/.config/i3/cenarios/layout_2.json
-# sed -i 's|^\(\s*\)// "|\1"|g; /^\s*\/\//d' ~/.config/i3/cenarios/layout_2.json
+# i3-save-tree --workspace 1 > $HOME/.config/i3/cenarios/layout_2.json
+# sed -i 's|^\(\s*\)// "|\1"|g; /^\s*\/\//d' $HOME/.config/i3/cenarios/layout_2.json
 # sed -i -e '/"swallows": \[/,/\]/ {s|^\(\s*\)// \("class".*\)$|\1\2|; s|^\(\s*
 
-set $restore_layout append_layout ~/.config/i3/
+set $restore_layout append_layout $HOME/.config/i3/
 
 # Start in current workspace
 $sc+1 $restore_layout/cenarios/layout_2.json; $exe firefox; $exe geany; $exe thunar; $exe kitty
@@ -1015,17 +1059,17 @@ $sc+2 workspace 7; $restore_layout/cenarios/layout_1.json; $exe firefox; $exe ge
 bindsym F12 $exe $scriptdir/save_restore_del.sh
 
 # Restore all workspaces and windows
-#bindsym F4 $exe "i3-resurrect ls -d ~/.cache/i3-resurrect | sed -n '/programs/!p' | awk '{print $2}' | xargs -n1 i3-resurrect restore -d ~/.cache/i3-resurrect -w"
+#bindsym F4 $exe "i3-resurrect ls -d $HOME/.cache/i3-resurrect | sed -n '/programs/!p' | awk '{print $2}' | xargs -n1 i3-resurrect restore -d $HOME/.cache/i3-resurrect -w"
 
 # i3-layout-manager
-#$sup+F1 $exe ~/.config/i3/i3-resurrect-dmenu
+#$sup+F1 $exe $HOME/.config/i3/i3-resurrect-dmenu
 
 #  ===> RESURRECT
 # Save all workspace layouts
-#bindsym F3 $exe "i3-msg -t get_workspaces | sed 's/},{/\n/g' | awk -F, '{print $3}' | awk -F: '{print $2}' | xargs -n1 i3-resurrect save -d ~/.cache/i3-resurrect -w"
+#bindsym F3 $exe "i3-msg -t get_workspaces | sed 's/},{/\n/g' | awk -F, '{print $3}' | awk -F: '{print $2}' | xargs -n1 i3-resurrect save -d $HOME/.cache/i3-resurrect -w"
 
 # Restore all workspaces and windows
-#bindsym F4 $exe "i3-resurrect ls -d ~/.cache/i3-resurrect | sed -n '/programs/!p' | awk '{print $2}' | xargs -n1 i3-resurrect restore -d ~/.cache/i3-resurrect -w"
+#bindsym F4 $exe "i3-resurrect ls -d $HOME/.cache/i3-resurrect | sed -n '/programs/!p' | awk '{print $2}' | xargs -n1 i3-resurrect restore -d $HOME/.cache/i3-resurrect -w"
 
 # Debugging - remover após análise
 #$always  bash -c 'date +"Início: %H:%M:%S" > /tmp/i3-debug.log'

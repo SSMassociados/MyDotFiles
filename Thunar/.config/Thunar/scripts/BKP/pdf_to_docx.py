@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 #  Este script requer a instalação das seguintes dependências:
 # - O Python geralmente já está instalado na maioria dos sistemas operacionais modernos.

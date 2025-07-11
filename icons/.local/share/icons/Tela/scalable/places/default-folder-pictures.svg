@@ -1,18 +1,25 @@
-<svg width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="64" height="64" version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="-197.1" x2="-196.91" y1="217.68" y2="219.37" gradientTransform="rotate(-45 -338.07 -140.03)" gradientUnits="userSpaceOnUse">
+  <style id="current-color-scheme" type="text/css">.ColorScheme-Text {
+        color:#333333;
+      }
+      .ColorScheme-Background{
+        color:#ffffff;
+      }
+      .ColorScheme-Highlight {
+        color:#5294e2;
+      }</style>
+  <linearGradient id="linearGradient892" x1="-197.72" x2="-197.72" y1="263.86" y2="273.76" gradientTransform="rotate(-45,-337.55,-145.8)" gradientUnits="userSpaceOnUse">
    <stop offset="0"/>
    <stop stop-opacity="0" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(0 -280.07)">
-  <path d="M3.44 282.448c-.294 0-.395.269-.53.53h-.793a.528.528 0 0 0-.53.528v5.292c0 .293.237.53.53.53h12.7c.293 0 .529-.237.529-.53v-5.292a.528.528 0 0 0-.53-.529H7.674c-.155-.249-.236-.53-.53-.53z" fill="#5294e2" paint-order="markers stroke fill"/>
-  <path d="M3.44 282.448c-.294 0-.395.269-.53.53h-.793a.528.528 0 0 0-.53.528v5.292c0 .293.237.53.53.53h12.7c.293 0 .529-.237.529-.53v-5.292a.528.528 0 0 0-.53-.529H7.674c-.155-.249-.236-.53-.53-.53z" opacity=".18" paint-order="markers stroke fill"/>
-  <rect x="2.381" y="283.77" width="12.171" height="5.027" ry=".265" fill="#fff" paint-order="markers stroke fill"/>
-  <rect x=".529" y="285.36" width="15.875" height="9.525" ry=".529" fill="#5294e2" paint-order="markers stroke fill"/>
-  <path d="M8.467 284.3h7.408c.293 0 .53.236.53.53v3.968c0 .293-.237.529-.53.529H6.152c-.294 0-.677-.276-.53-.53l2.316-3.968c.147-.253.236-.529.529-.529z" fill="#5294e2" paint-order="markers stroke fill"/>
-  <rect x="3.704" y="282.71" width="3.175" height=".529" ry=".265" opacity=".25" paint-order="stroke markers fill"/>
-  <path d="M5.82 287.74v4.233h5.292v-4.233H5.821zm.265.264h4.763v3.228l-1.81-1.81-1.95 1.95a.08.08 0 0 1 .008-.102l.56-.562-.808-.81-.763.762v-2.656zm3.97.53a.265.265 0 0 0-.265.264.265.265 0 0 0 .264.264.265.265 0 0 0 .265-.264.265.265 0 0 0-.265-.265z" fill="#fff" paint-order="stroke markers fill"/>
+ <g transform="scale(3.7796)">
+  <path class="ColorScheme-Highlight" transform="scale(.26458)" d="m27.002 8.9844-14 0.00391c-1.1097 0-1.4926 1.0128-2.002 1.998v0.01367h-1c-2.216 0-4 1.784-4 4v5c-2.216 0-4 1.784-4 4v28c0 2.216 1.784 4 4 4h52c2.216 0 4-1.784 4-4v-32c0-2.216-1.784-4-4-4v-1c0-2.216-1.784-4-4-4h-16.859c-0.04729-0.0032-0.09249-0.01387-0.14062-0.01367h-7.9961c-0.58584-0.94113-0.8907-2.002-2.002-2.002z" fill="currentColor"/>
+  <path id="shadow" d="m7.1441 2.3771-3.7041 0.00103c-0.2936 0-0.39492 0.26798-0.52967 0.52864v0.00362h-0.26458c-0.58631 0-1.0583 0.472-1.0583 1.0583v1.3229h6.6145l0.79373-1.0583h6.3499v-0.26458c0-0.58631-0.472-1.0583-1.0583-1.0583l-6.6134-0.00362c-0.155-0.249-0.23566-0.52967-0.52967-0.52967z" fill="#000000" opacity=".2"/>
+  <path transform="scale(.26458)" d="m11.016 13.984c-1.1166 0-2.0156 0.89903-2.0156 2.0156v4h22l3-4h21c0-1.1166-0.89903-2.0156-2.0156-2.0156h-41.969z" fill="#ffffff"/>
+  <rect x="3.704" y="2.64" width="3.175" height=".529" rx=".2645" ry=".2645" opacity=".25"/>
+  <path transform="scale(.26458)" d="m62 40-16 16h12c2.216 0 4-1.784 4-4z" fill="url(#linearGradient892)" opacity=".2" style="fill:url(#linearGradient892)"/>
  </g>
- <path d="m16.404 11.641-3.1744 3.1749h2.6458c0.29307 0 0.52864-0.23557 0.52864-0.52864z" fill="url(#a)" opacity=".1" style="paint-order:stroke markers fill"/>
+ <path class="ColorScheme-Background" d="m23.998 28.99c-1.108 0-2 0.89201-2 2v12.01c0 1.108 0.89201 2 2 2h16.002c1.108 0 2-0.89201 2-2v-12.01c0-1.108-0.89201-2-2-2h-16.002zm0 1.0098h16.002c0.554 0 1 0.446 1 1v11.186l-6.8398-6.8379-7.3712 7.3692a0.30237 0.30237 0 0 1 0.03125-0.38477l2.1172-2.125-3.0547-3.0605-2.8848 2.8789v-9.0255c0-0.554 0.446-1 1-1zm14.002 1.9863 0.0039 0.0039a1.0016 1.0016 0 0 0-1.002 0.99806 1.0016 1.0016 0 0 0 0.99806 0.99806 1.0016 1.0016 0 0 0 1.002-0.99806 1.0016 1.0016 0 0 0-1.002-1.002z" fill="currentColor"/>
 </svg>

@@ -17,16 +17,13 @@ betterlockscreen-git
 bibata-cursor-theme
 bluemail
 brave-bin
-brightness-controller-git
 bubbleupnpserver
-cctv-viewer-git
 chatgpt-desktop-bin
 cobang
 deskreen
 devour
 djmount
 dnslookup-bin
-ente-auth
 epapirus-icon-theme
 epson-inkjet-printer-201401w
 epson-printer-utility
@@ -37,6 +34,7 @@ fontpreview
 fonts-cjk
 fusesmb
 gearlever
+geckodriver-git
 gestures
 gksu
 gnirehtet-bin
@@ -53,6 +51,7 @@ harmony2
 hsqldb2-java
 hunspell-pt-br
 hyphen-pt-br
+i3-autodisplay
 i3-resurrect
 i3ass
 i3keys
@@ -61,6 +60,7 @@ imagescan-plugin-networkscan
 input-remapper-git
 jexiftoolgui
 kora-icon-theme
+kvantum-qt6-git
 laverna
 lexmark-e260-pxl
 libinput-gestures
@@ -70,6 +70,7 @@ libxlsxwriter
 light
 lightdm-settings
 lightdm-webkit-theme-osmos
+linuxtoys
 localsend
 lsplug
 masterpdfeditor-free
@@ -78,6 +79,7 @@ microsoft-edge-stable-bin
 mkinitcpio-numlock
 mons
 mythes-pt-br
+neofetch
 ocs-url
 onlyoffice-bin
 onvif-gui
@@ -94,6 +96,8 @@ python-i3-quickterm
 python-pdf2docx
 python-pdf2image
 python-pypdf2
+python-pywal16
+python-selenium
 python-sounddevice
 python2-bin
 qt5-styleplugins
@@ -111,9 +115,11 @@ smile
 spotify-adblock-git
 spotx-git
 sxcs
+tilix
 tldr-page
 transcode
 ttf-all-the-icons
+ttf-aptos
 ttf-devicons
 ttf-font-logos
 ttf-ionicons
@@ -126,6 +132,7 @@ typora
 universal-android-debloater-bin
 upd72020x-fw
 upscayl-bin
+warp-terminal-bin
 warsaw-bin
 waydroid
 wd719x-firmware

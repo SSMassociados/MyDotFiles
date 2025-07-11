@@ -32,6 +32,7 @@ class SoundPlayer:
         self.current_process = None
         self.is_playing = False
         self.lock = threading.Lock()
+        self.stop_event = threading.Event()
         
     def play(self, sound_file):
         """Play sound file"""
@@ -44,6 +45,7 @@ class SoundPlayer:
                 return False
 
             try:
+                self.stop_event.clear()
                 self.is_playing = True
                 GLib.idle_add(self.app.update_sound_controls)
                 
@@ -56,7 +58,11 @@ class SoundPlayer:
                 )
                 
                 def monitor_process():
-                    self.current_process.wait()
+                    while not self.stop_event.is_set():
+                        if self.current_process.poll() is not None:
+                            break
+                        time.sleep(0.1)
+                    
                     with self.lock:
                         self.is_playing = False
                         self.current_process = None
@@ -77,11 +83,15 @@ class SoundPlayer:
         """Stop current playback"""
         with self.lock:
             if self.is_playing and self.current_process:
+                self.stop_event.set()
                 try:
                     os.killpg(os.getpgid(self.current_process.pid), 15)
-                    try:
-                        self.current_process.wait(timeout=0.5)
-                    except subprocess.TimeoutExpired:
+                    # Wait for process to terminate with timeout
+                    for _ in range(5):
+                        if self.current_process.poll() is not None:
+                            break
+                        time.sleep(0.1)
+                    else:
                         os.killpg(os.getpgid(self.current_process.pid), 9)
                 except ProcessLookupError:
                     pass
@@ -110,11 +120,14 @@ class BellSchedulerApp(Gtk.Application):
         self.service_mode = service_mode
         self.tray_icon = None
         self.logger = self.setup_logging()
-        self.keep_running = True
+        self.shutdown_event = threading.Event()
         self.window = None
-        self.check_interval = 10
+        self.check_interval = 5  # Reduced default interval
         self.sound_player = SoundPlayer(self)
         self.last_played_time = None
+        self.notify_initialized = False
+        self.config_file_mtime = 0
+        self.dbus_retry_count = 0
         
         # Default configuration
         self.config = {
@@ -124,7 +137,7 @@ class BellSchedulerApp(Gtk.Application):
             "sound": "/usr/share/sounds/freedesktop/stereo/alarm-clock-elapsed.oga",
             "icon": "/usr/share/icons/gnome/256x256/status/appointment-soon.png",
             "active": False,
-            "check_interval": 10,
+            "check_interval": 5,
             "custom_sounds": {}
         }
         
@@ -156,6 +169,7 @@ class BellSchedulerApp(Gtk.Application):
             with open(CONFIG_FILE, 'r') as f:
                 saved_config = json.load(f)
                 self.config.update(saved_config)
+                self.config_file_mtime = os.path.getmtime(CONFIG_FILE)
                 self.log("Configuration loaded successfully")
         except (FileNotFoundError, json.JSONDecodeError) as e:
             self.log(f"Error loading configuration: {str(e)}", "error")
@@ -165,6 +179,7 @@ class BellSchedulerApp(Gtk.Application):
         try:
             with open(CONFIG_FILE, 'w') as f:
                 json.dump(self.config, f, indent=4)
+            self.config_file_mtime = os.path.getmtime(CONFIG_FILE)
             self.log("Configuration saved successfully")
         except Exception as e:
             self.log(f"Error saving configuration: {str(e)}", "error")
@@ -182,6 +197,79 @@ class BellSchedulerApp(Gtk.Application):
         try:
             return path and os.path.isfile(path) and os.access(path, os.R_OK)
         except (TypeError, ValueError):
+            return False
+
+    def check_config_updates(self):
+        """Check if config file has been modified"""
+        try:
+            current_mtime = os.path.getmtime(CONFIG_FILE)
+            if current_mtime > self.config_file_mtime:
+                self.load_config()
+                return True
+        except OSError:
+            pass
+        return False
+
+    def initialize_notifications(self):
+        """Initialize or reinitialize the notification system"""
+        try:
+            if Notify.is_initted():
+                Notify.uninit()
+            
+            Notify.init("BellScheduler")
+            self.notify_initialized = True
+            self.dbus_retry_count = 0
+            self.log("Notify initialized successfully")
+            return True
+        except Exception as e:
+            self.dbus_retry_count += 1
+            if self.dbus_retry_count <= 3:
+                self.log(f"Retrying notification initialization ({self.dbus_retry_count}/3): {str(e)}", "error")
+                time.sleep(1)
+                return self.initialize_notifications()
+            else:
+                self.log(f"Failed to initialize notifications after 3 attempts: {str(e)}", "error")
+                self.notify_initialized = False
+                return False
+
+    def check_notification_service(self):
+        """Check if notification service is available via DBus"""
+        try:
+            bus = dbus.SessionBus()
+            service_available = bus.name_has_owner('org.freedesktop.Notifications')
+            self.log(f"Notification service available: {service_available}")
+            return service_available
+        except Exception as e:
+            self.log(f"DBus check failed: {str(e)}", "error")
+            return False
+
+    def show_notification(self, message, submessage):
+        """Show notification with proper error handling"""
+        try:
+            if not self.notify_initialized and not self.initialize_notifications():
+                self.log("Cannot show notification - Notify not initialized", "error")
+                return False
+                
+            if not self.check_notification_service():
+                self.log("Notification service not available", "error")
+                return False
+
+            notification = Notify.Notification.new(
+                message,
+                submessage,
+                self.config["icon"]
+            )
+            notification.set_urgency(2)
+            notification.set_timeout(5000)  # 5 seconds timeout
+            
+            if not notification.show():
+                self.log("Notification.show() returned False", "error")
+                return False
+                
+            self.log("Notification shown successfully")
+            return True
+        except Exception as e:
+            self.log(f"Notification error: {str(e)}", "error")
             return False
 
     def do_command_line(self, command_line):
@@ -248,7 +336,7 @@ class BellSchedulerApp(Gtk.Application):
         # System tray icon (only if not in service mode)
         if not self.service_mode:
             try:
-                Notify.init("BellScheduler")
+                self.initialize_notifications()
                 self.tray_icon = Gtk.StatusIcon.new_from_file(self.config["icon"])
                 self.tray_icon.set_tooltip_text("Bell Scheduler")
                 self.tray_icon.connect("activate", self.on_icon_activate, self.window)
@@ -354,7 +442,7 @@ class BellSchedulerApp(Gtk.Application):
         # Interval
         settings_grid.attach(Gtk.Label(label="Check interval (seconds):"), 0, 3, 1, 1)
         self.interval_spin = Gtk.SpinButton.new_with_range(5, 60, 1)
-        self.interval_spin.set_value(self.config.get("check_interval", 10))
+        self.interval_spin.set_value(self.config.get("check_interval", 5))
         settings_grid.attach(self.interval_spin, 1, 3, 1, 1)
 
         main_box.pack_start(settings_frame, False, False, 0)
@@ -629,19 +717,21 @@ python3 {os.path.abspath(__file__)} --service
 
     def stop_service(self):
         """Stop running service"""
-        self.keep_running = False
-        self.on_stop_sound(None)
+        self.shutdown_event.set()
+        self.sound_player.stop()
         
         if self.process:
             try:
                 os.killpg(os.getpgid(self.process.pid), 15)
-                self.process.wait(timeout=5)
-            except (ProcessLookupError, subprocess.TimeoutExpired) as e:
-                self.log(f"Error stopping service: {str(e)}", "error")
-                try:
+                # Wait for process to terminate with timeout
+                for _ in range(50):
+                    if self.process.poll() is not None:
+                        break
+                    time.sleep(0.1)
+                else:
                     os.killpg(os.getpgid(self.process.pid), 9)
-                except ProcessLookupError:
-                    pass
+            except ProcessLookupError:
+                pass
             finally:
                 self.process = None
         
@@ -659,25 +749,36 @@ python3 {os.path.abspath(__file__)} --service
     def run_service(self):
         """Main service execution method"""
         self.log("Bell Scheduler Service started")
+        self.shutdown_event.clear()
         
         try:
             dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
-            bus = dbus.SessionBus()
-            Notify.init("BellScheduler")
+            if not self.initialize_notifications():
+                self.log("Failed to initialize notifications", "error")
+                return
         except Exception as e:
             self.log(f"Initialization error: {str(e)}", "error")
             return
         
-        while self.keep_running:
+        last_config_check = time.time()
+        
+        while not self.shutdown_event.is_set():
             try:
+                # Check for config updates every minute
+                if time.time() - last_config_check > 60:
+                    if self.check_config_updates():
+                        self.log("Configuration reloaded from file")
+                    last_config_check = time.time()
+                
                 self.check_and_notify()
-                time.sleep(self.config.get("check_interval", 10))
+                self.shutdown_event.wait(self.config.get("check_interval", 5))
             except Exception as e:
                 self.log(f"Service error: {str(e)}", "error")
-                time.sleep(30)
+                self.shutdown_event.wait(30)  # Wait with possibility of interruption
         
         if Notify.is_initted():
             Notify.uninit()
+        self.notify_initialized = False
         self.log("Bell Scheduler Service stopped")
 
     def check_and_notify(self):
@@ -685,43 +786,48 @@ python3 {os.path.abspath(__file__)} --service
         now = datetime.datetime.now()
         current_time = now.strftime("%H:%M")
         current_day = now.isoweekday()
+        current_minute = now.minute
         
-        # Avoid multiple executions in the same minute
-        if self.last_played_time == current_time:
-            return
-            
-        if current_day in self.config["days"] and current_time in self.config["times"]:
-            self.last_played_time = current_time
-            self.log(f"Triggering bell for {current_time}")
-            
-            # Get specific sound file or default
-            sound_file = self.config["custom_sounds"].get(
-                current_time, 
-                self.config["sound"]
-            )
-            
-            # Verify file exists
-            if not os.path.isfile(sound_file):
-                self.log(f"Sound file not found: {sound_file}", "error")
-                return
-                
-            # Visual notification
+        # Check if we should trigger now (with 1-minute tolerance)
+        for scheduled_time in self.config["times"]:
             try:
-                notification = Notify.Notification.new(
-                    self.config["message"],
-                    f"Time: {current_time}",
-                    self.config["icon"]
-                )
-                notification.set_urgency(2)
-                notification.show()
-            except Exception as e:
-                self.log(f"Notification error: {str(e)}", "error")
-            
-            # Audio playback
-            if self.play_sound(sound_file):
-                GLib.idle_add(self.update_sound_controls)
-            else:
-                self.log(f"Failed to play sound: {sound_file}", "error")
+                scheduled_h, scheduled_m = map(int, scheduled_time.split(':'))
+                time_diff = abs((now.hour - scheduled_h) * 60 + (now.minute - scheduled_m))
+                
+                if (time_diff <= 1 and  # Within 1 minute of scheduled time
+                    current_day in self.config["days"] and
+                    (self.last_played_time is None or 
+                     self.last_played_time != scheduled_time)):
+                    
+                    self.last_played_time = scheduled_time
+                    self.log(f"Triggering bell for {scheduled_time}")
+                    
+                    # Get specific sound file or default
+                    sound_file = self.config["custom_sounds"].get(
+                        scheduled_time, 
+                        self.config["sound"]
+                    )
+                    
+                    # Verify file exists
+                    if not os.path.isfile(sound_file):
+                        self.log(f"Sound file not found: {sound_file}", "error")
+                        continue
+                        
+                    # Show notification in main thread
+                    GLib.idle_add(
+                        self.show_notification,
+                        self.config["message"],
+                        f"Time: {scheduled_time}"
+                    )
+                    
+                    # Audio playback
+                    if self.play_sound(sound_file):
+                        GLib.idle_add(self.update_sound_controls)
+                    else:
+                        self.log(f"Failed to play sound: {sound_file}", "error")
+                        
+            except ValueError:
+                continue
 
     def update_interface_state(self):
         """Update button states in the interface"""

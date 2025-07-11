@@ -1,16 +1,19 @@
-<svg width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<svg width="64" height="64" version="1.1" viewBox="0 0 16.933 16.933" xmlns="http://www.w3.org/2000/svg">
  <defs>
-  <linearGradient id="a" x1="-197.1" x2="-196.91" y1="217.68" y2="219.37" gradientTransform="rotate(-45 -338.07 -140.03)" gradientUnits="userSpaceOnUse">
+  <style id="current-color-scheme" type="text/css">.ColorScheme-Text {
+        color:#333333;
+      }
+      .ColorScheme-Highlight {
+        color:#5294e2;
+      }</style>
+  <linearGradient id="linearGradient892" x1="-197.72" x2="-197.72" y1="263.86" y2="273.76" gradientTransform="matrix(.18709 -.18709 .18709 .18709 1.1192 -74.45)" gradientUnits="userSpaceOnUse">
    <stop offset="0"/>
    <stop stop-opacity="0" offset="1"/>
   </linearGradient>
  </defs>
- <g transform="translate(0 -280.07)">
-  <path d="M3.44 282.448c-.294 0-.395.269-.53.53h-.793a.528.528 0 0 0-.53.528v5.292c0 .293.237.53.53.53h12.7c.293 0 .529-.237.529-.53v-5.292a.528.528 0 0 0-.53-.529H7.674c-.155-.249-.236-.53-.53-.53z" fill="#5294e2" paint-order="markers stroke fill"/>
-  <path d="M3.44 282.448c-.294 0-.395.269-.53.53h-.793a.528.528 0 0 0-.53.528v5.292c0 .293.237.53.53.53h12.7c.293 0 .529-.237.529-.53v-5.292a.528.528 0 0 0-.53-.529H7.674c-.155-.249-.236-.53-.53-.53z" opacity=".18" paint-order="markers stroke fill"/>
-  <path d="M8.467 283.506l-2.382 2.381h1.323v2.382c0 .146.118.264.265.264H9.26a.264.264 0 0 0 .265-.264v-2.382h1.323l-2.381-2.38z" fill="#fff" stroke="#000" stroke-opacity=".039" stroke-width=".26458" paint-order="stroke markers fill"/>
-  <rect x=".529" y="287.48" width="15.875" height="7.408" ry=".529" fill="#5294e2" paint-order="markers stroke fill"/>
-  <path d="M8.467 286.681h7.408c.293 0 .53.236.53.53v3.968c0 .293-.237.53-.53.53H6.152c-.294 0-.677-.277-.53-.53l2.316-3.969c.147-.253.236-.529.529-.529z" fill="#5294e2" paint-order="markers stroke fill"/>
- </g>
- <path d="m16.404 11.641-3.1744 3.1749h2.6458c0.29307 0 0.52864-0.23557 0.52864-0.52864z" fill="url(#a)" opacity=".1" style="paint-order:stroke markers fill"/>
+ <path class="ColorScheme-Highlight" fill="currentColor" transform="scale(.26458)" d="m27.002 8.9844-14 0.0039062c-1.1097 0-1.4927 1.0129-2.002 1.998v0.013672h-1c-2.216 0-4 1.7841-4 4v13c-2.216 0-4 1.7841-4 4v20c0 2.216 1.7841 4 4 4h52c2.216 0 4-1.7841 4-4v-24c0-2.2154-1.783-3.9903-3.998-4v-9c0-2.216-1.7841-4-4-4h-16.859c-0.04729-0.0032-0.092495-0.013861-0.14062-0.013672h-7.9961c-0.58584-0.94112-0.89067-2.002-2.002-2.002h-0.001953z"/>
+ <path id="shadow" d="m7.1439 2.3771-3.7041 0.00103c-0.2936 0-0.39492 0.26798-0.52967 0.52864v0.00362h-0.26458c-0.58631 0-1.0583 0.47202-1.0583 1.0583v3.4395h6.6145l0.79373-1.0583h6.3499c1.73e-4 8e-7 3.44e-4 -8e-7 5.17e-4 0v-2.3812c0-0.58631-0.47202-1.0583-1.0583-1.0583l-6.6134-0.0036173c-0.155-0.249-0.23565-0.52967-0.52967-0.52967z" fill="#000000" opacity=".2" stroke-width=".26458"/>
+ <rect x="3.704" y="2.64" width="3.175" height=".529" ry=".265" opacity=".25" paint-order="stroke markers fill"/>
+ <path transform="scale(.26458)" d="m32.002 12.986-9.0039 9h5.002v6.0137h3l3-4h2v-2.0137h5.002l-9-8.9961v-0.003906z" fill="#ffffff"/>
+ <path d="m16.404 10.583-4.2333 4.2333h3.175c0.58631 0 1.0583-0.47201 1.0583-1.0583z" fill="url(#linearGradient892)" opacity=".2" stroke-linecap="round" stroke-linejoin="round" stroke-width=".52916" style="paint-order:stroke fill markers"/>
 </svg>

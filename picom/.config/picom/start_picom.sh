@@ -1,11 +1,10 @@
-#!/bin/sh
-sleep 1  # Espera 1s para evitar conflitos
+#!/bin/bash
 
-# Verifica se o Picom está rodando e mata se estiver
-if pgrep -x "picom" > /dev/null; then
-    pkill -9 picom
-    sleep 0.5  # Tempo para garantir que o processo foi encerrado
-fi
+# Encerra instâncias anteriores
+killall -q picom
 
-# Inicia o Picom com o arquivo de configuração
+# Espera um pouco para garantir que finalizou
+sleep 0.5
+
+# Inicia o Picom em modo daemon com configuração personalizada
 picom --config ~/.config/picom/picom.conf --daemon

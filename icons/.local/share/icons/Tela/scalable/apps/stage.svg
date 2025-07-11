@@ -1,17 +1,1 @@
-<svg width="64" height="64" version="1.1" xmlns="http://www.w3.org/2000/svg">
- <g transform="translate(-2.0331e-7 -2)">
-  <g transform="translate(0,-1)" stroke-linecap="round" stroke-linejoin="bevel">
-   <rect x="15" y="13" width="34" height="8" fill="#d34148" stroke-width="2.0616"/>
-   <rect x="12" y="15" width="40" height="8" fill="#884ca1" stroke-width="2.052"/>
-   <rect x="9" y="17" width="46" height="9" fill="#15bb91" stroke-width="2"/>
-  </g>
-  <g transform="matrix(1.2273 0 0 1.2273 2.5455 2.0005)" stroke-linejoin="round" stroke-width="1.6296">
-   <g transform="translate(.8148)">
-    <rect transform="matrix(.8148 0 0 .8148 -2.0741 -2.4444)" x="5" y="19" width="51.999" height="38" fill="#1ea5f7" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1.9626"/>
-    <path d="m2 14.5v27l25.999-13.5z" fill="#0a87e2" stroke-width="1.5991"/>
-    <path d="m44.369 19.5-42.369 22v2.5h42.369z" fill="#1392f5" stroke-width="1.5991"/>
-   </g>
-   <path d="m19 23 10 5-10 5z" fill="#c5eafd"/>
-  </g>
- </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64"><rect width="34" height="11" x="15" y="10" fill="#d34148" fill-rule="evenodd" rx="2" ry="2" style="paint-order:stroke fill markers"/><rect width="40" height="11" x="12" y="12" fill="#884ca1" fill-rule="evenodd" rx="2" ry="2" style="paint-order:stroke fill markers"/><rect width="46" height="11" x="9" y="14" fill="#15bb91" fill-rule="evenodd" rx="2" ry="2" style="paint-order:stroke fill markers"/><path fill="#1ea5f7" d="M10 16c-2.216 0-4 1.784-4 4v30c0 2.216 1.784 4 4 4h44c2.216 0 4-1.784 4-4V20c0-2.216-1.784-4-4-4z"/><path fill="#0a87e2" d="M6.5 18.057A4 4 0 0 0 6 20v30q.002.457.1.883l31.81-16.518z"/><path fill="#1392f5" d="M58 23.934 6.1 50.883A3.99 3.99 0 0 0 10 54h44c2.216 0 4-1.784 4-4z"/><path fill="#c5eafd" d="m25.636 27.998 12.273 6.367-12.273 6.365z"/></svg>

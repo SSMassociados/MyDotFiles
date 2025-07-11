@@ -1,0 +1,4 @@
+#!/bin/bash
+
+# Carrega variáveis de ambiente do i3
+[ -f "$HOME/.config/i3/env.sh" ] && . "$HOME/.config/i3/env.sh"

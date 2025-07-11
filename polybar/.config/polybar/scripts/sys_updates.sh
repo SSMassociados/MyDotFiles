@@ -32,4 +32,4 @@ has_updates_icon=""
 [ "$all_updates" -gt 0 ] && has_updates_icon="%{F$primary}%{F-}"
 
 # Saída formatada para Polybar
-echo "%{T4}%{F$primary}$has_updates_icon%{F-}%{T-} %{T4}%{F$primary}%{F-}%{T-} $total_pkgs %{T4}%{F$primary}%{F-}%{T-} $repo_updates %{T4}%{F$primary}%{F-}%{T-} $aur_updates"
+echo "%{T4}%{F$primary}$has_updates_icon%{F-}%{T-} %{T4}%{F$primary}󰏔%{F-}%{T-} $total_pkgs %{T4}%{F$primary}%{F-}%{T-} $repo_updates %{T4}%{F$primary}%{F-}%{T-} $aur_updates"
