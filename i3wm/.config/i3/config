@@ -18,9 +18,9 @@
 #  * xprop ou xwininfo
 #  * ==> Ordem=("INSTANCE","CLASS")xprop | grep WM_CLASS ou xprop WM_CLASS ou wmctrl -lx 
 
-#shift          Shift_L (0x32),  Shift_R (0x3e)
-#lock          Caps_Lock (0x42)
-#control      Control_L (0x25),  Control_R (0x69)
+#shift       Shift_L (0x32),  Shift_R (0x3e)
+#lock        Caps_Lock (0x42)
+#control     Control_L (0x25),  Control_R (0x69)
 #mod1        Alt_L (0x40),  Alt_L (0xcc),  Meta_L (0xcd)
 #mod2        Num_Lock (0x4d)
 #mod3        ISO_Level5_Shift (0xcb),  Hyper_L (0xcf)
