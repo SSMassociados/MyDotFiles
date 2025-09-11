@@ -65,10 +65,10 @@
 </action>
 <action>
 	<icon>gksu-icon</icon>
-	<name>Editar arquivo como ROOT</name>
+	<name>Editar ==&gt; ROOT</name>
 	<submenu></submenu>
 	<unique-id>1643418188631107-1</unique-id>
-	<command>gksu geany %f</command>
+	<command>pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY geany %f</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>

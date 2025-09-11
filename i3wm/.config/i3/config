@@ -222,18 +222,18 @@ client.background       $bg
 # [FLOATING RULES] --------------------------------------
 
 # Janelas de diálogo, menus e utilitários devem sempre flutuar
-for_window [window_type="Dialog"] $float
+for_window [window_type="Dialog"] $float $center
 for_window [window_type="Menu"] $float
 for_window [window_type="Utility"] $float
 
 # Janelas com roles específicos (normalmente diálogos secundários)
 for_window [window_role="pop-up|bubble|app|page-info|task_dialog|Preferences|About"] $float
-for_window [window_role="Picture-In-Picture"] $float
+for_window [window_role="PictureInPicture"] $float
 for_window [window_role="GtkFileChooserDialog|Dialog|DIALOG"] $float
 
 # Janelas identificáveis pelo título
 for_window [title="Authy|Preferences$|Progresso$"] $float
-for_window [title="Picture-in-Picture"] sticky enable $show
+for_window [title="Picture-in-Picture"] sticky enable
 for_window [title=".*QEMU/KVM$"] $nofloat
 for_window [title="Nova VM"] $float, $center
 for_window [title=".*cheatsheet.*"] $full
@@ -252,15 +252,16 @@ for_window [class="Blueman-manager|Blueman-services|System-config-printer.py|sim
 
 # Messaging Apps
 for_window [class="TelegramDesktop|WhatSie|qtwaw|ZapZap|whatsdesk|Whatsapp-for-linux"] $float, border none, resize set 910 512, $center
+for_window [class="zenity"] border none, focus
 
 # Media Applications
 for_window [class="zoom"] $float, resize set 200 480, $center
-for_window [class="smplayer|vlc|amberol|Audacity|qBittorrent"] $float
+for_window [class="smplayer|vlc|amberol|Audacity|qBittorrent|gnome-network-displays"] $float
 for_window [class="qvidcap"] $float, sticky enable, resize set 335 250
 for_window [class="RMPC"] $float, resize set 801 399, $center, border pixel 2
 
 #  File Managers and Browsers
-for_window [instance="Places|Firefox"] $float, resize set 561 328, $center
+for_window [instance="Places|firefox"] $float, resize set 561 328, $center
 for_window [instance="Navigator"] focus
 for_window [instance="pcmanfm|Thunar|nautilus"] focus
 for_window [instance="atril|evince"] focus
@@ -923,14 +924,14 @@ $exe autorandr --change --default notebook
 #$exe "sleep 2 && i3-autodisplay"
  
 # Input devices
-#$exe setxkbmap -layout br -model abnt2
+$always setxkbmap -layout br -model abnt2
 $always pidof xbindkeys && killall xbindkeys || xbindkeys &
-$exe ibus-daemon --xim -d -r
+#$exe ibus-daemon --xim -d -r
 $exe numlockx on
 #$exe unclutter
 
 # TouchPad >>> https://github.com/bulletmark/libinput-gestures
-$exe libinput-gestures-setup start &
+$always libinput-gestures-setup restart &
 
 # # System services
 $always /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
@@ -984,7 +985,6 @@ $exe $scriptdir/start_xidlehook.sh
 #  "
 
 $always $scriptdir/pywal_autorun.sh
-
 
 #exec_always --no-startup-id "$HOME/.config/polybar/launch.sh"
 

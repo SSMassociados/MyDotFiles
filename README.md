@@ -120,15 +120,39 @@ cd ~/.dotfiles && stow -vD -t ~ */        # Executa
 ### Reconstruir Links (-R)
 
 ```
-# Uso básico:
+# Pacote específico::
 cd ~/.dotfiles && stow -R -t ~ dunst picom
 
-# Com flags:
+# # Todos os dotfiles,com flags:
 cd ~/.dotfiles && stow -Rv -t ~ */   # Com verbose
 cd ~/.dotfiles && stow -Rn -t ~ */   # Dry-run
 ```
 
 ------
+
+
+
+| Opção         | Significado                                                  |
+| ------------- | ------------------------------------------------------------ |
+| `-t <target>` | Define o **diretório de destino** dos links simbólicos. Ex.: `-t ~` cria links no seu home. |
+| `-R`          | **Recria links existentes**. Se algum link já existe, ele é atualizado/reescrito. |
+| `-v`          | **Verbose** — mostra detalhadamente o que o Stow está fazendo (útil para debug). |
+| `-n`          | **No-action / dry run** — simula as ações, mostra o que seria feito **sem alterar nada**. |
+| `-D`          | **Delete** — desfaz links simbólicos criados anteriormente pelo Stow, removendo os links do destino. |
+
+💡 **Dicas de uso combinado:**
+
+- `-nv` → apenas simula e mostra detalhes, sem mexer em nada.
+- `-R -v -t ~` → aplica/recria os links no seu home, mostrando detalhes.
+- `-nvD` → simula a remoção de links, sem deletar nada de fato.
+
+
+
+💡 **Dicas de uso combinado:**
+
+- `-nv` → apenas simula e mostra detalhes, sem mexer em nada.
+- `-R -v -t ~` → aplica/recria os links no seu home, mostrando detalhes.
+- `-nvD` → simula a remoção de links, sem deletar nada de fato.
 
 ## 🔄 Sincronização com Git
 

@@ -1,0 +1,12 @@
+WebBrowser=firefox
+MailReader=thunderbird
+FileManager=thunar
+TerminalEmulator=kitty
+TextEditor=geany
+DocumentViewer=atril
+ImageViewer=
+MediaPlayer=vlc
+ArchiveManager=file-roller
+Spreadsheet=libreoffice-calc
+WordProcessor=libreoffice-writer
+Presentation=libreoffice-impress

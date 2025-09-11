@@ -186,23 +186,23 @@
 
 [urgency_low]
     # Cores com fallbacks para sistemas sem suporte a placeholders
-    background = "#372f34" 
+    background = "#1a1a0b" 
     foreground = "#FFFFFF" 
-    frame_color = "#372f34" 
+    frame_color = "#1a1a0b" 
     timeout = 15
     default_icon = dialog-information
     
 [urgency_normal]
-    background = "#847d87" 
+    background = "#a6741c" 
     foreground = "#000000"
-    frame_color = "#847d87"
+    frame_color = "#a6741c"
     timeout = 15
     default_icon = dialog-information
     
 [urgency_critical]
-    background = "#7d727d"
+    background = "#7d5442"
     foreground = "#000000"
-    frame_color = "#7d727d" 
+    frame_color = "#7d5442" 
     timeout = 30
     # Pausar notificador quando tiver X notificações críticas
     #override_pause_level = 60

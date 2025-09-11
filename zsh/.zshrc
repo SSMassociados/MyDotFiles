@@ -17,8 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 
-ZSH_THEME="robbyrussell" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
-#ZSH_THEME=powerlevel10k/powerlevel10k
+#ZSH_THEME="bira" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
+ZSH_THEME=powerlevel10k/powerlevel10k 
 
 #POWERLEVEL10K_MODE="nerdfont-complete"
 
@@ -92,22 +92,29 @@ ZSH_THEME="robbyrussell" #jonathan bira agnoster robbyrussell emotty edvardm pow
 ### git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
 
 ### Download FZF —command line fuzzy finder
-### git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf & ~/.fzf/install
+### git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
+
+### Download K
+### git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
+
+### Powerlevel10k no Oh My Zsh
+### git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
 plugins=(
-git
-zsh-syntax-highlighting
-zsh-autosuggestions
-fzf
-k
-git
-sudo
-web-search
-copypath
-copyfile
-copybuffer
-dirhistory
-history)
+  git
+  sudo
+  web-search
+  copypath
+  copyfile
+  copybuffer
+  dirhistory
+  history
+  fzf
+  k
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
+
 
 source $ZSH/oh-my-zsh.sh
 
@@ -154,31 +161,28 @@ fi
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-
 # Hook para capturar o status do último comando
-preexec() {
-    LAST_EXIT_CODE=$?  # Captura o código de saída do comando executado
-}
+autoload -Uz add-zsh-hook
+add-zsh-hook precmd oks
 
-# To play a sound after command finishes.
+_first_prompt=true
+
 oks() {
-    # like ok but with sounds
-    s=$?
-    sound_success=/usr/share/sounds/freedesktop/stereo/complete.oga
-    sound_error=/usr/share/sounds/freedesktop/stereo/suspend-error.oga
-    if [[ $s = 0 ]]; then
-	echo SUCCESS
-	paplay $sound_success
+    local s=$?  # salva o status imediatamente
+
+    if [ "$_first_prompt" = true ]; then
+        _first_prompt=false
+        return
+    fi
+
+    if [[ $s -eq 0 ]]; then
+        echo SUCCESS
+        paplay /usr/share/sounds/freedesktop/stereo/complete.oga
     else
-	echo ERROR: $s
-	paplay $sound_error
+        echo ERROR: $s
+        paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga
     fi
 }
-
-# Configurar os hooks no Zsh
-autoload -Uz add-zsh-hook
-add-zsh-hook preexec preexec
-add-zsh-hook precmd oks
 
 # Install/remove package using fzf
 function install(){
