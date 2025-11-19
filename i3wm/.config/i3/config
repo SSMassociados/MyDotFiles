@@ -16,7 +16,8 @@
 #  * xbindkeys --key * xbindkeys --multikey
 #  * xmodmap ou xmodmap -pke
 #  * xprop ou xwininfo
-#  * ==> Ordem=("INSTANCE","CLASS")xprop | grep WM_CLASS ou xprop WM_CLASS ou wmctrl -lx 
+#  * ==> Ordem=("INSTANCE","CLASS")xprop | grep WM_CLASS ou xprop WM_CLASS
+#  * wmctrl -lx
 
 #shift       Shift_L (0x32),  Shift_R (0x3e)
 #lock        Caps_Lock (0x42)
@@ -232,11 +233,12 @@ for_window [window_role="PictureInPicture"] $float
 for_window [window_role="GtkFileChooserDialog|Dialog|DIALOG"] $float
 
 # Janelas identificáveis pelo título
-for_window [title="Authy|Preferences$|Progresso$"] $float
+for_window [title="Authy|Preferences$|Progresso$|Informações da Bateria"] $float
 for_window [title="Picture-in-Picture"] sticky enable
 for_window [title=".*QEMU/KVM$"] $nofloat
 for_window [title="Nova VM"] $float, $center
 for_window [title=".*cheatsheet.*"] $full
+for_window [title="shell - i3-quickterm|sidiclei@arch:~"] border none
 
 # System Tools
 for_window [class="Protonvpn-app"] $float, $center
@@ -244,7 +246,7 @@ for_window [class="Yad" title="Calendar"] $float
 for_window [class="Psensor"] $float, resize set 450 590
 for_window [class="KeePassXC"] $float, resize set 800 500, $center
 for_window [class="Arandr"] $float, resize set 280 254
-for_window [class="pavucontrol|easyeffects"] $float, resize set 747 425
+for_window [class="pavucontrol|easyeffects"] $float, resize set 747 425, $center
 for_window [class="Gnome-calculator"] $float, resize set 100 300, $center
 for_window [class="xdman-Main"] $float, move position 1620 1010, resize set 759 419
 for_window [class="Xdm-app"] $float, move position 1620 1010, resize set 250 40
@@ -270,8 +272,9 @@ for_window [instance="org.gnome.FileRoller"] $float, $center, focus
 
 # Special Cases
 for_window [instance="gl"] focus, $full
-for_window [instance="et|wps"] focus
 for_window [instance="spotify"] focus
+for_window [instance="et|wps"] focus
+for_window [class="wps" title="wps"] $float
 for_window [class="floating_window"] $float
 for_window [class="Tk|Toplevel|Bell_scheduler_gui.py"] $float
 #for_window [instance="anydesk"] $scra
@@ -383,6 +386,7 @@ assign [class="Atril|Evince"] $ws3
 assign [class="Geany"] $ws4
 assign [class="mpv"] $ws5
 assign [class="Virt-manager"] $ws6
+assign [class="Master PDF Editor|Pdfarranger|qpdfview"] $ws7
 assign [class="wps"] $ws8
 assign [class="et"] $ws9
 assign [class="Spotify"] $ws10
@@ -451,7 +455,7 @@ mode "$mode_files" {
     bindsym o $term -e nvim $HOME/.config/picom/picom.conf, mode "default"
     bindsym f $term -e nvim $HOME/.config/feh/themes, mode "default"
     bindsym z $term -e nvim $HOME/.zshrc, mode "default"
-    bindsym n $term -e nvim $HOME/.config/nvim/init.vim, mode "default" 
+    bindsym n $term -e nvim $HOME/.config/nvim/init.lua, mode "default" 
     bindsym t $term -e nvim $HOME/.config/zathura/zathurarc, mode "default"
     bindsym s exec $term -e nvim /etc/samba/smb.conf; mode "default"
     bindsym Escape mode "default"
@@ -484,8 +488,8 @@ bindsym $alt+b $exe $scriptdir/barcode_scan.sh
 $sup+Return $exe kitty
 # Terminal flutuante  
 bindsym F1 $exe $scriptdir/draw_window.sh
-# Terminal rápido - ($HOME/.config/i3/i3-quickterm.json)  
-bindsym F2 $exe i3-quickterm shell  
+# Terminal rápido - ($HOME/.config/i3-quickterm/config.json or $HOME/.config/i3/i3-quickterm.json)  
+bindsym F2 $exe i3-quickterm shell
 
 # [BROWSERS] ---------------------------------------------
 $sup+f $exe firefox
@@ -677,8 +681,8 @@ $sup+F11 fullscreen toggle
 popup_during_fullscreen smart 
 
 # Fecha janela ativa (Mod4+q)
-# Fecha TODAS janelas (Mod4+Shift+q) - CUIDADO!
-$sup+q kill                    
+$sup+q kill 
+# Fecha TODAS janelas (Mod4+Shift+q) - CUIDADO!                 
 $ss+q [class=".*"] kill 
 # Fechar seletivo (Ctrl+Mod4+Del) → cursor em X       
 $sc+Delete --release $exe xkill

@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# escolhe wallpaper aleatório
+wallpaper_path=$(find -L ~/.wallpaper -type f \( -name '*.jpg' -o -name '*.png' \) | shuf -n 1)
+betterlockscreen -u "$wallpaper_path"
+
+# ativa DPMS (desliga monitor depois de X tempo)
+xset s 120 120
+xset dpms 0 0 600
+
+# mata instâncias antigas
+pkill -x xss-lock 2>/dev/null
+
+# inicia xss-lock chamando o betterlockscreen
+xss-lock -- betterlockscreen -l dim &

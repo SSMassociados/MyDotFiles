@@ -14,7 +14,6 @@ arandr
 arj
 arp-scan
 aspell-pt
-atril
 audacious
 audacity
 autorandr
@@ -72,7 +71,6 @@ faac
 fastfetch
 fdkaac
 fdupes
-featherpad
 feh
 ffmpegthumbnailer
 figlet
@@ -88,6 +86,7 @@ geany
 geany-plugins
 geeqie
 geoclue
+gerbera
 gimagereader-gtk
 git
 github-cli
@@ -108,7 +107,6 @@ gst-plugins-bad
 gst-plugins-ugly
 gstreamer-vaapi
 gthumb
-gtk-chtheme
 gufw
 gutenprint
 gvfs
@@ -148,6 +146,7 @@ kitty-terminfo
 kooha
 kruler
 kvantum-qt5
+kvantum-theme-materia
 lhasa
 lib32-mesa
 lib32-vulkan-intel
@@ -170,7 +169,7 @@ linux-firmware-qlogic
 linux-headers
 lsd
 lshw
-lxappearance-gtk3
+lxappearance
 ly
 man-db
 man-pages-pt_br
@@ -191,7 +190,6 @@ nasm
 nbtscan
 ncdu
 ncompress
-neovim
 net-tools
 netctl
 network-manager-applet
@@ -277,6 +275,7 @@ sshpass
 stow
 stress-ng
 sudo
+superfile
 switcheroo
 swtpm
 swww
@@ -310,6 +309,7 @@ ttf-hack-nerd
 ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-liberation
+ttf-nerd-fonts-symbols
 ttf-nerd-fonts-symbols-mono
 ttf-roboto-mono
 ttf-ubuntu-font-family
@@ -337,6 +337,7 @@ vsftpd
 vulkan-intel
 vulkan-tools
 wavemon
+waydroid
 wget
 wireless_tools
 wmctrl
@@ -400,7 +401,6 @@ xorg-xwayland
 xorg-xwd
 xorg-xwininfo
 xorg-xwud
-xreader
 xsettingsd
 yad
 yarn

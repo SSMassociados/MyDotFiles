@@ -1,0 +1,26 @@
+{
+    "menu": "rofi -dmenu -p 'quickterm: ' -no-custom -auto-select",
+    "term": "auto",
+    "history": "{$HOME}/.cache/i3-quickterm/shells.order",
+	"width": 1.0,
+    "height": 0.25,
+    "pos": "top",
+    "shells": {
+        "js": "node",
+        "python": "ipython3 --no-banner",
+        "shell": "{$SHELL}",
+        
+        "update_official": {
+            "command": "kitty -e ~/.config/polybar/scripts/update_official.sh",
+            "title": "Atualizacao_Oficial"
+        },
+        "update_aur": {
+            "command": "kitty -e ~/.config/polybar/scripts/update_aur.sh",
+            "title": "Atualizacao_AUR"
+        },
+        "check_updates": {
+            "command": "kitty -e ~/.config/polybar/scripts/check_updates.sh",
+            "title": "Detalhes_Updates"
+        }
+    }
+}

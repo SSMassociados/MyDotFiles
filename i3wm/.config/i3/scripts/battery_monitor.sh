@@ -20,7 +20,8 @@ while true; do
             # Se o carregador não estiver conectado e o nível da bateria for menor ou igual a 20%, emitir alerta
             if [ "$battery_level" -le 20 ]; then
                 notify-send --urgency=critical --icon=/usr/share/icons/Adwaita/symbolic/status/battery-level-20-symbolic.svg "Conecte o carregador" "A carga da bateria está abaixo de 20%."
-                paplay /usr/share/sounds/enchanted/stereo/battery-low.ogg
+                #paplay /usr/share/sounds/enchanted/stereo/battery-low.ogg
+                paplay /usr/share/sounds/harmony2/stereo/battery-low.ogg
             fi
         fi
     else

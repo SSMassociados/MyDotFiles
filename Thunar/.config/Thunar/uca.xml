@@ -124,6 +124,22 @@
 	<video-files/>
 </action>
 <action>
+	<icon>author</icon>
+	<name>Permissões</name>
+	<submenu></submenu>
+	<unique-id>1758063937832588-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/mostrar_permissoes.sh %f</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
 	<icon>folder-publicshare</icon>
 	<name>Compartilha</name>
 	<submenu></submenu>
@@ -204,7 +220,7 @@
 	<text-files/>
 </action>
 <action>
-	<icon></icon>
+	<icon>merge</icon>
 	<name>Unificar CSV(s)</name>
 	<submenu></submenu>
 	<unique-id>1711238667330772-1</unique-id>
@@ -212,6 +228,18 @@
 	<description></description>
 	<range>*</range>
 	<patterns>*.csv</patterns>
+	<other-files/>
+	<text-files/>
+</action>
+<action>
+	<icon>kr_combine</icon>
+	<name>Unificar XLSX Abas</name>
+	<submenu></submenu>
+	<unique-id>1757954944525610-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/unif_XLSX_abas.py %F</command>
+	<description></description>
+	<range>*</range>
+	<patterns>*.xlsx;*.xls;*.xlsm;*.xlsb</patterns>
 	<other-files/>
 	<text-files/>
 </action>
@@ -226,6 +254,17 @@
 	<patterns>*.csv</patterns>
 	<other-files/>
 	<text-files/>
+</action>
+<action>
+	<icon>gtk-convert</icon>
+	<name>Converter para PNG</name>
+	<submenu></submenu>
+	<unique-id>1758648277882325-1</unique-id>
+	<command>convert %f %f.png</command>
+	<description>Converte imagens JPEG/JPG</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<image-files/>
 </action>
 <action>
 	<icon>pdfstudio</icon>

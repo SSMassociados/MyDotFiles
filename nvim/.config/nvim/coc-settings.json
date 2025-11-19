@@ -1,0 +1,11 @@
+{
+  "Lua.workspace.checkThirdParty": false,
+  "Lua.workspace.ignoreDir": [
+    "/home/sidiclei/.dotfiles",
+    "**/.git",
+    "**/node_modules",
+    "**/.cache"
+  ],
+  "Lua.workspace.maxPreload": 2000,
+  "Lua.workspace.preloadFileSize": 500
+}

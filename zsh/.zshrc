@@ -18,7 +18,7 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="robbyrussell"
 
 #ZSH_THEME="bira" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
-ZSH_THEME=powerlevel10k/powerlevel10k 
+ZSH_THEME=powerlevel10k/powerlevel10k
 
 #POWERLEVEL10K_MODE="nerdfont-complete"
 
@@ -109,12 +109,10 @@ plugins=(
   copybuffer
   dirhistory
   history
-  fzf
   k
   zsh-autosuggestions
   zsh-syntax-highlighting
 )
-
 
 source $ZSH/oh-my-zsh.sh
 
@@ -126,11 +124,11 @@ source $ZSH/oh-my-zsh.sh
 # export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='nvim'
-# fi
+if [[ -n $SSH_CONNECTION ]]; then
+   export EDITOR='vim'
+ else
+   export EDITOR='nvim'
+ fi
 
 # Compilation flags
 # export ARCHFLAGS="-arch $(uname -m)"
@@ -170,13 +168,14 @@ _first_prompt=true
 oks() {
     local s=$?  # salva o status imediatamente
 
+    # Esta verificação impede que o hook seja executado na primeira vez que o Zsh carrega
     if [ "$_first_prompt" = true ]; then
         _first_prompt=false
         return
     fi
 
     if [[ $s -eq 0 ]]; then
-        echo SUCCESS
+        echo SUCCESS  
         paplay /usr/share/sounds/freedesktop/stereo/complete.oga
     else
         echo ERROR: $s

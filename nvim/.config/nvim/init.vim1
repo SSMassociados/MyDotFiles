@@ -11,11 +11,11 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'flazz/vim-colorschemes'
 Plug 'w0rp/ale'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'gorodinskiy/vim-'
 Plug 'ryanoasis/vim-devicons'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'thaerkh/vim-indentguides'
 Plug 'cohama/lexima.vim'
+Plug 'NvChad/nvim-colorizer.lua'
 call plug#end()
 
 autocmd VimEnter *
@@ -34,7 +34,7 @@ set noerrorbells "Desativa o bipe em caso de erros.
 set visualbell "Pisca a tela em vez de apitar em caso de erro.
 set mouse=a "Ativa o mouse para rolagem e redimensionamento
 set title "Defina o título da janela, refletindo o arquivo atualmente sendo editado.
-set ttimeoutlen=0 "Tempo em milissegundos para aceitar comandos.
+set ttimeoutlen=0 "Tempo em milissegundos para aceitarcomandos.
 set background=dark "Use cores que combinem com um fundo escuro.
 "set termguicolors
 set t_Co=256
@@ -54,7 +54,7 @@ set autowrite "Salvar arquivos automaticamente antes de abrir outro arquivo
 
 " ====== OPÇÕES DE RENDERIZAÇÃO DE TEXTO ======
 set display+=lastline "Sempre tente mostrar a última linha de um parágrafo.
-"set spell =pt_br,en "Ativar a verificação ortográfica (talvez seja necessário baixar o pacote de idiomas)
+"set spell =pt_br,en "Ativar a verificação ortográfica(talvez seja necessário baixar o pacote de idiomas)
 set encoding=UTF-8 "Use uma codificação que suporte Unicode.
 set linebreak "Evite quebrar uma linha no meio de uma palavra.
 set scrolloff=1 "O número de linhas da tela a serem mantidas acima e abaixo do cursor.
@@ -83,7 +83,7 @@ set completeopt=noinsert,menuone,noselect "Modifica o comportamento do menu de a
 
 " ====== TELA/JANELA ======
 set inccommand=split "Mostra substituições em uma divisão da janela, antes de aplicar no arquivo.
-set splitbelow splitright "Configura o comportamento da divisão da tela com o comando :split (dividir a tela horizontalmente) e :vsplit (verticalmente). Neste caso, as telas sempre se dividirão abaixo da tela atual e à direita.
+set splitbelow splitright "Configura o comportamento da divisão da tela com o comando :split (dividir a tela horizontalmente) e :vsplit (verticalmente). Neste caso,as telas sempre se dividirão abaixo da tela atual e à direita.
 
 " Airline config
 let g:airline#extensions#tabline#enabled = 1
@@ -134,3 +134,18 @@ nnoremap <silent> <s-Down> :m +1<CR>
 nnoremap <silent> <s-Up> :m -2<CR>
 vnoremap <C-c> "+y<CR>
 
+lua << EOF
+require("colorizer").setup({
+  filetypes = { "*" }, -- ativa em todos os tipos de arquivo
+  user_default_options = {
+    RGB = true,        -- habilita rgb() e rgba()
+    RRGGBB = true,     -- habilita hex simples (#RRGGBB)
+    names = true,      -- habilita nomes de cores (ex:Blue)
+    RRGGBBAA = true,   -- habilita hex com alpha (#RRGGBBAA)
+    rgb_fn = true,     -- habilita funções rgb()/rgba()
+    hsl_fn = true,     -- habilita funções hsl()/hsla()
+    css = true,        -- habilita propriedades css
+    css_fn = true,     -- habilita funções css
+  },
+})
+EOF

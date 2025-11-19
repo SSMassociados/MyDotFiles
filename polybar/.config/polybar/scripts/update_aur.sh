@@ -1,22 +1,22 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -u
+IFS=$'\n\t'
 
-# Atualiza o AUR
-yay -Sua --noconfirm && notify-send -t 5000 "✅ Atualização AUR concluída!"
+# Verifica atualizações do AUR com tratamento de erro
+aur_updates=$(yay -Qum 2>/dev/null | wc -l) || aur_updates=0
 
-# Aguarda para o usuário ver a notificação
-sleep 5
-i3-msg restart
+if (( aur_updates > 0 )); then
+    if yay -Sua --noconfirm; then
+        notify-send -t 5000 "✅ Atualização AUR concluída!"
+        polybar-msg cmd restart
+    else
+        notify-send -t 5000 "❌ Falha na atualização do AUR!"
+    fi
+else
+    notify-send -t 3000 "Nenhuma atualização AUR disponível."
+fi
 
-# Atualiza o módulo na Polybar
-# polybar-msg action "#sys_updates.hook.0"
-
-# Fecha o terminal
-#exit
-
-sleep 1 && \
-kill -TERM $PPID
-
-#echo -e "\n\033[1;32mPressione Enter para sair...\033[0m"
-#read -r  # Mantém o terminal aberto até o usuário pressionar Enter
-
+# Interação para manter o terminal aberto
+echo -e "\n\033[1;32mPressione Enter para sair...\033[0m"
+read -r
 

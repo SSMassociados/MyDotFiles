@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/usr/bin/env bash
+set -euo pipefail
+IFS=$'\n\t'
 
 # Cores carregadas do Pywal
 source "${HOME}/.cache/wal/colors.sh"

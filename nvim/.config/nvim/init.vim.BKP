@@ -1,0 +1,210 @@
+" ==============================================================================
+" PLUGINS - GERENCIADOR VIM-PLUG
+" ==============================================================================
+call plug#begin()
+
+" 📝 Melhorias de Edição e Syntax
+Plug 'sheerun/vim-polyglot' " Suporte a múltiplas linguagens
+Plug 'cohama/lexima.vim' " Auto-completar parênteses/chaves
+Plug 'thaerkh/vim-indentguides' " Guias de indentação visuais
+
+" 🎨 Interface e Temas
+Plug 'vim-airline/vim-airline' " Barra de status elegante
+Plug 'vim-airline/vim-airline-themes' " Temas para airline
+Plug 'crusoexia/vim-monokai' " Tema Monokai específico
+Plug 'nvim-tree/nvim-web-devicons' " Ícones para arquivos (opcional)
+Plug 'rcarriga/nvim-notify' " Sistema de notificações moderno
+
+" 🚀 Funcionalidades Avançadas
+Plug 'neoclide/coc.nvim', {'branch': 'release'} " Auto-completar inteligente
+Plug 'voldikss/vim-floaterm' " Terminal flutuante
+Plug 'NvChad/nvim-colorizer.lua' " Realce de cores hexadecimais
+
+" 📁 Navegação e Estrutura
+Plug 'nvim-tree/nvim-tree.lua' " Explorador de arquivos
+
+" 🔧 Linguagens Específicas
+Plug 'vim-scripts/bash-support.vim' " Suporte avançado para Bash
+Plug 'mateusbraga/vim-spell-pt-br' " Corretor ortográfico PT-BR
+
+call plug#end()
+
+" ==============================================================================
+" CONFIGURAÇÕES ESPECÍFICAS DE PLUGINS
+" ==============================================================================
+
+" 🎨 nvim-colorizer.lua - Realce de cores hexadecimais
+lua << EOF
+require("colorizer").setup({
+  filetypes = { "*" },
+  user_default_options = {
+    RGB = true,
+    RRGGBB = true,
+    names = true,
+    RRGGBBAA = true,
+    rgb_fn = true,
+    hsl_fn = true,
+    css = true,
+    css_fn = true,
+  },
+})
+EOF
+
+" 🌳 nvim-tree - Explorador de arquivos
+lua << EOF
+require("nvim-tree").setup({
+  view = {
+    width = 30,
+  },
+  renderer = {
+    icons = {
+      glyphs = {
+        default = "",
+        symlink = "",
+      },
+    },
+  },
+})
+EOF
+
+" 🚀 coc.nvim - Auto-completar inteligente
+let g:coc_global_extensions = [
+  \ 'coc-json',
+  \ 'coc-tsserver',
+  \ 'coc-pyright'
+  \ ]
+
+" 🔔 nvim-notify - Sistema de notificações
+lua << EOF
+require("notify").setup({
+  timeout = 3000,
+  background_colour = "#000000",
+})
+EOF
+
+" ✈️ airline - Barra de status
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 1
+let g:airline#extensions#tabline#switch_buffers_and_tabs = 1
+let g:airline#extensions#tabline#tab_nr_type = 1
+let g:airline_theme = 'powerlineish' " Tema da barra de status
+
+" 📏 vim-indentguides - Guias de indentação visuais
+let g:indentguides_ignorelist = ['text'] " Ignora arquivos de texto
+let g:indentguides_tabchar = '|' " Caractere para tabs
+let g:indentguides_spacechar = '|' " Caractere para espaços
+
+" 🐚 floaterm - Terminal flutuante
+let g:floaterm_keymap_toggle = '<F8>' " Alternar terminal com F8
+let g:floaterm_width = 0.8 " 80% da largura da tela
+let g:floaterm_height = 0.8 " 80% da altura da tela
+
+" ==============================================================================
+" CONFIGURAÇÕES GERAIS DO EDITOR
+" ==============================================================================
+
+" 🔧 Interface do Usuário
+set ruler " Mostra posição do cursor
+set wildmenu " Menu avançado para auto-completar
+set cursorline " Realça linha atual
+set number " Números das linhas
+set relativenumber " Números relativos para navegação
+set noerrorbells " Desativa sons de erro
+set visualbell " Pisca tela em vez de bipe
+set mouse=a " Habilita mouse
+set title " Mostra nome do arquivo na janela
+set ttimeoutlen=0 " Tempo para aceitar comandos
+set background=dark " Configura para tema escuro
+set termguicolors " Habilita cores verdadeiras
+set t_Co=256 " 256 cores
+colorscheme monokai " Tema de cores
+
+" 🔍 Pesquisa
+set hlsearch " Destaca resultados da pesquisa
+set ignorecase " Ignora maiúsculas/minúsculas
+set incsearch " Mostra correspondências enquanto digita
+set smartcase " Case-sensitive se usar maiúsculas
+
+" ⚡ Desempenho
+set ttyfast " Acelera rolagem
+set complete-=i " Limita arquivos para auto-completar
+set lazyredraw " Não redesenha durante macros
+set autowrite " Salva automaticamente ao abrir outro arquivo
+
+" 📝 Renderização de Texto
+set display+=lastline " Mostra última linha de parágrafos longos
+set spell spelllang=pt,en " Verificação ortográfica PT/EN
+set encoding=UTF-8 " Codificação Unicode
+set linebreak " Não quebra palavras
+set scrolloff=1 " Linhas acima/abaixo do cursor
+set sidescrolloff=5 " Colunas esquerda/direita do cursor
+syntax on " Habilita syntax highlighting
+set wrap " Quebra de linha
+
+" 📐 Recuo e Indentação
+filetype plugin indent on " Indentação específica por tipo de arquivo
+set autoindent " Herda indentação da linha anterior
+set expandtab " Converte tabs em espaços
+set shiftround " Arredonda indentação para múltiplos
+set shiftwidth=2 " 2 espaços para indentação
+set smarttab " Insere espaços ao pressionar Tab
+set tabstop=2 " 2 espaços por tab
+
+" 💾 Comportamento
+set hidden " Esconde buffers em vez de fechar
+set showmatch " Mostra pares correspondentes
+set showcmd " Mostra comandos parciais
+
+" 📋 Área de Transferência
+set clipboard=unnamedplus " Integração com clipboard do sistema
+set completeopt=noinsert,menuone,noselect " Comportamento IDE para auto-completar
+
+" 🖥️ Layout e Janelas
+set inccommand=split " Mostra substituições em split
+set splitbelow " Split abaixo da janela atual
+set splitright " Split à direita da janela atual
+
+" ==============================================================================
+" MAPEAMENTOS DE TECLAS (KEYBINDS)
+" ==============================================================================
+
+" 💾 Operações Básicas
+nnoremap <C-s> :w!<CR> " Salvar arquivo
+nnoremap <C-q> :qa<CR> " Sair de todos os arquivos
+nnoremap <F4> :bd<CR> " Fechar buffer atual
+
+" 📁 Navegação entre Buffers
+nnoremap <F1> :bprevious<CR> " Buffer anterior
+nnoremap <F2> :bnext<CR> " Próximo buffer
+
+" 🎨 Aparência
+noremap <F6> :hi Comment ctermfg=black guifg=black<cr> " Ocultar comentários
+noremap <F7> :hi Comment term=bold ctermfg=cyan guifg=cyan<cr> " Mostrar comentários
+
+" 🔧 Ferramentas
+nnoremap <F5> :NvimTreeToggle<CR> " Explorador de arquivos
+nnoremap <F8> :FloatermToggle<CR> " Terminal flutuante
+
+" 🐚 Cabeçalho Automático para Shell Script
+map <F9> ggO#!/bin/bash<CR><Esc>:r!echo %<CR>kJA #<CR><Esc>o# Versao: <CR><Esc>o# Script para:<CR><Esc>o# Autor: Sidiclei Sebastião<CR><Esc>
+
+" 📋 Manipulação de Texto
+nnoremap <silent> <s-Down> :m +1<CR> " Mover linha para baixo
+nnoremap <silent> <s-Up> :m -2<CR> " Mover linha para cima
+vnoremap <C-c> "+y<CR> " Copiar para clipboard
+
+" 🚀 coc.nvim - Navegação de Código
+nmap <silent> gd <Plug>(coc-definition) " Ir para definição
+nmap <silent> gy <Plug>(coc-type-definition) " Ir para definição de tipo
+nmap <silent> gi <Plug>(coc-implementation) " Ir para implementação
+nmap <silent> gr <Plug>(coc-references) " Mostrar referências
+
+" ==============================================================================
+" AUTOCOMANDOS E FINALIZAÇÃO
+" ==============================================================================
+
+" 📦 Instalação Automática de Plugins
+autocmd VimEnter *
+  \  if len(filter(values(g:plugs), '!isdirectory(v:val.dir)'))
+  \|   PlugInstall --sync | q
+  \| endif
