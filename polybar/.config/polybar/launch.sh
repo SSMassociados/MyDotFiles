@@ -17,9 +17,10 @@ fi
 declare -A SYSTRAY_APPS_CMDS=(
     [keepassxc]="keepassxc --minimized"
     [nm-applet]="nm-applet"
-    [redshift-gtk ]="redshift-gtk "
+    [redshift-gtk]="redshift-gtk"
     [xfce4-clipman]="xfce4-clipman"
-    [telegram-desktop]="telegram-desktop -startintray %u"
+    [Telegram]="Telegram -startintray"
+    [karere]="karere"
 )
 
 echo ":: Encerrando apps de Systray para evitar conflitos..."
@@ -100,6 +101,11 @@ echo "Polybar launched on ${#MONITORS[@]} monitor(s):"
 printf " - %s\n" "${MONITORS[@]}"
 echo "Logs disponíveis em: $LOG_FILE"
 echo "=========================================="
+
+echo ":: Iniciando tradutor de ícones SNI..."
+pkill -x snixembed || true
+snixembed --fork &  # O --fork ajuda a liberar o shell imediatamente
+sleep 2             # Um segundo apenas para o DBus registrar o SNI
 
 # 6. OPCIONAL: Reiniciar apps da Systray automaticamente
 echo ":: Aguardando Polybar estabilizar..."

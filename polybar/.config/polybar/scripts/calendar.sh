@@ -22,7 +22,7 @@ class CalendarWindow(Gtk.Window):
         self.set_skip_taskbar_hint(True)
         self.set_keep_above(True)      # Sempre no topo
         self.set_resizable(False)
-        self.move(1029, 9)             # Posição da janela
+        self.move(1014, 30)            # Posição da janela
 
         # Estilo CSS
         css_provider = Gtk.CssProvider()
@@ -32,7 +32,7 @@ class CalendarWindow(Gtk.Window):
             }
             calendar {
                 color: #ffffff;
-                font: 11pt "SF Pro Display Bold";
+                font: 12pt "SF Pro Display Bold";
                 background-color: #1e1e1e;
             }
             calendar:selected {

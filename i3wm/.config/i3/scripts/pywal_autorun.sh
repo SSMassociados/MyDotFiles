@@ -49,8 +49,36 @@ fi
 # Seta variáveis de cor se existirem. Carrega paleta
 [ -f "$HOME/.cache/wal/colors.sh" ] && source "$HOME/.cache/wal/colors.sh"
 
-# Atualiza os serviços que usam cores
-"$HOME/.config/dunst/update_dunst_colors.sh"
+# --- ATUALIZA SERVIÇOS ---
+
+# 1. Dunst
+if [ -f "$HOME/.config/dunst/update_dunst_colors.sh" ]; then
+    "$HOME/.config/dunst/update_dunst_colors.sh" &
+fi
+
+## 2. Walker (Adicionado)
+## 1. Garante que o Elephant (Backend) está rodando
+## (Só inicia se não estiver rodando)
+#if ! pgrep -x "elephant" > /dev/null; then
+    #notify-send "🐘 Elephant" "Iniciando backend..."
+    #elephant > /dev/null 2>&1 &
+#fi
+
+## 2. Reinicia o Walker (Frontend) para aplicar as novas Cores
+#pkill walker
+#sleep 0.1
+#walker --gapplication-service > /dev/null 2>&1 &
+
+# 3. AltTab
+#if [ -f "$HOME/.config/i3/scripts/alttab_pywal.py" ]; then
+    #"$HOME/.config/i3/scripts/alttab_pywal.py" &
+#fi
+
+# 4. Polybar (Adicionei um pkill para garantir que não acumule processos)
+pkill polybar
 sleep 0.2
-"$HOME/.config/i3/scripts/alttab_pywal.sh"
-"$HOME/.config/polybar/launch.sh"
+if [ -f "$HOME/.config/polybar/launch.sh" ]; then
+    "$HOME/.config/polybar/launch.sh" &
+fi
+
+#notify-send "🎨 Pywal" "Cores sincronizadas com o sistema!"

@@ -49,12 +49,44 @@
 </action>
 <action>
 	<icon>xml-node-duplicate</icon>
-	<name>Duplicar </name>
+	<name>Duplicar</name>
 	<submenu></submenu>
 	<unique-id>1643422675815038-2</unique-id>
-	<command>for file in %F; do newfile=&quot;${file}_1&quot;; i=1; while [ -e &quot;$newfile&quot; ]; do i=$((i+1)); newfile=&quot;${file}_$i&quot;; done; cp &quot;$file&quot; &quot;$newfile&quot;; done</command>
+	<command>/home/sidiclei/.config/Thunar/scripts/bkp.sh %F</command>
 	<description></description>
 	<range></range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>preferences-system-search</icon>
+	<name>Buscar Duplicatas</name>
+	<submenu></submenu>
+	<unique-id>1776078930213550-1</unique-id>
+	<command>/home/sidiclei/.config/Thunar/scripts/duplicate_cleaner_wrapper.sh %f</command>
+	<description>Encontra arquivos duplicados por hash SHA-256</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>korganizer</icon>
+	<name>Organizar</name>
+	<submenu></submenu>
+	<unique-id>1776079939850065-2</unique-id>
+	<command>bash -c &apos;/home/sidiclei/.config/Thunar/scripts/organizar.sh &quot;$(pwd)&quot;&apos;</command>
+	<description>Organiza arquivos por tipo de extensao</description>
+	<range>*</range>
 	<patterns>*</patterns>
 	<directories/>
 	<audio-files/>

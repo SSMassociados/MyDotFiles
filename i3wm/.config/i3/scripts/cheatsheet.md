@@ -48,6 +48,7 @@
 | `Mod+c`          | Google Chrome                                               |
 | `Mod+x`          | Thunar                                                      |
 | `Mod+r`          | Ranger                                                      |
+| `Mod+y`          | Yazi                                                        |
 | `Mod+d`          | Controles de Sessão "Desligar Reiniciar Suspender Bloquear" |
 | `Alt+Space`      | Launcher/Seach Apps                                         |
 | `Mod+m`          | Google Meet                                                 |

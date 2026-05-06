@@ -1,88 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
-
-# Path to your Oh My Zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time Oh My Zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-
-#ZSH_THEME="bira" #jonathan bira agnoster robbyrussell emotty edvardm powerlevel10k/powerlevel10k #Visualizar Mudança = source ~/.zshrc
-ZSH_THEME=powerlevel10k/powerlevel10k
-
-#POWERLEVEL10K_MODE="nerdfont-complete"
-
-# Set list of themes to pick from when loading at random
-# Setting this variable when ZSH_THEME=random will cause zsh to load
-# a theme from this variable instead of looking in $ZSH/themes/
-# If set to an empty array, this variable will have no effect.
-# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
-
-# Uncomment the following line to use case-sensitive completion.
-# CASE_SENSITIVE="true"
-
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# Uncomment one of the following lines to change the auto-update behavior
-# zstyle ':omz:update' mode disabled  # disable automatic updates
-# zstyle ':omz:update' mode auto      # update automatically without asking
-# zstyle ':omz:update' mode reminder  # just remind me to update when it's time
-
-# Uncomment the following line to change how often to auto-update (in days).
-# zstyle ':omz:update' frequency 13
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS="true"
-
-# Uncomment the following line to disable colors in ls.
-# DISABLE_LS_COLORS="true"
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# You can also set it to another string to have that shown instead of the default red dots.
-# e.g. COMPLETION_WAITING_DOTS="%F{yellow}waiting...%f"
-# Caution: this setting can cause issues with multiline prompts in zsh < 5.7.1 (see #5765)
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
-
-# Would you like to use another custom folder than $ZSH/custom?
-# ZSH_CUSTOM=/path/to/new-custom-folder
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-
 ### HABILITANDO PLUGINS (ZSH-AUTOSUGGESTIONS ZSH-SYNTAX-HIGHLIGHTING & FZF)
 
 ### Download zsh-autosuggestions by
@@ -94,12 +9,46 @@ ZSH_THEME=powerlevel10k/powerlevel10k
 ### Download FZF —command line fuzzy finder
 ### git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf && ~/.fzf/install
 
+### Instalar o plugin fzf-tab (necessário para os zstyles de preview funcionarem)
+### git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
+
 ### Download K
 ### git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
 ### Powerlevel10k no Oh My Zsh
 ### git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 
+# ==============================================================================
+# 1. POWERLEVEL10K INSTANT PROMPT (DEVE FICAR NO TOPO ABSOLUTO)
+# ==============================================================================
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# ==============================================================================
+# 2. VARIÁVEIS DE AMBIENTE E PATH
+# ==============================================================================
+export ZSH="$HOME/.oh-my-zsh"
+export LANG=pt_BR.UTF-8
+
+# Editor padrão (neovim se disponível, senão vim)
+if [[ -n $SSH_CONNECTION ]]; then
+  export EDITOR='vim'
+else
+  export EDITOR='nvim'
+fi
+
+# Suporte ao Tilix/VTE (Correção de diretório atual em terminais gráficos)
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+  source /etc/profile.d/vte.sh
+fi
+
+# ==============================================================================
+# 3. OH-MY-ZSH & PLUGINS
+# ==============================================================================
+ZSH_THEME="powerlevel10k/powerlevel10k"
+
+# Definição de Plugins
 plugins=(
   git
   sudo
@@ -109,125 +58,262 @@ plugins=(
   copybuffer
   dirhistory
   history
-  k
   zsh-autosuggestions
-  zsh-syntax-highlighting
+  fzf-tab               # Deve ser carregado após plugins de completion
+  zsh-syntax-highlighting # Deve ser o último plugin
 )
 
 source $ZSH/oh-my-zsh.sh
 
-# User configuration
+# ==============================================================================
+# 4. CONFIGURAÇÕES DE HISTÓRICO E COMPORTAMENTO
+# ==============================================================================
+HISTSIZE=10000
+SAVEHIST=10000
+HISTFILE=~/.zsh_history
 
-# export MANPATH="/usr/local/man:$MANPATH"
+# Opções de Histórico
+setopt appendhistory         # Adiciona ao final, não sobrescreve
+setopt sharehistory          # Compartilha histórico entre terminais
+setopt hist_ignore_space     # Espaço antes do comando ignora histórico
+setopt hist_ignore_all_dups  # Remove duplicatas antigas
+setopt hist_save_no_dups     # Não salva duplicatas
+setopt hist_find_no_dups     # Busca limpa sem duplicatas
+setopt hist_reduce_blanks    # Remove espaços extras
 
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+# ==============================================================================
+# 5. AUTOCOMPLETAR E ESTILO (FZF-TAB)
+# ==============================================================================
+# Case-insensitive (ignora maiúsculas/minúsculas)
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
+# Usa cores do LS_COLORS
+zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+# Desabilita menu cíclico
+zstyle ':completion:*' menu no
 
-# Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-   export EDITOR='vim'
- else
-   export EDITOR='nvim'
- fi
+# Previews com FZF-TAB
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
-# Compilation flags
-# export ARCHFLAGS="-arch $(uname -m)"
+# ==============================================================================
+# 6. KEYBINDINGS (ATALHOS)
+# ==============================================================================
+# Navegação no histórico inteligente (baseado no que já foi digitado)
+autoload -U up-line-or-beginning-search
+autoload -U down-line-or-beginning-search
+zle -N up-line-or-beginning-search
+zle -N down-line-or-beginning-search
 
-# Set personal aliases, overriding those provided by Oh My Zsh libs,
-# plugins, and themes. Aliases can be placed here, though Oh My Zsh
-# users are encouraged to define aliases within a top-level file in
-# the $ZSH_CUSTOM folder, with .zsh extension. Examples:
-# - $ZSH_CUSTOM/aliases.zsh
-# - $ZSH_CUSTOM/macos.zsh
-# For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
-alias p="nano ~/.config/polybar/config"
-alias i="nano ~/.config/i3/config"
+bindkey '^p' up-line-or-beginning-search      # Ctrl+P (Cima)
+bindkey '^n' down-line-or-beginning-search    # Ctrl+N (Baixo)
+bindkey '^[w' kill-region                     # Alt+W (Apagar palavra)
+
+# ==============================================================================
+# 7. INTEGRAÇÕES (TOOLS)
+# ==============================================================================
+# FZF
+eval "$(fzf --zsh)"
+
+# Zoxide (Substituto inteligente do 'cd')
+eval "$(zoxide init --cmd cd zsh)"
+
+# ==============================================================================
+# 8. ALIASES
+# ==============================================================================
+# Configuração
+alias zshconfig="nano ~/.zshrc"
+alias polyc="nano ~/.config/polybar/config"
+alias i3c="nano ~/.config/i3/config"
+
+# Navegação e Sistema Básicos
+alias ..='cd ..'
+alias c='clear'
+alias e='exit'
+alias mkdir='mkdir -pv'
+alias cp='cp -iv'
+alias mv='mv -iv'
+alias rm='rm -iv'
+alias rmdir='rmdir -v'
+
+# Sistema (Arch Linux Utils)
 alias grub-update="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias mirrors="sudo reflector -l 7 -a 24 -p https --sort rate --save /etc/pacman.d/mirrorlist"
-alias purga="sudo pacman -Rns $(pacman -Qtdq) ; sudo fstrim -av"
-alias update="yay -Syu"
+#alias purga="yay -Yc; sudo fstrim -av"
+alias purga="pacman -Qtdq | xargs -r sudo pacman -Rns; sudo fstrim -av"
 alias info="inxi -SCMmBAGDNsPx -t cm"
 alias erros="journalctl -p err -b"
+alias g="devour geany"
 
-if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-        source /etc/profile.d/vte.sh
+# Atalhos Yay (Curto e grosso)
+alias i="yay -S"     # Install
+alias r="yay -Rns"   # Remove
+alias u="yay -Syu"   # Update
+alias s="yay -Ss"    # Search (Procurar para instalar)
+alias q="yay -Q"     # Query (Listar pacotes instalados)
+
+# --- MODERNIZAÇÃO DE COMANDOS (Inteligente) ---
+
+# Find -> Fd
+if command -v fd &>/dev/null; then
+    alias find='fd'
 fi
 
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# Grep -> Ripgrep (Rg)
+if command -v rg &>/dev/null; then
+    alias grep='rg'
+else
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
+fi
 
-# Hook para capturar o status do último comando
+# Cat -> Bat
+if command -v bat &>/dev/null; then
+    alias cat='bat --theme base16'
+fi
+
+# Ls -> Lsd ou Eza
+if command -v lsd &>/dev/null; then
+    alias ls='lsd -F --group-dirs first'
+    alias ll='lsd --all --header --long --group-dirs first'
+    alias tree='lsd --tree'
+elif command -v eza &>/dev/null; then
+    alias ls='eza --icons'
+    alias ll='eza -l --icons --git -a'
+    alias tree='eza --tree --icons'
+else
+    alias ls='ls --color=auto'
+    alias ll='ls -la --color=auto'
+fi
+
+# Alias for neovim
+if [[ -x "$(command -v nvim)" ]]; then
+    alias vi='nvim'
+    alias vim='nvim'
+    alias svi='sudo nvim'
+    alias vis='nvim "+set si"'
+elif [[ -x "$(command -v vim)" ]]; then
+    alias vi='vim'
+    alias svi='sudo vim'
+    alias vis='vim "+set si"'
+fi
+
+# IP Addresses
+if command -v ip &>/dev/null; then
+    alias iplocal="ip -br -c a"
+else
+    alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
+fi
+
+if command -v curl &>/dev/null; then
+    alias ipexternal="curl -s ifconfig.me && echo"
+elif command -v wget &>/dev/null; then
+    alias ipexternal="wget -qO- ifconfig.me && echo"
+fi
+
+# ==============================================================================
+# 9. FUNÇÕES PERSONALIZADAS
+# ==============================================================================
+
+# Função que aceita cópia de múltiplos arquivos
+function copy() {
+    # Verifica dependência
+    if ! command -v xclip &> /dev/null; then
+        echo "❌ xclip não instalado. Execute: sudo pacman -S xclip"
+        return 1
+    fi
+    
+    # Caso 1: Dados via pipe
+    if [ $# -eq 0 ]; then
+        if xclip -selection clipboard; then
+            echo "✓ Conteúdo copiado da entrada padrão (pipe)"
+        else
+            echo "❌ Falha ao copiar"
+            return 1
+        fi
+    # Caso 2: Arquivo(s) como argumento
+    else
+        if cat "$@" | xclip -selection clipboard; then
+            echo "✓ Conteúdo de $# arquivo(s) copiado"
+        else
+            echo "❌ Falha ao copiar arquivo(s)"
+            return 1
+        fi
+    fi
+}
+
+# Yazi (File Manager) com troca de diretório ao sair
+function y() {
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")"
+    yazi "$@" --cwd-file="$tmp"
+    # Usa 'command cat' para evitar alias do bat e garantir leitura pura
+    if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+        builtin cd -- "$cwd"
+    fi
+    rm -f -- "$tmp"
+}
+
+# Gerenciamento de Pacotes com FZF
+function install(){
+  pacman -Sl | awk '{print $2" "$3}' | column -t | fzf --reverse --preview 'pacman -Si {1}' | xargs -ro sudo pacman -S
+}
+
+function remove(){
+  pacman -Qq | fzf --reverse --preview 'pacman -Qi {}' | xargs -ro sudo pacman -Rns
+}
+
+function yinstall(){
+  yay -Slq | fzf --reverse --preview 'yay -Si {1}' | xargs -ro yay -S
+}
+
+function yremove(){
+  yay -Qq | fzf --reverse --preview 'yay -Qi {}' | xargs -ro yay -Rns
+}
+
+function ysearch(){
+  yay -Ss | fzf --reverse --preview 'yay -Si {1}' | awk '{print $1}' | sed 's/\/.*//'
+}
+
+# ==============================================================================
+# 10. HOOKS (SONS DE SUCESSO/ERRO)
+# ==============================================================================
 autoload -Uz add-zsh-hook
-add-zsh-hook precmd oks
 
 _first_prompt=true
 
 oks() {
-    local s=$?  # salva o status imediatamente
+    local s=$?  # Captura o status imediatamente
 
-    # Esta verificação impede que o hook seja executado na primeira vez que o Zsh carrega
+    # Ignora execução no primeiro prompt ao abrir o terminal
     if [ "$_first_prompt" = true ]; then
         _first_prompt=false
         return
     fi
 
     if [[ $s -eq 0 ]]; then
-        echo SUCCESS  
-        paplay /usr/share/sounds/freedesktop/stereo/complete.oga
+        # echo SUCCESS  # Comentado para poluir menos, descomente se quiser ver
+        paplay /usr/share/sounds/freedesktop/stereo/complete.oga 2>/dev/null
     else
         echo ERROR: $s
-        paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga
+        paplay /usr/share/sounds/freedesktop/stereo/suspend-error.oga 2>/dev/null
     fi
 }
 
-# Install/remove package using fzf
-function install(){
-  pacman -Sl | awk '{print $2" "$3}' \
-  | column -t | fzf --reverse --preview 'pacman -Si {1}' \
-  | xargs -ro sudo pacman -S
-}
+add-zsh-hook precmd oks
 
-# Remove package using fzf
-function remove(){
-  pacman -Qq | fzf --reverse --preview 'pacman -Qi {}' \
-  | xargs -ro sudo pacman -Rns
-}
+# ==============================================================================
+# 11. CARREGAMENTOS FINAIS
+# ==============================================================================
 
-# Install package using yay and fzf
-function yinstall(){
-  yay -Slq | fzf --reverse --preview 'yay -Si {1}' \
-  | xargs -ro yay -S
-}
-
-# Remove package using yay and fzf
-function yremove(){
-  yay -Qq | fzf --reverse --preview 'yay -Qi {}' \
-  | xargs -ro yay -Rns
-}
-
-# Search package using yay and fzf
-function ysearch(){
-  yay -Ss | fzf --reverse --preview 'yay -Si {1}' \
-  | awk '{print $1}' | sed 's/\/.*//'
-}
-
-# -----------------------------------------------------
-# Fastfetch
-# -----------------------------------------------------
-#if [[ $(tty) == *"pts"* ]]; then
+# Fastfetch (Opcional - descomente se quiser ativar)
+# if [[ $(tty) == *"pts"* ]]; then
 #    fastfetch --config examples/13
-#else
+# else
 #    echo
-#fi
+# fi
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+# Configuração do Powerlevel10k (Deve ficar próximo ao final)
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-## [Completion]
-## Completion scripts setup. Remove the following line to uninstall
+# Dart / Flutter Completion
 [[ -f /home/sidiclei/.dart-cli-completion/zsh-config.zsh ]] && . /home/sidiclei/.dart-cli-completion/zsh-config.zsh || true
-## [/Completion]
-

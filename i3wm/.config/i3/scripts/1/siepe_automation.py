@@ -1,78 +1,89 @@
+#!/usr/bin/env python3
+
 from selenium import webdriver
-from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.options import Options
+from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
+import time
 
-service = Service("/sbin/geckodriver")
+# Configurações do Navegador
 options = Options()
+options.add_argument("--start-maximized")
 
+# Inicialização do Driver
+service = Service()
 driver = webdriver.Firefox(service=service, options=options)
-driver.maximize_window()
+wait = WebDriverWait(driver, 25)
 
-# Passo 1: abre página principal para login
-driver.get("https://www.siepe.educacao.pe.gov.br")
-
-input("🕒 Faça login manualmente no navegador e pressione ENTER aqui...")
-
-# Passo 2: após login, abre a URL direta da ficha
-url_ficha = "https://www.siepe.educacao.pe.gov.br/gestaoescolar.do"
-driver.get(url_ficha)
-
-# Aguarda o carregamento da página da ficha
 try:
-    WebDriverWait(driver, 10).until(
-        EC.presence_of_element_located((By.TAG_NAME, "body"))
-    )
-    print("✅ Página da ficha carregada com sucesso.")
-except:
-    print("❌ Falha ao carregar página da ficha.")
+    # Acesso ao Portal
+    driver.get("https://www.siepe.educacao.pe.gov.br")
+    print("🔑 Faça o login manualmente no navegador e pressione ENTER aqui no terminal...")
+    input()
 
-# Passo 3: Clica no menu "Aluno"
-try:
-    aluno_element = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/form/div/div/div[2]/div[7]/div[1]/a[2]/div"))
-    )
-    aluno_element.click()
-    print("✅ Clicou no menu ALUNO com sucesso!")
+    print("⏳ Iniciando automação...")
+
+    # 1. Acesso Restrito
+    print("1️⃣ ACESSO RESTRITO...")
+    acesso = wait.until(EC.element_to_be_clickable((
+        By.XPATH, "//*[contains(translate(text(),'ABCDEFGHIJKLMNOPQRSTUVWXYZ','abcdefghijklmnopqrstuvwxyz'), 'acesso restrito')]"
+    )))
+    driver.execute_script("arguments[0].click();", acesso)
+    time.sleep(4)
+
+    # 2. Gestão de Rede de Ensino
+    print("2️⃣ GESTÃO DE REDE DE ENSINO...")
+    gestao = wait.until(EC.element_to_be_clickable((
+        By.XPATH, "//*[contains(text(), 'Gestão de Rede de Ensino')]"
+    )))
+    driver.execute_script("arguments[0].click();", gestao)
+    time.sleep(5)
+
+    # 3. Módulo Aluno
+    print("3️⃣ MÓDULO ALUNO...")
+    aluno = wait.until(EC.element_to_be_clickable((
+        By.XPATH, "//div[contains(@class, 'icon-eol1331')] | //a[contains(@href, 'selecionarModulo(1331)')]"
+    )))
+    driver.execute_script("arguments[0].click();", aluno)
+    time.sleep(6)
+
+    # 4. Menu Lateral: Alunos
+    print("4️⃣ Abrindo menu 'Alunos'...")
+    # Seletor robusto para encontrar o item "Alunos" no menu lateral
+    alunos_menu = wait.until(EC.element_to_be_clickable((
+        By.XPATH, "//div[contains(@id, 'divMenuGestao')]//div[text()='Alunos']"
+    )))
+    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", alunos_menu)
+    time.sleep(1)
+    driver.execute_script("arguments[0].click();", alunos_menu)
+    print("✅ Menu 'Alunos' expandido!")
+
+    # 5. Clique em Documentos (O passo que você solicitou)
+    print("5️⃣ Clicando em 'Documentos'...")
+    # Buscamos o div com texto "Documentos" que está dentro de um li do menu de gestão
+    documentos = wait.until(EC.element_to_be_clickable((
+        By.XPATH, "//li[contains(@id, 'divMenuGestao')]//div[text()='Documentos']"
+    )))
+    
+    driver.execute_script("arguments[0].scrollIntoView({block: 'center'});", documentos)
+    time.sleep(1) # Pequena pausa para garantir a animação do menu
+    driver.execute_script("arguments[0].click();", documentos)
+    print("✅ Submenu 'Documentos' acessado com sucesso!")
+
+    # --- PRÓXIMOS PASSOS ---
+    # Se você precisar clicar em algo dentro de Documentos, como "Boletim escolar":
+    # print("6️⃣ Clicando em Boletim Escolar...")
+    # boletim = wait.until(EC.element_to_be_clickable((By.XPATH, "//div[text()='Boletim escolar']")))
+    # driver.execute_script("arguments[0].click();", boletim)
+
+    print("\n🎉 Automação concluída até o nível de 'Documentos'!")
+    input("\nPressione ENTER para fechar o navegador...")
+
 except Exception as e:
-    print(f"❌ Erro ao clicar no menu ALUNO: {e}")
+    print(f"\n❌ Ocorreu um erro: {e}")
+    input("\nPressione ENTER para encerrar...")
 
-# Passo 4: Clica no próximo elemento (XPath fornecido)
-try:
-    prox_element = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "/html/body/div[2]/form/div/div/div[3]/div[1]/div/div[1]/div[1]"))
-    )
-    prox_element.click()
-    print("✅ Clicou no próximo elemento com sucesso!")
-except Exception as e:
-    print(f"❌ Erro ao clicar no próximo elemento: {e}")
-
-# Passo 5: Detecta e troca para iframe se existir
-iframes = driver.find_elements(By.TAG_NAME, "iframe")
-print(f"Há {len(iframes)} iframes na página.")
-for i, iframe in enumerate(iframes):
-    print(f"Iframe[{i}]: id='{iframe.get_attribute('id')}', name='{iframe.get_attribute('name')}'")
-
-if iframes:
-    driver.switch_to.frame(iframes[0])
-    print("🟢 Entrou no iframe")
-
-# Passo 6: Clica no menu Gestão pelo texto (mais confiável que id dinâmico)
-try:
-    menu_gestao = WebDriverWait(driver, 20).until(
-        EC.element_to_be_clickable((By.XPATH, "//div[contains(text(), 'Gestão')]"))
-    )
-    menu_gestao.click()
-    print("✅ Clicou no menu Gestão com sucesso!")
-except Exception as e:
-    print(f"❌ Erro ao clicar no menu Gestão: {e}")
-
-# Volta para o DOM principal (caso tenha trocado o iframe)
-driver.switch_to.default_content()
-
-# Mantém aberto para você ver o resultado
-input("Pressione ENTER para finalizar o script...")
-
-driver.quit()
+finally:
+    driver.quit()

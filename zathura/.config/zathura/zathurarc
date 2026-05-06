@@ -1,2 +1,57 @@
+# Para aplicar as alterações: :source ou reinicie o Zathura
+
+# ====================== Zathura Config ======================
+
+# --- Comportamento Geral ---
 set selection-clipboard clipboard
-set adjust_window width
+set adjust-open "width"
+set guioptions "s"
+# set window-title-home-tilde true
+set window-title-page true
+set incremental-search true
+
+# --- Cores ---
+set highlight-color "#a6e3a188"
+set highlight-active-color "#f9e2af88"
+
+# --- Padding (margens) ---
+set page-h-padding 8      # margem lateral (esquerda + direita)
+set page-v-padding 10     # espaço vertical entre páginas
+
+# --- Arquivos ---
+map <C-o> focus_inputbar ":open "
+map <C-s> focus_inputbar ":save "
+map <C-p> feedkeys ":print<Return>"
+
+# --- Busca ---
+map <C-f> focus_inputbar "/"
+map <Esc> abort
+
+# --- Scroll e Navegação ---
+set scroll-step 100              # velocidade do scroll com j/k/h/l (ajuste se quiser)
+set scroll-page-aware true       # para não ultrapassar bordas de página
+set scroll-full-overlap 0.02     # pequena sobreposição ao mudar de página
+
+# Rolagem por página inteira
+map <Space>     scroll full-down
+map <BackSpace> scroll full-up     # BackSpace sobe página
+
+#Digite gg (aperte a tecla g duas vezes rapidamente) → deve ir para a primeira página.
+#Digite G (aperte Shift + g) → deve ir para a última página.
+
+# --- Navegação Vim-like ---
+map h scroll left
+map l scroll right
+map k scroll up
+map j scroll down
+
+# Modo Apresentação (tela limpa + best-fit)
+map <F5> feedkeys ":set guioptions \"\"<Return>:set adjust-open best-fit<Return>"
+# Voltar ao modo normal (statusbar + width)
+map <F6> feedkeys ":set guioptions s<Return>:set adjust-open width<Return>"
+
+# --- Others ---
+map <Tab> toggle_index     # Tecla padrão do Zathura (recomendado manter)
+map i     toggle_index     # Atalho extra com a letra "i"
+map <C-r> reload
+map <C-w> quit
