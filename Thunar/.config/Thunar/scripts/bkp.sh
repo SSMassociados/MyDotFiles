@@ -1,4 +1,4 @@
-veja esse script: #!/usr/bin/env bash
+#!/usr/bin/env bash
 
 # Itera sobre todos os arquivos selecionados no Thunar
 for file in "$@"; do

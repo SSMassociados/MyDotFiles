@@ -19,7 +19,6 @@ bluemail
 brave-bin
 bt-dualboot
 catt
-chatgpt-desktop-bin
 cheese
 cobang
 deskreen
@@ -42,7 +41,6 @@ fontpreview
 fonts-cjk
 frog-ocr
 fusesmb
-gearlever
 gestures
 gksu
 gnirehtet-bin
