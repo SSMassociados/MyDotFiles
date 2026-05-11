@@ -7,3 +7,4 @@
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.config/i3/scripts"
 export PATH="$PATH:$HOME/.config/polybar/scripts"
+export PATH="$PATH:$HOME/.config/Thunar/scripts"

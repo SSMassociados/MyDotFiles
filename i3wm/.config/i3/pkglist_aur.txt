@@ -94,7 +94,6 @@ mkinitcpio-numlock
 mons
 mythes-pt-br
 neofetch
-neovim-nightly-bin
 nody-greeter
 ocs-url
 oh-my-zsh-git
@@ -151,7 +150,6 @@ universal-android-debloater-bin
 upd72020x-fw
 upscayl-bin
 vidcutter
-vscode-codicons-git
 walker-bin
 warsaw-bin
 wd719x-firmware
@@ -170,6 +168,5 @@ xiaomitool-v2
 xidlehook-withdrawnwin
 xlayoutdisplay
 yay
-ytdlp-gui
 zapzap
 zsh-theme-powerlevel10k-git

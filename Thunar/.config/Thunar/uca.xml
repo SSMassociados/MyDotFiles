@@ -52,7 +52,7 @@
 	<name>Duplicar</name>
 	<submenu></submenu>
 	<unique-id>1643422675815038-2</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/bkp.sh %F</command>
+	<command>bkp.sh %F</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>
@@ -68,7 +68,7 @@
 	<name>Buscar Duplicatas</name>
 	<submenu></submenu>
 	<unique-id>1776078930213550-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/duplicate_cleaner_wrapper.sh %f</command>
+	<command>duplicate_cleaner_wrapper.sh %f</command>
 	<description>Encontra arquivos duplicados por hash SHA-256</description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -84,8 +84,8 @@
 	<name>Organizar</name>
 	<submenu></submenu>
 	<unique-id>1776079939850065-2</unique-id>
-	<command>bash -c &apos;/home/sidiclei/.config/Thunar/scripts/organizar.sh &quot;$(pwd)&quot;&apos;</command>
-	<description>Organiza arquivos por tipo de extensao</description>
+	<command>organizar.sh &quot;$(pwd)&quot;</command>
+	<description>Organiza arquivos por tipo de extensao bash -c &apos;/home/sidiclei/.config/Thunar/scripts/organizar.sh &quot;$(pwd)&quot;&apos;</description>
 	<range>*</range>
 	<patterns>*</patterns>
 	<directories/>
@@ -160,7 +160,7 @@
 	<name>Permissões</name>
 	<submenu></submenu>
 	<unique-id>1758063937832588-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/mostrar_permissoes.sh %f</command>
+	<command>mostrar_permissoes.sh %f</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -181,6 +181,22 @@
 	<range></range>
 	<patterns>*</patterns>
 	<directories/>
+</action>
+<action>
+	<icon>edit-copy</icon>
+	<name>Path</name>
+	<submenu></submenu>
+	<unique-id>1778456208902180-1</unique-id>
+	<command>copy_path.sh %f</command>
+	<description>Copia o caminho do arquivo ou pasta selecionado</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
 </action>
 <action>
 	<icon>object-rotate-right</icon>
@@ -221,7 +237,7 @@
 	<name>PDF to DOCX py</name>
 	<submenu></submenu>
 	<unique-id>1710498817170856-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/pdf_to_docx.py %f</command>
+	<command>pdf_to_docx.py %f</command>
 	<description> Python,pdf2docx,notify-send,paplay</description>
 	<range>*</range>
 	<patterns>*.pdf</patterns>
@@ -233,7 +249,7 @@
 	<name>PDF to TXT</name>
 	<submenu></submenu>
 	<unique-id>1710783221218932-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/1_pdf_txt.sh %F</command>
+	<command>1_pdf_txt.sh %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*.pdf</patterns>
@@ -245,7 +261,7 @@
 	<name>TXT to CSV - Extração de Dados</name>
 	<submenu></submenu>
 	<unique-id>1710783523210682-2</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/2_extra_txt_csv.sh %F</command>
+	<command>2_extra_txt_csv.sh %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*.txt</patterns>
@@ -256,7 +272,7 @@
 	<name>Unificar CSV(s)</name>
 	<submenu></submenu>
 	<unique-id>1711238667330772-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/unificar_CSV.py %F</command>
+	<command>unificar_CSV.py %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*.csv</patterns>
@@ -268,7 +284,7 @@
 	<name>Unificar XLSX Abas</name>
 	<submenu></submenu>
 	<unique-id>1757954944525610-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/unif_XLSX_abas.py %F</command>
+	<command>unif_XLSX_abas.py %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*.xlsx;*.xls;*.xlsm;*.xlsb</patterns>
@@ -280,7 +296,7 @@
 	<name>CSV to XLSX</name>
 	<submenu></submenu>
 	<unique-id>1710788371301295-1</unique-id>
-	<command>/home/sidiclei/.config/Thunar/scripts/3_csv_xlsx.py %F</command>
+	<command>3_csv_xlsx.py %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*.csv</patterns>
@@ -303,7 +319,7 @@
 	<name>Picture to PDF</name>
 	<submenu></submenu>
 	<unique-id>1710417193698244-1</unique-id>
-	<command>~/.config/Thunar/scripts/img_to_pdf.sh %F</command>
+	<command>img_to_pdf.sh %F</command>
 	<description></description>
 	<range>*</range>
 	<patterns>*</patterns>
@@ -314,7 +330,7 @@
 	<name>Comprimir PDF</name>
 	<submenu></submenu>
 	<unique-id>1671025988454365-1</unique-id>
-	<command>~/.config/Thunar/scripts/compression_pdf.sh %F</command>
+	<command>compression_pdf.sh %F</command>
 	<description></description>
 	<range></range>
 	<patterns>*.pdf</patterns>
