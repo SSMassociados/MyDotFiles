@@ -12,11 +12,11 @@
 
 # helpful cmdline tools:
 #  * xev 
-# ==> (Teclado)  xev | grep -i key 
+# ==> (Teclado)  xev | grep -i key ou xev -event keyboard
 # ==> (Mouse)    xev | grep button
 #  * xbindkeys xbindkeys_config
 #  * xbindkeys --key * xbindkeys --multikey
-#  * xmodmap ou xmodmap -pke
+#  * xmodmap -pm ou xmodmap -pke
 #  * xprop ou xwininfo
 #  * ==> Ordem=("INSTANCE","CLASS")xprop | grep WM_CLASS ou xprop WM_CLASS
 #  * wmctrl -lx
@@ -37,6 +37,7 @@
 # con_id	     ID interno do i3.	Mais usado em scripts de automação.
 # floating	     Seleciona apenas janelas flutuantes. for_window [floating] title_format "📌 %title"
 
+# xmodmap -pm
 #shift       Shift_L (0x32),  Shift_R (0x3e)
 #lock        Caps_Lock (0x42)
 #control     Control_L (0x25),  Control_R (0x69)
@@ -76,3 +77,4 @@ include ~/.config/i3/modules/autostart.conf
 #         statusline $fg
 #     }
 # }
+

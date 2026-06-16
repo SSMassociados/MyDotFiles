@@ -142,7 +142,9 @@ alias mirrors="sudo reflector -l 7 -a 24 -p https --sort rate --save /etc/pacman
 alias purga="pacman -Qtdq | xargs -r sudo pacman -Rns; sudo fstrim -av"
 alias info="inxi -SCMmBAGDNsPx -t cm"
 alias erros="journalctl -p err -b"
+alias unlock='sudo rm -f /var/lib/pacman/db.lck && echo "Lock removido com sucesso"'
 alias g="devour geany"
+alias nocomments='sed -E "/^\s*#/d; s/[[:space:]]+#.*$//" | sed "/^\s*$/d"'
 
 # Atalhos Yay (Curto e grosso)
 alias i="yay -S"     # Install
@@ -222,7 +224,7 @@ function copy() {
         echo "❌ xclip não instalado. Execute: sudo pacman -S xclip"
         return 1
     fi
-    
+
     # Caso 1: Dados via pipe
     if [ $# -eq 0 ]; then
         if xclip -selection clipboard; then
@@ -272,6 +274,29 @@ function yremove(){
 
 function ysearch(){
   yay -Ss | fzf --reverse --preview 'yay -Si {1}' | awk '{print $1}' | sed 's/\/.*//'
+}
+
+# Dotfiles Sync 
+dotsync() {
+    cd ~/.dotfiles || { echo "❌ Pasta ~/.dotfiles não encontrada"; return 1; }
+    
+    echo "🔄 Entrando em ~/.dotfiles..."
+    git status
+    
+    if git status --porcelain | grep -q .; then
+        git add .
+        echo "✅ Arquivos adicionados"
+        
+        if [ -z "$1" ]; then
+            git commit -m "Atualização automática dos dotfiles"
+        else
+            git commit -m "$1"
+        fi
+        
+        git push && echo "🚀 Push realizado com sucesso!"
+    else
+        echo "✅ Nenhum arquivo modificado."
+    fi
 }
 
 # ==============================================================================

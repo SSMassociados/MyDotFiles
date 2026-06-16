@@ -1,165 +1,225 @@
 # i3wm Cheat Sheet - Sidiclei Config
+> 🕒 **Última atualização:** 16/06/2026 - 12:15:40
+
+> 🐧 = Super (Mod4)
 
 ## 🌐 Workspaces e Navegação
-| Atalho           | Ação                            |
-| ---------------- | ------------------------------- |
-| `Mod + 1-0`      | Ir para workspace 1-10          |
-| `Mod+Shift+1-0`  | Mover janela para workspace     |
-| `Ctrl+Alt+←/→`   | Navegar entre workspaces        |
-| `Ctrl+Tab`       | Próximo workspace               |
-| `Ctrl+Shift+Tab` | Workspace anterior              |
-| `Mod+o`          | Ocultar Polybar                 |
-| `Mod+k`          | Limpar janelas urgentes         |
-| `Mod+Ctrl+←/→/↑` | Mover workspace entre monitores |
-
-## 🪟 Gerenciamento de Janelas
-| Atalho           | Ação                                   |
-| ---------------- | -------------------------------------- |
-| `Mod+←↑↓→`       | Navegar entre janelas                  |
-| `Mod+Shift+←↑↓→` | Mover janelas                          |
-| `Mod+Ctrl+←↑↓→`  | Redimensionar janelas                  |
-| `Mod+s`          | Layout empilhado                       |
-| `Mod+w`          | Layout em abas                         |
-| `Mod+e`          | Alternar divisão H/V                   |
-| `Mod+.`          | Alternar modo flutuante                |
-| `Mod+,`          | Alternar foco tiling/flutuante         |
-| `Mod+-`          | Esconder janela (scratchpad)           |
-| `Mod+=`          | Mostrar janela oculta                  |
-| `Mod+F11`        | Tela cheia                             |
-| `Mod+q`          | Fechar janela                          |
-| `Mod+Shift+q`    | Fechar TODAS janelas                   |
-| `Mod+t`          | Alternar bordas                        |
-| `Mod+Shift+h`    | Centralizar janela                     |
-| `Mod+;`          | Alternar divisão H/V (janela atual)    |
-| `Mod+/`          | Alternar orientação layout             |
-| `Mod+Tab`        | Alternar entre layouts                 |
-| `Mod+u`          | Focar janela urgente                   |
-| `Mod+Ctrl+Del`   | Fechar seletivo (xkill) usando o mouse |
-| `Mod+Esc`        | Matar processos travados               |
-
-## 🚀 Aplicativos e Lançadores
-| Atalho           | Ação                                                        |
-| ---------------- | ----------------------------------------------------------- |
-| `Mod+Enter`      | Terminal (Kitty)                                            |
-| `F1`             | Desenhar Terminal flutuante                                 |
-| `F2`             | Terminal rápido (i3-quickterm)                              |
-| `Mod+f`          | Firefox                                                     |
-| `Mod+b`          | Brave                                                       |
-| `Mod+c`          | Google Chrome                                               |
-| `Mod+x`          | Thunar                                                      |
-| `Mod+r`          | Ranger                                                      |
-| `Mod+y`          | Yazi                                                        |
-| `Mod+d`          | Controles de Sessão "Desligar Reiniciar Suspender Bloquear" |
-| `Alt+Space`      | Launcher/Seach Apps                                         |
-| `Mod+m`          | Google Meet                                                 |
-| `Mod+z`          | SIGE                                                        |
-| `Mod+i`          | Cheatsheet (este arquivo)                                   |
-| `F11`            | Agendador de alarmes                                        |
-| `F6`/`XF86Calc`  | Calculadora                                                 |
-| `F9`/`XF86Tools` | RMPC/Spotify                                                |
-
-## 🔧 Utilitários do Sistema
-| Atalho        | Ação                                |
-| ------------- | ----------------------------------- |
-| `Mod+Home`    | Editar config do i3                 |
-| `Mod+End`     | Editar config da Polybar            |
-| `Mod+'`       | Modo edição rápida de configs       |
-| `Mod+Shift+r` | Reiniciar i3                        |
-| `Mod+Shift+c` | Recarregar configuração             |
-| `Mod+Shift+e` | Sair do i3                          |
-| `Mod+Shift+d` | Desligar imediatamente              |
-| `Mod+Shift+b` | Reiniciar sistema                   |
-| `Mod+Shift+s` | Suspender                           |
-| `Mod+Shift+w` | Reiniciar no Windows                |
-| `Mod+l`       | Bloquear tela                       |
-| `Mod+F4`      | Ativar/Desativar Picom (compositor) |
-| `Mod+Shift+t` | Testar notificações do Dunst        |
-| `Mod+Shift+x` | Ativar/Desativar Xidlehook          |
-| `Mod+Ctrl+h`  | Ajuda do i3 (documentação)          |
-
-## 🖥️ Controles de Tela
-| Atalho        | Ação                               |
-| ------------- | ---------------------------------- |
-| `Print`       | Captura de tela inteira (Scrot)    |
-| `Shift+Print` | Captura de janela (Scrot)          |
-| `Mod+Print`   | Captura de área (Flameshot)        |
-| `Mod+g`       | Gravar tela                        |
-| `Mod+F8`      | Espelhamento em um segundo monitor |
-| `Alt+o`       | OCR (texto de imagem)              |
-| `Alt+q`       | QR code                            |
-
-## 🎵 Controles de Mídia
-| Atalho               | Ação                   |
-| -------------------- | ---------------------- |
-| `XF86AudioPlay`      | Play/Pause             |
-| `XF86AudioNext`      | Próxima faixa          |
-| `XF86AudioPrev`      | Faixa anterior         |
-| `XF86AudioRaiseVol`  | Aumentar volume (+10%) |
-| `XF86AudioLowerVol`  | Diminuir volume (-10%) |
-| `XF86AudioMute`      | Mudo                   |
-| `XF86MicMute`        | Mudo no microfone      |
-| `XF86MonBrightness↑` | Aumentar brilh+do      |
-| `XF86MonBrightness↓` | Diminuir brilho        |
-
-## 📱 Dispositivos e Conexões
-| Atalho       | Ação                          |
-| ------------ | ----------------------------- |
-| `Mod+PIPE`   | KDE Connect                   |
-| `Mod+Ctrl+b` | Bluetooth (Blueman)           |
-| `F5`         | UPnP (djmount)                |
-| `F7`         | Gnirehtet (Reverse Tethering) |
-| `F8`         | Scrcpy (Espelhamento Android) |
-
-## 🛠️ Modos Especiais
-### Modo Edição de Arquivos (`Mod+'`)
-| Tecla | Arquivo Editado              |
-| ----- | ---------------------------- |
-| `i`   | ~/.config/i3/config          |
-| `p`   | ~/.config/polybar/config.ini |
-| `k`   | ~/.config/kitty/kitty.conf   |
-| `b`   | ~/.config/betterlockscreenrc |
-| `d`   | ~/.config/dunst/dunstrc      |
-| `o`   | ~/.config/picom/picom.conf   |
-| `f`   | ~/.config/feh/themes         |
-| `z`   | ~/.zshrc                     |
-| `n`   | ~/.config/nvim/init.vim      |
-| `t`   | ~/.config/zathura/zathurarc  |
-| `s`   | /etc/samba/smb.conf          |
-
-### Notificações (Dunst)
-| Atalho             | Ação                       |
-| ------------------ | -------------------------- |
-| `Ctrl+Space`       | Fechar notificação         |
-| `Ctrl+Shift+Space` | Fechar todas notificações  |
-| `Ctrl+,`           | Mostrar última notificação |
-| `Ctrl+.`           | Abrir contexto/link        |
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + 0 | Workspace 10 |
+| 🐧 + 1 | Workspace 1 |
+| 🐧 + 2 | Workspace 2 |
+| 🐧 + 3 | Workspace 3 |
+| 🐧 + 4 | Workspace 4 |
+| 🐧 + 5 | Workspace 5 |
+| 🐧 + 6 | Workspace 6 |
+| 🐧 + 7 | Workspace 7 |
+| 🐧 + 8 | Workspace 8 |
+| 🐧 + 9 | Workspace 9 |
+| 🐧 + u | Focar janela urgente |
+| Ctrl + Alt + Left | Workspace anterior (à esquerda na ordem) |
+| Ctrl + Alt + Right | Próximo workspace (à direita na ordem) |
+| Ctrl + Alt + s | Alternar sticky (visível em todos workspaces) |
+| Ctrl + Shift + Left | Move o workspace atual → monitor à esquerda |
+| Ctrl + Shift + Right | Move o workspace atual → monitor à direita |
+| Ctrl + Shift + Tab | Workspace anterior (usando Tab) |
+| Ctrl + Shift + Up | Move o workspace → monitor esquerda → direita |
+| Ctrl + Tab | Próximo workspace (atalho alternativo) |
 
 ## 🖱️ Controles do Mouse
-| Ação do Mouse       | Comportamento           |
-| ------------------- | ----------------------- |
-| `Botão Meio`        | Fechar janela           |
-| `Mod+Botão Meio`    | Forçar fechar janela    |
-| `Mod+Botão Direito` | Alternar modo flutuante |
-| `Scroll Esquerdo`   | Mover janela ←          |
-| `Scroll Direito`    | Mover janela →          |
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + button2 | Mod4 + botão meio → força fechar |
+| 🐧 + button3 | Mod4 + botão direito → alterna flutuante |
+| button2 | Botão meio (barra título) → fecha janela |
+| button6 | Scroll esquerdo → move janela ← |
+| button7 | Scroll direito → move janela → |
 
-## 🔄 Layouts Salvos
-| Atalho       | Ação                                |
-| ------------ | ----------------------------------- |
-| `Mod+Ctrl+1` | Carregar Layout 1 (Workspace 7)     |
-| `Mod+Ctrl+2` | Carregar Layout 2 (Workspace atual) |
-| `F12`        | Gerenciar layouts salvos            |
+## 🪟 Gerenciamento de Janelas
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + Down | Mover foco ↓ |
+| 🐧 + Escape | Mata processos travados |
+| 🐧 + F11 | Tela cheia |
+| 🐧 + Left | Mover foco ← |
+| 🐧 + Next | Focar elemento filho |
+| 🐧 + Prior | Focar container pai |
+| 🐧 + Right | Mover foco → |
+| 🐧 + Tab | Layout Alternando Split -> Stacking -> Tabbed |
+| 🐧 + Up | Mover foco ↑ |
+| 🐧 + comma | Alternar foco entre tiling/flutuante - comma=vírgula |
+| 🐧 + e | Alternando H ↔ V (container atual) |
+| 🐧 + equal | Mostrar janela oculta |
+| 🐧 + h | Split Horizontal, próxima janela ao lado |
+| 🐧 + k | Limpa a marcação de urgência da janela atual |
+| 🐧 + minus | Esconder janela (scratchpad) |
+| 🐧 + period | Alternar modo flutuante - period=ponto |
+| 🐧 + q | Fecha janela ativa |
+| 🐧 + s | Janelas Empilhadas |
+| 🐧 + semicolon | Split alternando eixo de divisão |
+| 🐧 + slash | Orientação Invertendo H ↔ V |
+| 🐧 + t | Alternar bordas |
+| 🐧 + v | Split Vertical, próxima janela abaixo |
+| 🐧 + w | Janelas em Abas (Guias) |
+| 🐧 + Shift + 0 | Mover janela → ws 10 |
+| 🐧 + Shift + 1 | Mover janela → ws 1 |
+| 🐧 + Shift + 2 | Mover janela → ws 2 |
+| 🐧 + Shift + 3 | Mover janela → ws 3 |
+| 🐧 + Shift + 4 | Mover janela → ws 4 |
+| 🐧 + Shift + 5 | Mover janela → ws 5 |
+| 🐧 + Shift + 6 | Mover janela → ws 6 |
+| 🐧 + Shift + 7 | Mover janela → ws 7 |
+| 🐧 + Shift + 8 | Mover janela → ws 8 |
+| 🐧 + Shift + 9 | Mover janela → ws 9 |
+| 🐧 + Shift + Down | Mover janela ↓ |
+| 🐧 + Shift + Left | Mover janela ← |
+| 🐧 + Shift + Right | Mover janela → |
+| 🐧 + Shift + Up | Mover janela ↑ |
+| 🐧 + Shift + h | Centralizar janela |
+| 🐧 + Shift + q | Fecha TODAS janelas - CUIDADO! |
+| 🐧 + Ctrl + 1 | Layout restore bindings |
+| 🐧 + Ctrl + Delete | Fechar seletivo → cursor em X |
+| 🐧 + Ctrl + Down | ↓ Diminui altura |
+| 🐧 + Ctrl + Left | ← Diminui largura |
+| 🐧 + Ctrl + Right | → Aumenta largura |
+| 🐧 + Ctrl + Up | ↑ Aumenta altura |
+| Alt + shift + Tab | Alternar up,down entre janelas |
+| Alt + Tab | Alternar left,right entre janelas |
 
-## 🎨 Aparência
-| Atalho        | Ação                         |
-| ------------- | ---------------------------- |
-| `Mod+Shift+g` | Modo de configuração de gaps |
-| `Mod+Shift+o` | Alternar bordas inteligentes |
-| `Mod+Shift+i` | Alternar gaps inteligentes   |
+## 🚀 Aplicativos e Lançadores
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + Return | Kitty |
+| 🐧 + a | Alarme |
+| 🐧 + b | Brave |
+| 🐧 + c | Google Chrome |
+| 🐧 + f | Firefox |
+| 🐧 + m | Google Meet |
+| 🐧 + p | Gerenciador de Wallpaper usando Pywal |
+| 🐧 + r | Ranger |
+| 🐧 + x | Thunar |
+| 🐧 + y | Yazi |
+| Ctrl + Shift + q | Qutebrowser |
+| Alt + space | Launcher |
+| AltGr + space | Launcher Dmenu |
+| F1 | Terminal flutuante |
+| F2 | Dropdown Kitty |
+| F6 | start/close Calculadora |
+| F9 | Start/close rmpc |
+| XF86Calculator | start/close Calculadora |
+| XF86Tools | Start/close Spotify |
+
+## 🔧 Utilitários do Sistema
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + F4 | Ligar/desligar compositor(Picom) |
+| 🐧 + d | Power Menu |
+| 🐧 + i | Cheatsheet - Dica: -i + /palavra → ativa ignore-case |
+| 🐧 + l | Bloquear Tela |
+| 🐧 + o | Ocultar todas as barras(Polybar) |
+| 🐧 + Shift + F8 | Alternar monitores, gerenciador de exibição |
+| 🐧 + Shift + b | Reinicia o sistema |
+| 🐧 + Shift + c | Recarrega configuração e notifica |
+| 🐧 + Shift + d | Desligamento imediato |
+| 🐧 + Shift + e | Sai do i3 (volta para login manager) |
+| 🐧 + Shift + o | Ocultar Polybar do monitor secudário, se conectado. |
+| 🐧 + Shift + r | Reinicia o i3 (preserva sessão) |
+| 🐧 + Shift + s | Suspende o sistema |
+| 🐧 + Shift + t | Testar notificações do Dunst |
+| 🐧 + Shift + w | Dual boot: Refind |
+| 🐧 + Shift + x | Gerenciador de inatividade, energia/suspensão |
+| 🐧 + Ctrl + h | Ajuda do i3 |
+
+## 🖥️ Controles de Tela
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + Print | Print - Área selecionada |
+| 🐧 + g | Screen recording |
+| 🐧 + j | Print - Janela clicada e cópia para clipboard |
+| Alt + b | QRcode Reader/Scanner |
+| Alt + o | OCR |
+| Alt + q | Barcode Reader/Scanner |
+| Print | Print - Tela inteira com cópia para clipboard |
+
+## 🎵 Controles de Mídia
+| Atalho | Ação |
+| --- | --- |
+| XF86AudioLowerVolume | ↓ Volume (-10%) |
+| XF86AudioMicMute | Mute/Unmute microfone |
+| XF86AudioMute | Mute/Unmute |
+| XF86AudioNext | Próxima faixa |
+| XF86AudioPlay | Play/Pause dual-function |
+| XF86AudioPrev | Faixa anterior |
+| XF86AudioRaiseVolume | ↑ Volume (+10%) |
+| XF86AudioStop | Parar |
+| XF86MonBrightnessDown | - Brilho |
+| XF86MonBrightnessUp | + Brilho |
+
+## 📱 Dispositivos e Conexões
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + backslash | KDE Connect |
+| 🐧 + Ctrl + b | Bluetooth |
+| F11 | Wifi Quick Share |
+| F5 | UPnP AV Media |
+| F7 | Gnirehtet (Reverse Tethering) |
+| F8 | AutoAdb + Scrcpy |
+
+## 🔔 Notificações
+| Atalho | Ação |
+| --- | --- |
+| Ctrl + Shift + comma | Pausa/retoma notificações(toggle) |
+| Ctrl + Shift + space | Limpa todas notificações |
+| Ctrl + comma | Mostra última notificação |
+| Ctrl + period | Abre contexto/link (.) |
+| Ctrl + space | Fecha notificação atual |
 
 ## ✨ Recursos Especiais
-| Atalho        | Ação                         |
-| ------------- | ---------------------------- |
-| `Mod+a`       | Alternar alarme              |
-| `Mod+Shift+a` | Agendador de alarmes Escolar |
-| `Mod+Shift+z` | Pesquisa avançada            |
+| Atalho | Ação |
+| --- | --- |
+| 🐧 + z | Launch SIGE - Sistema de Informações e Gerenciamento Escolar |
+
+## 🔑 Modos Especiais
+
+### 🐧 + apostrophe → Dotfiles Mode Config
+*(K)itty \| (B)etterloc \| (D)unst \| (P)icom \| (Z)sh \| (F)eh \| (N)vim \| (T)zathura \| (S)amba*
+
+| Atalho | Arquivo / Comando |
+| --- | --- |
+| 🐧 + apostrophe → b | ~/.config/betterlockscreenrc |
+| 🐧 + apostrophe → d | ~/.config/dunst/dunstrc |
+| 🐧 + apostrophe → f | ~/.config/feh/themes |
+| 🐧 + apostrophe → k | ~/.config/kitty/kitty.conf |
+| 🐧 + apostrophe → n | ~/.config/nvim/init.lua |
+| 🐧 + apostrophe → o | ~/.config/picom/picom.conf |
+| 🐧 + apostrophe → s | /etc/samba/smb.conf |
+| 🐧 + apostrophe → t | ~/.config/zathura/zathurarc |
+| 🐧 + apostrophe → z | ~/.zshrc |
+
+### 🐧 + Home → i3 Config Modules
+*(E)nv \| (A)utostart \| (M)onitors \| (I)nput \| (D)ecor \| (B)inds \| (S)tatus \| (W)rules \| (M)isc*
+
+| Atalho | Arquivo / Comando |
+| --- | --- |
+| 🐧 + Home → a | ~/.config/i3/modules/autostart.conf |
+| 🐧 + Home → b | ~/.config/i3/modules/binds.conf |
+| 🐧 + Home → d | ~/.config/i3/modules/decoration.conf |
+| 🐧 + Home → e | ~/.config/i3/modules/env.conf |
+| 🐧 + Home → i | ~/.config/i3/modules/input.conf |
+| 🐧 + Home → m | ~/.config/i3/modules/monitors.conf |
+| 🐧 + Home → s | ~/.config/i3/modules/statusbar.conf |
+| 🐧 + Home → w | ~/.config/i3/modules/windowsrule.conf |
+| 🐧 + Home → Shift+m | ~/.config/i3/modules/misc.conf |
+
+### 🐧 + End → Polybar Settings
+*(C)onfig \| c(O)lors \| (F)onts \| (M)odules \| (L)aunch \| (R)estart*
+
+| Atalho | Arquivo / Comando |
+| --- | --- |
+| 🐧 + End → c | ~/.config/polybar/config.ini |
+| 🐧 + End → f | ~/.config/polybar/fonts.ini |
+| 🐧 + End → l | ~/.config/polybar/launch.sh |
+| 🐧 + End → m | ~/.config/polybar/modules.ini |
+| 🐧 + End → o | ~/.config/polybar/colors.ini |
+| 🐧 + End → r | ~/.config/polybar/launch.sh |
+

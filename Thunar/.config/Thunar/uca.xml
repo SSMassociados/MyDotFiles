@@ -39,7 +39,7 @@
 	<name>Compare</name>
 	<submenu></submenu>
 	<unique-id>1643422534590896-1</unique-id>
-	<command>meld %F</command>
+	<command>sh -c &apos;meld &quot;$@&quot; &amp; sleep 1 &amp;&amp; i3-msg &quot;[class=Meld] fullscreen enable&quot;&apos; _ %F</command>
 	<description></description>
 	<range></range>
 	<patterns>*</patterns>
@@ -184,7 +184,7 @@
 </action>
 <action>
 	<icon>edit-copy</icon>
-	<name>Path</name>
+	<name>Copy Path</name>
 	<submenu></submenu>
 	<unique-id>1778456208902180-1</unique-id>
 	<command>copy_path.sh %f</command>
@@ -197,6 +197,18 @@
 	<other-files/>
 	<text-files/>
 	<video-files/>
+</action>
+<action>
+	<icon>copy-coordinates</icon>
+	<name>Copy Content</name>
+	<submenu></submenu>
+	<unique-id>1778603449089829-1</unique-id>
+	<command>copy_content.sh %f</command>
+	<description>Copia o texto do arquivo</description>
+	<range>*</range>
+	<patterns>*</patterns>
+	<other-files/>
+	<text-files/>
 </action>
 <action>
 	<icon>object-rotate-right</icon>
@@ -355,7 +367,7 @@
 	<name>Imprimir</name>
 	<submenu></submenu>
 	<unique-id>1709808837539604-1</unique-id>
-	<command>bash -c &apos;printer=$(lpstat -a | awk &quot;{print \$1}&quot; | zenity --list --title=&quot;Imprimir&quot; --text=&quot;Selecione a impressora&quot; --column=&quot;Impressoras&quot; --height=400 --width=300) &amp;&amp; copies=$(zenity --entry --title=&quot;Quantidade de Cópias&quot; --text=&quot;Digite a quantidade de cópias&quot; --entry-text=&quot;1&quot;) &amp;&amp; lp -d &quot;$printer&quot; -n &quot;$copies&quot; %F&apos;</command>
+	<command>print.py %F</command>
 	<description>Imprimir arquivo</description>
 	<range>*</range>
 	<patterns>*</patterns>

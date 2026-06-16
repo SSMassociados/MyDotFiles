@@ -26,7 +26,8 @@ CURRENT_SCRIPT="$(cat "$STATE_FILE" 2>/dev/null || echo '')"
 # 🧩 Função: cria nova janela
 create_window() {
     echo "$SCRIPT" > "$STATE_FILE"
-    $TERMINAL --class="$CLASS" -e bash -lc "$SCRIPT" &
+    # Mudado de -lc para -ic para garantir ambiente interativo e leitura de caminhos locais
+    $TERMINAL --class="$CLASS" -e bash -ic "$SCRIPT" &
 
     # Espera janela registrar no i3
     for _ in {1..30}; do

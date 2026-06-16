@@ -80,7 +80,6 @@ firefox-i18n-pt-br
 firewalld
 flameshot
 flatpak
-font-manager
 geany
 geany-plugins
 geckodriver
@@ -92,6 +91,7 @@ glabels
 glow
 gnome-autoar
 gnome-boxes
+gnome-characters
 gnome-disk-utility
 gnome-themes-extra
 go
@@ -106,6 +106,7 @@ gst-plugin-va
 gst-plugins-bad
 gst-plugins-ugly
 gthumb
+gucharmap
 gufw
 gutenprint
 gvfs
@@ -150,6 +151,7 @@ kvantum-theme-materia
 lhasa
 lib32-mesa
 lib32-vulkan-intel
+libcamera
 libdvdcss
 libguestfs
 libmad
@@ -222,6 +224,7 @@ perl-anyevent-i3
 pipewire
 pipewire-alsa
 pipewire-jack
+pipewire-libcamera
 pipewire-pulse
 pipewire-roc
 pkgfile
@@ -247,6 +250,7 @@ python-pynvim
 python-reportlab
 python-soundfile
 python-xlsxwriter
+qalculate-gtk
 qbittorrent
 qemu-full
 qt5ct
@@ -261,10 +265,12 @@ resvg
 rmpc
 rofi
 rofi-emoji
+rofimoji
 rsync
 rustup
 sane-airscan
 scrcpy
+screenkey
 scribus
 scrot
 seahorse
@@ -290,15 +296,12 @@ telegram-desktop
 terminus-font
 tesseract
 tesseract-data-eng
-tesseract-data-por
 tftp-hpa
 thunar
 thunar-archive-plugin
 thunar-media-tags-plugin
 thunar-shares-plugin
 thunar-volman
-thunderbird
-thunderbird-i18n-pt-br
 tk
 tldr
 tmate
@@ -334,6 +337,7 @@ virt-viewer
 vivaldi
 vivaldi-ffmpeg-codecs
 vlc
+vlc-plugin-ffmpeg
 vsftpd
 vulkan-intel
 vulkan-tools

@@ -1,18 +1,22 @@
-#!/usr/bin/env sh
-# Dependencies flameshot, zbar and xclip
+#!/usr/bin/env bash
+# qrscan.sh
+# Dependencies: flameshot, zbar, xclip
 # yay -S flameshot zbar xclip
-# Takes the Screenshot
-flameshot gui -p /tmp/zbar_screenshot.png;
 
-# Copy link from Image
-zbarimg -q --raw /tmp/zbar_screenshot.png | xclip -selection clipboard;
+screenshot="/tmp/zbar_screenshot.png"
 
-# Delete Last Screenshot
-rm /tmp/zbar_screenshot.png;
+flameshot gui -p "$screenshot"
 
-# Set the exit status based on whether the last command succeeded or failed
-if [ $? -eq 0 ]; then
-    exit 0;  # Success
+if [ ! -f "$screenshot" ]; then
+    echo "Erro: screenshot não foi criado (captura cancelada?)"
+    exit 1
+fi
+
+if zbarimg -q --raw "$screenshot" | xclip -selection clipboard; then
+    rm -f "$screenshot"
+    exit 0
 else
-    exit 1;  # Error
+    echo "Erro: nenhum QR Code encontrado ou falha ao copiar"
+    rm -f "$screenshot"
+    exit 1
 fi

@@ -4,7 +4,6 @@ adwaita-qt5
 adwaita-qt6
 aic94xx-firmware
 alarm-clock-applet
-alttab
 android-sdk-platform-tools
 appimagelauncher
 ast-firmware
@@ -15,8 +14,8 @@ barrier
 barrier-headless
 betterlockscreen-git
 bibata-cursor-theme
-bluemail
 brave-bin
+brave-origin-beta-bin
 bt-dualboot
 catt
 cheese
@@ -86,6 +85,7 @@ lightdm-settings
 lightdm-webkit-theme-osmos
 localsend
 lsplug
+mailspring-bin
 masterpdfeditor-free
 matugen-bin
 media-downloader
@@ -95,6 +95,7 @@ mons
 mythes-pt-br
 neofetch
 nody-greeter
+nora-bin
 ocs-url
 oh-my-zsh-git
 onlyoffice-bin
@@ -131,8 +132,10 @@ sleepcount
 smem
 smile
 sound-theme-smooth
+spacedrive-clean
 spotx-git
 sxcs
+tesseract-data-best-por
 tilix
 tldr-page
 ttf-all-the-icons
@@ -153,6 +156,7 @@ vidcutter
 walker-bin
 warsaw-bin
 wd719x-firmware
+whatsie
 whitesur-cursor-theme-git
 wl-screenrec
 wpgtk
@@ -169,4 +173,6 @@ xidlehook-withdrawnwin
 xlayoutdisplay
 yay
 zapzap
+zen-browser-bin
+zoneminder
 zsh-theme-powerlevel10k-git

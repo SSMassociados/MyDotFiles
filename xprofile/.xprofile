@@ -1,10 +1,46 @@
 #!/bin/bash
+# ==============================================================
+# ~/.xprofile
+# Executado pelo display manager (GDM, LightDM, SDDM) antes
+# da sessão gráfica iniciar. Não use 'set -e' aqui: uma falha
+# isolada não deve impedir o login.
+# ==============================================================
 
-# Carrega variáveis de ambiente do i3
+# ── Variáveis de ambiente do i3 ───────────────────────────────
 [ -f "$HOME/.config/i3/env.sh" ] && . "$HOME/.config/i3/env.sh"
 
-# Diretórios pessoais ao PATH
+# ── PATH ──────────────────────────────────────────────────────
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.config/i3/scripts"
 export PATH="$PATH:$HOME/.config/polybar/scripts"
 export PATH="$PATH:$HOME/.config/Thunar/scripts"
+
+# ── IBUS ──────────────────────────────────────────────────────
+ibus-daemon -drxR
+
+# ── GTK: sincroniza GTK3 → GTK4 a cada login ─────────────────
+# Garante que apps GTK4 herdem tema, fonte e cursor do GTK3.
+# exit 0 interno: falha aqui nunca trava o login.
+"$HOME/.config/i3/scripts/sync_gtk3_to_gtk4.sh"
+
+# Exporta variáveis para systemd-user e DBus
+systemctl --user import-environment \
+    DISPLAY \
+    XAUTHORITY \
+    XDG_CURRENT_DESKTOP \
+    XDG_SESSION_TYPE \
+    XDG_SESSION_DESKTOP \
+    DESKTOP_SESSION \
+    QT_QPA_PLATFORMTHEME
+
+dbus-update-activation-environment --systemd \
+    DISPLAY \
+    XAUTHORITY \
+    XDG_CURRENT_DESKTOP \
+    XDG_SESSION_TYPE \
+    XDG_SESSION_DESKTOP \
+    DESKTOP_SESSION \
+    QT_QPA_PLATFORMTHEME
+
+# Declara sessão gráfica para systemd-user
+systemctl --user start graphical-session.target

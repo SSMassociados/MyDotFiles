@@ -6,6 +6,7 @@
 #                             
 # Dunst - Notificação de Desktop Leve
 # by Sidiclei < Ratel > (2025) 
+# dunstrc.template
 # ----------------------------------------------------- 
 
 ### INSTRUÇÕES ###
@@ -36,16 +37,13 @@
     
     # Deslocamento: (horizontal, vertical) em pixels da borda da tela
     offset = (3, 25)
-    
+        
     # Escala: 0 = automático, 1 = não escalar para HiDPI
     scale = 0
     
     # Limite de notificações visíveis simultaneamente (0 = ilimitado)
     notification_limit = 0
     
-    # Reduzir notificação se não couber no espaço
-    shrink = no
-
     ### BARRA DE PROGRESSO ###
 
     progress_bar = true
@@ -64,14 +62,14 @@
     transparency = 0
     
     # Altura da linha separadora entre notificações
-    separator_height = 1
+    separator_height = 0
     
     # Preenchimento interno da notificação
     padding = 8
     horizontal_padding = 8
     
     # Espaço entre texto e ícone
-    text_icon_padding = 0
+    text_icon_padding = 10
     
     # Espessura da borda da notificação
     frame_width = 2
@@ -87,8 +85,7 @@
     
     # Ordenar notificações: yes = mais recentes no topo
     sort = no
-    #idle_threshold = 120
-
+    
     ### TEXTO ###
 
     # Fonte padrão com fallback
@@ -118,9 +115,7 @@
     
     # Agrupar notificações duplicadas
     stack_duplicates = true
-    
-    replace_id = yes
-    
+        
     # Mostrar contador de duplicatas
     hide_duplicate_count = false
     
@@ -138,7 +133,9 @@
     icon_corner_radius = 0
     
     # Caminhos para buscar ícones (fallbacks adicionados)
-    icon_path = /usr/share/icons/gnome/24x24/status/:/usr/share/icons/gnome/24x24/devices/:/usr/share/icons/hicolor/24x24/status/:/usr/share/pixmaps/
+    enable_recursive_icon_lookup = true
+    icon_theme = Adwaita
+    icon_path = /usr/share/pixmaps/
 
     ### HISTÓRICO ###
 
@@ -151,10 +148,10 @@
     ### MISC/AVANÇADO ###
 
     # Aplicativo para mostrar histórico (com fallback)
-    dmenu = /usr/bin/dmenu -p dunst: || /usr/local/bin/dmenu -p dunst:
+    dmenu = /usr/bin/dmenu -p dunst:
     
     # Navegador padrão para URLs (múltiplos fallbacks)
-    browser = /usr/bin/firefox -new-tab || /usr/bin/chromium --new-tab || /usr/bin/xdg-open
+    browser = /usr/bin/xdg-open
     always_run_script = true
     
     # Identificação da janela para gerenciadores de janelas
@@ -169,7 +166,7 @@
 
     ### WAYLAND ###
 
-    force_xwayland = true
+    force_xwayland = false
 
     ### LEGACY ###
     
@@ -186,23 +183,23 @@
 
 [urgency_low]
     # Cores com fallbacks para sistemas sem suporte a placeholders
-    background = "#0a0b19" 
+    background = "#1b190b" 
     foreground = "#FFFFFF" 
-    frame_color = "#0a0b19" 
+    frame_color = "#1b190b" 
     timeout = 15
     default_icon = dialog-information
     
 [urgency_normal]
-    background = "#424a6c" 
+    background = "#547450" 
     foreground = "#FFFFFF"
-    frame_color = "#424a6c"
+    frame_color = "#547450"
     timeout = 15
     default_icon = dialog-information
     
 [urgency_critical]
-    background = "#174273"
+    background = "#4f602d"
     foreground = "#FFFFFF"
-    frame_color = "#174273" 
+    frame_color = "#4f602d" 
     timeout = 30
     # Pausar notificador quando tiver X notificações críticas
     #override_pause_level = 60

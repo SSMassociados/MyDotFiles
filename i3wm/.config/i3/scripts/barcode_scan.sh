@@ -1,90 +1,153 @@
-#!/bin/bash
+#!/usr/bin/env bash
+# barcode_scan.sh
+# Dependências: flameshot zbar imagemagick xclip libnotify
+# Opcionais: tesseract java (ZXing)
+# Arch: yay -S flameshot zbar imagemagick xclip libnotify tesseract
 
-# Script de leitura de código de barras com zbarimg, fallback com ZXing e OCR
-# Requer: flameshot, zbarimg, imagemagick, xclip, (opcional: tesseract, java + zxing)
+set -u
 
-check_dependencies() {
-    dependencies=("flameshot" "zbarimg" "xclip" "convert" "java")
-    missing=()
-    
-    for dep in "${dependencies[@]}"; do
-        if ! command -v "$dep" &>/dev/null; then
-            missing+=("$dep")
-        fi
-    done
+ZXING_DIR="$HOME/.local/bin/zxing"
+ZXING_JAR="$ZXING_DIR/zxing.jar"
+ZXING_CORE="$ZXING_DIR/core.jar"
 
-    if [ ${#missing[@]} -gt 0 ]; then
-        echo "Erro: Dependências faltando: ${missing[*]}"
-        echo "Instale com: sudo pacman -S flameshot zbar xclip imagemagick tesseract jre-openjdk"
-        exit 1
-    fi
+if command -v magick >/dev/null 2>&1; then
+    MAGICK_CMD="magick"
+else
+    MAGICK_CMD="convert"
+fi
 
-    if [ ! -f ~/.local/bin/zxing/zxing.jar ]; then
-        echo "ZXing não encontrado. Instalando em ~/.local/bin/zxing ..."
-        mkdir -p ~/.local/bin/zxing
-        wget -q https://repo1.maven.org/maven2/com/google/zxing/javase/3.5.1/javase-3.5.1.jar \
-             -O ~/.local/bin/zxing/zxing.jar || {
-            echo "Falha ao baixar ZXing"
-            exit 1
-        }
-    fi
-}
-
-zxing_read() {
-    local image="$1"
-    java -cp ~/.local/bin/zxing/zxing.jar com.google.zxing.client.j2se.CommandLineRunner "$image" \
-        2>/dev/null | grep -oP 'content:\K.*'
-}
+# Declaradas globalmente para evitar erro com set -u no cleanup
+temp_img=""
+temp_processed=""
 
 cleanup() {
     rm -f "$temp_img" "$temp_processed"
 }
 trap cleanup EXIT
 
+check_dependencies() {
+    local required=("flameshot" "zbarimg" "xclip" "notify-send")
+    local missing=()
+
+    for dep in "${required[@]}"; do
+        if ! command -v "$dep" >/dev/null 2>&1; then
+            missing+=("$dep")
+        fi
+    done
+
+    if ! command -v magick >/dev/null 2>&1 &&
+       ! command -v convert >/dev/null 2>&1; then
+        missing+=("imagemagick")
+    fi
+
+    if (( ${#missing[@]} > 0 )); then
+        echo "Erro: Dependências faltando:"
+        printf ' - %s\n' "${missing[@]}"
+        echo
+        echo "Instale com:"
+        echo "yay -S flameshot zbar imagemagick xclip libnotify"
+        exit 1
+    fi
+}
+
+install_zxing() {
+    command -v java >/dev/null 2>&1 || return 0
+
+    if [[ -f "$ZXING_JAR" && -f "$ZXING_CORE" ]]; then
+        return 0
+    fi
+
+    echo "ZXing não encontrado. Baixando..."
+    mkdir -p "$ZXING_DIR"
+
+    wget -q \
+        "https://repo1.maven.org/maven2/com/google/zxing/javase/3.5.1/javase-3.5.1.jar" \
+        -O "$ZXING_JAR" || return 1
+
+    wget -q \
+        "https://repo1.maven.org/maven2/com/google/zxing/core/3.5.1/core-3.5.1.jar" \
+        -O "$ZXING_CORE" || return 1
+}
+
+zxing_read() {
+    local image="$1"
+
+    [[ -f "$ZXING_JAR" ]] || return 1
+    [[ -f "$ZXING_CORE" ]] || return 1
+
+    java \
+        -cp "$ZXING_JAR:$ZXING_CORE" \
+        com.google.zxing.client.j2se.CommandLineRunner \
+        "$image" 2>/dev/null |
+        grep -oP 'content:\K.*'
+}
+
 scan_barcode() {
+    local barcode_result=""
+    local ocr_result=""
+
     temp_img=$(mktemp /tmp/barcode_scan.XXXXXX.png)
     temp_processed=$(mktemp /tmp/barcode_processed.XXXXXX.png)
 
     flameshot gui -r > "$temp_img"
 
-    if [ ! -s "$temp_img" ]; then
+    if [[ ! -s "$temp_img" ]]; then
         echo "Captura cancelada."
         exit 0
     fi
 
-    convert "$temp_img" \
-        -resize 300% \
+    "$MAGICK_CMD" "$temp_img" \
         -colorspace Gray \
         -auto-level \
-        -contrast-stretch 10% \
-        -sharpen 0x2 \
+        -sharpen 0x1 \
+        -resize 300% \
         "$temp_processed"
 
-    barcode_result=$(zbarimg -q --raw "$temp_processed" 2>/dev/null)
+    # Tentativa 1: ZBar imagem original
+    barcode_result=$(zbarimg -q --raw "$temp_img" 2>/dev/null)
 
-    # ZXing como fallback
-    if [ -z "$barcode_result" ]; then
-        barcode_result=$(zxing_read "$temp_processed")
+    # Tentativa 2: ZBar imagem processada
+    if [[ -z "$barcode_result" ]]; then
+        barcode_result=$(zbarimg -q --raw "$temp_processed" 2>/dev/null)
     fi
 
-    # OCR como último recurso
-    if [ -z "$barcode_result" ] && command -v tesseract &>/dev/null; then
-        ocr_result=$(tesseract "$temp_processed" stdout 2>/dev/null | tr -dc '0-9')
-        if [ -n "$ocr_result" ]; then
-            barcode_result="$ocr_result"
-            echo "⚠️ Lido via OCR (tesseract): $barcode_result"
+    # Tentativa 3: ZXing
+    if [[ -z "$barcode_result" ]] && command -v java >/dev/null 2>&1; then
+        barcode_result=$(zxing_read "$temp_img")
+        if [[ -z "$barcode_result" ]]; then
+            barcode_result=$(zxing_read "$temp_processed")
         fi
     fi
 
-    if [ -n "$barcode_result" ]; then
-        echo -n "$barcode_result" | xclip -selection clipboard
-        notify-send "Leitor de Código" "Código: $barcode_result" -u normal
-        echo "✅ Código detectado: $barcode_result (copiado para clipboard)"
+    # Tentativa 4: OCR (último recurso)
+    if [[ -z "$barcode_result" ]] && command -v tesseract >/dev/null 2>&1; then
+        ocr_result=$(
+            LANG=pt_BR.UTF-8 \
+            tesseract "$temp_processed" stdout 2>/dev/null |
+            tr -dc '0-9A-Za-z'
+        )
+        if [[ ${#ocr_result} -ge 6 ]]; then
+            barcode_result="$ocr_result"
+            echo "⚠️ Lido via OCR (resultado pode ser impreciso)"
+        fi
+    fi
+
+    if [[ -n "$barcode_result" ]]; then
+        printf '%s' "$barcode_result" | xclip -selection clipboard
+        local preview="${barcode_result:0:50}"
+        [[ ${#barcode_result} -gt 50 ]] && preview="$preview..."
+        notify-send "Leitor de Código" "Código: $preview" -u normal
+        echo "✅ Código detectado:"
+        echo "$barcode_result"
+        echo
+        echo "📋 Copiado para a área de transferência"
     else
         notify-send "Leitor de Código" "Nenhum código detectado" -u critical
-        echo "❌ Nenhum código detectado. Tente ajustar zoom, luz ou ângulo."
+        echo "❌ Nenhum código detectado."
+        echo "Tente selecionar uma área mais próxima do código."
     fi
 }
 
 check_dependencies
+install_zxing
 scan_barcode

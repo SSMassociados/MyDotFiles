@@ -1,38 +1,29 @@
 #!/usr/bin/env bash
-# Dependencies slop, xdotool, xwininfo and wmctrl
+# draw_window.sh
+# Dependencies: slop, xdotool, xwininfo, wmctrl
 # yay -S slop xdotool xwininfo wmctrl
 
-# Takes the area geometry and position
-geometry=$(slop -f '0, %x, %y, %w, %h');
+geometry=$(slop -f '0,%x,%y,%w,%h') || exit 1
 
-# Checks if slop was executed successfully
-if [ $? -eq 0 ]
-then
-    # Opens kitty
-    /usr/bin/kitty &
+/usr/bin/kitty &
+pid=$!
 
-    # Stores the pid
-    pid=$!;
+attempts=0
+until id=$(xdotool search --pid "$pid" 2>/dev/null) && [ -n "$id" ]; do
+    sleep 0.1
+    (( attempts++ ))
+    [ $attempts -ge 50 ] && { echo "Timeout: janela não encontrada"; exit 1; }
+done
 
-    # Takes the window id
-    until id=$(xdotool search --pid "$pid") 1>/dev/null
-	do
-	    sleep 0.1;
-	done
+id=$(echo "$id" | tail -1)
 
-    # Checks if the window id is the same and if it is visible
-    until xwininfo -id "$id" | grep -q "IsViewable" 1>/dev/null
-        do
-            id=$(xdotool search --pid "$pid");
-            sleep 0.1;
-        done
+attempts=0
+until xwininfo -id "$id" 2>/dev/null | grep -q "IsViewable"; do
+    sleep 0.1
+    id=$(xdotool search --pid "$pid" 2>/dev/null | tail -1)
+    (( attempts++ ))
+    [ $attempts -ge 50 ] && { echo "Timeout: janela não visível"; exit 1; }
+done
 
-    # Toggles window to floating mode
-    i3-msg "[id=$id]" floating enable;
-
-    # Takes the kitty id then reposition and resize
-    wmctrl -i -r "$id" -e "$geometry";
-    exit 0;
-else
-    exit 1;
-fi
+i3-msg "[id=$id]" floating enable, border none || { echo "Falha no i3-msg"; exit 1; }
+wmctrl -i -r "$id" -e "$geometry"

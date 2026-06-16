@@ -26,12 +26,13 @@ all_updates=$((repo_updates + aur_updates))
 
 # Modo silencioso: não mostrar nada se não houver updates
 if $quiet && [[ "$all_updates" -eq 0 ]]; then
+    echo ""
     exit 0
 fi
 
 # Ícone se houver atualizações
-has_updates_icon=""
-[ "$all_updates" -gt 0 ] && has_updates_icon="%{F$primary}%{F-}"
+icon_color="${primary}"
+[[ "$all_updates" -gt 0 ]] && icon_color="${color2:-$primary}"
 
 # Saída formatada para Polybar
-echo "%{T4}%{F$primary}$has_updates_icon%{F-}%{T-} %{T4}%{F$primary}󰏖%{F-}%{T-} $total_pkgs %{T4}%{F$primary}󰣇%{F-}%{T-} $repo_updates %{T4}%{F$primary}%{F-}%{T-} $aur_updates"
+echo "%{T4}%{F$icon_color}󰏖%{F-}%{T-} $total_pkgs  %{T4}%{F$primary}󰣇%{F-}%{T-} $repo_updates  %{T4}%{F$primary}%{F-}%{T-} $aur_updates"
