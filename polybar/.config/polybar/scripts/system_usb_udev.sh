@@ -1,4 +1,5 @@
 #!/bin/sh
+export PATH="/usr/bin:/usr/sbin:/bin:/sbin"
 
 # sudo nano /etc/udev/rules.d/99-polybar-usb.rules
 # ACTION=="add", SUBSYSTEM=="block", ENV{DEVTYPE}=="partition", RUN+="/bin/su sidiclei -c '/home/sidiclei/.config/polybar/scripts/system_usb_udev.sh --update'"

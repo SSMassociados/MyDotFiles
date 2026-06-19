@@ -1,0 +1,12 @@
+[Unit]
+Description=Keep graphical-session.target active
+After=graphical-session.target
+Wants=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/true
+RemainAfterExit=yes
+
+[Install]
+WantedBy=default.target

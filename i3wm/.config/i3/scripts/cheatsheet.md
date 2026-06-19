@@ -1,5 +1,5 @@
 # i3wm Cheat Sheet - Sidiclei Config
-> 🕒 **Última atualização:** 16/06/2026 - 12:15:40
+> 🕒 **Última atualização:** 18/06/2026 - 13:02:08
 
 > 🐧 = Super (Mod4)
 

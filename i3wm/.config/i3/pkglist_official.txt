@@ -344,6 +344,7 @@ vulkan-tools
 wavemon
 waydroid
 wget
+wireless-regdb
 wireless_tools
 wmctrl
 wmfocus

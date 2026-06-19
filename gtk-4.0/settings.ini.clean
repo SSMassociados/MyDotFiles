@@ -1,0 +1,16 @@
+# Gerado automaticamente por sync_gtk3_to_gtk4.sh
+# Origem: /home/sidiclei/.dotfiles/gtk-3.0/.config/gtk-3.0/settings.ini
+# Data:   2026-06-18 16:42:32
+# NÃO edite este arquivo manualmente.
+
+[Settings]
+gtk-theme-name=WhiteSur-dark
+gtk-icon-theme-name=candy-icons
+gtk-font-name=SF Pro Display 12
+gtk-cursor-theme-name=volantes_cursors
+gtk-cursor-theme-size=24
+gtk-xft-antialias=1
+gtk-xft-hinting=1
+gtk-xft-hintstyle=hintslight
+gtk-xft-rgba=rgb
+gtk-application-prefer-dark-theme=1
