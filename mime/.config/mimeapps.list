@@ -67,6 +67,7 @@ application/vnd.ms-excel=wps-office-et.desktop
 application/vnd.openxmlformats-officedocument.spreadsheetml.sheet=wps-office-et.desktop
 application/vnd.ms-powerpoint=wps-office-wpp.desktop
 application/vnd.openxmlformats-officedocument.presentationml.presentation=wps-office-wpp.desktop
+x-scheme-handler/mailspring=Mailspring.desktop
 
 [Added Associations]
 application/pdf=atril.desktop;
@@ -93,3 +94,4 @@ application/x-doc=wps-office-wps.desktop;
 application/vnd.oasis.opendocument.text=wps-office-wps.desktop;
 application/rtf=wps-office-wps.desktop;
 application/vnd.kde.kxmlguirc=geany.desktop;
+text/markdown=typora.desktop;

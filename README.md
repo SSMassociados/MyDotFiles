@@ -121,6 +121,35 @@ git clone https://github.com/SSMassociados/MyDotFiles.git ~/.dotfiles
 cd ~/.dotfiles
 ```
 
+### Ignorar Pacotes com `.stow-local-ignore`
+
+Para excluir pacotes permanentemente do Stow (sem precisar filtrá-los manualmente toda vez), crie o arquivo `.stow-local-ignore` na raiz do repositório:
+
+```bash
+nano ~/.dotfiles/.stow-local-ignore
+```
+
+Adicione os pacotes a ignorar, um por linha (formato regex):
+
+```
+^gtk-4\.0$
+^xorg$
+^TUTORIAIS$
+```
+
+A partir daí, o comando `stow -Rv -t ~ */` já os ignora automaticamente, sem necessidade de filtros extras.
+
+Para ignorar pontualmente (sem salvar a regra), filtre na linha de comando:
+
+```bash
+stow -Rv -t ~ $(ls -1d ~/.dotfiles/*/ | xargs -n1 basename | grep -Ev '^(gtk-4\.0|xorg|TUTORIAIS)$' | tr '\n' ' ')
+```
+
+| Abordagem             | Quando usar                                              |
+| --------------------- | -------------------------------------------------------- |
+| `.stow-local-ignore`  | Exclusão permanente — pacotes que nunca devem ser linkados via stow |
+| `grep -Ev` no comando | Exclusão pontual, sem necessidade de salvar a regra      |
+
 ---
 
 ## ⚠️ Importante: Sempre Simule Antes!
@@ -190,18 +219,18 @@ cd ~/.dotfiles && stow -Rnv -t ~ */    # Dry-run
 
 ### Listar todos os pacotes do repositório em uma linha
 
-Útil para copiar e colar direto no comando `stow`:
+Exibe todos os pacotes em uma linha **e** copia para a área de transferência ao mesmo tempo. Útil para colar direto no comando `stow`:
 
 ```bash
-ls -1d ~/.dotfiles/*/ 2>/dev/null | xargs -n1 basename | tr '\n' ' ';echo
+ls -1d ~/.dotfiles/*/ | xargs -n1 basename | tr '\n' ' ' | tee >(xclip -selection clipboard); echo
 ```
 
 ### Exportar a árvore completa de arquivos para a área de transferência
 
-Copia toda a estrutura do repositório (incluindo arquivos ocultos) para usar onde quiser:
+Exibe a estrutura do repositório (incluindo arquivos ocultos) **e** copia para a área de transferência ao mesmo tempo:
 
 ```bash
-/usr/bin/tree ~/.dotfiles -L 5 -a | xclip -selection clipboard
+/usr/bin/tree ~/.dotfiles -L 5 -a | tee >(xclip -selection clipboard)
 ```
 
 > **Nota:** use `/usr/bin/tree` para garantir o binário nativo, já que `tree` pode estar mapeado para `lsd` via alias.
