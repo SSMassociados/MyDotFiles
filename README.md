@@ -239,14 +239,44 @@ Exibe a estrutura do repositório (incluindo arquivos ocultos) **e** copia para 
 
 ## 🔄 Sincronização com Git
 
-```bash
-# Atualizar:
-git add .
-git commit -m "Atualização das configurações"
-git push origin main
+O alias `dotsync` (definido no `.zshrc`) automatiza o fluxo completo de `add → commit → push`:
 
-# Em outra máquina:
-git pull origin main
+```zsh
+# Dotfiles Sync
+dotsync() {
+    cd ~/.dotfiles || { echo "❌ Pasta ~/.dotfiles não encontrada"; return 1; }
+
+    echo "🔄 Entrando em ~/.dotfiles..."
+    git status
+
+    if git status --porcelain | grep -q .; then
+        git add .
+        echo "✅ Arquivos adicionados"
+
+        if [ -z "$1" ]; then
+            git commit -m "Atualização automática dos dotfiles"
+        else
+            git commit -m "$1"
+        fi
+
+        git push && echo "🚀 Push realizado com sucesso!"
+    else
+        echo "✅ Nenhum arquivo modificado."
+    fi
+}
+```
+
+**Uso:**
+
+```bash
+dotsync                        # Commit com mensagem automática
+dotsync "minha mensagem aqui"  # Commit com mensagem personalizada
+```
+
+Em outra máquina, para sincronizar:
+
+```bash
+cd ~/.dotfiles && git pull origin main
 ```
 
 ---
