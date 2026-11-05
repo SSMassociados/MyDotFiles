@@ -12,6 +12,9 @@
 ### Instalar o plugin fzf-tab (necessário para os zstyles de preview funcionarem)
 ### git clone https://github.com/Aloxaf/fzf-tab ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/fzf-tab
 
+### Instalar o plugin zsh-history-substring-search
+### git clone https://github.com/zsh-users/zsh-history-substring-search.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-history-substring-search
+
 ### Download K
 ### git clone https://github.com/supercrabtree/k $ZSH_CUSTOM/plugins/k
 
@@ -40,7 +43,7 @@ fi
 
 # Suporte ao Tilix/VTE (Correção de diretório atual em terminais gráficos)
 if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
-  source /etc/profile.d/vte.sh
+  source /etc/profile.d/vte.sh 2>/dev/null || true
 fi
 
 # ==============================================================================
@@ -59,7 +62,9 @@ plugins=(
   dirhistory
   history
   zsh-autosuggestions
-  fzf-tab               # Deve ser carregado após plugins de completion
+  fzf-tab                 # Deve ser carregado após plugins de completion
+  zsh-history-substring-search
+  k
   zsh-syntax-highlighting # Deve ser o último plugin
 )
 
@@ -98,15 +103,17 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 # ==============================================================================
 # 6. KEYBINDINGS (ATALHOS)
 # ==============================================================================
-# Navegação no histórico inteligente (baseado no que já foi digitado)
-autoload -U up-line-or-beginning-search
-autoload -U down-line-or-beginning-search
-zle -N up-line-or-beginning-search
-zle -N down-line-or-beginning-search
+# Navegação com setas usando substring search (melhor experiência)
+bindkey '^[[A' history-substring-search-up     # Seta para cima
+bindkey '^[[B' history-substring-search-down   # Seta para baixo
+bindkey '^P' history-substring-search-up       # Ctrl+P
+bindkey '^N' history-substring-search-down     # Ctrl+N
 
-bindkey '^p' up-line-or-beginning-search      # Ctrl+P (Cima)
-bindkey '^n' down-line-or-beginning-search    # Ctrl+N (Baixo)
-bindkey '^[w' kill-region                     # Alt+W (Apagar palavra)
+# Ctrl+R com busca incremental tradicional (backup)
+bindkey '^R' history-incremental-search-backward
+
+# Outros atalhos úteis
+bindkey '^[w' kill-region                      # Alt+W
 
 # ==============================================================================
 # 7. INTEGRAÇÕES (TOOLS)
@@ -201,17 +208,134 @@ elif [[ -x "$(command -v vim)" ]]; then
 fi
 
 # IP Addresses
-if command -v ip &>/dev/null; then
-    alias iplocal="ip -br -c a"
-else
-    alias iplocal="ifconfig | grep -Eo 'inet (addr:)?([0-9]*\.){3}[0-9]*' | grep -Eo '([0-9]*\.){3}[0-9]*' | grep -v '127.0.0.1'"
-fi
+ipinfo() {
+  local mode="${1:-full}"
 
-if command -v curl &>/dev/null; then
-    alias ipexternal="curl -s ifconfig.me && echo"
-elif command -v wget &>/dev/null; then
-    alias ipexternal="wget -qO- ifconfig.me && echo"
-fi
+  _ip_header() { printf '\n%s\n' "$1"; }
+
+  _get_gw() {
+    if command -v ip &>/dev/null; then
+      ip route show default 2>/dev/null | awk '/default/ {print $3; exit}'
+    else
+      route -n get default 2>/dev/null | awk '/gateway/ {print $2}'
+    fi
+  }
+
+  _ip_dns_ativo() {
+    local -a dns_list
+    local gw=$(_get_gw)
+    local iface
+
+    if command -v resolvectl &>/dev/null; then
+      if command -v ip &>/dev/null; then
+        iface=$(ip route show default 2>/dev/null \
+          | awk '/default/ {for(i=1;i<=NF;i++) if($i=="dev") {print $(i+1); exit}}')
+      fi
+
+      local src
+      if [[ -n "$iface" ]]; then
+        # DNS apenas da interface da rota padrão
+        src=$(resolvectl status "$iface" 2>/dev/null)
+      else
+        # Fallback: seção Global do resolvectl
+        src=$(resolvectl status 2>/dev/null | awk '/^Global/,/^Link/')
+      fi
+
+      # Extrai todos os IPs IPv4 via awk — sem depender do grep
+      dns_list=( $(printf '%s\n' "$src" \
+        | awk '/Current DNS Server:|DNS Servers:/ {
+            for(i=1;i<=NF;i++)
+              if($i ~ /^([0-9]{1,3}\.){3}[0-9]{1,3}$/) print $i
+          }') )
+
+    elif [[ -f /etc/resolv.conf ]]; then
+      dns_list=( $(awk '/^nameserver/ &&
+        $2 ~ /^([0-9]{1,3}\.){3}[0-9]{1,3}$/ {print $2}' /etc/resolv.conf) )
+    fi
+
+    # Remove gateway e deduplica (zsh nativo)
+    [[ -n "$gw" ]] && dns_list=( ${dns_list[@]:#$gw} )
+    dns_list=( ${(u)dns_list[@]} )
+
+    if (( ${#dns_list[@]} == 0 )); then
+      printf '   %-20s\n' "⚠️  DNS: não encontrado"
+    elif (( ${#dns_list[@]} == 1 )); then
+      printf '   %-20s → %s\n' "✅ DNS ativo" "${dns_list[1]}"
+    else
+      printf '   %-20s → %s\n' "✅ DNS ativos" "${dns_list[1]}"
+      local i
+      for i in "${dns_list[@]:1}"; do
+        printf '   %-20s   %s\n' "" "$i"
+      done
+    fi
+  }
+
+  _ip_local() {
+    _ip_header "📍 IP Local:"
+    if command -v ip &>/dev/null; then
+      ip -br addr show scope global up \
+        | awk '$1 !~ /^(eno1|lo)$/ && $3 != "" {
+            split($3, a, "/"); print "   " $1 "\t→ " a[1]
+          }'
+    else
+      ifconfig \
+        | awk '/inet / && $2 != "127.0.0.1" {print "   • " $2}'
+    fi
+  }
+
+  _ip_router() {
+    _ip_header "🔀 Gateway / Roteador:"
+    local gw=$(_get_gw)
+    if [[ -n "$gw" ]]; then
+      printf '   %b\n' $'\e]8;;http://'"$gw"$'\e\\\🔀 '"$gw"$'\e]8;;\e\\'
+    else
+      echo "   ⚠️  Não encontrado"
+    fi
+  }
+
+  _ip_externo() {
+    _ip_header "🌍 IP Externo:"
+    local ext
+    if command -v curl &>/dev/null; then
+      ext=$(curl -s --max-time 3 https://api.ipify.org 2>/dev/null)
+    elif command -v wget &>/dev/null; then
+      ext=$(wget -qO- --timeout=3 https://api.ipify.org 2>/dev/null)
+    fi
+    if [[ "$ext" =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
+      printf '   🌐 %s\n' "$ext"
+    else
+      echo "   ⚠️  Timeout ou sem conexão"
+    fi
+  }
+
+  case "$mode" in
+    full)
+      echo "🌐 Informações de Rede"
+      echo "══════════════════════"
+      _ip_local
+      _ip_router
+      _ip_dns_ativo
+      _ip_externo
+      echo
+      ;;
+    local)
+      _ip_local
+      _ip_router
+      _ip_dns_ativo
+      echo
+      ;;
+    externo)
+      _ip_externo
+      _ip_router
+      echo
+      ;;
+  esac
+}
+
+# Aliases
+alias ips='ipinfo full'
+alias iplocal='ipinfo local'
+alias ipexterno='ipinfo externo'
 
 # ==============================================================================
 # 9. FUNÇÕES PERSONALIZADAS
@@ -341,4 +465,4 @@ add-zsh-hook precmd oks
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Dart / Flutter Completion
-[[ -f /home/sidiclei/.dart-cli-completion/zsh-config.zsh ]] && . /home/sidiclei/.dart-cli-completion/zsh-config.zsh || true
+[[ -f /home/sidiclei/.dart-cli-completion/zsh-config.zsh ]] && source /home/sidiclei/.dart-cli-completion/zsh-config.zsh

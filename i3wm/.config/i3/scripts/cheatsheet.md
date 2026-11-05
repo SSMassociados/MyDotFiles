@@ -1,5 +1,5 @@
 # i3wm Cheat Sheet - Sidiclei Config
-> 🕒 **Última atualização:** 18/06/2026 - 13:02:08
+> 🕒 **Última atualização:** 12/10/2026 - 15:46:25
 
 > 🐧 = Super (Mod4)
 
@@ -178,6 +178,11 @@
 | Atalho | Ação |
 | --- | --- |
 | 🐧 + z | Launch SIGE - Sistema de Informações e Gerenciamento Escolar |
+
+## 🧩 Outros Atalhos
+| Atalho | Ação |
+| --- | --- |
+| Escape | Mata janelas específicas com Escape (case insensitive) |
 
 ## 🔑 Modos Especiais
 

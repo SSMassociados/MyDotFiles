@@ -37,17 +37,18 @@ cabextract
 catfish
 cava
 cdrdao
-chromium
 cmake
 cpu-x
 csvkit
 cups
+cups-filters
 cups-pdf
 cups-pk-helper
 cyme
 deepin-sound-theme
 dex
 dialog
+dkms
 dmenu
 dnsmasq
 docker
@@ -80,6 +81,7 @@ firefox-i18n-pt-br
 firewalld
 flameshot
 flatpak
+foomatic-db-engine
 geany
 geany-plugins
 geckodriver
@@ -117,8 +119,6 @@ gvfs-smb
 handbrake
 hardinfo2
 helvum
-hplip
-htop
 i3-wm
 i3blocks
 ifplugd
@@ -159,6 +159,7 @@ libmatemixer
 libmythes
 libreoffice-still
 libreoffice-still-pt-br
+librist
 libva-intel-driver
 lightdm
 lightdm-gtk-greeter
@@ -169,6 +170,7 @@ linux
 linux-firmware
 linux-firmware-qlogic
 linux-headers
+lsb-release
 lsd
 lshw
 ly
@@ -216,6 +218,7 @@ os-prober
 otf-font-awesome
 pacman-contrib
 pandoc-cli
+pappl
 pavucontrol
 pdfarranger
 pdftk
@@ -241,6 +244,7 @@ python-installer
 python-matplotlib
 python-numexpr
 python-numpydoc
+python-opentelemetry-sdk
 python-pandas
 python-pdftotext
 python-pip
@@ -250,13 +254,11 @@ python-pynvim
 python-reportlab
 python-soundfile
 python-xlsxwriter
-qalculate-gtk
 qbittorrent
 qemu-full
 qt5ct
 qt6ct
 qutebrowser
-ranger
 rebuild-detector
 redshift
 refind
@@ -325,7 +327,6 @@ tumbler
 unace
 unarchiver
 unarj
-unoconv
 unzip
 vcdimager
 vde2
@@ -334,6 +335,9 @@ viewnior
 vim-runtime
 virt-manager
 virt-viewer
+virtualbox
+virtualbox-guest-iso
+virtualbox-host-dkms
 vivaldi
 vivaldi-ffmpeg-codecs
 vlc
@@ -412,7 +416,6 @@ yad
 yarn
 yazi
 zathura-pdf-poppler
-zed
 zenity
 zip
 zoxide

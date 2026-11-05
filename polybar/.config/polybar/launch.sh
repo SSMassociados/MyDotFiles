@@ -1,46 +1,21 @@
 #!/usr/bin/env bash
-
-# ==================================================
 # ~/.config/polybar/launch.sh
-# LAUNCHER POLYBAR OTIMIZADO (MULTI-MONITOR/FAILSAFE)
-# Com parada automática de apps Systray
-# Barras: main (por monitor ou só primário) + tray (monitor primário)
-# ==================================================
 
 set -eo pipefail
 
-# Garante variáveis externas opcionais antes do set -u.
-# Evita abort por "variável não associada" ao ser chamado
-# fora do ambiente de login (ex: toggle_mons.sh, i3 reload).
-# Cobre todas as variáveis que o pywal/colors.sh pode referenciar.
 export FZF_DEFAULT_OPTS="${FZF_DEFAULT_OPTS:-}"
-export LSCOLORS="${LSCOLORS:-}"
 export LS_COLORS="${LS_COLORS:-}"
-export LESS_TERMCAP_mb="${LESS_TERMCAP_mb:-}"
-export LESS_TERMCAP_md="${LESS_TERMCAP_md:-}"
-export LESS_TERMCAP_me="${LESS_TERMCAP_me:-}"
-export LESS_TERMCAP_se="${LESS_TERMCAP_se:-}"
-export LESS_TERMCAP_so="${LESS_TERMCAP_so:-}"
-export LESS_TERMCAP_ue="${LESS_TERMCAP_ue:-}"
-export LESS_TERMCAP_us="${LESS_TERMCAP_us:-}"
-export FALLBACK_MONITOR="${FALLBACK_MONITOR:-eDP1}"
 
 set -u
 
-# ==================================================
-# OPÇÃO DE MODO DA POLYBAR
-#   "primary" → barra [main] apenas no monitor primário
-#   "all"     → barra [main] em todos os monitores conectados
-# ==================================================
-POLYBAR_MODE="all"
-
-# 0. EVITAR MÚLTIPLAS EXECUÇÕES
+# 0. EVITAR MÚLTIPLAS EXECUÇÕES SIMULTÂNEAS (Comportamento Mantido)
 if pgrep -u "$UID" -x polybar >/dev/null; then
-    echo "⚠ Polybar já está rodando! Abortando nova execução..."
+    echo "⚠ Polybar já está rodando! Abortando..."
     exit 1
 fi
 
-# 1. LISTA DE APPS DE SYSTRAY: nome simples + comando
+# 1. APPS DE SYSTRAY
+# Ajustado para usar os nomes exatos verificados pelo seu script de debug
 declare -A SYSTRAY_APPS_CMDS=(
     [keepassxc]="keepassxc --minimized"
     [nm-applet]="nm-applet"
@@ -51,137 +26,85 @@ declare -A SYSTRAY_APPS_CMDS=(
     [redshift-gtk]="redshift-gtk"
 )
 
-echo ":: Encerrando apps de Systray para evitar conflitos..."
+echo ":: Encerrando apps de Systray antigos..."
 for app in "${!SYSTRAY_APPS_CMDS[@]}"; do
-    if pgrep -u "$UID" -x "$app" > /dev/null; then
-        echo " - Encerrando $app"
-        pkill -u "$UID" -x "$app" || true
-    fi
+    # Usando pkill direto para limpar instâncias órfãs de forma segura
+    pkill -u "$UID" -x "$app" || true
 done
-
 sleep 1
 
-# 2. ENCERRAR INSTÂNCIAS EXISTENTES (COM TIMEOUT MELHORADO)
-echo ":: Encerrando instâncias antigas da Polybar..."
-killall -q polybar || true
+# 2. ENCERRAR INSTÂNCIAS ANTIGAS DO POLYBAR
+echo ":: Encerrando Polybar..."
+polybar-msg cmd quit &>/dev/null || killall -q polybar || true
 
-MAX_ATTEMPTS=5
-KILL_ATTEMPTED=0
-
-for ((i=1; i<=MAX_ATTEMPTS; i++)); do
-    if ! pgrep -u "$UID" -x polybar > /dev/null; then
-        echo "✔ Polybar encerrado após $i tentativa(s)"
-        break
-    fi
-
-    echo ":: Aguardando encerramento ($i/$MAX_ATTEMPTS)..."
-
-    if [ $i -eq $MAX_ATTEMPTS ] && [ $KILL_ATTEMPTED -eq 0 ]; then
-        echo "⚠ Forçando encerramento com SIGKILL..."
-        killall -9 -q polybar || true
-        KILL_ATTEMPTED=1
-        i=$((i-1))
-    else
-        sleep 1
-    fi
+for ((i=1; i<=10; i++)); do
+    pgrep -u "$UID" -x polybar > /dev/null || break
+    sleep 0.3
 done
 
 if pgrep -u "$UID" -x polybar > /dev/null; then
-    echo "⚠⚠ Não foi possível encerrar o Polybar após $MAX_ATTEMPTS tentativas!"
-    echo ":: Você pode tentar manualmente com: killall -9 polybar"
-    exit 1
+    echo "⚠ Forçando SIGKILL..."
+    killall -9 -q polybar || true
+    sleep 1
 fi
 
-# 3. DETECTAR MONITORES ATIVOS COM VALIDAÇÃO
-mapfile -t MONITORS < <(xrandr --query | awk '/ connected/ && !/disconnected/ {print $1}')
-
-if [ ${#MONITORS[@]} -eq 0 ]; then
-    echo "⚠ Nenhum monitor detectado! Usando fallback..."
-    MONITORS=("$FALLBACK_MONITOR")
-fi
-
-# Detecta o monitor marcado como primary pelo xrandr.
-# Fallback para o primeiro da lista se nenhum estiver marcado,
-# e para FALLBACK_MONITOR se a lista estiver vazia.
+# 3. DETECTAR MONITOR PRIMÁRIO
 PRIMARY_MONITOR=$(xrandr --query | awk '/ connected primary/ {print $1; exit}')
-if [[ -z "$PRIMARY_MONITOR" ]]; then
-    PRIMARY_MONITOR="${MONITORS[0]:-$FALLBACK_MONITOR}"
-fi
+PRIMARY_MONITOR="${PRIMARY_MONITOR:-eDP1}"
 
-# 4. LANÇAMENTO COM CONTROLE DE ERROS
+echo ":: Monitor primário: $PRIMARY_MONITOR"
+
+# 4. LANÇAR BARRAS
 LOG_FILE="/tmp/polybar.log"
 : > "$LOG_FILE"
 
-# 4a. BARRA MAIN — primário ou todos, conforme POLYBAR_MODE
-if [[ "$POLYBAR_MODE" == "all" ]]; then
-    echo ":: Iniciando Polybar em todos os monitores: ${MONITORS[*]}"
-    for m in "${MONITORS[@]}"; do
-        echo ":: Iniciando barra [main] no monitor $m"
-        (
-            MONITOR="$m" polybar -q -r main >> "$LOG_FILE" 2>&1
-            echo "✔ [main] iniciada no monitor $m" >> "$LOG_FILE"
-        ) &
-        sleep 0.5
-    done
-else
-    echo ":: Iniciando Polybar apenas no monitor primário: $PRIMARY_MONITOR"
-    (
-        MONITOR="$PRIMARY_MONITOR" polybar -q -r main >> "$LOG_FILE" 2>&1
-        echo "✔ [main] iniciada no monitor $PRIMARY_MONITOR" >> "$LOG_FILE"
-    ) &
-fi
+# [tray] PRIMEIRO — precisa assumir o systray antes da [main]
+echo ":: [tray] → $PRIMARY_MONITOR"
+MONITOR="$PRIMARY_MONITOR" polybar -q -r tray >> "$LOG_FILE" 2>&1 &
+sleep 2  
 
-# Aguarda a(s) instância(s) main subirem antes de lançar a tray
+# [main] depois — em todos os monitores conectados
+while IFS= read -r monitor; do
+    echo ":: [main] → $monitor"
+    MONITOR="$monitor" polybar -q -r main >> "$LOG_FILE" 2>&1 &
+    sleep 0.3
+done < <(xrandr --query | awk '/ connected/ && !/disconnected/ {print $1}')
+
 sleep 1
 
-# 4b. BARRA TRAY — sempre no monitor primário
-echo ":: Iniciando barra [tray] no monitor primário ($PRIMARY_MONITOR)"
-(
-    MONITOR="$PRIMARY_MONITOR" polybar -q -r tray >> "$LOG_FILE" 2>&1
-    echo "✔ [tray] iniciada no monitor $PRIMARY_MONITOR" >> "$LOG_FILE"
-) &
+# Garante que a tray fique acima das janelas i3
+(sleep 2; for i in {1..5}; do xdo raise -N Polybar 2>/dev/null || true; sleep 1; done) &
 
-# Aguarda a tray renderizar e força acima das janelas do i3
-(
-    sleep 2
-    for i in 1 2 3 4 5; do
-        xdo raise -N Polybar 2>/dev/null || true
-        sleep 1
-    done
-) &
-
-# 5. LOG FINAL
-echo "=========================================="
-echo "Modo polybar : $POLYBAR_MODE"
-echo "Monitor primário : $PRIMARY_MONITOR"
-echo "Monitores conectados: ${MONITORS[*]}"
-echo "Logs disponíveis em : $LOG_FILE"
-echo "=========================================="
-
-echo ":: Iniciando tradutor de ícones SNI..."
+# 5. SNIXEMBED
+echo ":: Iniciando snixembed..."
 pkill -x snixembed || true
-timeout 3 bash -c 'while pgrep -x snixembed > /dev/null; do sleep 0.2; done' || true
-snixembed --fork &
-sleep 2
+sleep 0.5
+snixembed &
+sleep 3  
 
-# 6. REINICIAR APPS DA SYSTRAY
+# 6. REINICIAR APPS DE SYSTRAY
 echo ":: Aguardando Polybar estabilizar..."
-sleep 7
+sleep 2
 
 echo ":: Reiniciando apps de Systray..."
 for app in "${!SYSTRAY_APPS_CMDS[@]}"; do
+    # Separando o binário dos argumentos para validação do command -v
     IFS=' ' read -r -a cmd <<< "${SYSTRAY_APPS_CMDS[$app]}"
+    
     if command -v "${cmd[0]}" > /dev/null; then
-        if ! pgrep -u "$UID" -x "$app" > /dev/null; then
-            echo " - Iniciando ${cmd[*]} &"
-            "${cmd[@]}" &
+        if pgrep -u "$UID" -x "$app" > /dev/null; then
+            echo " - $app já rodando"
         else
-            echo " - $app já está rodando."
+            echo " - Iniciando ${cmd[*]}"
+            # Executa os comandos expandindo o array corretamente e jogando pro log
+            "${cmd[@]}" >> "$LOG_FILE" 2>&1 &
         fi
     else
-        echo " - ${cmd[0]} não encontrado no sistema."
+        echo " - ${cmd[0]} não encontrado"
     fi
 done
 
-echo ":: Fallback de monitor parametrizável: FALLBACK_MONITOR"
-echo "   Exemplo: export FALLBACK_MONITOR=\"eDP1\" no seu ~/.config/i3/env.sh"
+echo "=========================================="
+echo "Monitor primário : $PRIMARY_MONITOR"
+echo "Logs             : $LOG_FILE"
+echo "=========================================="

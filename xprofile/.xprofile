@@ -31,7 +31,8 @@ systemctl --user import-environment \
     XDG_SESSION_TYPE \
     XDG_SESSION_DESKTOP \
     DESKTOP_SESSION \
-    QT_QPA_PLATFORMTHEME
+    QT_QPA_PLATFORMTHEME\
+    PATH 
 
 dbus-update-activation-environment --systemd \
     DISPLAY \
@@ -40,7 +41,8 @@ dbus-update-activation-environment --systemd \
     XDG_SESSION_TYPE \
     XDG_SESSION_DESKTOP \
     DESKTOP_SESSION \
-    QT_QPA_PLATFORMTHEME
+    QT_QPA_PLATFORMTHEME\
+    PATH 
 
 # Declara sessão gráfica para systemd-user
 systemctl --user start graphical-session.target
